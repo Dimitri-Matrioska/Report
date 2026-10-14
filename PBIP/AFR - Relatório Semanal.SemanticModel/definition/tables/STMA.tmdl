@@ -1,0 +1,289 @@
+table STMA
+	lineageTag: d2b581a2-264f-47b0-8c7d-fe987f7bc2b7
+
+	measure 'HHT mensal' =
+			
+			VAR Atual =
+			    MAX(STMA[HH Acum])
+			
+			VAR MesAnterior =
+			    CALCULATE(
+			        MAX(STMA[HH Acum]),
+			        PREVIOUSMONTH(STMA[Mês Referência].[Date])
+			    )
+			
+			RETURN
+			    Atual - MesAnterior
+		lineageTag: df3fad72-cb6f-4ecb-87bd-e1e42d342b0b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Dias seguros' =
+			VAR DataInicio = DATE(2026, 3, 9)
+			VAR DataFiltro = MAX('dCalendario'[Date])
+			RETURN
+			IF(
+			    DataFiltro < DataInicio,
+			    BLANK(),
+			    DATEDIFF(DataInicio, DataFiltro, DAY) + 1
+			)
+		formatString: 0
+		lineageTag: d0b2207b-b1f4-4fa6-98eb-25d0adc174b0
+
+	column 'ID Contrato'
+		dataType: string
+		lineageTag: 75cd96df-55da-4b6f-876d-a63cd189d795
+		summarizeBy: none
+		sourceColumn: ID Contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column Contratada
+		dataType: string
+		lineageTag: 3a12f91a-5679-4585-85dc-db71fe0fd38e
+		summarizeBy: none
+		sourceColumn: Contratada
+
+		annotation SummarizationSetBy = Automatic
+
+	column Data
+		dataType: dateTime
+		formatString: dd/mmm
+		lineageTag: 4b0c5e18-724a-4eaa-9335-06df73171f19
+		summarizeBy: none
+		sourceColumn: Data
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column Semana
+		dataType: double
+		lineageTag: 84278085-af20-4e99-b554-685257c0fa8d
+		summarizeBy: sum
+		sourceColumn: Semana
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Agenda
+		dataType: string
+		lineageTag: a050d974-6bd0-4fa0-809f-802541a8163c
+		summarizeBy: none
+		sourceColumn: Agenda
+
+		annotation SummarizationSetBy = Automatic
+
+	column Indicador
+		dataType: string
+		lineageTag: ecd11777-4f04-49c9-808b-e00a6a03ed5d
+		summarizeBy: none
+		sourceColumn: Indicador
+
+		annotation SummarizationSetBy = Automatic
+
+	column Resultado
+		dataType: double
+		formatString: 0
+		lineageTag: c7148014-9ef8-4950-b344-adb6622ef564
+		summarizeBy: sum
+		sourceColumn: Resultado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column Tipo
+		dataType: string
+		lineageTag: 5dd61a34-03db-4ca2-b936-169395db63a3
+		summarizeBy: none
+		sourceColumn: Tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 09/03/2026
+		dataType: string
+		lineageTag: 3ac86aaa-815e-401a-8bd8-a448a5b6b28f
+		summarizeBy: none
+		sourceColumn: 09/03/2026
+
+		annotation SummarizationSetBy = Automatic
+
+	column Índice
+		dataType: int64
+		formatString: 0
+		lineageTag: 3469a5d0-d4a6-4212-bd20-0c4e9f39c2d9
+		summarizeBy: sum
+		sourceColumn: Índice
+
+		annotation SummarizationSetBy = Automatic
+
+	column Observações
+		dataType: string
+		lineageTag: dd197a91-09a2-4ca5-8ef2-108571aada23
+		summarizeBy: none
+		sourceColumn: Observações
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mês Referência'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b8dbc5e4-81ca-4eb9-a44c-b6c19610faf9
+		summarizeBy: none
+		sourceColumn: Mês Referência
+
+		variation Variation
+			isDefault
+			relationship: 3d10e940-8d7d-46b8-814a-3c132d65d791
+			defaultHierarchy: LocalDateTable_7df4dd42-1eb9-4b46-884e-a4e761a30d3f.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column '% IGPP-GF'
+		dataType: double
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: adee570b-86a8-47cf-abba-0a6a35d647fd
+		summarizeBy: sum
+		sourceColumn: % IGPP-GF
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'HH Acum'
+		dataType: double
+		lineageTag: c21212f4-e4af-40c5-b65a-93ca30b645a6
+		summarizeBy: sum
+		sourceColumn: HH Acum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Testes Etilômetro'
+		dataType: double
+		lineageTag: b58d8879-3b5c-488e-94a3-2aa5cdef282a
+		summarizeBy: sum
+		sourceColumn: Testes Etilômetro
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Desvios
+		dataType: double
+		lineageTag: 821c51d2-2581-41c0-8e6f-27f3b6cc0539
+		summarizeBy: sum
+		sourceColumn: Desvios
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Liberações PTR'
+		dataType: double
+		formatString: 0
+		lineageTag: 316127de-4073-4bba-8c0d-0646a6b0a58f
+		summarizeBy: sum
+		sourceColumn: Liberações PTR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column GEMBA
+		dataType: double
+		lineageTag: befc1822-88ab-4bf2-b11b-1b15fd3349c4
+		summarizeBy: sum
+		sourceColumn: GEMBA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Tipo Desvio'
+		dataType: double
+		lineageTag: d4769adc-07cc-4cb3-aff4-0aa2b1944cc6
+		summarizeBy: sum
+		sourceColumn: Tipo Desvio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column '% Aderência Ações'
+		dataType: double
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: bfb66814-c33e-43ff-8802-f95bf7ef7f47
+		summarizeBy: sum
+		sourceColumn: % Aderência Ações
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'APR válidas'
+		dataType: double
+		lineageTag: c9174cab-8fda-493a-a20f-7b3c8fbb8f7e
+		summarizeBy: sum
+		sourceColumn: APR válidas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Desvios EPI'
+		dataType: double
+		lineageTag: 3c510f11-418f-4536-b6a6-63d59bf8a07b
+		summarizeBy: sum
+		sourceColumn: Desvios EPI
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition STMA = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(Web.Contents("https://afonline.sharepoint.com/sites/70-OBoticario-ProjetoAfrodite/Shared%20Documents/02%20Planejamento/00%20Dados%20Report%20BI/Dados%20Gerais%20-%20Report%20AFR.xlsx"), null, true),
+				    STMA_Sheet = Fonte{[Item="STMA",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(STMA_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Resultado", type number}}),
+				    #"Índice Adicionado" = Table.AddIndexColumn(#"Tipo Alterado", "Índice", 1, 1, Int64.Type),
+				    #"Coluna Condicional Adicionada" = Table.AddColumn(#"Índice Adicionado", "% IGPP-GF", each if [Indicador] = "% IGPP-GF" then [Resultado] else null),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Coluna Condicional Adicionada",{{"% IGPP-GF", type number}, {"Mês Referência", type date}, {"Data", type date}}),
+				    #"Coluna Condicional Adicionada1" = Table.AddColumn(#"Tipo Alterado1", "HH Acum", each if [Indicador] = "HH Acum" then [Resultado] else null),
+				    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Coluna Condicional Adicionada1",{{"HH Acum", type number}}),
+				    #"Coluna Condicional Adicionada2" = Table.AddColumn(#"Tipo Alterado2", "Testes Etilômetro", each if [Indicador] = "Testes de Etilômetro" then [Resultado] else null),
+				    #"Tipo Alterado3" = Table.TransformColumnTypes(#"Coluna Condicional Adicionada2",{{"Testes Etilômetro", type number}}),
+				    #"Coluna Condicional Adicionada3" = Table.AddColumn(#"Tipo Alterado3", "Desvios", each if [Indicador] = "Desvios" then [Resultado] else null),
+				    #"Tipo Alterado4" = Table.TransformColumnTypes(#"Coluna Condicional Adicionada3",{{"Desvios", type number}}),
+				    #"Coluna Condicional Adicionada4" = Table.AddColumn(#"Tipo Alterado4", "Liberações PTR", each if [Indicador] = "N° das liberações críticas (PTR) de SST" then [Resultado] else null),
+				    #"Tipo Alterado5" = Table.TransformColumnTypes(#"Coluna Condicional Adicionada4",{{"Liberações PTR", type number}}),
+				    #"Coluna Condicional Adicionada5" = Table.AddColumn(#"Tipo Alterado5", "GEMBA", each if [Indicador] = "Inspeções de campo realizadas x planejadas (GEMBA)" then [Resultado] else null),
+				    #"Tipo Alterado6" = Table.TransformColumnTypes(#"Coluna Condicional Adicionada5",{{"GEMBA", type number}, {"Semana", type number}, {"Data", type date}}),
+				    #"Coluna Condicional Adicionada6" = Table.AddColumn(#"Tipo Alterado6", "Tipo Desvio", each if [Indicador] = "Desvios Leves" then [Resultado] else if [Indicador] = "Desvios Moderados" then [Resultado] else if [Indicador] = "Desvios Graves" then [Resultado] else if [Indicador] = "Desvios Gravíssimos" then [Resultado] else null),
+				    #"Tipo Alterado7" = Table.TransformColumnTypes(#"Coluna Condicional Adicionada6",{{"Tipo Desvio", type number}}),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Tipo Alterado7","Desvios Leves","Leves",Replacer.ReplaceText,{"Indicador"}),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Valor Substituído","Desvios Moderados","Moderados",Replacer.ReplaceText,{"Indicador"}),
+				    #"Valor Substituído2" = Table.ReplaceValue(#"Valor Substituído1","Desvios Graves","Graves",Replacer.ReplaceText,{"Indicador"}),
+				    #"Valor Substituído3" = Table.ReplaceValue(#"Valor Substituído2","Desvios Gravíssimos","Gravíssimos",Replacer.ReplaceText,{"Indicador"}),
+				    #"Valor Substituído4" = Table.ReplaceValue(#"Valor Substituído3","Desvios Meio Ambiente","Meio Ambiente",Replacer.ReplaceText,{"Indicador"}),
+				    #"Valor Substituído5" = Table.ReplaceValue(#"Valor Substituído4","Desvios Qualidade","Qualidade",Replacer.ReplaceText,{"Indicador"}),
+				    #"Valor Substituído6" = Table.ReplaceValue(#"Valor Substituído5","Desvio de Segurança","Segurança",Replacer.ReplaceText,{"Indicador"}),
+				    #"Coluna Condicional Adicionada7" = Table.AddColumn(#"Valor Substituído6", "% Aderência Ações", each if [Indicador] = "% de ações corretivas de segurança concluídas no prazo" then [Resultado] else null),
+				    #"Tipo Alterado8" = Table.TransformColumnTypes(#"Coluna Condicional Adicionada7",{{"% Aderência Ações", type number}}),
+				    #"Coluna Condicional Adicionada8" = Table.AddColumn(#"Tipo Alterado8", "APR válidas", each if [Indicador] = "N° de frentes com APR válidas" then [Resultado] else null),
+				    #"Tipo Alterado9" = Table.TransformColumnTypes(#"Coluna Condicional Adicionada8",{{"APR válidas", type number}}),
+				    #"Coluna Condicional Adicionada9" = Table.AddColumn(#"Tipo Alterado9", "Desvios EPI", each if [Indicador] = "Desvios não uso de EPI/EPI inadequado" then [Resultado] else null),
+				    #"Tipo Alterado10" = Table.TransformColumnTypes(#"Coluna Condicional Adicionada9",{{"Desvios EPI", type number}})
+				in
+				    #"Tipo Alterado10"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
+

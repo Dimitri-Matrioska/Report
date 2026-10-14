@@ -1,0 +1,118 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "5a024b7ced26e086104b",
+  "position": {
+    "x": 470.00000000000006,
+    "y": 317.14285714285717,
+    "z": 17000,
+    "height": 354.28571428571433,
+    "width": 795.71428571428578,
+    "tabOrder": 15000
+  },
+  "visual": {
+    "visualType": "simpleImageEBC4593F96F1425FB3D84C5BF02B5075",
+    "query": {
+      "queryState": {
+        "imageURL": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Atividades Diárias"
+                    }
+                  },
+                  "Property": "URL Foto"
+                }
+              },
+              "queryRef": "Atividades Diárias.URL Foto",
+              "nativeQueryRef": "URL Foto"
+            }
+          ]
+        },
+        "altText": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Atividades Diárias"
+                    }
+                  },
+                  "Property": "Legenda Foto"
+                }
+              },
+              "queryRef": "Atividades Diárias.Legenda Foto",
+              "nativeQueryRef": "Legenda Foto"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "imageSettings": [
+        {
+          "properties": {
+            "imageAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'mcenter'"
+                }
+              }
+            },
+            "scalingMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'normal'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "altTextSettings": [
+        {
+          "properties": {
+            "textAlign": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

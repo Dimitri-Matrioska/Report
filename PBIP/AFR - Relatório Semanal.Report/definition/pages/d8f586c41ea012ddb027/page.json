@@ -1,0 +1,137 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "d8f586c41ea012ddb027",
+  "displayName": "DESEMBOLSO",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7df239761ba0947431ba",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medições"
+              }
+            },
+            "Property": "ID Contrato"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "image": {
+            "image": {
+              "name": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Slide2.JPG'"
+                  }
+                }
+              },
+              "url": {
+                "expr": {
+                  "ResourcePackageItem": {
+                    "PackageName": "RegisteredResources",
+                    "PackageType": 1,
+                    "ItemName": "Slide207324508673567875.JPG"
+                  }
+                }
+              },
+              "scaling": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Fit'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "visualInteractions": [
+    {
+      "source": "d044243258b2c1023969",
+      "target": "f637f5ae357ebeac0970",
+      "type": "NoFilter"
+    },
+    {
+      "source": "a2612bec45a0a82dcbaa",
+      "target": "f637f5ae357ebeac0970",
+      "type": "NoFilter"
+    },
+    {
+      "source": "a2612bec45a0a82dcbaa",
+      "target": "c8daac07145d00d06ae3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "a2612bec45a0a82dcbaa",
+      "target": "67c2088e13e0aa7e02c2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "a2612bec45a0a82dcbaa",
+      "target": "8a90bebd4c352071aa16",
+      "type": "NoFilter"
+    },
+    {
+      "source": "a2612bec45a0a82dcbaa",
+      "target": "d27851da7890876d05c8",
+      "type": "NoFilter"
+    },
+    {
+      "source": "a2612bec45a0a82dcbaa",
+      "target": "f7d4a0fa6d78e2884927",
+      "type": "NoFilter"
+    },
+    {
+      "source": "a2612bec45a0a82dcbaa",
+      "target": "0f29e46e0a20dd342ddb",
+      "type": "NoFilter"
+    },
+    {
+      "source": "a2612bec45a0a82dcbaa",
+      "target": "d044243258b2c1023969",
+      "type": "NoFilter"
+    },
+    {
+      "source": "a2612bec45a0a82dcbaa",
+      "target": "4f983b0b40197e425e03",
+      "type": "NoFilter"
+    }
+  ]
+}

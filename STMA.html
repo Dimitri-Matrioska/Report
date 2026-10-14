@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STMA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --navy: #012b45;
+        --navy-2: #06314f;
+        --bg-panel: #f2efe9;
+        --panel-light: rgba(255,255,255,0.72);
+        --panel-strong: rgba(255,255,255,0.9);
+        --line: rgba(10, 33, 52, 0.08);
+        --text: #0f1d2d;
+        --text-soft: #5d6c7d;
+        --green: #3aa76d;
+        --green-soft: #d7f0e2;
+        --yellow: #f6c857;
+        --yellow-soft: #fdf0bf;
+        --blue: #2e7de9;
+        --blue-soft: #dfeeff;
+        --red: #db5b5b;
+        --red-soft: #fde3e3;
+      }
+
+      * { box-sizing: border-box; }
+
+      html, body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--navy);
+        font-family: 'Inter', sans-serif;
+        color: var(--text);
+      }
+
+      body {
+        min-height: 100vh;
+      }
+
+      .page {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        background: var(--navy);
+      }
+
+      .sidebar {
+        width: 260px;
+        min-width: 260px;
+        background: rgba(1, 39, 66, 0.96);
+        padding: 22px 16px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-left: 8px;
+      }
+
+      .brand-name {
+        font-size: 2.05rem;
+        line-height: 1;
+        font-weight: 800;
+        letter-spacing: -0.085em;
+        color: #f6f4f1;
+      }
+
+      .brand-mark {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-left: 4px;
+      }
+
+      .brand-mark span {
+        display: block;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+      }
+
+      .brand-mark .g { background: #6fd3ae; }
+      .brand-mark .y { background: #f5b84b; }
+      .brand-mark .b { background: #2c87ef; }
+
+      .brand-footer {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-left: 14px;
+        color: rgba(255,255,255,0.92);
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        font-size: 1.15rem;
+      }
+
+      .brand-footer .stamp {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 2px solid rgba(255,255,255,0.9);
+        position: relative;
+      }
+
+      .brand-footer .stamp::before {
+        content: "";
+        position: absolute;
+        inset: 2px;
+        border-radius: 50%;
+        border: 2px solid rgba(255,255,255,0.9);
+        transform: scale(0.8);
+      }
+
+      .panel-shell {
+        flex: 1;
+        background: var(--navy);
+        padding: 18px 0 18px 18px;
+      }
+
+      .main-panel {
+        width: 100%;
+        height: 100%;
+        background: var(--bg-panel);
+        border-radius: 36px 0 0 36px;
+        padding: 20px 26px 22px;
+        box-shadow: inset 0 0 0 1px rgba(13, 27, 39, 0.02);
+      }
+
+      .top-label {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255,255,255,0.3);
+        border: 1px solid rgba(9, 31, 49, 0.06);
+        border-radius: 12px;
+        padding: 8px 14px;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--text-soft);
+        font-weight: 700;
+      }
+
+      .content-grid {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: 270px minmax(0, 1fr);
+        gap: 22px;
+        height: calc(100% - 90px);
+      }
+
+      .sidebar-panel {
+        padding-top: 6px;
+      }
+
+      .filter-card,
+      .nav-card,
+      .metric-card,
+      .chart-card,
+      .table-card {
+        background: rgba(255,255,255,0.72);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        box-shadow: 0 10px 28px rgba(21, 38, 52, 0.04);
+      }
+
+      .filter-card {
+        padding: 14px 14px 12px;
+        margin-bottom: 18px;
+      }
+
+      .filter-card label {
+        display: block;
+        margin-bottom: 12px;
+      }
+
+      .filter-card label:last-child {
+        margin-bottom: 0;
+      }
+
+      .filter-card .label {
+        display: block;
+        color: var(--text-soft);
+        font-size: 0.68rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 7px;
+      }
+
+      .filter-box {
+        width: 100%;
+        border: 1px solid rgba(14, 29, 44, 0.08);
+        background: rgba(9, 29, 41, 0.03);
+        border-radius: 10px;
+        padding: 10px 12px;
+        color: var(--text);
+        font: inherit;
+        font-weight: 600;
+      }
+
+      .nav-card {
+        padding: 18px 14px;
+      }
+
+      .nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .nav-list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 9px 10px;
+        border-radius: 10px;
+        background: rgba(14, 35, 49, 0.03);
+        font-weight: 600;
+        color: rgba(17, 30, 39, 0.8);
+      }
+
+      .nav-list li::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--green);
+      }
+
+      .nav-list li:nth-child(2)::before { background: var(--yellow); }
+      .nav-list li:nth-child(3)::before { background: var(--blue); }
+      .nav-list li:nth-child(4)::before { background: var(--red); }
+
+      .main-body {
+        min-width: 0;
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+        gap: 18px;
+      }
+
+      .title-bar {
+        width: 100%;
+        background: rgba(255,255,255,0.12);
+        border: 1px solid rgba(17, 38, 58, 0.06);
+        border-radius: 14px;
+        padding: 12px 18px;
+      }
+
+      .title-bar h1 {
+        margin: 0;
+        font-size: clamp(1.7rem, 2vw, 2.6rem);
+        letter-spacing: -0.08em;
+        color: #12314d;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(165px, 1fr));
+        gap: 16px;
+      }
+
+      .metric-card {
+        padding: 16px 16px 12px;
+      }
+
+      .metric-card .small {
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--text-soft);
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      .metric-card .big {
+        font-weight: 800;
+        font-size: clamp(1.7rem, 2vw, 2.4rem);
+        letter-spacing: -0.06em;
+        color: var(--text);
+      }
+
+      .metric-card .trend {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 8px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--green);
+      }
+
+      .metric-card .trend.down { color: var(--red); }
+
+      .legend {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: currentColor;
+      }
+
+      .panel-area {
+        display: grid;
+        grid-template-columns: 380px minmax(0, 1fr);
+        gap: 18px;
+        min-height: 0;
+      }
+
+      .left-stack,
+      .right-stack {
+        display: grid;
+        gap: 18px;
+        min-height: 0;
+      }
+
+      .chart-card {
+        padding: 16px 16px 12px;
+        overflow: hidden;
+      }
+
+      .chart-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+      }
+
+      .chart-head h3 {
+        margin: 0;
+        font-size: 0.92rem;
+        letter-spacing: -0.02em;
+        color: var(--text);
+      }
+
+      .tag {
+        font-size: 0.68rem;
+        color: var(--text-soft);
+        background: rgba(13, 35, 55, 0.04);
+        padding: 6px 8px;
+        border-radius: 999px;
+        border: 1px solid rgba(13, 35, 55, 0.06);
+      }
+
+      .donut-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .donut {
+        position: relative;
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        background: conic-gradient(
+          var(--green) 0 48%,
+          #2673d8 48% 72%,
+          #f4b63c 72% 100%
+        );
+        box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
+      }
+
+      .donut::before {
+        content: "";
+        position: absolute;
+        inset: 24px;
+        background: rgba(255,255,255,0.82);
+        border-radius: 50%;
+        border: 1px solid rgba(10,33,52,0.08);
+      }
+
+      .donut .center {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        text-align: center;
+      }
+
+      .donut .center strong {
+        display: block;
+        font-size: 2.2rem;
+        letter-spacing: -0.08em;
+      }
+
+      .donut .center span {
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-soft);
+      }
+
+      .bars {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 10px;
+        height: 120px;
+        padding-top: 10px;
+      }
+
+      .bars .bar-col {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        gap: 8px;
+        height: 100%;
+      }
+
+      .bars .bar {
+        width: 100%;
+        max-width: 30px;
+        border-radius: 10px 10px 0 0;
+        background: linear-gradient(180deg, #4bb3ff 0%, #2b73d3 100%);
+      }
+
+      .bars .bar.alt { background: linear-gradient(180deg, #63d7a7 0%, #3fb46f 100%); }
+      .bars .bar.warn { background: linear-gradient(180deg, #f1ba4d 0%, #ef8c3c 100%); }
+
+      .bars .bar-col span {
+        font-size: 0.68rem;
+        font-weight: 700;
+        color: var(--text-soft);
+      }
+
+      .area-chart {
+        position: relative;
+        height: 150px;
+        border-radius: 12px;
+        background:
+          linear-gradient(180deg, rgba(63,138,230,0.06), rgba(63,138,230,0.01)),
+          rgba(255,255,255,0.18);
+        overflow: hidden;
+      }
+
+      .area-chart svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .line-chart {
+        position: relative;
+        height: 170px;
+        border-radius: 12px;
+        background: rgba(255,255,255,0.15);
+      }
+
+      .line-chart svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .table-card {
+        padding: 14px 16px 10px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.83rem;
+      }
+
+      th, td {
+        border-bottom: 1px solid rgba(14, 29, 44, 0.08);
+        padding: 10px 8px;
+        text-align: left;
+      }
+
+      th {
+        color: var(--text-soft);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-weight: 700;
+      }
+
+      .pill {
+        display: inline-block;
+        border-radius: 999px;
+        padding: 5px 8px;
+        font-size: 0.68rem;
+        font-weight: 700;
+      }
+
+      .pill.green { background: var(--green-soft); color: #1a7d4a; }
+      .pill.yellow { background: var(--yellow-soft); color: #a57311; }
+      .pill.red { background: var(--red-soft); color: #bc4545; }
+      .pill.blue { background: var(--blue-soft); color: #245fbe; }
+
+      @media (max-width: 1100px) {
+        .content-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .panel-area {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-name">GrupoBoticário</div>
+          <div class="brand-mark" aria-label="marca">
+            <span class="g"></span>
+            <span class="y"></span>
+            <span class="b"></span>
+          </div>
+        </div>
+
+        <div class="brand-footer">
+          <span class="stamp" aria-hidden="true"></span>
+          <span>AFRY</span>
+        </div>
+      </aside>
+
+      <div class="panel-shell">
+        <div class="main-panel">
+          <div class="top-label">
+            <div class="chip">Relatório</div>
+          </div>
+
+          <div class="content-grid">
+            <div class="sidebar-panel">
+              <div class="filter-card">
+                <label>
+                  <span class="label">Período</span>
+                  <select class="filter-box">
+                    <option>Mês atual</option>
+                  </select>
+                </label>
+                <label>
+                  <span class="label">Unidade</span>
+                  <select class="filter-box">
+                    <option>Todos</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="nav-card">
+                <ul class="nav-list">
+                  <li>STMA</li>
+                  <li>Desvios</li>
+                  <li>Entregas</li>
+                  <li>Risco</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="main-body">
+              <div class="title-bar">
+                <h1>STMA</h1>
+              </div>
+
+              <div class="metrics">
+                <div class="metric-card">
+                  <span class="small">Dias seguros</span>
+                  <div class="big">18</div>
+                  <div class="trend"><span class="legend"></span> +6,4% vs. mês</div>
+                </div>
+                <div class="metric-card">
+                  <span class="small">Índice</span>
+                  <div class="big">79%</div>
+                  <div class="trend"><span class="legend"></span> +2,1 pts</div>
+                </div>
+                <div class="metric-card">
+                  <span class="small">Ações</span>
+                  <div class="big">31</div>
+                  <div class="trend down"><span class="legend"></span> -4 esta semana</div>
+                </div>
+                <div class="metric-card">
+                  <span class="small">Risco</span>
+                  <div class="big">12%</div>
+                  <div class="trend"><span class="legend"></span> Meta 10%</div>
+                </div>
+              </div>
+
+              <div class="panel-area">
+                <div class="left-stack">
+                  <div class="chart-card">
+                    <div class="chart-head">
+                      <h3>Distribuição e status</h3>
+                      <span class="tag">Mês</span>
+                    </div>
+                    <div class="donut-wrap">
+                      <div class="donut" aria-label="gráfico donut">
+                        <div class="center">
+                          <div>
+                            <strong>48%</strong>
+                            <span>OK</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="chart-card">
+                    <div class="chart-head">
+                      <h3>Volume por semana</h3>
+                      <span class="tag">Últimos 6</span>
+                    </div>
+                    <div class="bars" aria-label="barras mensais">
+                      <div class="bar-col"><div class="bar" style="height: 28%;"></div><span>W1</span></div>
+                      <div class="bar-col"><div class="bar alt" style="height: 45%;"></div><span>W2</span></div>
+                      <div class="bar-col"><div class="bar" style="height: 66%;"></div><span>W3</span></div>
+                      <div class="bar-col"><div class="bar warn" style="height: 76%;"></div><span>W4</span></div>
+                      <div class="bar-col"><div class="bar alt" style="height: 58%;"></div><span>W5</span></div>
+                      <div class="bar-col"><div class="bar" style="height: 82%;"></div><span>W6</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="right-stack">
+                  <div class="chart-card">
+                    <div class="chart-head">
+                      <h3>Curva de estabilidade</h3>
+                      <span class="tag">30 dias</span>
+                    </div>
+                    <div class="area-chart">
+                      <svg viewBox="0 0 600 150" preserveAspectRatio="none" aria-label="gráfico de área">
+                        <defs>
+                          <linearGradient id="areaFill" x1="0" x2="0" y1="0" y2="1">
+                            <stop offset="0%" stop-color="#4da9ff" stop-opacity="0.35" />
+                            <stop offset="100%" stop-color="#4da9ff" stop-opacity="0.05" />
+                          </linearGradient>
+                        </defs>
+                        <path d="M0,120 C80,80 110,91 160,72 S250,40 308,52 S390,20 470,42 S540,60 600,35 L600,150 L0,150 Z" fill="url(#areaFill)"></path>
+                        <path d="M0,120 C80,80 110,91 160,72 S250,40 308,52 S390,20 470,42 S540,60 600,35" fill="none" stroke="#2f7fe9" stroke-width="3" stroke-linecap="round"></path>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="chart-card">
+                    <div class="chart-head">
+                      <h3>Fechamento por turno</h3>
+                      <span class="tag">Atual</span>
+                    </div>
+                    <div class="line-chart">
+                      <svg viewBox="0 0 600 170" preserveAspectRatio="none" aria-label="gráfico de linha">
+                        <g opacity="0.18" stroke="#9aa7b3" stroke-width="1">
+                          <line x1="0" y1="30" x2="600" y2="30"></line>
+                          <line x1="0" y1="70" x2="600" y2="70"></line>
+                          <line x1="0" y1="110" x2="600" y2="110"></line>
+                          <line x1="0" y1="150" x2="600" y2="150"></line>
+                        </g>
+                        <path d="M0,130 C60,120 110,110 160,112 C220,115 255,70 315,86 C355,98 420,54 470,64 C525,78 550,40 600,33" fill="none" stroke="#1f7fe8" stroke-width="3" stroke-linecap="round"></path>
+                        <path d="M0,145 C60,138 120,126 180,128 C212,128 240,118 305,98 C390,72 448,76 505,70 C542,67 575,54 600,48" fill="none" stroke="#45b778" stroke-width="2.5" stroke-linecap="round"></path>
+                        <circle cx="315" cy="86" r="5" fill="#1f7fe8"></circle>
+                        <circle cx="470" cy="64" r="5" fill="#1f7fe8"></circle>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="table-card">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Indicador</th>
+                          <th>Meta</th>
+                          <th>Atual</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Segurança</td>
+                          <td>95%</td>
+                          <td>91%</td>
+                          <td><span class="pill green">OK</span></td>
+                        </tr>
+                        <tr>
+                          <td>Entrega</td>
+                          <td>88%</td>
+                          <td>82%</td>
+                          <td><span class="pill yellow">Atenção</span></td>
+                        </tr>
+                        <tr>
+                          <td>Risco</td>
+                          <td>10%</td>
+                          <td>12%</td>
+                          <td><span class="pill red">Alerta</span></td>
+                        </tr>
+                        <tr>
+                          <td>Qualidade</td>
+                          <td>96%</td>
+                          <td>94%</td>
+                          <td><span class="pill blue">Normal</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

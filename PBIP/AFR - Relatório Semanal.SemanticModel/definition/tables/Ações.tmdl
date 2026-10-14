@@ -1,0 +1,66 @@
+table Ações
+	lineageTag: 595e1582-1ee7-4d1f-8435-ff1fe5c90ebe
+
+	column 'Data Ação'
+		dataType: string
+		lineageTag: 94140035-046d-4992-9d4c-7458783d5f17
+		summarizeBy: none
+		sourceColumn: Data Ação
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ação
+		dataType: string
+		lineageTag: 5d9cce76-d56b-4603-bc6f-b3a9ce3fcfdf
+		summarizeBy: none
+		sourceColumn: Ação
+
+		annotation SummarizationSetBy = Automatic
+
+	column Responsável
+		dataType: string
+		lineageTag: 35ece7d0-723a-4b48-a7ff-6773bef9bd0b
+		summarizeBy: none
+		sourceColumn: Responsável
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: a8cf43d4-6d7c-492b-9f11-661c7985336e
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Conclusão'
+		dataType: dateTime
+		formatString: DD/MM/YY
+		lineageTag: f86312f6-ca18-4ed8-b38a-f94ce7ab590a
+		summarizeBy: none
+		sourceColumn: Data Conclusão
+
+		variation Variation
+			isDefault
+			relationship: 82df6dc8-edf1-4c37-acc3-508894cddb9e
+			defaultHierarchy: LocalDateTable_9d692075-5c00-480a-9adf-1ea28677e9f7.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	partition Ações = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(Web.Contents("https://afonline.sharepoint.com/sites/70-OBoticario-ProjetoAfrodite/Shared%20Documents/02%20Planejamento/00%20Dados%20Report%20BI/Dados%20Gerais%20-%20Report%20AFR.xlsx"), null, true),
+				    Ações_Sheet = Fonte{[Item="Ações",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Ações_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Data Ação", type any}, {"Ação", type text}, {"Responsável", type text}, {"Status", type text}, {"Data Conclusão", type date}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

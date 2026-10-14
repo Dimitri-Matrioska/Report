@@ -1,0 +1,76 @@
+table 'Status Semanal'
+	lineageTag: bae4a791-ce18-49a1-a427-597de725dde3
+
+	column 'ID Contrato'
+		dataType: int64
+		formatString: 0
+		lineageTag: 482f6750-0a85-4076-858f-090f8f3f6080
+		summarizeBy: none
+		sourceColumn: ID Contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column Contratada
+		dataType: string
+		lineageTag: bac8ac88-6c3f-4f4f-a9b9-3f6866fd4cea
+		summarizeBy: none
+		sourceColumn: Contratada
+
+		annotation SummarizationSetBy = Automatic
+
+	column Semana
+		dataType: int64
+		formatString: 0
+		lineageTag: db11106d-fe56-42ce-b2a5-cc27d9adc332
+		summarizeBy: none
+		sourceColumn: Semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mês Referência'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 637077dd-8d15-4d77-893b-da23fac619cf
+		summarizeBy: none
+		sourceColumn: Mês Referência
+
+		variation Variation
+			isDefault
+			relationship: ecef730e-c9eb-4161-ad7e-aed20fb97342
+			defaultHierarchy: LocalDateTable_401de211-c16b-46aa-9d16-26ad847519df.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Item
+		dataType: string
+		lineageTag: a21abdad-db46-49b5-86e6-e4d84311f4ab
+		summarizeBy: none
+		sourceColumn: Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descrição
+		dataType: string
+		lineageTag: 09365dc9-f1e5-466b-babf-a923fff43dbd
+		summarizeBy: none
+		sourceColumn: Descrição
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Status Semanal' = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(Web.Contents("https://afonline.sharepoint.com/sites/70-OBoticario-ProjetoAfrodite/Shared%20Documents/02%20Planejamento/00%20Dados%20Report%20BI/Dados%20Gerais%20-%20Report%20AFR.xlsx"), null, true),
+				    Semanal_Sheet = Fonte{[Item="Status Semanal",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Semanal_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"ID Contrato", Int64.Type}, {"Contratada", type text}, {"Mês Referência", type date}, {"Semana", Int64.Type}, {"Item", type text}, {"Descrição", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

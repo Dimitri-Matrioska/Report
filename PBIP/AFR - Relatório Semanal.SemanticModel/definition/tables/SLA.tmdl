@@ -1,0 +1,158 @@
+table SLA
+	lineageTag: 29ef3d98-af25-405d-903b-e8c3659d21ae
+
+	measure 'SLA Máximo' = MAX(SLA[Aplicação SLA])
+		lineageTag: f86f2a0d-1314-4958-b773-a07aa8769abb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'SLA range' =
+			
+			VAR Resultado = SUM(SLA[Aplicação SLA])
+			VAR LimiteSuperior = 0.02
+			VAR LimiteInferior = -0.02
+			
+			RETURN
+			MIN(
+			    LimiteSuperior,
+			    MAX(LimiteInferior, Resultado)
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 3802aeea-a38e-437f-9eed-b62c5f0e0f8f
+
+	column Validação
+		dataType: string
+		lineageTag: 46b45359-2c45-4f88-a5fb-18fdaf1e31da
+		summarizeBy: none
+		sourceColumn: Validação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID Contrato'
+		dataType: int64
+		formatString: 0
+		lineageTag: 41b8302d-ef5f-4014-af24-3f8eef1e2156
+		summarizeBy: sum
+		sourceColumn: ID Contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column Contratada
+		dataType: string
+		lineageTag: 99d54ed0-5218-4f7d-90e8-63fcb01311cb
+		summarizeBy: none
+		sourceColumn: Contratada
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mês
+		dataType: dateTime
+		formatString: mmm/yy
+		lineageTag: 138f92e5-dbfc-4099-bef8-ec700b9188e6
+		summarizeBy: none
+		sourceColumn: Mês
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column Indicador
+		dataType: string
+		lineageTag: df43779f-4446-48a9-b9a5-f28c60a5d1eb
+		summarizeBy: none
+		sourceColumn: Indicador
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descrição
+		dataType: string
+		lineageTag: f9640b58-d501-47aa-8954-ae64904514f1
+		summarizeBy: none
+		sourceColumn: Descrição
+
+		annotation SummarizationSetBy = Automatic
+
+	column Meta
+		dataType: string
+		lineageTag: 7ea5774f-2b9e-466b-8539-e3cf7ff43b99
+		summarizeBy: none
+		sourceColumn: Meta
+
+		annotation SummarizationSetBy = Automatic
+
+	column Range
+		dataType: string
+		lineageTag: c2d4df28-3360-4613-9229-2433db7c92a9
+		summarizeBy: none
+		sourceColumn: Range
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Variação mínima'
+		dataType: double
+		lineageTag: e30fb9db-408c-4af7-a710-b791e7325f95
+		summarizeBy: sum
+		sourceColumn: Variação mínima
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Variação máxima'
+		dataType: double
+		lineageTag: 0b6b7ec2-e33f-407b-9675-c5bf840b3294
+		summarizeBy: sum
+		sourceColumn: Variação máxima
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Frequência
+		dataType: string
+		lineageTag: f0377938-b7dc-4866-a54f-13f91cffa945
+		summarizeBy: none
+		sourceColumn: Frequência
+
+		annotation SummarizationSetBy = Automatic
+
+	column Resultado
+		dataType: string
+		lineageTag: eea222f1-d2cc-4f9d-b076-8a5d0f35faf4
+		summarizeBy: none
+		sourceColumn: Resultado
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Aplicação SLA'
+		dataType: double
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: dbca4515-8748-4e37-8a30-f474f9307fd0
+		summarizeBy: sum
+		sourceColumn: Aplicação SLA
+
+		annotation SummarizationSetBy = Automatic
+
+	column Observação
+		dataType: string
+		lineageTag: dd0d0678-a6b8-49a0-b5eb-b9ab767da9b3
+		summarizeBy: none
+		sourceColumn: Observação
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SLA = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(Web.Contents("https://afonline.sharepoint.com/sites/70-OBoticario-ProjetoAfrodite/Shared%20Documents/02%20Planejamento/00%20Dados%20Report%20BI/Dados%20Gerais%20-%20Report%20AFR.xlsx"), null, true),
+				    SLA_Sheet = Fonte{[Item="SLA",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(SLA_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Validação", type text}, {"ID Contrato", Int64.Type}, {"Contratada", type text}, {"Mês", type date}, {"Indicador", type text}, {"Descrição", type text}, {"Meta", type text}, {"Range", type text}, {"Variação mínima", type number}, {"Variação máxima", type number}, {"Frequência", type text}, {"Resultado", type any}, {"Aplicação SLA", Percentage.Type}, {"Observação", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,218 @@
+relationship AutoDetected_b41aa0fa-bb14-455b-b740-38fe68aa9aaf
+	fromColumn: '% Físico Total'.'ID Contrato'
+	toColumn: 'Dados Contrato'.'ID Contrato'
+
+relationship 4aca4a4b-bbb6-404e-9431-813f3470a113
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Milestones.'Data Baseline'
+	toColumn: LocalDateTable_ce38f3fa-06cf-49b4-a6f6-3591c7ff86d8.Date
+
+relationship 27bd5ece-82f9-4e27-8f4b-076c884f88a8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Milestones.'Data Real/Projetada'
+	toColumn: LocalDateTable_da7e29b8-e548-433c-a6c2-cfeb0af0e9b7.Date
+
+relationship AutoDetected_8104853e-db58-410c-8953-243282b6cc02
+	fromColumn: Milestones.'ID Contrato'
+	toColumn: 'Dados Contrato'.'ID Contrato'
+
+relationship 33875f62-05e9-46af-83a4-4e2dd54c4943
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Medições.'Data Medição'
+	toColumn: LocalDateTable_e303867e-1f59-4b38-b004-4ce73fdad77d.Date
+
+relationship 2b1e9729-c29a-fd1d-b280-b24f9f097ca3
+	fromColumn: Medições.'ID Contrato'
+	toColumn: 'Dados Contrato'.'ID Contrato'
+
+relationship e832f051-e2cc-432d-8e29-4734e89c4c39
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Dados Contrato'.Início
+	toColumn: LocalDateTable_27aafd1e-fd73-4843-aab9-092d2aa61d14.Date
+
+relationship 09dc992c-c730-4ad1-8902-ce271cdcca08
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Dados Contrato'.Término
+	toColumn: LocalDateTable_71b6b6b2-c2dd-44b3-910a-3982c506882c.Date
+
+relationship f197f102-fae8-4c9d-a230-8a1256e8c58a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Engenharia.Início
+	toColumn: LocalDateTable_fe223f05-eaee-487b-9be1-8f6db287ac46.Date
+
+relationship 2544c4ab-03a4-488b-89be-2dc5b5485d20
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Engenharia.Término
+	toColumn: LocalDateTable_5da38ee6-1177-4397-b91a-e6a497b16cbb.Date
+
+relationship d1d4f37d-e0a7-492f-a2ba-c826372f4a3b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '% Físico Entregas'.Data
+	toColumn: LocalDateTable_b3102cd2-0efc-42ef-8351-16d8395243f8.Date
+
+relationship 7163e2df-7d14-4a05-9f8e-dee3243c73ca
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Pluviometria.Mês
+	toColumn: LocalDateTable_9dc60053-340b-4bb4-83bb-93a40e967ce2.Date
+
+relationship 1501b0af-e72e-7e9b-5c01-cfbb2f0b5aa3
+	toCardinality: many
+	fromColumn: 'Status Semanal'.Semana
+	toColumn: dCalendario.SemanaDoProjeto
+
+relationship b8339511-6990-497f-92db-888f15e8988a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Serviços Notáveis'.'Mês Referência'
+	toColumn: LocalDateTable_71f777ce-e903-49e4-84a6-49d46d937c82.Date
+
+relationship e3846ea4-8980-3ce0-300a-10b68b68715f
+	isActive: false
+	toCardinality: many
+	fromColumn: '% Físico Total'.Semana
+	toColumn: dCalendario.SemanaDoProjeto
+
+relationship 40058aeb-53a5-49be-b88e-01c024ee49cc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Milestones.'Data Replan.'
+	toColumn: LocalDateTable_6d444206-db54-45e0-a832-4d3f146c6e68.Date
+
+relationship ecef730e-c9eb-4161-ad7e-aed20fb97342
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Status Semanal'.'Mês Referência'
+	toColumn: LocalDateTable_401de211-c16b-46aa-9d16-26ad847519df.Date
+
+relationship d986246f-91ee-4306-9fcc-3ffafd2e7f00
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Histograma Diário - Real'.Mês
+	toColumn: LocalDateTable_6b11c50c-200d-4aba-b46a-5502b5dc52d4.Date
+
+relationship cba3dfcc-9361-48dd-a910-af2c953d59d7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: '% Físico Total'.Mês
+	toColumn: LocalDateTable_5f42206e-3794-4a61-ace3-3452c44ec99f.Date
+
+relationship b82c8f6f-e8cc-44c9-a9c2-474b3fb2c08a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Atividades Diárias'.Mês
+	toColumn: LocalDateTable_4a041126-4e95-4814-a156-9af547e36923.Date
+
+relationship 5ae487e8-40a6-3c7e-6234-c27ce5cc4e5a
+	fromColumn: Histograma.'ID Contrato'
+	toColumn: 'Dados Contrato'.'ID Contrato'
+
+relationship af9ec390-040d-8a36-05b1-bde102ff8aec
+	fromColumn: 'Serviços Notáveis'.'ID Contrato'
+	toColumn: 'Dados Contrato'.'ID Contrato'
+
+relationship bcc003cb-2b19-731f-75c4-f019e0e8311e
+	fromColumn: 'Status Semanal'.'ID Contrato'
+	toColumn: 'Dados Contrato'.'ID Contrato'
+
+relationship 9ffb78f2-3103-bf0f-ae1c-0f03f6a90d10
+	fromColumn: STMA.'ID Contrato'
+	toColumn: 'Dados Contrato'.'ID Contrato'
+
+relationship 0e67e429-a1bd-4df4-ac8d-fe7b34b45c43
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dCalendario.Date
+	toColumn: LocalDateTable_d309dc03-df07-4352-922f-230a60102376.Date
+
+relationship 73a4587e-484f-71eb-fb35-87f818ffa8db
+	fromColumn: '% Físico Total'.Data
+	toColumn: dCalendario.Date
+
+relationship 6c95975d-0a41-930d-1e88-0667276d780a
+	fromColumn: Pluviometria.Data
+	toColumn: dCalendario.Date
+
+relationship ad1a1a4f-3685-280f-2f6b-c7d3364841f1
+	toCardinality: many
+	fromColumn: 'Serviços Notáveis'.Dia
+	toColumn: dCalendario.Date
+
+relationship b5873496-32e1-3e98-75d4-27b429d419a2
+	fromColumn: STMA.Data
+	toColumn: dCalendario.Date
+
+relationship fd92f2ed-9c9c-bb46-e351-5596f04f26c8
+	fromColumn: 'Histograma Diário - Real'.Data
+	toColumn: dCalendario.Date
+
+relationship 1543fc34-efac-063e-e032-d26061cb7140
+	fromColumn: 'Atividades Diárias'.Data
+	toColumn: dCalendario.Date
+
+relationship 439df88c-505b-40c2-ac46-ed074f12bbb0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Histograma.Mês
+	toColumn: LocalDateTable_98c138d0-c27b-4f99-89ad-b7dea44fbfdb.Date
+
+relationship 3d10e940-8d7d-46b8-814a-3c132d65d791
+	joinOnDateBehavior: datePartOnly
+	fromColumn: STMA.'Mês Referência'
+	toColumn: LocalDateTable_7df4dd42-1eb9-4b46-884e-a4e761a30d3f.Date
+
+relationship AutoDetected_a24dda5f-ef66-4bbe-bedb-ce13ee1eeb26
+	fromColumn: IGPP-GF.Contratada
+	toColumn: 'Dados Contrato'.Contratada
+
+relationship AutoDetected_841b9b2d-d398-49b2-a012-7057133d68e6
+	fromColumn: SLA.Contratada
+	toColumn: 'Dados Contrato'.Contratada
+
+relationship 8253a98e-931a-712c-4daf-85c556fb6dcc
+	fromColumn: SLA.Mês
+	toColumn: dCalendario.Date
+
+relationship dd6c5d96-c708-d7d1-9386-372313a3d1cc
+	fromColumn: Medições.'Mês Referência'
+	toColumn: dCalendario.Date
+
+relationship 82df6dc8-edf1-4c37-acc3-508894cddb9e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Ações.'Data Conclusão'
+	toColumn: LocalDateTable_9d692075-5c00-480a-9adf-1ea28677e9f7.Date
+
+relationship 9c3d28fd-e14f-a55f-d920-2065033829a4
+	fromColumn: 'Desvios STMA'.Data
+	toColumn: dCalendario.Date
+
+relationship 64c26a5a-e9fb-fb71-ede0-b6df174f69fc
+	fromColumn: STMA.Indicador
+	toColumn: Ordenação.Status
+
+relationship ea9c548c-b9d2-4878-8172-e4f7f81f574b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Condicionantes MA'.'Data Limite'
+	toColumn: LocalDateTable_6626274d-4a1a-488d-9a5b-197330f4db9b.Date
+
+relationship a8721daf-73ed-c3ba-4488-073f5d742d51
+	fromColumn: IGPP-GF.'Mês Referência'
+	toColumn: dCalendario.Date
+
+relationship 35659ca1-92ea-405d-92f8-ba244e434864
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Milestones.'Data Plano de Ação'
+	toColumn: LocalDateTable_d3c8bb26-bc1e-4ad1-b109-ffa4b2f66394.Date
+
+relationship dd7c736b-d2d2-4606-b8d3-23f1a8a5ad19
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Ações Desvios'.'Data do Desvio'
+	toColumn: LocalDateTable_54068a91-03dd-443e-a5b0-9de95f2703ea.Date
+
+relationship 13ba7aee-e903-48b2-aa76-ccf1924c51ea
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Ações Desvios'.'Data da Início'
+	toColumn: LocalDateTable_4ea31ca3-1241-45dc-a704-bc8d5f029b98.Date
+
+relationship b1ad5b42-9c11-4fb0-9b5e-577dcd725011
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Ações Desvios'.Prazo
+	toColumn: LocalDateTable_3dd9cc51-36ff-4033-82a6-181c7d19f00b.Date
+
+relationship 4fd10c69-95c3-1624-407d-48e01a5303d0
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 'Desvios STMA'.'ID F.'
+	toColumn: 'Ações Desvios'.'ID F.'
+
