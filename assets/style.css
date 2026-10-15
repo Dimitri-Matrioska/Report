@@ -1,34 +1,269 @@
+/* ============================================================
+   STYLE.CSS — Estilos compartilhados
+   ============================================================ */
+
 * { box-sizing: border-box; }
-body {
-  margin: 0; padding: 20px; background: #f3f2f1;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #f3f2f1;
   font-family: "Segoe UI", helvetica, arial, sans-serif;
+  height: 100vh;
+  overflow: hidden;
 }
+
+/* ============================================================
+   LAYOUT GERAL — Sidebar + Área do relatório
+   ============================================================ */
+.app {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ============================================================
+   SIDEBAR (esquerda, escura)
+   ============================================================ */
+.sidebar {
+  width: 230px;
+  flex-shrink: 0;
+  background: #0B1220;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  overflow-y: auto;
+}
+
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.sidebar-logo .logo-top {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+.sidebar-logo .logo-sub {
+  font-size: 10px;
+  color: #8a94a8;
+  margin-top: 4px;
+  letter-spacing: 2px;
+}
+
+.sidebar-titles {
+  margin-bottom: 24px;
+  text-align: center;
+}
+.sidebar-titles .titulo {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+.sidebar-titles .subtitulo {
+  font-size: 11px;
+  color: #8a94a8;
+}
+
+.sidebar-filtros {
+  margin-bottom: 20px;
+}
+.sidebar-filtros .filtro-label {
+  font-size: 10px;
+  color: #8a94a8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.sidebar-filtros .filtro-valor {
+  background: #1a2332;
+  border: 1px solid #2a3446;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar-filtros .filtro-valor::after {
+  content: "▾";
+  color: #8a94a8;
+  font-size: 10px;
+}
+
+/* Menu */
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.sidebar-menu a {
+  display: block;
+  padding: 12px 14px;
+  text-align: center;
+  background: #0d1827;
+  border: 1px solid #1a2332;
+  color: #cfd4dd;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+}
+.sidebar-menu a:hover {
+  background: #1a2332;
+  color: #ffffff;
+}
+.sidebar-menu a.active {
+  background: #3a3a3a;
+  border-color: #3a3a3a;
+  color: #ffffff;
+}
+
+/* Rodapé da sidebar */
+.sidebar-footer {
+  text-align: center;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #1a2332;
+  color: #8a94a8;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+/* ============================================================
+   ÁREA DO RELATÓRIO
+   ============================================================ */
+.report-area {
+  flex: 1;
+  background: #d9d9d9;      /* cinza médio externo */
+  padding: 20px;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Canvas que simula a página do Power BI */
 .pbi-canvas {
-  position: relative; width: 1280px; height: 720px;
-  background: #ffffff; border: 1px solid #d0d0d0; margin: 0 auto; overflow: hidden;
+  position: relative;
+  width: 1280px;
+  height: 720px;
+  background: #F2F2F2;      /* cinza claro da página */
+  border-radius: 4px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  flex-shrink: 0;
 }
+
+/* ============================================================
+   KPI PADRÃO (fundo cinza, sem borda)
+   ============================================================ */
 .kpi-flat {
-  position: absolute; background: #F5F5F5; padding: 8px 10px;
-  display: flex; flex-direction: column; justify-content: center;
-  align-items: center; text-align: center;
+  position: absolute;
+  background: #FFFFFF;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 3px;
 }
-.kpi-flat .kpi-label { font-size: 9pt; color: #252423; margin-bottom: 4px; line-height: 1; }
-.kpi-flat .kpi-value { font-size: 22pt; font-weight: 600; color: #252423; line-height: 1; }
+.kpi-flat .kpi-label {
+  font-size: 9pt;
+  color: #252423;
+  margin-bottom: 4px;
+  line-height: 1;
+  font-weight: 600;
+}
+.kpi-flat .kpi-value {
+  font-size: 22pt;
+  font-weight: 600;
+  color: #252423;
+  line-height: 1;
+}
 .kpi-flat .kpi-value.negative { color: #E53935; }
+
+/* ============================================================
+   KPI COM BORDA (accent bar azul)
+   ============================================================ */
 .kpi-bordered {
-  position: absolute; background: transparent; border: 1px solid #e0e0e0;
-  padding: 5px; display: flex; align-items: stretch;
+  position: absolute;
+  background: #FFFFFF;
+  border: 1px solid #e0e0e0;
+  padding: 5px;
+  display: flex;
+  align-items: stretch;
+  border-radius: 3px;
 }
-.kpi-bordered .kpi-accent { width: 2px; background: #118DFF; margin-right: 6px; flex-shrink: 0; }
+.kpi-bordered .kpi-accent {
+  width: 3px;
+  background: #118DFF;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
 .kpi-bordered .kpi-content {
-  flex: 1; display: flex; flex-direction: column; justify-content: center;
-  align-items: center; text-align: center; min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 0;
 }
-.kpi-bordered .kpi-label { font-size: 8pt; color: #605e5c; line-height: 1.1; margin-bottom: 2px; }
-.kpi-bordered .kpi-value { font-size: 10pt; font-weight: 600; color: #252423; }
+.kpi-bordered .kpi-label {
+  font-size: 8pt;
+  color: #605e5c;
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+.kpi-bordered .kpi-value {
+  font-size: 10pt;
+  font-weight: 600;
+  color: #252423;
+}
+
+/* ============================================================
+   FAIXA AZUL DE TÍTULO (barra de seção)
+   ============================================================ */
+.faixa-azul {
+  position: absolute;
+  background: #0B1F3A;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   Estados
+   ============================================================ */
 .loading { color: #a0a0a0 !important; font-weight: 400 !important; }
 .error { color: #d13438 !important; font-size: 8pt !important; }
+
 .mock-banner {
-  position: absolute; top: 0; left: 0; background: #fff4ce; color: #8a6d00;
-  font-size: 11px; padding: 4px 10px; z-index: 9999; display: none;
+  position: absolute;
+  top: 0; left: 0;
+  background: #fff4ce;
+  color: #8a6d00;
+  font-size: 11px;
+  padding: 4px 10px;
+  z-index: 9999;
+  display: none;
 }
