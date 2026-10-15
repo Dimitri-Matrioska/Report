@@ -5,52 +5,67 @@
   <title>PERFORMANCE SEMANAL</title>
   <link rel="stylesheet" href="../assets/style.css">
   <style>
+    /* Posições específicas desta página */
     #kpi-previsto        { left: 252.38px; top: 37.49px; width: 136.67px; height: 67.51px; }
     #kpi-real            { left: 404.69px; top: 35.85px; width: 136.67px; height: 67.51px; }
     #kpi-desvio          { left: 557.01px; top: 35.85px; width: 136.67px; height: 67.51px; }
     #kpi-mm-acum         { left: 944.22px; top: 158.12px; width: 150px; height: 50px; }
     #kpi-dias-impactados { left: 1103.94px; top: 157.83px; width: 150.74px; height: 50px; }
+
+    /* Faixas azuis de seção */
+    #faixa-curva-fisica { left: 245px; top: 120px; width: 697px; height: 20px; }
   </style>
 </head>
 <body>
 
-  <div class="pbi-canvas">
-    <div class="mock-banner" id="mockBanner">Mock</div>
+  <div class="app">
+    <div id="sidebar-container"></div>
 
-    <div class="kpi-flat" id="kpi-previsto">
-      <div class="kpi-label">AVANÇO PREVISTO</div>
-      <div class="kpi-value loading" data-kpi="previsto">...</div>
-    </div>
+    <main class="report-area">
+      <div class="pbi-canvas">
+        <div class="mock-banner" id="mockBanner">Mock</div>
 
-    <div class="kpi-flat" id="kpi-real">
-      <div class="kpi-label">AVANÇO REAL</div>
-      <div class="kpi-value loading" data-kpi="real">...</div>
-    </div>
+        <!-- Faixa azul: CURVA FÍSICA -->
+        <div class="faixa-azul" id="faixa-curva-fisica">CURVA FÍSICA - MÊS</div>
 
-    <div class="kpi-flat" id="kpi-desvio">
-      <div class="kpi-label">DESVIO</div>
-      <div class="kpi-value loading" data-kpi="desvio">...</div>
-    </div>
+        <!-- KPIs -->
+        <div class="kpi-flat" id="kpi-previsto">
+          <div class="kpi-label">AVANÇO PREVISTO</div>
+          <div class="kpi-value loading" data-kpi="previsto">...</div>
+        </div>
 
-    <div class="kpi-bordered" id="kpi-mm-acum">
-      <div class="kpi-accent"></div>
-      <div class="kpi-content">
-        <div class="kpi-label">mm acum no mês</div>
-        <div class="kpi-value loading" data-kpi="mm_acum">...</div>
+        <div class="kpi-flat" id="kpi-real">
+          <div class="kpi-label">AVANÇO REAL</div>
+          <div class="kpi-value loading" data-kpi="real">...</div>
+        </div>
+
+        <div class="kpi-flat" id="kpi-desvio">
+          <div class="kpi-label">DESVIO</div>
+          <div class="kpi-value loading" data-kpi="desvio">...</div>
+        </div>
+
+        <div class="kpi-bordered" id="kpi-mm-acum">
+          <div class="kpi-accent"></div>
+          <div class="kpi-content">
+            <div class="kpi-label">mm acum no mês</div>
+            <div class="kpi-value loading" data-kpi="mm_acum">...</div>
+          </div>
+        </div>
+
+        <div class="kpi-bordered" id="kpi-dias-impactados">
+          <div class="kpi-accent"></div>
+          <div class="kpi-content">
+            <div class="kpi-label">Dias impactados</div>
+            <div class="kpi-value loading" data-kpi="dias_impactados">...</div>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="kpi-bordered" id="kpi-dias-impactados">
-      <div class="kpi-accent"></div>
-      <div class="kpi-content">
-        <div class="kpi-label">Dias impactados</div>
-        <div class="kpi-value loading" data-kpi="dias_impactados">...</div>
-      </div>
-    </div>
+    </main>
   </div>
 
   <script src="../assets/config.js"></script>
   <script src="../assets/pbi.js"></script>
+  <script src="../assets/sidebar.js"></script>
   <script>
     const MES_ALVO = '2026-10-31';
 
