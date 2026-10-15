@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>PERFORMANCE SEMANAL</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    #kpi-previsto        { left: 252.38px; top: 37.49px; width: 136.67px; height: 67.51px; }
+    #kpi-real            { left: 404.69px; top: 35.85px; width: 136.67px; height: 67.51px; }
+    #kpi-desvio          { left: 557.01px; top: 35.85px; width: 136.67px; height: 67.51px; }
+    #kpi-mm-acum         { left: 944.22px; top: 158.12px; width: 150px; height: 50px; }
+    #kpi-dias-impactados { left: 1103.94px; top: 157.83px; width: 150.74px; height: 50px; }
+  </style>
+</head>
+<body>
+
+  <div class="pbi-canvas">
+    <div class="mock-banner" id="mockBanner">Mock</div>
+
+    <div class="kpi-flat" id="kpi-previsto">
+      <div class="kpi-label">AVANÇO PREVISTO</div>
+      <div class="kpi-value loading" data-kpi="previsto">...</div>
+    </div>
+
+    <div class="kpi-flat" id="kpi-real">
+      <div class="kpi-label">AVANÇO REAL</div>
+      <div class="kpi-value loading" data-kpi="real">...</div>
+    </div>
+
+    <div class="kpi-flat" id="kpi-desvio">
+      <div class="kpi-label">DESVIO</div>
+      <div class="kpi-value loading" data-kpi="desvio">...</div>
+    </div>
+
+    <div class="kpi-bordered" id="kpi-mm-acum">
+      <div class="kpi-accent"></div>
+      <div class="kpi-content">
+        <div class="kpi-label">mm acum no mês</div>
+        <div class="kpi-value loading" data-kpi="mm_acum">...</div>
+      </div>
+    </div>
+
+    <div class="kpi-bordered" id="kpi-dias-impactados">
+      <div class="kpi-accent"></div>
+      <div class="kpi-content">
+        <div class="kpi-label">Dias impactados</div>
+        <div class="kpi-value loading" data-kpi="dias_impactados">...</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/config.js"></script>
+  <script src="../assets/pbi.js"></script>
+  <script>
+    const MES_ALVO = '2026-10-31';
+
+    async function carregar() {
+      const v = Date.now();
+      const [pluv, fisico] = await Promise.all([
+        fetch(`${BASE_URL}/pluviometria.json?v=${v}`).then(r => r.json()),
+        fetch(`${BASE_URL}/fisico_total.json?v=${v}`).then(r => r.json())
+      ]);
+      return { pluv, fisico };
+    }
+
+    function calcMmAcum(pluv) {
+      return maxDe(filtrarPorMes(pluv, MES_ALVO), 'mm_acum');
+    }
+
+    function calcDiasImpactados(pluv) {
+      return filtrarPorMes(pluv, MES_ALVO).filter(d => d.dia_paralisado === 'sim').length;
+    }
+
+    function calcPrevisto(fisico) {
+      const ultima = ultimaDataCom(fisico, 'real_acum');
+      if (!ultima) return 0;
+      return maxDe(fisico.filter(d => d.data === ultima), 'baseline_1_acum');
+    }
+
+    function calcReal(fisico) {
+      const ultima = ultimaDataCom(fisico, 'real_acum');
+      if (!ultima) return 0;
+      return maxDe(fisico.filter(d => d.data === ultima), 'real_acum');
+    }
+
+    function calcDesvio(fisico) {
+      return calcReal(fisico) - calcPrevisto(fisico);
+    }
+
+    async function render() {
+      try {
+        const { pluv, fisico } = await carregar();
+        const previsto = calcPrevisto(fisico);
+        const real     = calcReal(fisico);
+        const desvio   = calcDesvio(fisico);
+
+        const kpis = {
+          previsto:        fmt.pct(previsto),
+          real:            fmt.pct(real),
+          desvio:          fmt.pct(desvio),
+          mm_acum:         fmt.int(calcMmAcum(pluv)),
+          dias_impactados: fmt.int(calcDiasImpactados(pluv))
+        };
+
+        document.querySelectorAll('[data-kpi]').forEach(el => {
+          const k = el.getAttribute('data-kpi');
+          el.classList.remove('loading');
+          el.textContent = kpis[k] ?? '-';
+          if (k === 'desvio' && desvio < 0) el.classList.add('negative');
+        });
+      } catch (err) {
+        console.error(err);
+        document.querySelectorAll('[data-kpi]').forEach(el => {
+          el.classList.remove('loading');
+          el.classList.add('error');
+          el.textContent = 'erro';
+        });
+      }
+    }
+
+    render();
+  </script>
+
+</body>
+</html>
