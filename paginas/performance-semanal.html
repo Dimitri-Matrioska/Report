@@ -4,17 +4,8 @@
   <meta charset="UTF-8">
   <title>PERFORMANCE SEMANAL</title>
   <link rel="stylesheet" href="../assets/style.css">
-  <style>
-    /* Posições específicas desta página */
-    #kpi-previsto        { left: 252.38px; top: 37.49px; width: 136.67px; height: 67.51px; }
-    #kpi-real            { left: 404.69px; top: 35.85px; width: 136.67px; height: 67.51px; }
-    #kpi-desvio          { left: 557.01px; top: 35.85px; width: 136.67px; height: 67.51px; }
-    #kpi-mm-acum         { left: 944.22px; top: 158.12px; width: 150px; height: 50px; }
-    #kpi-dias-impactados { left: 1103.94px; top: 157.83px; width: 150.74px; height: 50px; }
-
-    /* Faixas azuis de seção */
-    #faixa-curva-fisica { left: 245px; top: 120px; width: 697px; height: 20px; }
-  </style>
+  <link rel="stylesheet" href="performance-semanal.css">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 </head>
 <body>
 
@@ -27,6 +18,12 @@
 
         <!-- Faixa azul: CURVA FÍSICA -->
         <div class="faixa-azul" id="faixa-curva-fisica">CURVA FÍSICA - MÊS</div>
+
+        <!-- Faixa azul: PLUVIOMETRIA (título do gráfico) -->
+        <div class="faixa-azul" id="faixa-pluviometria">PLUVIOMETRIA HISTÓRICA X REAL (mm)</div>
+
+        <!-- Gráfico de barras agrupadas -->
+        <div id="chart-pluviometria"></div>
 
         <!-- KPIs -->
         <div class="kpi-flat" id="kpi-previsto">
@@ -65,76 +62,9 @@
 
   <script src="../assets/config.js"></script>
   <script src="../assets/pbi.js"></script>
+  <script src="../assets/charts.js"></script>
   <script src="../assets/sidebar.js"></script>
-  <script>
-    const MES_ALVO = '2026-10-31';
-
-    async function carregar() {
-      const v = Date.now();
-      const [pluv, fisico] = await Promise.all([
-        fetch(`${BASE_URL}/pluviometria.json?v=${v}`).then(r => r.json()),
-        fetch(`${BASE_URL}/fisico_total.json?v=${v}`).then(r => r.json())
-      ]);
-      return { pluv, fisico };
-    }
-
-    function calcMmAcum(pluv) {
-      return maxDe(filtrarPorMes(pluv, MES_ALVO), 'mm_acum');
-    }
-
-    function calcDiasImpactados(pluv) {
-      return filtrarPorMes(pluv, MES_ALVO).filter(d => d.dia_paralisado === 'sim').length;
-    }
-
-    function calcPrevisto(fisico) {
-      const ultima = ultimaDataCom(fisico, 'real_acum');
-      if (!ultima) return 0;
-      return maxDe(fisico.filter(d => d.data === ultima), 'baseline_1_acum');
-    }
-
-    function calcReal(fisico) {
-      const ultima = ultimaDataCom(fisico, 'real_acum');
-      if (!ultima) return 0;
-      return maxDe(fisico.filter(d => d.data === ultima), 'real_acum');
-    }
-
-    function calcDesvio(fisico) {
-      return calcReal(fisico) - calcPrevisto(fisico);
-    }
-
-    async function render() {
-      try {
-        const { pluv, fisico } = await carregar();
-        const previsto = calcPrevisto(fisico);
-        const real     = calcReal(fisico);
-        const desvio   = calcDesvio(fisico);
-
-        const kpis = {
-          previsto:        fmt.pct(previsto),
-          real:            fmt.pct(real),
-          desvio:          fmt.pct(desvio),
-          mm_acum:         fmt.int(calcMmAcum(pluv)),
-          dias_impactados: fmt.int(calcDiasImpactados(pluv))
-        };
-
-        document.querySelectorAll('[data-kpi]').forEach(el => {
-          const k = el.getAttribute('data-kpi');
-          el.classList.remove('loading');
-          el.textContent = kpis[k] ?? '-';
-          if (k === 'desvio' && desvio < 0) el.classList.add('negative');
-        });
-      } catch (err) {
-        console.error(err);
-        document.querySelectorAll('[data-kpi]').forEach(el => {
-          el.classList.remove('loading');
-          el.classList.add('error');
-          el.textContent = 'erro';
-        });
-      }
-    }
-
-    render();
-  </script>
+  <script src="performance-semanal.js"></script>
 
 </body>
 </html>
