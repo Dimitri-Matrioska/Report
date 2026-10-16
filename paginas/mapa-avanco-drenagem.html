@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>MAPA AVANÇO DRENAGEM</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="mapa-avanco-drenagem.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+</head>
+<body>
+
+<div class="canvas-wrapper" id="canvasWrapper">
+<div class="pbi-canvas" id="pbiCanvas">
+
+    <!-- Filtros da sidebar (sobrepostos na imagem) -->
+    <div class="sidebar-filtro st-projeto">PROJETO AFRODITE</div>
+    <div class="sidebar-filtro st-titulo">PERFORMANCE GERAL</div>
+    <div class="sidebar-label st-label-1">Contratada</div>
+    <div class="sidebar-select st-sel-1">TERRAM ENGENHARI<span class="arrow">▾</span></div>
+    <div class="sidebar-label st-label-2">Ano, Mês</div>
+    <div class="sidebar-select st-sel-2">2026 (Ano) + outubr<span class="arrow">▾</span></div>
+    <div class="sidebar-label st-label-3">SemanaDoProjeto</div>
+    <div class="sidebar-select st-sel-3">31<span class="arrow">▾</span></div>
+
+    <!-- Botões do menu -->
+    <a href="./stma.html" class="menu-botao st-btn-1">STMA</a>
+    <a href="./performance-semanal.html" class="menu-botao st-btn-2">PERFORMANCE SEMANAL</a>
+    <a href="./mapa-avanco.html" class="menu-botao st-btn-3">MAPA AVANÇO</a>
+    <a href="./mapa-avanco-drenagem.html" class="menu-botao ativo st-btn-4">MAPA AVANÇO DRENAGEM</a>
+    <a href="./pluviometria.html" class="menu-botao st-btn-5">PLUVIOMETRIA</a>
+
+
+    <div id="slicer-27cad5a3" class="slicer-container" data-visual="27cad5a3208091778543"></div>
+
+    <div id="slicer-5c797f93" class="slicer-container" data-visual="5c797f93d0a2e400907b"></div>
+
+    <div class="kpi-flat" id="kpi-6b8d956f" data-visual="6b8d956f6415ab608dc1">
+      <div class="kpi-label">DREN. SUPERFICIAL - ESCADAS</div>
+      <div class="kpi-value loading" data-kpi="6b8d956f">...</div>
+    </div>
+
+    <div class="kpi-flat" id="kpi-7214a250" data-visual="7214a250fd3249b8b7a0">
+      <div class="kpi-label">DREN. PROF. - SUBESTAÇÃO</div>
+      <div class="kpi-value loading" data-kpi="7214a250">...</div>
+    </div>
+
+    <div id="slicer-accb55e8" class="slicer-container" data-visual="accb55e88b7d44094030"></div>
+
+    <div class="kpi-flat" id="kpi-bbed587c" data-visual="bbed587c13df43e093d9">
+      <div class="kpi-label">DREN. PROF. - CANTEIRO GC</div>
+      <div class="kpi-value loading" data-kpi="bbed587c">...</div>
+    </div>
+
+</div>
+</div>
+
+<script src="../assets/config.js"></script>
+<script src="../assets/pbi.js"></script>
+<script src="../assets/charts.js"></script>
+<script src="mapa-avanco-drenagem.js"></script>
+
+</body>
+</html>

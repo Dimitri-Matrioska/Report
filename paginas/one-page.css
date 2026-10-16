@@ -1,0 +1,125 @@
+/* ONE PAGE - gerado automaticamente */
+
+.pbi-canvas {
+  background-image: url('../imagens/fundo-detalhe-one-page.jpg');
+}
+
+/* ============================================================
+   TEXTOS DA SIDEBAR (sobrepostos na imagem)
+   ============================================================ */
+.sidebar-filtro {
+  position: absolute;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.5px;
+  z-index: 10;
+}
+.st-projeto { left: 20px; top: 120px; width: 190px; font-size: 11px; }
+.st-titulo  { left: 20px; top: 150px; width: 190px; font-size: 13px; }
+
+.sidebar-label {
+  position: absolute;
+  left: 20px;
+  color: #b8c4d9;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  z-index: 10;
+}
+.st-label-1 { top: 190px; }
+.st-label-2 { top: 250px; }
+.st-label-3 { top: 310px; }
+
+.sidebar-select {
+  position: absolute;
+  left: 20px;
+  width: 190px;
+  background: transparent;
+  border: 1px solid #4a6fa5;
+  color: #ffffff;
+  padding: 7px 8px;
+  border-radius: 2px;
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 10;
+}
+.st-sel-1 { top: 208px; }
+.st-sel-2 { top: 268px; }
+.st-sel-3 { top: 328px; }
+
+.sidebar-select .arrow {
+  color: #b8c4d9;
+  font-size: 10px;
+}
+
+/* ============================================================
+   BOTÕES DO MENU
+   ============================================================ */
+.menu-botao {
+  position: absolute;
+  left: 20px;
+  width: 190px;
+  text-align: center;
+  border: 1px solid #4a6fa5;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: transparent;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  font-family: inherit;
+  z-index: 10;
+}
+.menu-botao:hover { background: #16294a; }
+.menu-botao.ativo {
+  background: #3a2a20;
+  border-color: #3a2a20;
+}
+.st-btn-1 { top: 370px; height: 35px; }
+.st-btn-2 { top: 415px; height: 50px; }
+.st-btn-3 { top: 475px; height: 40px; }
+.st-btn-4 { top: 525px; height: 50px; }
+.st-btn-5 { top: 585px; height: 40px; }
+
+/* ============================================================
+   VISUAIS (posições extraídas do PBIP)
+   ============================================================ */
+#kpi-181c9427 { left: 848.33px; top: 113.89px; width: 62.22px; height: 45.0px; }
+#visual-3610b59c { left: 256.67px; top: 67.14px; width: 300.48px; height: 123.81px; }
+#table-3846f7bb { left: 923.18px; top: 479.58px; width: 318.57px; height: 205.53px; }
+#kpi-3c5117f5 { left: 16.58px; top: 285.45px; width: 148.23px; height: 50.34px; }
+#visual-4b4f8379 { left: 594.55px; top: 77.27px; width: 300.91px; height: 130.91px; }
+#table-4f1f3c12 { left: 916.29px; top: 283.99px; width: 337.45px; height: 180.42px; }
+#kpi-5149d1b1 { left: 778.27px; top: 99.09px; width: 78.61px; height: 40.37px; }
+#table-557f754b { left: 260.78px; top: 289.43px; width: 308.06px; height: 167.64px; }
+#kpi-66bb9195 { left: 16.36px; top: 332.73px; width: 150.91px; height: 49.09px; }
+#kpi-6c28acc1 { left: 1149.09px; top: 78.85px; width: 78.18px; height: 50.0px; }
+#kpi-71edfd2f { left: 848.33px; top: 81.67px; width: 62.22px; height: 45.0px; }
+#chart-74f91279 { left: 922.73px; top: 122.73px; width: 319.09px; height: 135.45px; }
+#visual-7f6dec30 { left: 256.67px; top: 32.86px; width: 300.48px; height: 123.81px; }
+#chart-850f660a { left: 600.38px; top: 158.49px; width: 292.73px; height: 88.57px; }
+#kpi-8f5b2dc0 { left: 930.07px; top: 78.85px; width: 152.38px; height: 50.0px; }
+#kpi-91235b82 { left: 1075.17px; top: 78.85px; width: 77.07px; height: 50.0px; }
+#visual-98356cde { left: 594.29px; top: 45.24px; width: 301.0px; height: 131.43px; }
+#kpi-a58ec120 { left: 440.77px; top: 99.85px; width: 78.31px; height: 40.09px; }
+#slicer-ac9de593 { left: 12.17px; top: 224.38px; width: 210.87px; height: 79.75px; }
+#table-b2726d50 { left: 587.48px; top: 479.58px; width: 318.57px; height: 205.53px; }
+#chart-e229319a { left: 258.24px; top: 158.49px; width: 299.26px; height: 87.63px; }
+#slicer-fbd6e81a { left: 10.0px; top: 145.0px; width: 212.0px; height: 57.0px; }
+#table-fc7e9d88 { left: 256.92px; top: 479.58px; width: 318.57px; height: 205.53px; }
+
+/* Estados */
+.loading { color: #a0a0a0 !important; font-weight: 400 !important; }
+.error   { color: #d13438 !important; font-size: 8pt !important; }

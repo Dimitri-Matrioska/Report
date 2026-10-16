@@ -1,0 +1,24 @@
+/* ============================================================
+   {{TITULO}} — gerado automaticamente
+   ============================================================ */
+
+.pbi-canvas {
+  position: relative;
+  width: 1280px;
+  height: 720px;
+  background-image: url('../imagens/{{FUNDO}}');
+  background-size: 1280px 720px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  flex-shrink: 0;
+  font-family: "Segoe UI", helvetica, arial, sans-serif;
+}
+
+{{CSS_ELEMENTOS}}
+
+/* Estados */
+.loading { color: #a0a0a0 !important; font-weight: 400 !important; }
+.error   { color: #d13438 !important; font-size: 8pt !important; }

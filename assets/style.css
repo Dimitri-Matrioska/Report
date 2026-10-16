@@ -15,10 +15,11 @@
   --pbi-good: #1AAB40;
   --pbi-bad: #D64550;
 
-  --pbi-azul-escuro: #0B1F3A;   /* sidebar + faixas */
-  --pbi-sidebar-fundo: #0B1F3A;
+  --pbi-azul-escuro: #001d37;   /* sidebar + faixas */
+  --pbi-sidebar-fundo: #001d37;
   --pbi-sidebar-borda: #4a6fa5;
   --pbi-botao-ativo: #3a2a20;
+  --pbi-fundo-pagina: #f3f0eb;  /* fundo do canvas (bege) */
 
   --fonte-principal: "Segoe UI", helvetica, arial, sans-serif;
 }
@@ -214,7 +215,7 @@ body {
   position: relative;
   width: 1280px;
   height: 720px;
-  background: #F2F2F2;
+  background: var(--pbi-fundo-pagina);
   border-radius: 4px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.15);
   overflow: hidden;
@@ -226,11 +227,11 @@ body {
 }
 
 /* ============================================================
-   KPI PADRÃO (flat)
+   KPI PADRÃO (flat) — transparente sobre o fundo do canvas
    ============================================================ */
 .kpi-flat {
   position: absolute;
-  background: #FFFFFF;
+  background: transparent;
   padding: 8px 10px;
   display: flex;
   flex-direction: column;
@@ -239,8 +240,11 @@ body {
   text-align: center;
   border-radius: 3px;
 }
+.kpi-flat.boxed {
+  background: #FFFFFF;
+}
 .kpi-flat .kpi-label {
-  font-size: 9pt;
+  font-size: 8pt;
   color: var(--pbi-foreground);
   margin-bottom: 4px;
   line-height: 1;
@@ -292,6 +296,53 @@ body {
   font-weight: 600;
   color: var(--pbi-foreground);
 }
+
+/* ============================================================
+   CONTAINERS DE VISUAIS (posição definida por página, em px)
+   ============================================================ */
+.chart-container,
+.table-container,
+.slicer-container {
+  position: absolute;
+  overflow: hidden;
+}
+
+/* Título de visual (faixa azul) reutilizável */
+.visual-title {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  background: var(--pbi-azul-escuro);
+  text-align: center;
+  z-index: 5;
+}
+
+/* Tabela simples (tableEx) — fundo transparente sobre o canvas,
+   apenas texto com marcador "•". Sem cabeçalho azul. */
+.table-container {
+  overflow: auto;
+  font-size: 8pt;
+  color: var(--pbi-foreground);
+}
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-container th,
+.table-container td {
+  padding: 2px 6px;
+  border: 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* Gauge/KPI dentro de chart-container usa o echarts */
+.chart-container { min-height: 10px; }
 
 /* ============================================================
    FAIXA AZUL DE TÍTULO

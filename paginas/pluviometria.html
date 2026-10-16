@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>PLUVIOMETRIA</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="pluviometria.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+</head>
+<body>
+
+<div class="canvas-wrapper" id="canvasWrapper">
+<div class="pbi-canvas" id="pbiCanvas">
+
+    <!-- Filtros da sidebar (sobrepostos na imagem) -->
+    <div class="sidebar-filtro st-projeto">PROJETO AFRODITE</div>
+    <div class="sidebar-filtro st-titulo">PERFORMANCE GERAL</div>
+    <div class="sidebar-label st-label-1">Contratada</div>
+    <div class="sidebar-select st-sel-1">TERRAM ENGENHARI<span class="arrow">▾</span></div>
+    <div class="sidebar-label st-label-2">Ano, Mês</div>
+    <div class="sidebar-select st-sel-2">2026 (Ano) + outubr<span class="arrow">▾</span></div>
+    <div class="sidebar-label st-label-3">SemanaDoProjeto</div>
+    <div class="sidebar-select st-sel-3">31<span class="arrow">▾</span></div>
+
+    <!-- Botões do menu -->
+    <a href="./stma.html" class="menu-botao st-btn-1">STMA</a>
+    <a href="./performance-semanal.html" class="menu-botao st-btn-2">PERFORMANCE SEMANAL</a>
+    <a href="./mapa-avanco.html" class="menu-botao st-btn-3">MAPA AVANÇO</a>
+    <a href="./mapa-avanco-drenagem.html" class="menu-botao st-btn-4">MAPA AVANÇO DRENAGEM</a>
+    <a href="./pluviometria.html" class="menu-botao ativo st-btn-5">PLUVIOMETRIA</a>
+
+
+    <!-- Visual nao suportado: areaChart (id: 0ed828cca489fa40ba1a) -->
+
+    <div class="kpi-flat" id="kpi-3de37231" data-visual="3de37231dbb9a875700e">
+      <div class="kpi-label">Média mm/dia</div>
+      <div class="kpi-value loading" data-kpi="3de37231">...</div>
+    </div>
+
+    <div class="kpi-flat" id="kpi-462b62f5" data-visual="462b62f59d94fb968397">
+      <div class="kpi-label">Dias impactados</div>
+      <div class="kpi-value loading" data-kpi="462b62f5">...</div>
+    </div>
+
+    <div id="chart-92bf6e58" class="chart-container" data-visual="92bf6e58012ab1a42b95"></div>
+
+    <div id="slicer-bd0e6988" class="slicer-container" data-visual="bd0e698858660041cab4"></div>
+
+    <!-- Visual nao suportado: bciCalendarCC0FA2BFE4B54EE1ACCFE383B9B1DE61 (id: c95cd022eaa2e839673b) -->
+
+    <div class="kpi-flat" id="kpi-e092e2d6" data-visual="e092e2d6fc453c7df2a5">
+      <div class="kpi-label">mm acum no mês</div>
+      <div class="kpi-value loading" data-kpi="e092e2d6">...</div>
+    </div>
+
+</div>
+</div>
+
+<script src="../assets/config.js"></script>
+<script src="../assets/pbi.js"></script>
+<script src="../assets/charts.js"></script>
+<script src="pluviometria.js"></script>
+
+</body>
+</html>

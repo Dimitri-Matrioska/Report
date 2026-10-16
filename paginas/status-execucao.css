@@ -1,0 +1,114 @@
+/* STATUS EXECUÇÃO - gerado automaticamente */
+
+.pbi-canvas {
+  background-image: url('../imagens/fundo-status-execucao.jpg');
+}
+
+/* ============================================================
+   TEXTOS DA SIDEBAR (sobrepostos na imagem)
+   ============================================================ */
+.sidebar-filtro {
+  position: absolute;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.5px;
+  z-index: 10;
+}
+.st-projeto { left: 20px; top: 120px; width: 190px; font-size: 11px; }
+.st-titulo  { left: 20px; top: 150px; width: 190px; font-size: 13px; }
+
+.sidebar-label {
+  position: absolute;
+  left: 20px;
+  color: #b8c4d9;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  z-index: 10;
+}
+.st-label-1 { top: 190px; }
+.st-label-2 { top: 250px; }
+.st-label-3 { top: 310px; }
+
+.sidebar-select {
+  position: absolute;
+  left: 20px;
+  width: 190px;
+  background: transparent;
+  border: 1px solid #4a6fa5;
+  color: #ffffff;
+  padding: 7px 8px;
+  border-radius: 2px;
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 10;
+}
+.st-sel-1 { top: 208px; }
+.st-sel-2 { top: 268px; }
+.st-sel-3 { top: 328px; }
+
+.sidebar-select .arrow {
+  color: #b8c4d9;
+  font-size: 10px;
+}
+
+/* ============================================================
+   BOTÕES DO MENU
+   ============================================================ */
+.menu-botao {
+  position: absolute;
+  left: 20px;
+  width: 190px;
+  text-align: center;
+  border: 1px solid #4a6fa5;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: transparent;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  font-family: inherit;
+  z-index: 10;
+}
+.menu-botao:hover { background: #16294a; }
+.menu-botao.ativo {
+  background: #3a2a20;
+  border-color: #3a2a20;
+}
+.st-btn-1 { top: 370px; height: 35px; }
+.st-btn-2 { top: 415px; height: 50px; }
+.st-btn-3 { top: 475px; height: 40px; }
+.st-btn-4 { top: 525px; height: 50px; }
+.st-btn-5 { top: 585px; height: 40px; }
+
+/* ============================================================
+   VISUAIS (posições extraídas do PBIP)
+   ============================================================ */
+#table-3194a4fd { left: 935.96px; top: 528.41px; width: 322.87px; height: 172.9px; }
+#chart-3b83100e { left: 241.81px; top: 108.3px; width: 677.81px; height: 275.42px; }
+#slicer-53e7860e { left: 11.0px; top: 217.0px; width: 211.0px; height: 80.0px; }
+#table-5fce3a2f { left: 935.08px; top: 329.92px; width: 322.87px; height: 189.66px; }
+#kpi-65322dc1 { left: 252.38px; top: 37.49px; width: 136.67px; height: 67.51px; }
+#chart-686e2342 { left: 241.81px; top: 383.72px; width: 289.42px; height: 300.63px; }
+#chart-72434220 { left: 716.71px; top: 37.43px; width: 209.33px; height: 72.09px; }
+#kpi-76a82a0e { left: 557.01px; top: 35.85px; width: 136.67px; height: 67.51px; }
+#table-86f37fa4 { left: 534.97px; top: 383.72px; width: 386.52px; height: 300.63px; }
+#table-de275f13 { left: 941.0px; top: 36.0px; width: 319.0px; height: 296.0px; }
+#kpi-e4ce7724 { left: 404.69px; top: 35.85px; width: 136.67px; height: 67.51px; }
+#slicer-fc12dff4 { left: 10.81px; top: 304.14px; width: 212.22px; height: 79.75px; }
+
+/* Estados */
+.loading { color: #a0a0a0 !important; font-weight: 400 !important; }
+.error   { color: #d13438 !important; font-size: 8pt !important; }

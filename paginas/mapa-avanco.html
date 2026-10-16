@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>MAPA AVANÇO</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="mapa-avanco.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+</head>
+<body>
+
+<div class="canvas-wrapper" id="canvasWrapper">
+<div class="pbi-canvas" id="pbiCanvas">
+
+    <!-- Filtros da sidebar (sobrepostos na imagem) -->
+    <div class="sidebar-filtro st-projeto">PROJETO AFRODITE</div>
+    <div class="sidebar-filtro st-titulo">PERFORMANCE GERAL</div>
+    <div class="sidebar-label st-label-1">Contratada</div>
+    <div class="sidebar-select st-sel-1">TERRAM ENGENHARI<span class="arrow">▾</span></div>
+    <div class="sidebar-label st-label-2">Ano, Mês</div>
+    <div class="sidebar-select st-sel-2">2026 (Ano) + outubr<span class="arrow">▾</span></div>
+    <div class="sidebar-label st-label-3">SemanaDoProjeto</div>
+    <div class="sidebar-select st-sel-3">31<span class="arrow">▾</span></div>
+
+    <!-- Botões do menu -->
+    <a href="./stma.html" class="menu-botao st-btn-1">STMA</a>
+    <a href="./performance-semanal.html" class="menu-botao st-btn-2">PERFORMANCE SEMANAL</a>
+    <a href="./mapa-avanco.html" class="menu-botao ativo st-btn-3">MAPA AVANÇO</a>
+    <a href="./mapa-avanco-drenagem.html" class="menu-botao st-btn-4">MAPA AVANÇO DRENAGEM</a>
+    <a href="./pluviometria.html" class="menu-botao st-btn-5">PLUVIOMETRIA</a>
+
+
+    <div class="kpi-flat" id="kpi-161e379c" data-visual="161e379c97378119a724">
+      <div class="kpi-label">UTILIDADES (m³)</div>
+      <div class="kpi-value loading" data-kpi="161e379c">...</div>
+    </div>
+
+    <div id="slicer-28ca6060" class="slicer-container" data-visual="28ca60600508d740e425"></div>
+
+    <div id="table-3c33b6e3" class="table-container" data-visual="3c33b6e328ae30a76bb2"></div>
+
+    <div id="slicer-4e09031d" class="slicer-container" data-visual="4e09031d0350782dd429"></div>
+
+    <div class="kpi-flat" id="kpi-687f4078" data-visual="687f40786b7fc6ce02a2">
+      <div class="kpi-label">DATA CENTER 1 (m³)</div>
+      <div class="kpi-value loading" data-kpi="687f4078">...</div>
+    </div>
+
+    <div id="slicer-73cced44" class="slicer-container" data-visual="73cced448b4335a123c7"></div>
+
+    <div class="kpi-flat" id="kpi-a5bb84b4" data-visual="a5bb84b4de09b0a9a0e9">
+      <div class="kpi-label">TRANSELEVADOR (m³)</div>
+      <div class="kpi-value loading" data-kpi="a5bb84b4">...</div>
+    </div>
+
+    <div class="kpi-flat" id="kpi-de8f9145" data-visual="de8f9145e705c10d3a67">
+      <div class="kpi-label">ATERRO GERAL (m³)</div>
+      <div class="kpi-value loading" data-kpi="de8f9145">...</div>
+    </div>
+
+</div>
+</div>
+
+<script src="../assets/config.js"></script>
+<script src="../assets/pbi.js"></script>
+<script src="../assets/charts.js"></script>
+<script src="mapa-avanco.js"></script>
+
+</body>
+</html>

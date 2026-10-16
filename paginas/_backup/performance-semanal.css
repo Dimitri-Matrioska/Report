@@ -1,0 +1,235 @@
+/* ============================================================
+   PERFORMANCE-SEMANAL.CSS
+   Canvas 1280x720 com imagem de fundo inteira (com sidebar nativa)
+   Elementos interativos sobrepostos por cima
+   ============================================================ */
+
+.pbi-canvas {
+  position: relative;
+  width: 1280px;
+  height: 720px;
+  background-image: url('../imagens/fundo-performance-semanal.jpg');
+  background-size: 1280px 720px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  flex-shrink: 0;
+  font-family: "Segoe UI", helvetica, arial, sans-serif;
+  /* A escala proporcional (zoom) é definida em assets/style.css
+     e o fator --escala é calculado via JS (performance-semanal.js).
+     As posições internas abaixo permanecem em px absolutos do canvas 1280x720. */
+}
+
+/* ============================================================
+   TEXTOS DA SIDEBAR (sobrepostos na imagem)
+   ============================================================ */
+.sidebar-filtro {
+  position: absolute;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.5px;
+  z-index: 10;
+}
+.st-projeto {
+  left: 20px; top: 120px; width: 190px;
+  font-size: 11px;
+}
+.st-titulo {
+  left: 20px; top: 150px; width: 190px;
+  font-size: 13px;
+}
+
+.sidebar-label {
+  position: absolute;
+  left: 20px;
+  color: #b8c4d9;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  z-index: 10;
+}
+.st-label-1 { top: 190px; }
+.st-label-2 { top: 250px; }
+.st-label-3 { top: 310px; }
+
+.sidebar-select {
+  position: absolute;
+  left: 20px;
+  width: 190px;
+  background: transparent;
+  border: 1px solid #4a6fa5;
+  color: #ffffff;
+  padding: 7px 8px;
+  border-radius: 2px;
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 10;
+}
+.st-sel-1 { top: 208px; }
+.st-sel-2 { top: 268px; }
+.st-sel-3 { top: 328px; }
+
+.sidebar-select .arrow {
+  color: #b8c4d9;
+  font-size: 10px;
+}
+
+/* ============================================================
+   BOTÕES DO MENU
+   ============================================================ */
+.menu-botao {
+  position: absolute;
+  left: 20px;
+  width: 190px;
+  text-align: center;
+  border: 1px solid #4a6fa5;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: transparent;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  font-family: inherit;
+  z-index: 10;
+}
+.menu-botao:hover { background: #16294a; }
+.menu-botao.ativo {
+  background: #3a2a20;
+  border-color: #3a2a20;
+}
+
+.st-btn-1 { top: 370px; height: 35px; }
+.st-btn-2 { top: 415px; height: 50px; }
+.st-btn-3 { top: 475px; height: 40px; }
+.st-btn-4 { top: 525px; height: 50px; }
+.st-btn-5 { top: 585px; height: 40px; }
+
+/* ============================================================
+   KPI - TOPO (AVANÇO PREVISTO / REAL / DESVIO)
+   ============================================================ */
+.kpi-flat {
+  position: absolute;
+  background: #F5F5F5;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 3px;
+  z-index: 10;
+}
+.kpi-flat .kpi-label {
+  font-size: 9pt;
+  color: #252423;
+  margin-bottom: 4px;
+  line-height: 1;
+  font-weight: 600;
+}
+.kpi-flat .kpi-value {
+  font-size: 22pt;
+  font-weight: 600;
+  color: #252423;
+  line-height: 1;
+}
+.kpi-flat .kpi-value.negative { color: #E53935; }
+
+#kpi-previsto { left: 252px; top: 37px; width: 137px; height: 68px; }
+#kpi-real     { left: 405px; top: 36px; width: 137px; height: 68px; }
+#kpi-desvio   { left: 557px; top: 36px; width: 137px; height: 68px; }
+
+/* ============================================================
+   KPI - DIREITA (mm acum / dias impactados)
+   ============================================================ */
+.kpi-bordered {
+  position: absolute;
+  background: #FFFFFF;
+  border: 1px solid #e0e0e0;
+  padding: 5px;
+  display: flex;
+  align-items: stretch;
+  border-radius: 3px;
+  z-index: 10;
+}
+.kpi-bordered .kpi-accent {
+  width: 3px;
+  background: #118DFF;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+.kpi-bordered .kpi-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 0;
+}
+.kpi-bordered .kpi-label {
+  font-size: 8pt;
+  color: #605e5c;
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+.kpi-bordered .kpi-value {
+  font-size: 10pt;
+  font-weight: 600;
+  color: #252423;
+}
+
+#kpi-mm-acum         { left: 944px;  top: 158px; width: 150px; height: 50px; }
+#kpi-dias-impactados { left: 1104px; top: 158px; width: 151px; height: 50px; }
+
+/* ============================================================
+   FAIXAS AZUIS DE TÍTULO
+   ============================================================ */
+.faixa-azul {
+  position: absolute;
+  background: #0B1F3A;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  font-family: "DIN", "Segoe UI", sans-serif;
+  z-index: 10;
+}
+#faixa-curva-fisica  { left: 245px; top: 120px; width: 697px; height: 20px; }
+#faixa-pluviometria  { left: 943px; top: 12px;  width: 309px; height: 16px; }
+
+/* ============================================================
+   GRÁFICO
+   ============================================================ */
+#chart-pluviometria {
+  position: absolute;
+  left: 943px;
+  top: 28px;
+  width: 309px;
+  height: 130px;
+  z-index: 10;
+}
+
+/* ============================================================
+   ESTADOS
+   ============================================================ */
+.loading { color: #a0a0a0 !important; font-weight: 400 !important; }
+.error   { color: #d13438 !important; font-size: 8pt !important; }

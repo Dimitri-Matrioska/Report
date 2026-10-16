@@ -1,0 +1,119 @@
+/* Duplicata de ONE PAGE - gerado automaticamente */
+
+.pbi-canvas {
+  background-image: url('../imagens/fundo-duplicata-de-one-page.jpg');
+}
+
+/* ============================================================
+   TEXTOS DA SIDEBAR (sobrepostos na imagem)
+   ============================================================ */
+.sidebar-filtro {
+  position: absolute;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.5px;
+  z-index: 10;
+}
+.st-projeto { left: 20px; top: 120px; width: 190px; font-size: 11px; }
+.st-titulo  { left: 20px; top: 150px; width: 190px; font-size: 13px; }
+
+.sidebar-label {
+  position: absolute;
+  left: 20px;
+  color: #b8c4d9;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  z-index: 10;
+}
+.st-label-1 { top: 190px; }
+.st-label-2 { top: 250px; }
+.st-label-3 { top: 310px; }
+
+.sidebar-select {
+  position: absolute;
+  left: 20px;
+  width: 190px;
+  background: transparent;
+  border: 1px solid #4a6fa5;
+  color: #ffffff;
+  padding: 7px 8px;
+  border-radius: 2px;
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 10;
+}
+.st-sel-1 { top: 208px; }
+.st-sel-2 { top: 268px; }
+.st-sel-3 { top: 328px; }
+
+.sidebar-select .arrow {
+  color: #b8c4d9;
+  font-size: 10px;
+}
+
+/* ============================================================
+   BOTÕES DO MENU
+   ============================================================ */
+.menu-botao {
+  position: absolute;
+  left: 20px;
+  width: 190px;
+  text-align: center;
+  border: 1px solid #4a6fa5;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: transparent;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  font-family: inherit;
+  z-index: 10;
+}
+.menu-botao:hover { background: #16294a; }
+.menu-botao.ativo {
+  background: #3a2a20;
+  border-color: #3a2a20;
+}
+.st-btn-1 { top: 370px; height: 35px; }
+.st-btn-2 { top: 415px; height: 50px; }
+.st-btn-3 { top: 475px; height: 40px; }
+.st-btn-4 { top: 525px; height: 50px; }
+.st-btn-5 { top: 585px; height: 40px; }
+
+/* ============================================================
+   VISUAIS (posições extraídas do PBIP)
+   ============================================================ */
+#chart-0267c21c { left: 257.27px; top: 130.0px; width: 310.91px; height: 97.27px; }
+#table-0416ed24 { left: 260.78px; top: 289.43px; width: 308.06px; height: 167.64px; }
+#chart-06100487 { left: 600.0px; top: 130.0px; width: 292.73px; height: 96.36px; }
+#table-101a5ddd { left: 256.92px; top: 479.58px; width: 318.57px; height: 205.53px; }
+#slicer-192cdc36 { left: 12.17px; top: 224.38px; width: 210.87px; height: 79.75px; }
+#kpi-1ea3afbc { left: 755.0px; top: 80.0px; width: 151.0px; height: 50.0px; }
+#table-2fd91871 { left: 923.18px; top: 479.58px; width: 318.57px; height: 205.53px; }
+#kpi-33be6eed { left: 1008.72px; top: 136.12px; width: 78.81px; height: 51.58px; }
+#chart-4bed5691 { left: 1080.36px; top: 47.28px; width: 176.24px; height: 206.33px; }
+#kpi-65767086 { left: 602.17px; top: 80.35px; width: 152.38px; height: 50.44px; }
+#kpi-73b28a16 { left: 935.53px; top: 80.35px; width: 152.38px; height: 49.87px; }
+#slicer-975e0c95 { left: 9.94px; top: 144.73px; width: 212.28px; height: 80.0px; }
+#kpi-9e3b7bb7 { left: 263.78px; top: 80.35px; width: 152.38px; height: 50.44px; }
+#kpi-a9d78a7d { left: 421.0px; top: 80.0px; width: 148.0px; height: 50.0px; }
+#kpi-b7651dbd { left: 935.17px; top: 138.73px; width: 77.07px; height: 49.67px; }
+#table-dd063976 { left: 587.48px; top: 479.58px; width: 318.57px; height: 205.53px; }
+#table-f13902ea { left: 923.52px; top: 284.44px; width: 340.78px; height: 180.09px; }
+
+/* Estados */
+.loading { color: #a0a0a0 !important; font-weight: 400 !important; }
+.error   { color: #d13438 !important; font-size: 8pt !important; }

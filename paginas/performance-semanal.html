@@ -12,62 +12,71 @@
 <div class="canvas-wrapper" id="canvasWrapper">
 <div class="pbi-canvas" id="pbiCanvas">
 
-  <!-- Filtros da sidebar (sobrepostos na imagem) -->
-  <div class="sidebar-filtro st-projeto">PROJETO AFRODITE</div>
-  <div class="sidebar-filtro st-titulo">PERFORMANCE GERAL</div>
+    <!-- Filtros da sidebar (sobrepostos na imagem) -->
+    <div class="sidebar-filtro st-projeto">PROJETO AFRODITE</div>
+    <div class="sidebar-filtro st-titulo">PERFORMANCE<br>CONTRATADAS</div>
+    <div class="sidebar-label st-label-1">Contratada</div>
+    <select class="sidebar-select st-sel-1" id="sel-contratada"></select>
+    <div class="sidebar-label st-label-2">Ano, Mês</div>
+    <select class="sidebar-select st-sel-2" id="sel-mes"></select>
+    <div class="sidebar-label st-label-3">SemanaDoProjeto</div>
+    <select class="sidebar-select st-sel-3" id="sel-semana"></select>
 
-  <div class="sidebar-label st-label-1">Contratada</div>
-  <div class="sidebar-select st-sel-1">TERRAM ENGENHARI<span class="arrow">▾</span></div>
+    <!-- Botões do menu -->
+    <a href="./stma.html" class="menu-botao st-btn-1">STMA</a>
+    <a href="./performance-semanal.html" class="menu-botao ativo st-btn-2">PERFORMANCE SEMANAL</a>
+    <a href="./mapa-avanco.html" class="menu-botao st-btn-3">MAPA AVANÇO</a>
+    <a href="./mapa-avanco-drenagem.html" class="menu-botao st-btn-4">MAPA AVANÇO DRENAGEM</a>
+    <a href="./pluviometria.html" class="menu-botao st-btn-5">PLUVIOMETRIA</a>
 
-  <div class="sidebar-label st-label-2">Ano, Mês</div>
-  <div class="sidebar-select st-sel-2">2026 (Ano) + outubr<span class="arrow">▾</span></div>
 
-  <div class="sidebar-label st-label-3">SemanaDoProjeto</div>
-  <div class="sidebar-select st-sel-3">31<span class="arrow">▾</span></div>
-
-  <!-- Botões do menu -->
-  <a href="./stma.html" class="menu-botao st-btn-1">STMA</a>
-  <a href="#" class="menu-botao ativo st-btn-2">PERFORMANCE SEMANAL</a>
-  <a href="./mapa-avanco.html" class="menu-botao st-btn-3">MAPA AVANÇO</a>
-  <a href="./mapa-avanco-drenagem.html" class="menu-botao st-btn-4">MAPA AVANÇO DRENAGEM</a>
-  <a href="./pluviometria.html" class="menu-botao st-btn-5">PLUVIOMETRIA</a>
-
-  <!-- KPIs do topo -->
-  <div class="kpi-flat" id="kpi-previsto">
-    <div class="kpi-label">AVANÇO PREVISTO</div>
-    <div class="kpi-value loading" data-kpi="previsto">...</div>
-  </div>
-  <div class="kpi-flat" id="kpi-real">
-    <div class="kpi-label">AVANÇO REAL</div>
-    <div class="kpi-value loading" data-kpi="real">...</div>
-  </div>
-  <div class="kpi-flat" id="kpi-desvio">
-    <div class="kpi-label">DESVIO</div>
-    <div class="kpi-value loading" data-kpi="desvio">...</div>
-  </div>
-
-  <!-- KPIs da direita -->
-  <div class="kpi-bordered" id="kpi-mm-acum">
-    <div class="kpi-accent"></div>
-    <div class="kpi-content">
+    <div class="kpi-flat boxed" id="kpi-01b213fc" data-visual="01b213fc53a59065b539">
       <div class="kpi-label">mm acum no mês</div>
-      <div class="kpi-value loading" data-kpi="mm_acum">...</div>
+      <div class="kpi-value loading" data-kpi="01b213fc">...</div>
     </div>
-  </div>
-  <div class="kpi-bordered" id="kpi-dias-impactados">
-    <div class="kpi-accent"></div>
-    <div class="kpi-content">
+
+    <div class="kpi-flat" id="kpi-02f6851e" data-visual="02f6851e19016c5aa44b">
+      <div class="kpi-label">DESVIO</div>
+      <div class="kpi-value loading" data-kpi="02f6851e">...</div>
+    </div>
+
+    <div id="table-12e44aa3" class="table-container" data-visual="12e44aa34324ad005080"></div>
+
+    <div id="chart-1ecebfde" class="chart-container" data-visual="1ecebfde6b209038d400"></div>
+    <div class="visual-title" id="title-1ecebfde">CURVA FÍSICA - ANO</div>
+
+    <div class="kpi-flat" id="kpi-22e35e93" data-visual="22e35e935c0400d09c10">
+      <div class="kpi-label">AVANÇO PREVISTO</div>
+      <div class="kpi-value loading" data-kpi="22e35e93">...</div>
+    </div>
+
+    <div id="slicer-3e3c0cca" class="slicer-container" data-visual="3e3c0cca749291760040"></div>
+
+    <div id="slicer-47df692d" class="slicer-container" data-visual="47df692d5213d13b66d7"></div>
+
+    <div class="kpi-flat boxed" id="kpi-613f2719" data-visual="613f27198068ddb9454f">
       <div class="kpi-label">Dias impactados</div>
-      <div class="kpi-value loading" data-kpi="dias_impactados">...</div>
+      <div class="kpi-value loading" data-kpi="613f2719">...</div>
     </div>
-  </div>
 
-  <!-- Faixas azuis -->
-  <div class="faixa-azul" id="faixa-curva-fisica">CURVA FÍSICA - MÊS</div>
-  <div class="faixa-azul" id="faixa-pluviometria">PLUVIOMETRIA HISTÓRICA X REAL (mm)</div>
+    <div id="chart-62f295f1" class="chart-container" data-visual="62f295f1ed5151a2a32a"></div>
+    <div class="visual-title" id="title-62f295f1">CURVA FÍSICA - MÊS</div>
 
-  <!-- Gráfico -->
-  <div id="chart-pluviometria"></div>
+    <div class="kpi-flat" id="kpi-6b304c5c" data-visual="6b304c5c9e460a16c440">
+      <div class="kpi-label">AVANÇO REAL</div>
+      <div class="kpi-value loading" data-kpi="6b304c5c">...</div>
+    </div>
+
+    <div id="slicer-7a448040" class="slicer-container" data-visual="7a4480402ee720607081"></div>
+
+    <div id="table-9f78ce2d" class="table-container" data-visual="9f78ce2d3c7e56e6a151"></div>
+
+    <div id="chart-a2d9b88a" class="chart-container" data-visual="a2d9b88a5cde5097bc3a"></div>
+    <div class="visual-title" id="title-a2d9b88a">ADERÊNCIA REAL</div>
+
+    <div id="table-b7008cbc" class="table-container" data-visual="b7008cbc001a2d800000"></div>
+
+    <div id="chart-cfaada41" class="chart-container" data-visual="cfaada418e21e30ee815"></div>
 
 </div>
 </div>
