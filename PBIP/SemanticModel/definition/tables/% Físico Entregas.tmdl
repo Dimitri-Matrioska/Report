@@ -1,0 +1,99 @@
+table '% Físico Entregas'
+	lineageTag: 3e43a593-546e-40b1-a384-660ff55ea121
+
+	measure 'Aderência Real' = DIVIDE(max('% Físico Entregas'[Real]),max('% Físico Entregas'[Baseline]))
+		formatString: 0%;-0%;0%
+		lineageTag: 427713a6-53b8-4b3a-8cfe-32fdd3eb08dc
+
+	column 'ID Contrato'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f1a9073-9fd1-4348-ab8d-cf9862417cbb
+		summarizeBy: sum
+		sourceColumn: ID Contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column Contratada
+		dataType: string
+		lineageTag: 88ed25e5-37d2-4f26-84e8-32957f18516d
+		summarizeBy: none
+		sourceColumn: Contratada
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mês
+		dataType: string
+		lineageTag: bcda3514-3679-45cc-b965-cf5e89e18b96
+		summarizeBy: none
+		sourceColumn: Mês
+
+		annotation SummarizationSetBy = Automatic
+
+	column Entrega
+		dataType: string
+		lineageTag: ff42f5ce-5d34-40d0-91b6-3a8ce285d8a9
+		summarizeBy: none
+		sourceColumn: Entrega
+
+		annotation SummarizationSetBy = Automatic
+
+	column Data
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: a6fcc2ca-e86b-47e8-9b61-fda80838e091
+		summarizeBy: none
+		sourceColumn: Data
+
+		variation Variation
+			isDefault
+			relationship: d1d4f37d-e0a7-492f-a2ba-c826372f4a3b
+			defaultHierarchy: LocalDateTable_b3102cd2-0efc-42ef-8351-16d8395243f8.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Baseline
+		dataType: double
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 8d86a84a-331d-4b7b-beac-89c9f6e2fd66
+		summarizeBy: sum
+		sourceColumn: Baseline
+
+		annotation SummarizationSetBy = Automatic
+
+	column Real
+		dataType: double
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 28eae465-0384-440c-89c2-1ef6efb4d900
+		summarizeBy: sum
+		sourceColumn: Real
+
+		annotation SummarizationSetBy = Automatic
+
+	column Projetado
+		dataType: double
+		lineageTag: 1e76e649-a7e9-4d39-98cb-73ff99feffd0
+		summarizeBy: sum
+		sourceColumn: Projetado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition '% Físico Entregas' = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(Web.Contents("https://afonline.sharepoint.com/sites/70-OBoticario-ProjetoAfrodite/Shared%20Documents/02%20Planejamento/00%20Dados%20Report%20BI/Dados%20Gerais%20-%20Report%20AFR.xlsx"), null, true),
+				    #"% Físico Entregas_Sheet" = Fonte{[Item="% Físico Entregas",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"% Físico Entregas_Sheet", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"ID Contrato", Int64.Type}, {"Contratada", type text}, {"Mês", type text}, {"Entrega", type text}, {"Data", type date}, {"Baseline", type number}, {"Real", type number}, {"Projetado", type number}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
+

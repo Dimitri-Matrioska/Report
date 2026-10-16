@@ -1,0 +1,101 @@
+table Pluviometria
+	lineageTag: d8198fff-0a4a-4628-b7fb-e201895732e8
+
+	column Mês
+		dataType: dateTime
+		formatString: mmm/yy
+		lineageTag: 43df655f-65b5-408b-96ae-f9071f759bc0
+		summarizeBy: none
+		sourceColumn: Mês
+
+		variation Variation
+			isDefault
+			relationship: 7163e2df-7d14-4a05-9f8e-dee3243c73ca
+			defaultHierarchy: LocalDateTable_9dc60053-340b-4bb4-83bb-93a40e967ce2.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column Data
+		dataType: dateTime
+		formatString: dd/mmm
+		lineageTag: ed11f24f-3675-4a33-90f3-09b61b76f21e
+		summarizeBy: none
+		sourceColumn: Data
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column 'histórica acum'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2fffcbfa-7aef-4f39-8ab4-0ff67f656d0c
+		summarizeBy: sum
+		sourceColumn: histórica acum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'histórica média/dia'
+		dataType: int64
+		formatString: 0
+		lineageTag: 106cd681-7d87-4b65-ba9c-2fa53bef3fc4
+		summarizeBy: sum
+		sourceColumn: histórica média/dia
+
+		annotation SummarizationSetBy = Automatic
+
+	column mm/dia
+		dataType: int64
+		formatString: 0
+		lineageTag: 2a527751-91c6-4915-9a78-b69993dce14b
+		summarizeBy: sum
+		sourceColumn: mm/dia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'mm acum'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2a1d6df7-a590-4412-8c23-02865c211e38
+		summarizeBy: sum
+		sourceColumn: mm acum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'dia paralisado?'
+		dataType: string
+		lineageTag: 72b91a42-1f76-4fd8-8bb4-0fc386284f9d
+		summarizeBy: none
+		sourceColumn: dia paralisado?
+
+		annotation SummarizationSetBy = Automatic
+
+	column Semana
+		dataType: string
+		lineageTag: 6c613724-ae54-4412-b2c7-abcf503082ab
+		summarizeBy: none
+		sourceColumn: Semana
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Pluviometria = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(Web.Contents("https://afonline.sharepoint.com/sites/70-OBoticario-ProjetoAfrodite/Shared%20Documents/02%20Planejamento/00%20Dados%20Report%20BI/Dados%20Gerais%20-%20Report%20AFR.xlsx"), null, true),
+				    Pluviometria_Sheet = Fonte{[Item="Pluviometria",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Pluviometria_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Mês", type date}, {"Data", type date}, {"histórica acum", Int64.Type}, {"histórica média/dia", Int64.Type}, {"mm/dia", Int64.Type}, {"mm acum", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
+

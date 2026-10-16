@@ -5,17 +5,18 @@
 const TEMA_PBI = {
   fontFamily: '"Segoe UI", helvetica, arial, sans-serif',
   textColor: '#252423',
-  corHist: '#0B1F3A',      // azul-marinho (Histórica)
-  corReal: '#4A78D6',      // azul-claro (Real)
   corFundo: '#FFFFFF',
-  corGrid: '#E8E8E8'
+  corGrid: '#E8E8E8',
+
+  /* Paleta extraída do tema CY26SU02 */
+  cores: [
+    '#118DFF', '#12239E', '#E66C37', '#6B007B', '#E044A7',
+    '#744EC2', '#D9B300', '#D64550', '#197278', '#1AAB40'
+  ]
 };
 
 /**
- * Cria um gráfico de colunas agrupadas.
- * @param {string} elementoId — id do container no HTML
- * @param {string[]} categorias — labels do eixo X
- * @param {object[]} series — [{ nome, dados, cor }]
+ * Cria um gráfico de colunas agrupadas (clusteredColumnChart).
  */
 function renderBarChartAgrupado(elementoId, categorias, series) {
   const el = document.getElementById(elementoId);
@@ -24,17 +25,8 @@ function renderBarChartAgrupado(elementoId, categorias, series) {
   const chart = echarts.init(el, null, { renderer: 'canvas' });
 
   chart.setOption({
-    grid: {
-      left: 8,
-      right: 8,
-      top: 24,
-      bottom: 24,
-      containLabel: false
-    },
-    tooltip: {
-      trigger: 'axis',
-      axisPointer: { type: 'shadow' }
-    },
+    grid: { left: 8, right: 8, top: 24, bottom: 24, containLabel: false },
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
     xAxis: {
       type: 'category',
       data: categorias,
@@ -69,8 +61,19 @@ function renderBarChartAgrupado(elementoId, categorias, series) {
     }))
   });
 
-  // Responsivo: redimensiona quando a janela muda
   window.addEventListener('resize', () => chart.resize());
-
   return chart;
+}
+
+/**
+ * Formata um mês ISO ("2026-03-31") como "mar/26".
+ */
+const MESES_ABREV = ['jan','fev','mar','abr','mai','jun',
+                     'jul','ago','set','out','nov','dez'];
+function formatarMes(mesIso) {
+  if (!mesIso) return '';
+  const d = new Date(mesIso + 'T00:00:00');
+  const abrev = MESES_ABREV[d.getMonth()];
+  const ano = String(d.getFullYear()).slice(-2);
+  return `${abrev}/${ano}`;
 }

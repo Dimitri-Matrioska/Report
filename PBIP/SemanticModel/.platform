@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "AFR - Relatório Semanal"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "21bfdf1f-2d8f-41d7-aefe-73526137a00d"
+  }
+}

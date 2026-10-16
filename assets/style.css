@@ -2,143 +2,177 @@
    STYLE.CSS — Estilos compartilhados
    ============================================================ */
 
+:root {
+  /* Paleta do tema CY26SU02 */
+  --pbi-foreground: #252423;
+  --pbi-background: #FFFFFF;
+  --pbi-accent: #118DFF;
+  --pbi-cor-1: #118DFF;   /* Histórica */
+  --pbi-cor-2: #12239E;   /* Real */
+  --pbi-cor-3: #E66C37;
+  --pbi-cor-4: #6B007B;
+  --pbi-cor-5: #E044A7;
+  --pbi-good: #1AAB40;
+  --pbi-bad: #D64550;
+
+  --pbi-azul-escuro: #0B1F3A;   /* sidebar + faixas */
+  --pbi-sidebar-fundo: #0B1F3A;
+  --pbi-sidebar-borda: #4a6fa5;
+  --pbi-botao-ativo: #3a2a20;
+
+  --fonte-principal: "Segoe UI", helvetica, arial, sans-serif;
+}
+
 * { box-sizing: border-box; }
 
 html, body {
   margin: 0;
   padding: 0;
   background: #f3f2f1;
-  font-family: "Segoe UI", helvetica, arial, sans-serif;
-  height: 100vh;
+  font-family: var(--fonte-principal);
+  min-height: 100vh;
   overflow: hidden;
 }
 
 /* ============================================================
-   LAYOUT GERAL — Sidebar + Área do relatório
+   LAYOUT GERAL
    ============================================================ */
+/* O body funciona como área do relatório: centraliza o wrapper
+   do canvas (horizontal e verticalmente) e permite rolagem se
+   o conteúdo exceder a janela. */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 .app {
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  width: 200vw;
+  min-height: 200vh;
 }
 
 /* ============================================================
-   SIDEBAR (esquerda, escura)
+   SIDEBAR
    ============================================================ */
 .sidebar {
   width: 230px;
   flex-shrink: 0;
-  background: #0B1220;
+  background: var(--pbi-sidebar-fundo);
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  padding: 24px 16px;
+  padding: 20px 16px;
   overflow-y: auto;
 }
 
 .sidebar-logo {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
-.sidebar-logo .logo-top {
-  font-size: 22px;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 0.5px;
+.sidebar-logo .logo-img-boticario {
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 8px auto;
 }
 .sidebar-logo .logo-sub {
   font-size: 10px;
-  color: #8a94a8;
-  margin-top: 4px;
+  color: #b8c4d9;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .sidebar-titles {
-  margin-bottom: 24px;
   text-align: center;
+  margin-bottom: 20px;
 }
 .sidebar-titles .titulo {
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   color: #ffffff;
-  margin-bottom: 4px;
   letter-spacing: 0.5px;
-}
-.sidebar-titles .subtitulo {
-  font-size: 11px;
-  color: #8a94a8;
+  line-height: 1.3;
 }
 
 .sidebar-filtros {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 .sidebar-filtros .filtro-label {
+  display: block;
   font-size: 10px;
-  color: #8a94a8;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  color: #b8c4d9;
   margin-bottom: 4px;
+  margin-top: 12px;
 }
-.sidebar-filtros .filtro-valor {
-  background: #1a2332;
-  border: 1px solid #2a3446;
-  color: #ffffff;
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-size: 12px;
-  margin-bottom: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.sidebar-filtros .filtro-valor::after {
-  content: "▾";
-  color: #8a94a8;
-  font-size: 10px;
+.sidebar-filtros .filtro-label:first-child {
+  margin-top: 0;
 }
 
-/* Menu */
+.filtro-select {
+  width: 100%;
+  background: var(--pbi-sidebar-fundo);
+  border: 1px solid var(--pbi-sidebar-borda);
+  color: #ffffff;
+  padding: 8px 10px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8c4d9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px;
+  padding-right: 28px;
+}
+.filtro-select:hover { border-color: #6a8fc5; }
+.filtro-select:focus { outline: none; border-color: var(--pbi-accent); }
+.filtro-select option { background: var(--pbi-sidebar-fundo); color: #ffffff; }
+
 .sidebar-menu {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   flex: 1;
 }
-
 .sidebar-menu a {
   display: block;
-  padding: 12px 14px;
+  padding: 14px 10px;
   text-align: center;
-  background: #0d1827;
-  border: 1px solid #1a2332;
-  color: #cfd4dd;
+  background: var(--pbi-sidebar-fundo);
+  border: 1px solid var(--pbi-sidebar-borda);
+  color: #ffffff;
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 3px;
+  border-radius: 2px;
   transition: all 0.15s ease;
+  line-height: 1.3;
 }
-.sidebar-menu a:hover {
-  background: #1a2332;
-  color: #ffffff;
-}
+.sidebar-menu a:hover { background: #16294a; }
 .sidebar-menu a.active {
-  background: #3a3a3a;
-  border-color: #3a3a3a;
-  color: #ffffff;
+  background: var(--pbi-botao-ativo);
+  border-color: var(--pbi-botao-ativo);
 }
 
-/* Rodapé da sidebar */
 .sidebar-footer {
   text-align: center;
   margin-top: 16px;
   padding-top: 16px;
-  border-top: 1px solid #1a2332;
-  color: #8a94a8;
-  font-size: 10px;
-  letter-spacing: 1px;
+  border-top: 1px solid #1a2f4a;
+}
+.sidebar-footer .logo-img-afry {
+  max-width: 90px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.85;
 }
 
 /* ============================================================
@@ -146,28 +180,53 @@ html, body {
    ============================================================ */
 .report-area {
   flex: 1;
-  background: #d9d9d9;      /* cinza médio externo */
+  background: #d9d9d9;
   padding: 20px;
   overflow: auto;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
-/* Canvas que simula a página do Power BI */
+/* ------------------------------------------------------------
+   WRAPPER + CANVAS (escala proporcional 16:9)
+
+   O canvas mantém o tamanho de projeto 1280x720. As posições
+   internas dos KPIs/gráfico/faixas NÃO mudam — tudo é calibrado
+   em px absolutos dentro desse canvas.
+
+   A escala é aplicada no canvas INTEIRO via zoom (e não
+   transform: scale). O zoom reflui o layout ANTES de rasterizar,
+   mantendo textos e gráficos nítidos, ao contrário do transform
+   que rasteriza primeiro e depois estica (deixando borrado).
+
+   Como zoom reflui o layout, o .canvas-wrapper não precisa mais
+   reservar dimensões manualmente — o próprio canvas já ocupa o
+   tamanho escalado. O wrapper serve apenas como contêiner que o
+   flex do body centraliza. O JS apenas atualiza a variável CSS
+   --escala. */
+.canvas-wrapper {
+  display: block;
+  flex-shrink: 0;
+}
+
 .pbi-canvas {
   position: relative;
   width: 1280px;
   height: 720px;
-  background: #F2F2F2;      /* cinza claro da página */
+  background: #F2F2F2;
   border-radius: 4px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.15);
   overflow: hidden;
   flex-shrink: 0;
+
+  /* --escala é calculada e atualizada pelo JS */
+  --escala: 1;
+  zoom: var(--escala);
 }
 
 /* ============================================================
-   KPI PADRÃO (fundo cinza, sem borda)
+   KPI PADRÃO (flat)
    ============================================================ */
 .kpi-flat {
   position: absolute;
@@ -182,7 +241,7 @@ html, body {
 }
 .kpi-flat .kpi-label {
   font-size: 9pt;
-  color: #252423;
+  color: var(--pbi-foreground);
   margin-bottom: 4px;
   line-height: 1;
   font-weight: 600;
@@ -190,13 +249,13 @@ html, body {
 .kpi-flat .kpi-value {
   font-size: 22pt;
   font-weight: 600;
-  color: #252423;
+  color: var(--pbi-foreground);
   line-height: 1;
 }
-.kpi-flat .kpi-value.negative { color: #E53935; }
+.kpi-flat .kpi-value.negative { color: var(--pbi-bad); }
 
 /* ============================================================
-   KPI COM BORDA (accent bar azul)
+   KPI COM BORDA
    ============================================================ */
 .kpi-bordered {
   position: absolute;
@@ -209,7 +268,7 @@ html, body {
 }
 .kpi-bordered .kpi-accent {
   width: 3px;
-  background: #118DFF;
+  background: var(--pbi-accent);
   margin-right: 6px;
   flex-shrink: 0;
 }
@@ -231,15 +290,15 @@ html, body {
 .kpi-bordered .kpi-value {
   font-size: 10pt;
   font-weight: 600;
-  color: #252423;
+  color: var(--pbi-foreground);
 }
 
 /* ============================================================
-   FAIXA AZUL DE TÍTULO (barra de seção)
+   FAIXA AZUL DE TÍTULO
    ============================================================ */
 .faixa-azul {
   position: absolute;
-  background: #0B1F3A;
+  background: var(--pbi-azul-escuro);
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -249,13 +308,14 @@ html, body {
   letter-spacing: 1.5px;
   text-transform: uppercase;
   border-radius: 2px;
+  font-family: "DIN", "Segoe UI", sans-serif;
 }
 
 /* ============================================================
    Estados
    ============================================================ */
 .loading { color: #a0a0a0 !important; font-weight: 400 !important; }
-.error { color: #d13438 !important; font-size: 8pt !important; }
+.error { color: var(--pbi-bad) !important; font-size: 8pt !important; }
 
 .mock-banner {
   position: absolute;

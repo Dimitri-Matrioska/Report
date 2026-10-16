@@ -1,0 +1,34 @@
+table URL
+	lineageTag: 4b332db5-971f-4b6a-a7e1-5694c68f8113
+
+	column URL
+		lineageTag: 652b775b-84b3-4375-b7b1-6cf7ede05cd0
+		dataCategory: WebUrl
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [URL]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Link
+		lineageTag: 673d002c-bda9-4f27-b9f0-3fbb12df17a5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Link]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition URL = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "URL", STRING,
+				    "Link", STRING,
+				    {
+				        {"IGPP-GF", "https://datastudio.google.com/s/lljAyyyuZaE"}
+				    }
+				)
+
+	annotation PBI_Id = 3d1e3efe0d42491190d3d7b4e5eaed5f
+

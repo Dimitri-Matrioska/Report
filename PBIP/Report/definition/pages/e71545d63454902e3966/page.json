@@ -1,0 +1,86 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "e71545d63454902e3966",
+  "displayName": "CONTRATADAS",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "image": {
+            "image": {
+              "name": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Slide2.JPG'"
+                  }
+                }
+              },
+              "url": {
+                "expr": {
+                  "ResourcePackageItem": {
+                    "PackageName": "RegisteredResources",
+                    "PackageType": 1,
+                    "ItemName": "Slide27033151397060093.JPG"
+                  }
+                }
+              },
+              "scaling": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Fit'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "290L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "visualInteractions": [
+    {
+      "source": "e1e2baa7123676e87407",
+      "target": "3c983f28697860e74a91",
+      "type": "NoFilter"
+    },
+    {
+      "source": "e1e2baa7123676e87407",
+      "target": "ce9c8e98c71b5c147817",
+      "type": "NoFilter"
+    },
+    {
+      "source": "e1e2baa7123676e87407",
+      "target": "6681ba2ace0963b810d0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "e1e2baa7123676e87407",
+      "target": "7cc3d2704b061e04506d",
+      "type": "NoFilter"
+    }
+  ]
+}

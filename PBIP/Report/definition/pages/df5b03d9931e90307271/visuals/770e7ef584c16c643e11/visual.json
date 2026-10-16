@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "770e7ef584c16c643e11",
+  "position": {
+    "x": 835,
+    "y": 357,
+    "z": 22000,
+    "height": 95,
+    "width": 347,
+    "tabOrder": 22000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "EVM"
+                    }
+                  },
+                  "Property": "VA Valor Agregado R$"
+                }
+              },
+              "queryRef": "EVM.VA Valor Agregado R$",
+              "nativeQueryRef": "VA Valor Agregado R$"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "EVM"
+                    }
+                  },
+                  "Property": "CR Custo Incorrido"
+                }
+              },
+              "queryRef": "EVM.CR Custo Incorrido",
+              "nativeQueryRef": "CR Custo Incorrido"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,139 @@
+table 'Condicionantes MA'
+	lineageTag: 2a49ffd3-c994-4c28-9585-ae90d53ebd32
+
+	column Item
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a3b50dd-ffe6-4afd-a6ff-07c8fb845318
+		summarizeBy: sum
+		sourceColumn: Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descrição da Condicionante'
+		dataType: string
+		lineageTag: 15eae6b0-67a8-435f-bfd5-a3d35054b0a2
+		summarizeBy: none
+		sourceColumn: Descrição da Condicionante
+
+		annotation SummarizationSetBy = Automatic
+
+	column Prazo
+		dataType: string
+		lineageTag: 026f55a2-3827-496d-8169-f1349a6053d9
+		summarizeBy: none
+		sourceColumn: Prazo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Limite'
+		dataType: dateTime
+		formatString: mMM/YY
+		lineageTag: ec590bc0-84c0-43cc-9737-242dd72e70e0
+		summarizeBy: none
+		sourceColumn: Data Limite
+
+		variation Variation
+			isDefault
+			relationship: ea9c548c-b9d2-4878-8172-e4f7f81f574b
+			defaultHierarchy: LocalDateTable_6626274d-4a1a-488d-9a5b-197330f4db9b.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column Status
+		dataType: string
+		lineageTag: 9ec203f7-cdd1-454b-bf3d-fcd11ecc3500
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 26/02/2026
+		dataType: string
+		lineageTag: 09ef14ce-0f54-495e-9a9f-6647deaa09a6
+		summarizeBy: none
+		sourceColumn: 26/02/2026
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Item Audit'
+		dataType: string
+		lineageTag: ce9a3917-0b84-40d3-9873-88017433138e
+		summarizeBy: none
+		sourceColumn: Item Audit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tema
+		dataType: string
+		lineageTag: a309502d-6868-4162-9e17-d178151d5948
+		summarizeBy: none
+		sourceColumn: Tema
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descrição da Não Conformidade (Situação Detectada)'
+		dataType: string
+		lineageTag: ae18438c-60e0-4ee3-a59b-0c3e36dd0ec0
+		summarizeBy: none
+		sourceColumn: Descrição da Não Conformidade (Situação Detectada)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ação Corretiva Proposta'
+		dataType: string
+		lineageTag: a4ecc000-9a6e-4d64-9bab-444227da24fa
+		summarizeBy: none
+		sourceColumn: Ação Corretiva Proposta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Status Audit'
+		dataType: string
+		lineageTag: d1933b1e-a603-4399-ad3b-39fa56c49baf
+		summarizeBy: none
+		sourceColumn: Status Audit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Observações
+		dataType: string
+		lineageTag: 5db9d449-0777-44fe-bc25-6eba9c9180a3
+		summarizeBy: none
+		sourceColumn: Observações
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Término'
+		dataType: string
+		lineageTag: 55775646-6846-4337-8c70-af0918810206
+		summarizeBy: none
+		sourceColumn: Data Término
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ações
+		dataType: string
+		lineageTag: 497933a8-0e47-4f64-a4cf-e4f9a3fc27e0
+		summarizeBy: none
+		sourceColumn: Ações
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Condicionantes MA' = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(Web.Contents("https://afonline.sharepoint.com/sites/70-OBoticario-ProjetoAfrodite/Shared%20Documents/02%20Planejamento/00%20Dados%20Report%20BI/Dados%20Gerais%20-%20Report%20AFR.xlsx"), null, true),
+				    #"Condicionantes MA_Sheet" = Fonte{[Item="Condicionantes MA",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Condicionantes MA_Sheet", [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Item", Int64.Type}, {"Descrição da Condicionante", type text}, {"Prazo", type text}, {"Data Limite", type date}, {"Status", type any}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

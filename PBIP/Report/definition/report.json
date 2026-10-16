@@ -1,0 +1,211 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY26SU02",
+      "reportVersionAtImport": {
+        "visual": "2.6.0",
+        "report": "3.1.0",
+        "page": "2.3.0"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Grupo_Botic_rio21638983150856683.json",
+      "reportVersionAtImport": {
+        "visual": "2.7.0",
+        "report": "3.2.0",
+        "page": "2.3.1"
+      },
+      "type": "RegisteredResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "publicCustomVisuals": [
+    "bciCalendarCC0FA2BFE4B54EE1ACCFE383B9B1DE61",
+    "Gantt1448688115699",
+    "GanttChartByMAQSoftware1448688115701",
+    "stratadatimelineProDB508FD14E2E41D2B5A5522CC05312AELAPIsss",
+    "simpleImageEBC4593F96F1425FB3D84C5BF02B5075",
+    "safetyPyramidA1B2C3D4E5F6",
+    "speedometerKpiProA1B2C3D4E5F6",
+    "eaTachometer6616D82ED23A4C048E1D3CD4604742ED",
+    "linearGauge8C105C35DD8E4826903041C089AF454F",
+    "advancedGauge97290A2225EA4EB5BC5C8D85F9ACA7DA",
+    "linearGauge2EBA8C0A99F94BF297BCCB1CF5427E68"
+  ],
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY26SU02",
+          "path": "BaseThemes/CY26SU02.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "ChatGPT_Image_15_de_jul._de_2039198068076033843.png",
+          "path": "ChatGPT_Image_15_de_jul._de_2039198068076033843.png",
+          "type": "Image"
+        },
+        {
+          "name": "DJI_20260928150512_0001_V1660713648115748.JPG",
+          "path": "DJI_20260928150512_0001_V1660713648115748.JPG",
+          "type": "Image"
+        },
+        {
+          "name": "DJI_20260928150641_0004_V5060117978234815.JPG",
+          "path": "DJI_20260928150641_0004_V5060117978234815.JPG",
+          "type": "Image"
+        },
+        {
+          "name": "DJI_20261008170155_0003_V5396479844671216.JPG",
+          "path": "DJI_20261008170155_0003_V5396479844671216.JPG",
+          "type": "Image"
+        },
+        {
+          "name": "drenagem_12800902882317888.png",
+          "path": "drenagem_12800902882317888.png",
+          "type": "Image"
+        },
+        {
+          "name": "Drenagem_23092622637963888741408.png",
+          "path": "Drenagem_23092622637963888741408.png",
+          "type": "Image"
+        },
+        {
+          "name": "Farol4737681415292363.png",
+          "path": "Farol4737681415292363.png",
+          "type": "Image"
+        },
+        {
+          "name": "Grupo_Botic_rio21638983150856683.json",
+          "path": "Grupo_Botic_rio21638983150856683.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "Plano_de_Fundo_044455039329675634.jpg",
+          "path": "Plano_de_Fundo_044455039329675634.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "Plano_de_Fundo_OK17065372167641568.jpg",
+          "path": "Plano_de_Fundo_OK17065372167641568.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "Plano_de_Fundo_OK7581383607404028.jpg",
+          "path": "Plano_de_Fundo_OK7581383607404028.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "Plano_de_Fundo_OK794722990847363.jpg",
+          "path": "Plano_de_Fundo_OK794722990847363.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "Recom26082608992147859046484.png",
+          "path": "Recom26082608992147859046484.png",
+          "type": "Image"
+        },
+        {
+          "name": "Slide17314847777981348.JPG",
+          "path": "Slide17314847777981348.JPG",
+          "type": "Image"
+        },
+        {
+          "name": "Slide2022133923288611523.JPG",
+          "path": "Slide2022133923288611523.JPG",
+          "type": "Image"
+        },
+        {
+          "name": "Slide207324508673567875.JPG",
+          "path": "Slide207324508673567875.JPG",
+          "type": "Image"
+        },
+        {
+          "name": "Slide217678168577634257.JPG",
+          "path": "Slide217678168577634257.JPG",
+          "type": "Image"
+        },
+        {
+          "name": "Slide22897201604057038.JPG",
+          "path": "Slide22897201604057038.JPG",
+          "type": "Image"
+        },
+        {
+          "name": "Slide239357918315103113.JPG",
+          "path": "Slide239357918315103113.JPG",
+          "type": "Image"
+        },
+        {
+          "name": "Slide27033151397060093.JPG",
+          "path": "Slide27033151397060093.JPG",
+          "type": "Image"
+        },
+        {
+          "name": "Slide27258428636412874.JPG",
+          "path": "Slide27258428636412874.JPG",
+          "type": "Image"
+        },
+        {
+          "name": "Slide29120553905089768.JPG",
+          "path": "Slide29120553905089768.JPG",
+          "type": "Image"
+        },
+        {
+          "name": "Slide29486934672299127.JPG",
+          "path": "Slide29486934672299127.JPG",
+          "type": "Image"
+        },
+        {
+          "name": "WhatsApp_Image_2026-10-02_at_11441808969737013.jpeg",
+          "path": "WhatsApp_Image_2026-10-02_at_11441808969737013.jpeg",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

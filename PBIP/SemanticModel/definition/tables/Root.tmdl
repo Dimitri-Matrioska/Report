@@ -1,0 +1,57 @@
+table Root
+	lineageTag: 5ec5e6d5-9dca-4c36-8e5e-77c1bf96a392
+
+	column Name
+		dataType: string
+		lineageTag: a9061c26-2d98-4b33-a930-9d3ab77f3bf2
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value
+		dataType: string
+		lineageTag: 3bcf88d3-3f89-4ba5-88dd-399921c0cb2b
+		summarizeBy: none
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Root = m
+		mode: import
+		queryGroup: Main
+		source = ```
+				let
+				    BaseSharePoint = let
+				        // ===== SITE =====
+				        Site = "https://afonline.sharepoint.com/sites/70-OBoticario-ProjetoAfrodite",
+				
+				        // Raiz do site
+				        Root = SharePoint.Contents(Site, [ApiVersion = 15]),
+				
+				        // Biblioteca de documentos
+				        Docs = 
+				            try Root{[Name = "Documentos"]}[Content]
+				            otherwise Root{[Name = "Shared Documents"]}[Content],
+				
+				        // Pasta "02 Planejamento"
+				        Planejamento = Docs{[Name = "02 Planejamento"]}[Content],
+				
+				        // Pasta "00 Dados Report BI"
+				        DadosReportBI = Planejamento{[Name = "00 Dados Report BI"]}[Content]
+				    in
+				        [
+				            Site = Site,
+				            Root = Root,
+				            Docs = Docs,
+				            Planejamento = Planejamento,
+				            DadosReportBI = DadosReportBI
+				        ]
+				in
+				    BaseSharePoint
+				```
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Record
+

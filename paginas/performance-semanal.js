@@ -4,9 +4,6 @@
 
 const MES_ALVO = '2026-10-31';
 
-/* ============================================================
-   CARREGAMENTO DOS DADOS
-   ============================================================ */
 async function carregarDados() {
   const v = Date.now();
   const [pluv, fisico] = await Promise.all([
@@ -16,9 +13,6 @@ async function carregarDados() {
   return { pluv, fisico };
 }
 
-/* ============================================================
-   CÁLCULO DOS KPIs
-   ============================================================ */
 function calcMmAcum(pluv) {
   return maxDe(filtrarPorMes(pluv, MES_ALVO), 'mm_acum');
 }
@@ -28,15 +22,17 @@ function calcDiasImpactados(pluv) {
 }
 
 function calcPrevisto(fisico) {
-  const ultima = ultimaDataCom(fisico, 'real_acum');
+  const doMes = filtrarPorMes(fisico, MES_ALVO);
+  const ultima = ultimaDataCom(doMes, 'real_acum');
   if (!ultima) return 0;
-  return maxDe(fisico.filter(d => d.data === ultima), 'baseline_1_acum');
+  return maxDe(doMes.filter(d => d.data === ultima), 'baseline_1_acum');
 }
 
 function calcReal(fisico) {
-  const ultima = ultimaDataCom(fisico, 'real_acum');
+  const doMes = filtrarPorMes(fisico, MES_ALVO);
+  const ultima = ultimaDataCom(doMes, 'real_acum');
   if (!ultima) return 0;
-  return maxDe(fisico.filter(d => d.data === ultima), 'real_acum');
+  return maxDe(doMes.filter(d => d.data === ultima), 'real_acum');
 }
 
 function calcDesvio(fisico) {
@@ -47,35 +43,17 @@ function calcDesvio(fisico) {
    GRÁFICO — Pluviometria (Histórica vs Real)
    ============================================================ */
 function montarGraficoPluviometria(pluv) {
-  // Agrupa por Mês
   const meses = [...new Set(pluv.map(d => d.mes))]
     .filter(m => m !== null)
     .sort();
 
-  // Para cada mês, pega o MAX (acumulado até o último dia do mês)
-  const dadosHist = meses.map(mes => {
-    const doMes = filtrarPorMes(pluv, mes);
-    return maxDe(doMes, 'historica_acum') || 0;
-  });
-
-  const dadosReal = meses.map(mes => {
-    const doMes = filtrarPorMes(pluv, mes);
-    return maxDe(doMes, 'mm_acum') || 0;
-  });
-
-  // Formata o rótulo do eixo X: "2026-03-31" → "mar/26"
-  const MESES_ABREV = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun',
-                       'jul', 'ago', 'set', 'out', 'nov', 'dez'];
-  const labels = meses.map(mes => {
-    const d = new Date(mes + 'T00:00:00');
-    const abrev = MESES_ABREV[d.getMonth()];
-    const ano = String(d.getFullYear()).slice(-2);
-    return `${abrev}/${ano}`;
-  });
+  const dadosHist = meses.map(mes => maxDe(filtrarPorMes(pluv, mes), 'historica_acum') || 0);
+  const dadosReal = meses.map(mes => maxDe(filtrarPorMes(pluv, mes), 'mm_acum') || 0);
+  const labels = meses.map(formatarMes);
 
   renderBarChartAgrupado('chart-pluviometria', labels, [
-    { nome: 'Histórica acum', dados: dadosHist, cor: TEMA_PBI.corHist },
-    { nome: 'Real acum',      dados: dadosReal, cor: TEMA_PBI.corReal }
+    { nome: 'Histórica acum', dados: dadosHist, cor: TEMA_PBI.cores[1] },  // #12239E
+    { nome: 'Real acum',      dados: dadosReal, cor: TEMA_PBI.cores[0] }   // #118DFF
   ]);
 }
 
@@ -86,7 +64,6 @@ async function render() {
   try {
     const { pluv, fisico } = await carregarDados();
 
-    // KPIs
     const previsto = calcPrevisto(fisico);
     const real     = calcReal(fisico);
     const desvio   = calcDesvio(fisico);
@@ -106,7 +83,6 @@ async function render() {
       if (k === 'desvio' && desvio < 0) el.classList.add('negative');
     });
 
-    // Gráfico
     montarGraficoPluviometria(pluv);
 
   } catch (err) {
@@ -119,4 +95,61 @@ async function render() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', render);
+document.addEventListener('DOMContentLoaded', () => {
+  ajustarEscalaCanvas();   // escala ANTES de renderizar (canvas já no tamanho certo)
+  render();
+});
+
+/* ============================================================
+   ESCALA PROPORCIONAL DO CANVAS (16:9)
+   ------------------------------------------------------------
+   O canvas é desenhado em 1280x720 (projeto). Para preencher a
+   janela mantendo exatamente a proporção 16:9 e SEM cortar nada,
+   calculamos a maior escala que caiba tanto em largura quanto em
+   altura (descontando uma margem). A escala é aplicada via zoom
+   (e não transform: scale) no canvas INTEIRO, então KPIs, gráfico
+   e faixas escalam juntos, automaticamente — suas posições
+   internas em px absolutos não são tocadas.
+
+   Usamos zoom porque ele reflui o layout ANTES de rasterizar,
+   mantendo textos e gráficos nítidos. O transform: scale()
+   rasterizaria primeiro e depois esticaria, deixando borrado.
+
+   Como o zoom reflui o layout, o .canvas-wrapper não precisa
+   reservar dimensões manualmente: o próprio canvas já ocupa o
+   tamanho escalado e o flex do body centraliza o conjunto.
+   ============================================================ */
+
+const CANVAS_LARGURA = 1280;
+const CANVAS_ALTURA  = 720;
+const ESCALA_MARGEM  = 40;   // 20px de folga de cada lado
+const ESCALA_MAXIMA  = 2.0;  // teto p/ telas muito grandes
+const ESCALA_MINIMA  = 0.2;  // piso de segurança
+
+function ajustarEscalaCanvas() {
+  const canvas = document.getElementById('pbiCanvas');
+  if (!canvas) return;
+
+  // Dimensões úteis da janela (descontando a margem)
+  const larguraUtil = window.innerWidth  - ESCALA_MARGEM;
+  const alturaUtil  = window.innerHeight - ESCALA_MARGEM;
+
+  // Maior fator que cabe respeitando 16:9 (limita por largura E altura)
+  let escala = Math.min(
+    larguraUtil / CANVAS_LARGURA,
+    alturaUtil  / CANVAS_ALTURA
+  );
+
+  // Limita entre mínimo e máximo
+  escala = Math.max(ESCALA_MINIMA, Math.min(ESCALA_MAXIMA, escala));
+
+  // Aplica a escala via variável CSS (usada por zoom: var(--escala))
+  canvas.style.setProperty('--escala', escala);
+}
+
+// Recalcula ao redimensionar a janela (debounce simples)
+let _resizeTimer = null;
+window.addEventListener('resize', () => {
+  clearTimeout(_resizeTimer);
+  _resizeTimer = setTimeout(ajustarEscalaCanvas, 100);
+});

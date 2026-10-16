@@ -1,4 +1,3 @@
-// pbi.js — funções genéricas
 const FUNCOES = {
   0: (a) => a.length,
   1: (a) => a.length ? Math.min(...a) : 0,
@@ -12,7 +11,7 @@ function agregar(valores, funcCode) {
   return (FUNCOES[funcCode] || FUNCOES[4])(limpos);
 }
 const fmt = {
-  pct: (v) => (Number(v) || 0).toLocaleString('pt-BR', {minimumFractionDigits:1, maximumFractionDigits:1}) + '%',
+  pct: (v) => ((Number(v) || 0) * 100).toLocaleString('pt-BR', {minimumFractionDigits:1, maximumFractionDigits:1}) + '%',
   num: (v) => (Number(v) || 0).toLocaleString('pt-BR', {minimumFractionDigits:1, maximumFractionDigits:1}),
   int: (v) => Math.round(Number(v) || 0).toString()
 };

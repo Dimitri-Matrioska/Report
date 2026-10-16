@@ -1,0 +1,126 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "cd7d9f7269865866acb7",
+  "displayName": "STMA Recorrências",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "image": {
+            "image": {
+              "name": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Slide2.JPG'"
+                  }
+                }
+              },
+              "url": {
+                "expr": {
+                  "ResourcePackageItem": {
+                    "PackageName": "RegisteredResources",
+                    "PackageType": 1,
+                    "ItemName": "Slide29120553905089768.JPG"
+                  }
+                }
+              },
+              "scaling": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Fit'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "333L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "visualInteractions": [
+    {
+      "source": "4711cf644206c724b2ac",
+      "target": "823bad52a3d329027505",
+      "type": "NoFilter"
+    },
+    {
+      "source": "4711cf644206c724b2ac",
+      "target": "083fe9fbd8078b677db0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "e0fb00229069ded07d86",
+      "target": "823bad52a3d329027505",
+      "type": "NoFilter"
+    },
+    {
+      "source": "e0fb00229069ded07d86",
+      "target": "083fe9fbd8078b677db0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "e0fb00229069ded07d86",
+      "target": "177286940c1100643d1c",
+      "type": "NoFilter"
+    },
+    {
+      "source": "4711cf644206c724b2ac",
+      "target": "177286940c1100643d1c",
+      "type": "NoFilter"
+    },
+    {
+      "source": "e0fb00229069ded07d86",
+      "target": "63a499c4b8e55ad07031",
+      "type": "NoFilter"
+    },
+    {
+      "source": "4711cf644206c724b2ac",
+      "target": "63a499c4b8e55ad07031",
+      "type": "NoFilter"
+    },
+    {
+      "source": "e0fb00229069ded07d86",
+      "target": "c5915b48146a4c996dbc",
+      "type": "NoFilter"
+    },
+    {
+      "source": "4711cf644206c724b2ac",
+      "target": "c5915b48146a4c996dbc",
+      "type": "NoFilter"
+    },
+    {
+      "source": "e0fb00229069ded07d86",
+      "target": "231f6c5ac3894508bcda",
+      "type": "NoFilter"
+    },
+    {
+      "source": "4711cf644206c724b2ac",
+      "target": "231f6c5ac3894508bcda",
+      "type": "NoFilter"
+    }
+  ]
+}
