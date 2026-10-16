@@ -9,7 +9,8 @@
     "real_acum": 0.0006704163055789824,
     "aderencia": 1.0,
     "baseline_1": 0.0006704163055789824,
-    "real": 0.0006704163055789824
+    "real": 0.0006704163055789824,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -21,7 +22,8 @@
     "real_acum": 0.0015178722089311597,
     "aderencia": 1.0,
     "baseline_1": 0.0008474559033521772,
-    "real": 0.0008474559033521772
+    "real": 0.0008474559033521772,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -33,7 +35,8 @@
     "real_acum": 0.004165227859826889,
     "aderencia": 1.0,
     "baseline_1": 0.00264735565089573,
-    "real": 0.00264735565089573
+    "real": 0.00264735565089573,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -45,7 +48,8 @@
     "real_acum": 0.0068189196714665,
     "aderencia": 1.0,
     "baseline_1": 0.0026536918116396107,
-    "real": 0.0026536918116396107
+    "real": 0.0026536918116396107,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -57,7 +61,8 @@
     "real_acum": 0.009833625292931905,
     "aderencia": 1.0,
     "baseline_1": 0.003014705621465404,
-    "real": 0.003014705621465404
+    "real": 0.003014705621465404,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -69,7 +74,8 @@
     "real_acum": 0.009847544562216776,
     "aderencia": 1.0,
     "baseline_1": 1.3919269284871664e-05,
-    "real": 1.3919269284871664e-05
+    "real": 1.3919269284871664e-05,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -81,7 +87,8 @@
     "real_acum": 0.009847544562216776,
     "aderencia": 1.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -93,7 +100,8 @@
     "real_acum": 0.012012373410897975,
     "aderencia": 1.0,
     "baseline_1": 0.002164828848681198,
-    "real": 0.002164828848681198
+    "real": 0.002164828848681198,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -105,7 +113,8 @@
     "real_acum": 0.01475910325360271,
     "aderencia": 1.0,
     "baseline_1": 0.002746729842704735,
-    "real": 0.002746729842704735
+    "real": 0.002746729842704735,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -117,7 +126,8 @@
     "real_acum": 0.017505833096307447,
     "aderencia": 1.0,
     "baseline_1": 0.002746729842704735,
-    "real": 0.002746729842704735
+    "real": 0.002746729842704735,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -129,7 +139,8 @@
     "real_acum": 0.02028064721477931,
     "aderencia": 1.0,
     "baseline_1": 0.002774814118471866,
-    "real": 0.002774814118471866
+    "real": 0.002774814118471866,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -141,7 +152,8 @@
     "real_acum": 0.02120958061895177,
     "aderencia": 1.0,
     "baseline_1": 0.000928933404172459,
-    "real": 0.000928933404172459
+    "real": 0.000928933404172459,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -153,7 +165,8 @@
     "real_acum": 0.021698443581910185,
     "aderencia": 1.0,
     "baseline_1": 0.0004888629629584128,
-    "real": 0.0004888629629584128
+    "real": 0.0004888629629584128,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -165,7 +178,8 @@
     "real_acum": 0.021698443581910185,
     "aderencia": 1.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -177,7 +191,8 @@
     "real_acum": 0.02585450223794536,
     "aderencia": 1.0,
     "baseline_1": 0.004156058656035173,
-    "real": 0.004156058656035173
+    "real": 0.004156058656035173,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -189,7 +204,8 @@
     "real_acum": 0.03044032518442894,
     "aderencia": 1.0,
     "baseline_1": 0.0045858229464835806,
-    "real": 0.0045858229464835806
+    "real": 0.0045858229464835806,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -201,7 +217,8 @@
     "real_acum": 0.03612547182577365,
     "aderencia": 1.0,
     "baseline_1": 0.005685146641344706,
-    "real": 0.005685146641344706
+    "real": 0.005685146641344706,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -213,7 +230,8 @@
     "real_acum": 0.04207439216600267,
     "aderencia": 1.0,
     "baseline_1": 0.005948920340229023,
-    "real": 0.005948920340229023
+    "real": 0.005948920340229023,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -225,7 +243,8 @@
     "real_acum": 0.04410910823560067,
     "aderencia": 1.0,
     "baseline_1": 0.0020347160695979973,
-    "real": 0.0020347160695979973
+    "real": 0.0020347160695979973,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -237,7 +256,8 @@
     "real_acum": 0.044597971198559086,
     "aderencia": 1.0,
     "baseline_1": 0.0004888629629584128,
-    "real": 0.0004888629629584128
+    "real": 0.0004888629629584128,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -249,7 +269,8 @@
     "real_acum": 0.044597971198559086,
     "aderencia": 1.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -261,7 +282,8 @@
     "real_acum": 0.04970989150902191,
     "aderencia": 1.0,
     "baseline_1": 0.005111920310462823,
-    "real": 0.005111920310462823
+    "real": 0.005111920310462823,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -273,7 +295,8 @@
     "real_acum": 0.053568996178022125,
     "aderencia": 1.0,
     "baseline_1": 0.003859104669000216,
-    "real": 0.003859104669000216
+    "real": 0.003859104669000216,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -285,7 +308,8 @@
     "real_acum": 0.057388773680309584,
     "aderencia": 1.0,
     "baseline_1": 0.003819777502287461,
-    "real": 0.003819777502287461
+    "real": 0.003819777502287461,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -297,7 +321,8 @@
     "real_acum": 0.06070470701383903,
     "aderencia": 1.0,
     "baseline_1": 0.0033159333335294476,
-    "real": 0.0033159333335294476
+    "real": 0.0033159333335294476,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -309,7 +334,8 @@
     "real_acum": 0.06070470701383903,
     "aderencia": 1.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -321,7 +347,8 @@
     "real_acum": 0.06070470701383903,
     "aderencia": 1.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -333,7 +360,8 @@
     "real_acum": 0.06070470701383903,
     "aderencia": 1.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -345,7 +373,8 @@
     "real_acum": 0.06469055037349768,
     "aderencia": 1.0,
     "baseline_1": 0.003985843359658642,
-    "real": 0.003985843359658642
+    "real": 0.003985843359658642,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -357,7 +386,8 @@
     "real_acum": 0.06856762744576446,
     "aderencia": 1.0,
     "baseline_1": 0.0038770770722667785,
-    "real": 0.0038770770722667785
+    "real": 0.0038770770722667785,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -369,7 +399,8 @@
     "real_acum": 0.06877279250162618,
     "aderencia": 1.0,
     "baseline_1": 0.00020516505586172545,
-    "real": 0.00020516505586172545
+    "real": 0.00020516505586172545,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -381,7 +412,8 @@
     "real_acum": 0.07221666108199108,
     "aderencia": 1.0,
     "baseline_1": 0.003443868580364903,
-    "real": 0.003443868580364903
+    "real": 0.003443868580364903,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -393,7 +425,8 @@
     "real_acum": 0.07672632742487408,
     "aderencia": 1.0,
     "baseline_1": 0.0045096663428829935,
-    "real": 0.0045096663428829935
+    "real": 0.0045096663428829935,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -405,7 +438,8 @@
     "real_acum": 0.07892472685183788,
     "aderencia": 1.0,
     "baseline_1": 0.002198399426963797,
-    "real": 0.002198399426963797
+    "real": 0.002198399426963797,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -417,7 +451,8 @@
     "real_acum": 0.07892472685183788,
     "aderencia": 1.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -429,7 +464,8 @@
     "real_acum": 0.08514246818848292,
     "aderencia": 1.0,
     "baseline_1": 0.006217741336645043,
-    "real": 0.006217741336645043
+    "real": 0.006217741336645043,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -441,7 +477,8 @@
     "real_acum": 0.09040954396463859,
     "aderencia": 1.0,
     "baseline_1": 0.0052670757761556644,
-    "real": 0.0052670757761556644
+    "real": 0.0052670757761556644,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -453,7 +490,8 @@
     "real_acum": 0.0982511396580487,
     "aderencia": 1.0,
     "baseline_1": 0.007841595693410109,
-    "real": 0.007841595693410109
+    "real": 0.007841595693410109,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -465,7 +503,8 @@
     "real_acum": 0.1032106568106665,
     "aderencia": 1.0,
     "baseline_1": 0.004959517152617807,
-    "real": 0.004959517152617807
+    "real": 0.004959517152617807,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -477,7 +516,8 @@
     "real_acum": 0.10915439285869828,
     "aderencia": 1.0,
     "baseline_1": 0.005943736048031774,
-    "real": 0.005943736048031774
+    "real": 0.005943736048031774,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -489,7 +529,8 @@
     "real_acum": 0.11254354832471856,
     "aderencia": 1.0,
     "baseline_1": 0.0033891554660202858,
-    "real": 0.0033891554660202858
+    "real": 0.0033891554660202858,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -501,7 +542,8 @@
     "real_acum": 0.112550507959361,
     "aderencia": 1.0,
     "baseline_1": 6.959634642435832e-06,
-    "real": 6.959634642435832e-06
+    "real": 6.959634642435832e-06,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -513,7 +555,8 @@
     "real_acum": 0.11808057842902794,
     "aderencia": 1.0,
     "baseline_1": 0.005530070469666944,
-    "real": 0.005530070469666944
+    "real": 0.005530070469666944,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -525,7 +568,8 @@
     "real_acum": 0.12046901526077068,
     "aderencia": 1.0,
     "baseline_1": 0.0023884368317427323,
-    "real": 0.0023884368317427323
+    "real": 0.0023884368317427323,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -537,7 +581,8 @@
     "real_acum": 0.1262300586896586,
     "aderencia": 1.0,
     "baseline_1": 0.005761043428887913,
-    "real": 0.005761043428887913
+    "real": 0.005761043428887913,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -549,7 +594,8 @@
     "real_acum": 0.1330045223489547,
     "aderencia": 1.0,
     "baseline_1": 0.006774463659296127,
-    "real": 0.006774463659296127
+    "real": 0.006774463659296127,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -561,7 +607,8 @@
     "real_acum": 0.13986949710770197,
     "aderencia": 1.0,
     "baseline_1": 0.006864974758747258,
-    "real": 0.006864974758747258
+    "real": 0.006864974758747258,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -573,7 +620,8 @@
     "real_acum": 0.143438423740294,
     "aderencia": 1.0,
     "baseline_1": 0.0035689266325920357,
-    "real": 0.0035689266325920357
+    "real": 0.0035689266325920357,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -585,7 +633,8 @@
     "real_acum": 0.143438423740294,
     "aderencia": 1.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -597,7 +646,8 @@
     "real_acum": 0.15041508368870754,
     "aderencia": 1.0,
     "baseline_1": 0.006976659948413526,
-    "real": 0.006976659948413526
+    "real": 0.006976659948413526,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -609,7 +659,8 @@
     "real_acum": 0.15589861711460007,
     "aderencia": 1.0,
     "baseline_1": 0.005483533425892528,
-    "real": 0.005483533425892528
+    "real": 0.005483533425892528,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -621,7 +672,8 @@
     "real_acum": 0.1584509300471455,
     "aderencia": 1.0,
     "baseline_1": 0.002552312932545442,
-    "real": 0.002552312932545442
+    "real": 0.002552312932545442,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -633,7 +685,8 @@
     "real_acum": 0.16442349943201087,
     "aderencia": 1.0,
     "baseline_1": 0.005972569384865373,
-    "real": 0.005972569384865373
+    "real": 0.005972569384865373,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -645,7 +698,8 @@
     "real_acum": 0.1644913970657551,
     "aderencia": 0.9864270590554989,
     "baseline_1": 0.002331249999999999,
-    "real": 6.789763374422403e-05
+    "real": 6.789763374422403e-05,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -657,7 +711,8 @@
     "real_acum": 0.1644913970657551,
     "aderencia": 0.9728268314248971,
     "baseline_1": 0.002331249999999999,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -669,7 +724,8 @@
     "real_acum": 0.1644913970657551,
     "aderencia": 0.9595965260835504,
     "baseline_1": 0.002331249999999999,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -681,7 +737,8 @@
     "real_acum": 0.16971607819387963,
     "aderencia": 0.9767916197762089,
     "baseline_1": 0.002331249999999999,
-    "real": 0.00522468112812451
+    "real": 0.00522468112812451,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -693,7 +750,8 @@
     "real_acum": 0.17510915859803197,
     "aderencia": 0.9944877770606227,
     "baseline_1": 0.002331249999999999,
-    "real": 0.005393080404152352
+    "real": 0.005393080404152352,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -705,7 +763,8 @@
     "real_acum": 0.1805063386339884,
     "aderencia": 1.0117444507830133,
     "baseline_1": 0.002331249999999999,
-    "real": 0.005397180035956423
+    "real": 0.005397180035956423,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -717,7 +776,8 @@
     "real_acum": 0.18234529654739867,
     "aderencia": 1.0088692440224982,
     "baseline_1": 0.002331249999999999,
-    "real": 0.0018389579134102665
+    "real": 0.0018389579134102665,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -729,7 +789,8 @@
     "real_acum": 0.18690198472702735,
     "aderencia": 1.0209122855404762,
     "baseline_1": 0.002331249999999999,
-    "real": 0.004556688179628685
+    "real": 0.004556688179628685,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -741,7 +802,8 @@
     "real_acum": 0.1870377799945158,
     "aderencia": 1.008807921951879,
     "baseline_1": 0.002331249999999999,
-    "real": 0.00013579526748844805
+    "real": 0.00013579526748844805,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -753,7 +815,8 @@
     "real_acum": 0.1870377799945158,
     "aderencia": 0.9962808441662356,
     "baseline_1": 0.002331249999999999,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -765,7 +828,8 @@
     "real_acum": 0.19166169307634578,
     "aderencia": 1.0083888394718163,
     "baseline_1": 0.002331249999999999,
-    "real": 0.004623913081829995
+    "real": 0.004623913081829995,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -777,7 +841,8 @@
     "real_acum": 0.19616028060886084,
     "aderencia": 1.0195520297089387,
     "baseline_1": 0.002331249999999999,
-    "real": 0.004498587532515057
+    "real": 0.004498587532515057,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -789,7 +854,8 @@
     "real_acum": 0.2006539083348624,
     "aderencia": 1.0304224645701598,
     "baseline_1": 0.002331249999999999,
-    "real": 0.004493627726001568
+    "real": 0.004493627726001568,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -801,7 +867,8 @@
     "real_acum": 0.20486116921017972,
     "aderencia": 1.0395825140471793,
     "baseline_1": 0.002331249999999999,
-    "real": 0.004207260875317319
+    "real": 0.004207260875317319,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -813,7 +880,8 @@
     "real_acum": 0.2083274249691881,
     "aderencia": 1.0448120504313978,
     "baseline_1": 0.002331249999999999,
-    "real": 0.0034662557590083767
+    "real": 0.0034662557590083767,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -825,7 +893,8 @@
     "real_acum": 0.21018642922233227,
     "aderencia": 1.0419531180757333,
     "baseline_1": 0.002331249999999999,
-    "real": 0.0018590042531441715
+    "real": 0.0018590042531441715,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -837,7 +906,8 @@
     "real_acum": 0.21018642922233227,
     "aderencia": 1.0300491892856642,
     "baseline_1": 0.002331249999999999,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -849,7 +919,8 @@
     "real_acum": 0.21216639469001577,
     "aderencia": 1.0280076908022484,
     "baseline_1": 0.002331249999999999,
-    "real": 0.001979965467683506
+    "real": 0.001979965467683506,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -861,7 +932,8 @@
     "real_acum": 0.21448475261234543,
     "aderencia": 1.0276330930770203,
     "baseline_1": 0.002331249999999999,
-    "real": 0.00231835792232965
+    "real": 0.00231835792232965,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -873,7 +945,8 @@
     "real_acum": 0.21651962219478252,
     "aderencia": 1.025923533109668,
     "baseline_1": 0.002331249999999999,
-    "real": 0.0020348695824370985
+    "real": 0.0020348695824370985,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -885,7 +958,8 @@
     "real_acum": 0.21728587066748054,
     "aderencia": 1.0183059603634699,
     "baseline_1": 0.002331249999999999,
-    "real": 0.0007662484726980219
+    "real": 0.0007662484726980219,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -897,7 +971,8 @@
     "real_acum": 0.21959327377925383,
     "aderencia": 1.0179975724810753,
     "baseline_1": 0.002331249999999999,
-    "real": 0.0023074031117732855
+    "real": 0.0023074031117732855,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -909,7 +984,8 @@
     "real_acum": 0.2198414654286795,
     "aderencia": 1.0082516851727374,
     "baseline_1": 0.002331249999999999,
-    "real": 0.0002481916494256731
+    "real": 0.0002481916494256731,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -921,7 +997,8 @@
     "real_acum": 0.2198414654286795,
     "aderencia": 0.9975857623321188,
     "baseline_1": 0.002331249999999999,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -933,7 +1010,8 @@
     "real_acum": 0.22201671889869995,
     "aderencia": 0.9969105709013129,
     "baseline_1": 0.002331249999999999,
-    "real": 0.002175253470020461
+    "real": 0.002175253470020461,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -945,7 +1023,8 @@
     "real_acum": 0.22389713018642685,
     "aderencia": 0.9949391686287585,
     "baseline_1": 0.002331249999999999,
-    "real": 0.0018804112877269087
+    "real": 0.0018804112877269087,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -957,7 +1036,8 @@
     "real_acum": 0.22689082546673292,
     "aderencia": 0.997904606021895,
     "baseline_1": 0.002331249999999999,
-    "real": 0.0029936952803060624
+    "real": 0.0029936952803060624,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -969,7 +1049,8 @@
     "real_acum": 0.2277919139338041,
     "aderencia": 0.9916996170940537,
     "baseline_1": 0.002331249999999999,
-    "real": 0.0009010884670711814
+    "real": 0.0009010884670711814,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -981,7 +1062,8 @@
     "real_acum": 0.2287569642964393,
     "aderencia": 0.9858949762106658,
     "baseline_1": 0.002331249999999999,
-    "real": 0.0009650503626352054
+    "real": 0.0009650503626352054,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -993,7 +1075,8 @@
     "real_acum": 0.22881406417220726,
     "aderencia": 0.9763316623787781,
     "baseline_1": 0.002331249999999999,
-    "real": 5.709987576795265e-05
+    "real": 5.709987576795265e-05,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1005,7 +1088,8 @@
     "real_acum": 0.22881406417220726,
     "aderencia": 0.9667154911970752,
     "baseline_1": 0.002331249999999999,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1017,7 +1101,8 @@
     "real_acum": 0.22981816208001518,
     "aderencia": 0.961487730813621,
     "baseline_1": 0.002331249999999999,
-    "real": 0.00100409790780793
+    "real": 0.00100409790780793,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1029,7 +1114,8 @@
     "real_acum": 0.23109286620008324,
     "aderencia": 0.9460027662015745,
     "baseline_1": 0.00526,
-    "real": 0.0012747041200680555
+    "real": 0.0012747041200680555,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1041,7 +1127,8 @@
     "real_acum": 0.232458491121829,
     "aderencia": 0.9315349494213656,
     "baseline_1": 0.00526,
-    "real": 0.0013656249217457804
+    "real": 0.0013656249217457804,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1053,7 +1140,8 @@
     "real_acum": 0.23405964863881518,
     "aderencia": 0.9186609382499433,
     "baseline_1": 0.00524,
-    "real": 0.0016011575169861667
+    "real": 0.0016011575169861667,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1065,7 +1153,8 @@
     "real_acum": 0.23527316925089214,
     "aderencia": 0.9048150254296902,
     "baseline_1": 0.00524,
-    "real": 0.001213520612076977
+    "real": 0.001213520612076977,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1077,7 +1166,8 @@
     "real_acum": 0.2367590547070115,
     "aderencia": 0.9105294530078325,
     "baseline_1": 0.0,
-    "real": 0.0014858854561193467
+    "real": 0.0014858854561193467,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1089,7 +1179,8 @@
     "real_acum": 0.2367590547070115,
     "aderencia": 0.9105294530078325,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1101,7 +1192,8 @@
     "real_acum": 0.2383987157233349,
     "aderencia": 0.8987241600665008,
     "baseline_1": 0.00524,
-    "real": 0.00163966101632339
+    "real": 0.00163966101632339,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1113,7 +1205,8 @@
     "real_acum": 0.24043971495929517,
     "aderencia": 0.8888599055618789,
     "baseline_1": 0.00524,
-    "real": 0.00204099923596027
+    "real": 0.00204099923596027,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1125,7 +1218,8 @@
     "real_acum": 0.24103729906398252,
     "aderencia": 0.8741359254542065,
     "baseline_1": 0.00524,
-    "real": 0.00059758410468735
+    "real": 0.00059758410468735,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1137,7 +1231,8 @@
     "real_acum": 0.24107556270416064,
     "aderencia": 0.8635640518715928,
     "baseline_1": 0.00342,
-    "real": 3.826364017810782e-05
+    "real": 3.826364017810782e-05,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1149,7 +1244,8 @@
     "real_acum": 0.2415151561809205,
     "aderencia": 0.8546682897846569,
     "baseline_1": 0.00342,
-    "real": 0.00043959347675986564
+    "real": 0.00043959347675986564,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1161,7 +1257,8 @@
     "real_acum": 0.2415151561809205,
     "aderencia": 0.8546682897846569,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1173,7 +1270,8 @@
     "real_acum": 0.2415151561809205,
     "aderencia": 0.8546682897846569,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1185,7 +1283,8 @@
     "real_acum": 0.24349821776725153,
     "aderencia": 0.8513819524964801,
     "baseline_1": 0.00342,
-    "real": 0.0019830615863310162
+    "real": 0.0019830615863310162,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1197,7 +1296,8 @@
     "real_acum": 0.24537337123649228,
     "aderencia": 0.847800443702856,
     "baseline_1": 0.00342,
-    "real": 0.001875153469240753
+    "real": 0.001875153469240753,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1209,7 +1309,8 @@
     "real_acum": 0.2466016820689916,
     "aderencia": 0.8420937550169,
     "baseline_1": 0.00342,
-    "real": 0.0012283108324993343
+    "real": 0.0012283108324993343,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1221,7 +1322,8 @@
     "real_acum": 0.2524387615517437,
     "aderencia": 0.8546714879705436,
     "baseline_1": 0.00252,
-    "real": 0.005837079482752097
+    "real": 0.005837079482752097,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1233,7 +1335,8 @@
     "real_acum": 0.2582758410344958,
     "aderencia": 0.867036413654878,
     "baseline_1": 0.00252,
-    "real": 0.005837079482752097
+    "real": 0.005837079482752097,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1245,7 +1348,8 @@
     "real_acum": 0.2641129205172479,
     "aderencia": 0.8866315892650811,
     "baseline_1": 0.0,
-    "real": 0.005837079482752097
+    "real": 0.005837079482752097,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1257,7 +1361,8 @@
     "real_acum": 0.2641129205172479,
     "aderencia": 0.8866315892650811,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1269,7 +1374,8 @@
     "real_acum": 0.26994999999999997,
     "aderencia": 0.8986246848335948,
     "baseline_1": 0.00252,
-    "real": 0.005837079482752097
+    "real": 0.005837079482752097,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1281,7 +1387,8 @@
     "real_acum": 0.26994999999999997,
     "aderencia": 0.8911490871661087,
     "baseline_1": 0.00252,
-    "real": null
+    "real": null,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1293,7 +1400,8 @@
     "real_acum": 0.26994999999999997,
     "aderencia": 0.8837968413208555,
     "baseline_1": 0.00252,
-    "real": null
+    "real": null,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1305,7 +1413,8 @@
     "real_acum": 0.26994999999999997,
     "aderencia": 0.8750873239477632,
     "baseline_1": 0.00304,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1317,7 +1426,8 @@
     "real_acum": 0.26994999999999997,
     "aderencia": 0.8665477901095406,
     "baseline_1": 0.00304,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1329,7 +1439,8 @@
     "real_acum": 0.26994999999999997,
     "aderencia": 0.8665477901095406,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1341,7 +1452,8 @@
     "real_acum": 0.26994999999999997,
     "aderencia": 0.8665477901095406,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1353,7 +1465,8 @@
     "real_acum": 0.27194999999999997,
     "aderencia": 0.8645313283042825,
     "baseline_1": 0.00304,
-    "real": 0.002
+    "real": 0.002,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1365,7 +1478,8 @@
     "real_acum": 0.27394999999999997,
     "aderencia": 0.8584988898198165,
     "baseline_1": 0.00454,
-    "real": 0.002
+    "real": 0.002,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1377,7 +1491,8 @@
     "real_acum": 0.27595,
     "aderencia": 0.8566058309000262,
     "baseline_1": 0.00304,
-    "real": 0.002
+    "real": 0.002,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1389,7 +1504,8 @@
     "real_acum": 0.2799833333333333,
     "aderencia": 0.8588353616483942,
     "baseline_1": 0.00386,
-    "real": 0.004033333333333333
+    "real": 0.004033333333333333,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1401,7 +1517,8 @@
     "real_acum": 0.28401666666666664,
     "aderencia": 0.861012713306299,
     "baseline_1": 0.00386,
-    "real": 0.004033333333333333
+    "real": 0.004033333333333333,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1413,7 +1530,8 @@
     "real_acum": 0.28805,
     "aderencia": 0.8732399931971577,
     "baseline_1": 0.0,
-    "real": 0.004033333333333333
+    "real": 0.004033333333333333,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1425,7 +1543,8 @@
     "real_acum": 0.28805,
     "aderencia": 0.8732399931971577,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1437,7 +1556,8 @@
     "real_acum": 0.2920833333333333,
     "aderencia": 0.8700115834235325,
     "baseline_1": 0.00586,
-    "real": 0.004033333333333333
+    "real": 0.004033333333333333,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1449,7 +1569,8 @@
     "real_acum": 0.29611666666666664,
     "aderencia": 0.8668939429423637,
     "baseline_1": 0.00586,
-    "real": 0.004033333333333333
+    "real": 0.004033333333333333,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1461,7 +1582,8 @@
     "real_acum": 0.30015,
     "aderencia": 0.8638814670318344,
     "baseline_1": 0.00586,
-    "real": 0.004033333333333333
+    "real": 0.004033333333333333,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1473,7 +1595,8 @@
     "real_acum": 0.30338333333333334,
     "aderencia": 0.862512978415326,
     "baseline_1": 0.0043,
-    "real": 0.003233333333333338
+    "real": 0.003233333333333338,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1485,7 +1608,8 @@
     "real_acum": 0.30661666666666665,
     "aderencia": 0.8611775447545201,
     "baseline_1": 0.0043,
-    "real": 0.003233333333333338
+    "real": 0.003233333333333338,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1497,7 +1621,8 @@
     "real_acum": 0.30984999999999996,
     "aderencia": 0.8702588321210677,
     "baseline_1": 0.0,
-    "real": 0.003233333333333338
+    "real": 0.003233333333333338,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1509,7 +1634,8 @@
     "real_acum": 0.30984999999999996,
     "aderencia": 0.8702588321210677,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1521,7 +1647,8 @@
     "real_acum": 0.31308333333333327,
     "aderencia": 0.8688469025439024,
     "baseline_1": 0.0043,
-    "real": 0.003233333333333338
+    "real": 0.003233333333333338,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1533,7 +1660,8 @@
     "real_acum": 0.3163166666666666,
     "aderencia": 0.8672304431997935,
     "baseline_1": 0.0044,
-    "real": 0.003233333333333338
+    "real": 0.003233333333333338,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1545,7 +1673,8 @@
     "real_acum": 0.3195499999999999,
     "aderencia": 0.8589049411906092,
     "baseline_1": 0.0073,
-    "real": 0.003233333333333338
+    "real": 0.003233333333333338,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1557,7 +1686,8 @@
     "real_acum": 0.3262333333333332,
     "aderencia": 0.8599945269176897,
     "baseline_1": 0.0073,
-    "real": 0.0066833333333333285
+    "real": 0.0066833333333333285,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1569,7 +1699,8 @@
     "real_acum": 0.3329166666666665,
     "aderencia": 0.8610429689254558,
     "baseline_1": 0.0073,
-    "real": 0.0066833333333333285
+    "real": 0.0066833333333333285,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1581,7 +1712,8 @@
     "real_acum": 0.33959999999999985,
     "aderencia": 0.8783284873504424,
     "baseline_1": 0.0,
-    "real": 0.0066833333333333285
+    "real": 0.0066833333333333285,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1593,7 +1725,8 @@
     "real_acum": 0.33959999999999985,
     "aderencia": 0.8783284873504424,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1605,7 +1738,8 @@
     "real_acum": 0.34628333333333317,
     "aderencia": 0.8790177622745536,
     "baseline_1": 0.0073,
-    "real": 0.0066833333333333285
+    "real": 0.0066833333333333285,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1617,7 +1751,8 @@
     "real_acum": 0.3529666666666665,
     "aderencia": 0.8796819566331073,
     "baseline_1": 0.0073,
-    "real": 0.0066833333333333285
+    "real": 0.0066833333333333285,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1629,7 +1764,8 @@
     "real_acum": 0.3596499999999998,
     "aderencia": 0.8803224148713988,
     "baseline_1": 0.0073,
-    "real": 0.0066833333333333285
+    "real": 0.0066833333333333285,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1641,7 +1777,8 @@
     "real_acum": 0.3719249999999998,
     "aderencia": 0.8998399571064772,
     "baseline_1": 0.00478,
-    "real": 0.012274999999999994
+    "real": 0.012274999999999994,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1653,7 +1790,8 @@
     "real_acum": 0.3719249999999998,
     "aderencia": 0.8895524684803066,
     "baseline_1": 0.00478,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1665,7 +1803,8 @@
     "real_acum": 0.3719249999999998,
     "aderencia": 0.8895524684803066,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1677,7 +1816,8 @@
     "real_acum": 0.3719249999999998,
     "aderencia": 0.8895524684803066,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1689,7 +1829,8 @@
     "real_acum": 0.38419999999999976,
     "aderencia": 0.9085244529900829,
     "baseline_1": 0.00478,
-    "real": 0.012274999999999994
+    "real": 0.012274999999999994,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1701,7 +1842,8 @@
     "real_acum": 0.39647499999999974,
     "aderencia": 0.9270723373085772,
     "baseline_1": 0.00478,
-    "real": 0.012274999999999994
+    "real": 0.012274999999999994,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1713,7 +1855,8 @@
     "real_acum": 0.4087499999999997,
     "aderencia": 0.9429859735262727,
     "baseline_1": 0.0058,
-    "real": 0.012274999999999994
+    "real": 0.012274999999999994,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1725,7 +1868,8 @@
     "real_acum": 0.4128999999999997,
     "aderencia": 0.9419553398990064,
     "baseline_1": 0.00488,
-    "real": 0.004149999999999987
+    "real": 0.004149999999999987,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1737,7 +1881,8 @@
     "real_acum": 0.4170499999999997,
     "aderencia": 0.9388292166741392,
     "baseline_1": 0.00588,
-    "real": 0.004149999999999987
+    "real": 0.004149999999999987,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1749,7 +1894,8 @@
     "real_acum": 0.4211999999999997,
     "aderencia": 0.9481713608995262,
     "baseline_1": 0.0,
-    "real": 0.004149999999999987
+    "real": 0.004149999999999987,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1761,7 +1907,8 @@
     "real_acum": 0.4211999999999997,
     "aderencia": 0.9481713608995262,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1773,7 +1920,8 @@
     "real_acum": 0.4253499999999997,
     "aderencia": 0.947109075164071,
     "baseline_1": 0.00488,
-    "real": 0.004149999999999987
+    "real": 0.004149999999999987,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1785,7 +1933,8 @@
     "real_acum": 0.42949999999999966,
     "aderencia": 0.946069627062122,
     "baseline_1": 0.00488,
-    "real": 0.004149999999999987
+    "real": 0.004149999999999987,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1797,7 +1946,8 @@
     "real_acum": 0.43364999999999965,
     "aderencia": 0.9450522879609711,
     "baseline_1": 0.00488,
-    "real": 0.004149999999999987
+    "real": 0.004149999999999987,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1809,7 +1959,8 @@
     "real_acum": 0.438183333333333,
     "aderencia": 0.9449644737856464,
     "baseline_1": 0.00484,
-    "real": 0.004533333333333343
+    "real": 0.004533333333333343,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1821,7 +1972,8 @@
     "real_acum": 0.4427166666666663,
     "aderencia": 0.9448784738308118,
     "baseline_1": 0.00484,
-    "real": 0.004533333333333343
+    "real": 0.004533333333333343,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1833,7 +1985,8 @@
     "real_acum": 0.44724999999999965,
     "aderencia": 0.9545538472781627,
     "baseline_1": 0.0,
-    "real": 0.004533333333333343
+    "real": 0.004533333333333343,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1845,7 +1998,8 @@
     "real_acum": 0.44724999999999965,
     "aderencia": 0.9545538472781627,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1857,7 +2011,8 @@
     "real_acum": 0.451783333333333,
     "aderencia": 0.9543706822806564,
     "baseline_1": 0.00484,
-    "real": 0.004533333333333343
+    "real": 0.004533333333333343,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1869,7 +2024,8 @@
     "real_acum": 0.4563166666666663,
     "aderencia": 0.9541912248323985,
     "baseline_1": 0.00484,
-    "real": 0.004533333333333343
+    "real": 0.004533333333333343,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1881,7 +2037,8 @@
     "real_acum": 0.46084999999999965,
     "aderencia": 0.95401536349128,
     "baseline_1": 0.00484,
-    "real": 0.004533333333333343
+    "real": 0.004533333333333343,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1893,7 +2050,8 @@
     "real_acum": 0.4660166666666663,
     "aderencia": 0.9543195590806287,
     "baseline_1": 0.00526,
-    "real": 0.005166666666666667
+    "real": 0.005166666666666667,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1905,7 +2063,8 @@
     "real_acum": 0.47118333333333295,
     "aderencia": 0.9546172711923011,
     "baseline_1": 0.00526,
-    "real": 0.005166666666666667
+    "real": 0.005166666666666667,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1917,7 +2076,8 @@
     "real_acum": 0.4763499999999996,
     "aderencia": 0.9650849360810426,
     "baseline_1": 0.0,
-    "real": 0.005166666666666667
+    "real": 0.005166666666666667,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1929,7 +2089,8 @@
     "real_acum": 0.4763499999999996,
     "aderencia": 0.9650849360810426,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1941,7 +2102,8 @@
     "real_acum": 0.48151666666666626,
     "aderencia": 0.9652659946755382,
     "baseline_1": 0.00526,
-    "real": 0.005166666666666667
+    "real": 0.005166666666666667,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1953,7 +2115,8 @@
     "real_acum": 0.4866833333333329,
     "aderencia": 0.9654432748070468,
     "baseline_1": 0.00526,
-    "real": 0.005166666666666667
+    "real": 0.005166666666666667,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1965,7 +2128,8 @@
     "real_acum": 0.49184999999999957,
     "aderencia": 0.9656168935317496,
     "baseline_1": 0.00526,
-    "real": 0.005166666666666667
+    "real": 0.005166666666666667,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1977,7 +2141,8 @@
     "real_acum": 0.49440833333333295,
     "aderencia": 0.9621394278438099,
     "baseline_1": 0.0045,
-    "real": 0.0025583333333334033
+    "real": 0.0025583333333334033,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -1989,7 +2154,8 @@
     "real_acum": 0.49696666666666633,
     "aderencia": 0.9587223390752053,
     "baseline_1": 0.0045,
-    "real": 0.0025583333333334033
+    "real": 0.0025583333333334033,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2001,7 +2167,8 @@
     "real_acum": 0.4995249999999997,
     "aderencia": 0.9636577431615977,
     "baseline_1": 0.0,
-    "real": 0.0025583333333334033
+    "real": 0.0025583333333334033,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2013,7 +2180,8 @@
     "real_acum": 0.4995249999999997,
     "aderencia": 0.9636577431615977,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2025,7 +2193,8 @@
     "real_acum": 0.5020833333333331,
     "aderencia": 0.9602569960969711,
     "baseline_1": 0.0045,
-    "real": 0.0025583333333334033
+    "real": 0.0025583333333334033,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2037,7 +2206,8 @@
     "real_acum": 0.5046416666666665,
     "aderencia": 0.9569142862753747,
     "baseline_1": 0.0045,
-    "real": 0.0025583333333334033
+    "real": 0.0025583333333334033,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2049,7 +2219,8 @@
     "real_acum": 0.5072,
     "aderencia": 0.9536281405692448,
     "baseline_1": 0.0045,
-    "real": 0.0025583333333334033
+    "real": 0.0025583333333334033,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2061,7 +2232,8 @@
     "real_acum": 0.5094,
     "aderencia": 0.9521303129444112,
     "baseline_1": 0.0031473001135978508,
-    "real": 0.0022000000000000075
+    "real": 0.0022000000000000075,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2073,7 +2245,8 @@
     "real_acum": 0.5115999999999999,
     "aderencia": 0.9506500047550623,
     "baseline_1": 0.0031473001135978508,
-    "real": 0.0022000000000000075
+    "real": 0.0022000000000000075,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2085,7 +2258,8 @@
     "real_acum": 0.5137999999999999,
     "aderencia": 0.9547380227583092,
     "baseline_1": 0.0,
-    "real": 0.0022000000000000075
+    "real": 0.0022000000000000075,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2097,7 +2271,8 @@
     "real_acum": 0.5137999999999999,
     "aderencia": 0.9547380227583092,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2109,7 +2284,8 @@
     "real_acum": 0.5159999999999999,
     "aderencia": 0.9532511595424218,
     "baseline_1": 0.0031473001135978508,
-    "real": 0.0022000000000000075
+    "real": 0.0022000000000000075,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2121,7 +2297,8 @@
     "real_acum": 0.5159999999999999,
     "aderencia": 0.9477407313944097,
     "baseline_1": 0.0031473001135978508,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2133,7 +2310,8 @@
     "real_acum": 0.5159999999999999,
     "aderencia": 0.9422936449963474,
     "baseline_1": 0.0031473001135978508,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2145,7 +2323,8 @@
     "real_acum": 0.5179999999999999,
     "aderencia": 0.9404844039362357,
     "baseline_1": 0.003656641619263268,
-    "real": 0.0020000000000000295
+    "real": 0.0020000000000000295,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2157,7 +2336,8 @@
     "real_acum": 0.5199999999999999,
     "aderencia": 0.9386959347245286,
     "baseline_1": 0.003656641619263268,
-    "real": 0.0020000000000000295
+    "real": 0.0020000000000000295,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2169,7 +2349,8 @@
     "real_acum": 0.5199999999999999,
     "aderencia": 0.9386959347245286,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2181,7 +2362,8 @@
     "real_acum": 0.5199999999999999,
     "aderencia": 0.9386959347245286,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2193,7 +2375,8 @@
     "real_acum": 0.5199999999999999,
     "aderencia": 0.9333381196826649,
     "baseline_1": 0.003656641619263268,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2205,7 +2388,8 @@
     "real_acum": 0.5219999999999999,
     "aderencia": 0.9316105082809822,
     "baseline_1": 0.003656641619263268,
-    "real": 0.0020000000000000295
+    "real": 0.0020000000000000295,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2217,7 +2401,8 @@
     "real_acum": 0.5239999999999999,
     "aderencia": 0.929902395740905,
     "baseline_1": 0.003656641619263268,
-    "real": 0.0020000000000000295
+    "real": 0.0020000000000000295,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2229,7 +2414,8 @@
     "real_acum": 0.5239999999999999,
     "aderencia": 0.9233480176211454,
     "baseline_1": 0.004132497850459024,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2241,7 +2427,8 @@
     "real_acum": 0.5239999999999999,
     "aderencia": 0.9168853893263342,
     "baseline_1": 0.004208798648150261,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2253,7 +2440,8 @@
     "real_acum": 0.5239999999999999,
     "aderencia": 0.9168853893263342,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2265,7 +2453,8 @@
     "real_acum": 0.5239999999999999,
     "aderencia": 0.9168853893263342,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2277,7 +2466,8 @@
     "real_acum": 0.5248333333333333,
     "aderencia": 0.9119606139588764,
     "baseline_1": 0.004206863497042361,
-    "real": 0.0008333333333333526
+    "real": 0.0008333333333333526,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2289,7 +2479,8 @@
     "real_acum": 0.5256666666666666,
     "aderencia": 0.907103825136612,
     "baseline_1": 0.0,
-    "real": 0.0008333333333333526
+    "real": 0.0008333333333333526,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2301,7 +2492,8 @@
     "real_acum": 0.5265,
     "aderencia": 0.9023136246786633,
     "baseline_1": 0.0042029931948265615,
-    "real": 0.0008333333333333526
+    "real": 0.0008333333333333526,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2313,7 +2505,8 @@
     "real_acum": 0.5272,
     "aderencia": 0.8978201634877385,
     "baseline_1": 0.0041570766517651835,
-    "real": 0.0007000000000000062
+    "real": 0.0007000000000000062,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2325,7 +2518,8 @@
     "real_acum": 0.5279,
     "aderencia": 0.8933829751226943,
     "baseline_1": 0.004120386009476738,
-    "real": 0.0007000000000000062
+    "real": 0.0007000000000000062,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2337,7 +2531,8 @@
     "real_acum": 0.5286000000000001,
     "aderencia": 0.8945676087324422,
     "baseline_1": 0.0,
-    "real": 0.0007000000000000062
+    "real": 0.0007000000000000062,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2349,7 +2544,8 @@
     "real_acum": 0.5286000000000001,
     "aderencia": 0.8945676087324422,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2361,7 +2557,8 @@
     "real_acum": 0.5286000000000001,
     "aderencia": 0.8890010090817357,
     "baseline_1": 0.004510755350082601,
-    "real": null
+    "real": null,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2373,7 +2570,8 @@
     "real_acum": 0.5286000000000001,
     "aderencia": 0.8835032592344978,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2385,7 +2583,8 @@
     "real_acum": 0.5293000000000001,
     "aderencia": 0.8792358803986712,
     "baseline_1": 0.004669050710708798,
-    "real": 0.0007000000000000062
+    "real": 0.0007000000000000062,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2397,7 +2596,8 @@
     "real_acum": 0.5302200000000001,
     "aderencia": 0.8758465757045162,
     "baseline_1": 0.004669050710708798,
-    "real": 0.0009199999999999875
+    "real": 0.0009199999999999875,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2409,7 +2609,8 @@
     "real_acum": 0.5311400000000002,
     "aderencia": 0.872494907681188,
     "baseline_1": 0.004501970883149569,
-    "real": 0.0009199999999999875
+    "real": 0.0009199999999999875,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2421,7 +2622,8 @@
     "real_acum": 0.5311400000000002,
     "aderencia": 0.872494907681188,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2433,7 +2635,8 @@
     "real_acum": 0.5311400000000002,
     "aderencia": 0.872494907681188,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2445,7 +2648,8 @@
     "real_acum": 0.5320600000000002,
     "aderencia": 0.8691802528833273,
     "baseline_1": 0.004418430969369954,
-    "real": 0.0009199999999999875
+    "real": 0.0009199999999999875,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2457,7 +2661,8 @@
     "real_acum": 0.5329800000000002,
     "aderencia": 0.8659020015596568,
     "baseline_1": 0.0,
-    "real": 0.0009199999999999875
+    "real": 0.0009199999999999875,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2469,7 +2674,8 @@
     "real_acum": 0.5339000000000003,
     "aderencia": 0.8626595572790434,
     "baseline_1": 0.004418430969369954,
-    "real": 0.0009199999999999875
+    "real": 0.0009199999999999875,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2481,7 +2687,8 @@
     "real_acum": 0.5353600000000002,
     "aderencia": 0.8599331791313285,
     "baseline_1": 0.004587291490513784,
-    "real": 0.0014599999999999503
+    "real": 0.0014599999999999503,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2493,7 +2700,8 @@
     "real_acum": 0.5368200000000001,
     "aderencia": 0.8572386701159334,
     "baseline_1": 0.0,
-    "real": 0.0014599999999999503
+    "real": 0.0014599999999999503,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2505,7 +2713,8 @@
     "real_acum": 0.5368200000000001,
     "aderencia": 0.8572386701159334,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2517,7 +2726,8 @@
     "real_acum": 0.5368200000000001,
     "aderencia": 0.8572386701159334,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2529,7 +2739,8 @@
     "real_acum": 0.53828,
     "aderencia": 0.854575474693592,
     "baseline_1": 0.004647483387900298,
-    "real": 0.0014599999999999503
+    "real": 0.0014599999999999503,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2541,7 +2752,8 @@
     "real_acum": 0.5397399999999999,
     "aderencia": 0.8519430501625779,
     "baseline_1": 0.004647483387900298,
-    "real": 0.0014599999999999503
+    "real": 0.0014599999999999503,
+    "projetado_acum": null
   },
   {
     "id_contrato": "110340",
@@ -2553,7 +2765,8 @@
     "real_acum": 0.5411999999999998,
     "aderencia": 0.849340866290018,
     "baseline_1": 0.004647483387900298,
-    "real": 0.0014599999999999503
+    "real": 0.0014599999999999503,
+    "projetado_acum": 0.5411999999999998
   },
   {
     "id_contrato": "110340",
@@ -2565,7 +2778,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5411999999999998
   },
   {
     "id_contrato": "110340",
@@ -2577,7 +2791,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004613203235869646,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5462447651005181
   },
   {
     "id_contrato": "110340",
@@ -2589,7 +2804,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5462447651005181
   },
   {
     "id_contrato": "110340",
@@ -2601,7 +2817,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5462447651005181
   },
   {
     "id_contrato": "110340",
@@ -2613,7 +2830,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5462447651005181
   },
   {
     "id_contrato": "110340",
@@ -2625,7 +2843,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004591087112406267,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5519729525051585
   },
   {
     "id_contrato": "110340",
@@ -2637,7 +2856,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004591087112406267,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.557701139909799
   },
   {
     "id_contrato": "110340",
@@ -2649,7 +2869,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004594834203168761,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5634293273144394
   },
   {
     "id_contrato": "110340",
@@ -2661,7 +2882,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004638862353425563,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5691575147190798
   },
   {
     "id_contrato": "110340",
@@ -2673,7 +2895,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5691575147190798
   },
   {
     "id_contrato": "110340",
@@ -2685,7 +2908,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5691575147190798
   },
   {
     "id_contrato": "110340",
@@ -2697,7 +2921,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5748857021237203
   },
   {
     "id_contrato": "110340",
@@ -2709,7 +2934,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5748857021237203
   },
   {
     "id_contrato": "110340",
@@ -2721,7 +2947,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004638862353425563,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5806138895283607
   },
   {
     "id_contrato": "110340",
@@ -2733,7 +2960,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004459156675952496,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5863256079642951
   },
   {
     "id_contrato": "110340",
@@ -2745,7 +2973,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004432064338838566,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5920373264002295
   },
   {
     "id_contrato": "110340",
@@ -2757,7 +2986,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5920373264002295
   },
   {
     "id_contrato": "110340",
@@ -2769,7 +2999,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5920373264002295
   },
   {
     "id_contrato": "110340",
@@ -2781,7 +3012,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00440980993489522,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.597749044836164
   },
   {
     "id_contrato": "110340",
@@ -2793,7 +3025,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004409622901681928,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6034607632720984
   },
   {
     "id_contrato": "110340",
@@ -2805,7 +3038,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6091724817080328
   },
   {
     "id_contrato": "110340",
@@ -2817,7 +3051,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004409685393821914,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6148842001439673
   },
   {
     "id_contrato": "110340",
@@ -2829,7 +3064,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004451153249967623,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6205717406415078
   },
   {
     "id_contrato": "110340",
@@ -2841,7 +3077,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6205717406415078
   },
   {
     "id_contrato": "110340",
@@ -2853,7 +3090,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6205717406415078
   },
   {
     "id_contrato": "110340",
@@ -2865,7 +3103,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6249917406415078
   },
   {
     "id_contrato": "110340",
@@ -2877,7 +3116,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6294117406415077
   },
   {
     "id_contrato": "110340",
@@ -2889,7 +3129,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004885767358088571,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6338317406415077
   },
   {
     "id_contrato": "110340",
@@ -2901,7 +3142,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004998924889766549,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6382517406415077
   },
   {
     "id_contrato": "110340",
@@ -2913,7 +3155,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.005000146034934609,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6426717406415077
   },
   {
     "id_contrato": "110340",
@@ -2925,7 +3168,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6426717406415077
   },
   {
     "id_contrato": "110340",
@@ -2937,7 +3181,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6426717406415077
   },
   {
     "id_contrato": "110340",
@@ -2949,7 +3194,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.005000146034934609,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6470917406415077
   },
   {
     "id_contrato": "110340",
@@ -2961,7 +3207,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0049966627629403895,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6515117406415076
   },
   {
     "id_contrato": "110340",
@@ -2973,7 +3220,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6559317406415076
   },
   {
     "id_contrato": "110340",
@@ -2985,7 +3233,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004974767799603629,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6603517406415076
   },
   {
     "id_contrato": "110340",
@@ -2997,7 +3246,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004974767799603629,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6647717406415076
   },
   {
     "id_contrato": "110340",
@@ -3009,7 +3259,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6647717406415076
   },
   {
     "id_contrato": "110340",
@@ -3021,7 +3272,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6647717406415076
   },
   {
     "id_contrato": "110340",
@@ -3033,7 +3285,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.005121244389655807,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6691917406415075
   },
   {
     "id_contrato": "110340",
@@ -3045,7 +3298,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6736117406415075
   },
   {
     "id_contrato": "110340",
@@ -3057,7 +3311,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.005209109889699453,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6780317406415075
   },
   {
     "id_contrato": "110340",
@@ -3069,7 +3324,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.005209109889699453,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6824517406415075
   },
   {
     "id_contrato": "110340",
@@ -3081,7 +3337,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6868717406415075
   },
   {
     "id_contrato": "110340",
@@ -3093,7 +3350,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6868717406415075
   },
   {
     "id_contrato": "110340",
@@ -3105,7 +3363,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6868717406415075
   },
   {
     "id_contrato": "110340",
@@ -3117,7 +3376,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6912917406415074
   },
   {
     "id_contrato": "110340",
@@ -3129,7 +3389,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.005182363142983779,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6957117406415074
   },
   {
     "id_contrato": "110340",
@@ -3141,7 +3402,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.005159119501760654,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7001317406415074
   },
   {
     "id_contrato": "110340",
@@ -3153,7 +3415,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7045517406415074
   },
   {
     "id_contrato": "110340",
@@ -3165,7 +3428,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004918560330149557,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7089717406415074
   },
   {
     "id_contrato": "110340",
@@ -3177,7 +3441,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7089717406415074
   },
   {
     "id_contrato": "110340",
@@ -3189,7 +3454,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7089717406415074
   },
   {
     "id_contrato": "110340",
@@ -3201,7 +3467,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7133917406415073
   },
   {
     "id_contrato": "110340",
@@ -3213,7 +3480,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7178117406415073
   },
   {
     "id_contrato": "110340",
@@ -3225,7 +3493,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00489160616271393,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7222317406415073
   },
   {
     "id_contrato": "110340",
@@ -3237,7 +3506,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004904184811117778,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7266517406415073
   },
   {
     "id_contrato": "110340",
@@ -3249,7 +3519,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7310717406415073
   },
   {
     "id_contrato": "110340",
@@ -3261,7 +3532,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7310717406415073
   },
   {
     "id_contrato": "110340",
@@ -3273,7 +3545,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7310717406415073
   },
   {
     "id_contrato": "110340",
@@ -3285,7 +3558,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004983250221193395,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7354917406415072
   },
   {
     "id_contrato": "110340",
@@ -3297,7 +3571,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7399117406415072
   },
   {
     "id_contrato": "110340",
@@ -3309,7 +3584,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004956987234554279,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7443317406415072
   },
   {
     "id_contrato": "110340",
@@ -3321,7 +3597,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004954850202809758,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7487517406415072
   },
   {
     "id_contrato": "110340",
@@ -3333,7 +3610,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7516117406415072
   },
   {
     "id_contrato": "110340",
@@ -3345,7 +3623,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7516117406415072
   },
   {
     "id_contrato": "110340",
@@ -3357,7 +3636,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7516117406415072
   },
   {
     "id_contrato": "110340",
@@ -3369,7 +3649,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.005098460464547579,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7544717406415071
   },
   {
     "id_contrato": "110340",
@@ -3381,7 +3662,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7573317406415071
   },
   {
     "id_contrato": "110340",
@@ -3393,7 +3675,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004918330195087942,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7601917406415071
   },
   {
     "id_contrato": "110340",
@@ -3405,7 +3688,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004918330195087942,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.763051740641507
   },
   {
     "id_contrato": "110340",
@@ -3417,7 +3701,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.765911740641507
   },
   {
     "id_contrato": "110340",
@@ -3429,7 +3714,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.765911740641507
   },
   {
     "id_contrato": "110340",
@@ -3441,7 +3727,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.765911740641507
   },
   {
     "id_contrato": "110340",
@@ -3453,7 +3740,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004864369007821699,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.768771740641507
   },
   {
     "id_contrato": "110340",
@@ -3465,7 +3753,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.771631740641507
   },
   {
     "id_contrato": "110340",
@@ -3477,7 +3766,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004154045672174196,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7744917406415069
   },
   {
     "id_contrato": "110340",
@@ -3489,7 +3779,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7773517406415069
   },
   {
     "id_contrato": "110340",
@@ -3501,7 +3792,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7783317406415069
   },
   {
     "id_contrato": "110340",
@@ -3513,7 +3805,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7783317406415069
   },
   {
     "id_contrato": "110340",
@@ -3525,7 +3818,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7783317406415069
   },
   {
     "id_contrato": "110340",
@@ -3537,7 +3831,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7793117406415069
   },
   {
     "id_contrato": "110340",
@@ -3549,7 +3844,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7802917406415069
   },
   {
     "id_contrato": "110340",
@@ -3561,7 +3857,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7812717406415068
   },
   {
     "id_contrato": "110340",
@@ -3573,7 +3870,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0036842941395277876,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7822517406415068
   },
   {
     "id_contrato": "110340",
@@ -3585,7 +3883,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7822517406415068
   },
   {
     "id_contrato": "110340",
@@ -3597,7 +3896,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7822517406415068
   },
   {
     "id_contrato": "110340",
@@ -3609,7 +3909,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7822517406415068
   },
   {
     "id_contrato": "110340",
@@ -3621,7 +3922,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7822517406415068
   },
   {
     "id_contrato": "110340",
@@ -3633,7 +3935,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7822517406415068
   },
   {
     "id_contrato": "110340",
@@ -3645,7 +3948,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.003701884679718846,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7866717406415068
   },
   {
     "id_contrato": "110340",
@@ -3657,7 +3961,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.003701884679718846,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7916580607336762
   },
   {
     "id_contrato": "110340",
@@ -3669,7 +3974,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004395444498815106,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7966443808258455
   },
   {
     "id_contrato": "110340",
@@ -3681,7 +3987,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7966443808258455
   },
   {
     "id_contrato": "110340",
@@ -3693,7 +4000,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7966443808258455
   },
   {
     "id_contrato": "110340",
@@ -3705,7 +4013,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7966443808258455
   },
   {
     "id_contrato": "110340",
@@ -3717,7 +4026,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7966443808258455
   },
   {
     "id_contrato": "110340",
@@ -3729,7 +4039,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7966443808258455
   },
   {
     "id_contrato": "110340",
@@ -3741,7 +4052,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0044237529950220955,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8016307009180149
   },
   {
     "id_contrato": "110340",
@@ -3753,7 +4065,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0044237529950220955,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8066170210101843
   },
   {
     "id_contrato": "110340",
@@ -3765,7 +4078,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8066170210101843
   },
   {
     "id_contrato": "110340",
@@ -3777,7 +4091,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8066170210101843
   },
   {
     "id_contrato": "110340",
@@ -3789,7 +4104,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0044237529950220955,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8116033411023537
   },
   {
     "id_contrato": "110340",
@@ -3801,7 +4117,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8116033411023537
   },
   {
     "id_contrato": "110340",
@@ -3813,7 +4130,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8116033411023537
   },
   {
     "id_contrato": "110340",
@@ -3825,7 +4143,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004503718447035844,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.816589661194523
   },
   {
     "id_contrato": "110340",
@@ -3837,7 +4156,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00478453751502292,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8215759812866924
   },
   {
     "id_contrato": "110340",
@@ -3849,7 +4169,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8215759812866924
   },
   {
     "id_contrato": "110340",
@@ -3861,7 +4182,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8215759812866924
   },
   {
     "id_contrato": "110340",
@@ -3873,7 +4195,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.005337654781228982,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8265623013788618
   },
   {
     "id_contrato": "110340",
@@ -3885,7 +4208,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0049863200921693735,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8315486214710311
   },
   {
     "id_contrato": "110340",
@@ -3897,7 +4221,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8315486214710311
   },
   {
     "id_contrato": "110340",
@@ -3909,7 +4234,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8315486214710311
   },
   {
     "id_contrato": "110340",
@@ -3921,7 +4247,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004045682307008477,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8365349415632005
   },
   {
     "id_contrato": "110340",
@@ -3933,7 +4260,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8365349415632005
   },
   {
     "id_contrato": "110340",
@@ -3945,7 +4273,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8365349415632005
   },
   {
     "id_contrato": "110340",
@@ -3957,7 +4286,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0037042149495699907,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8415212616553699
   },
   {
     "id_contrato": "110340",
@@ -3969,7 +4299,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8415212616553699
   },
   {
     "id_contrato": "110340",
@@ -3981,7 +4312,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8415212616553699
   },
   {
     "id_contrato": "110340",
@@ -3993,7 +4325,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8415212616553699
   },
   {
     "id_contrato": "110340",
@@ -4005,7 +4338,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0037042149495699907,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8465075817475393
   },
   {
     "id_contrato": "110340",
@@ -4017,7 +4351,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8465075817475393
   },
   {
     "id_contrato": "110340",
@@ -4029,7 +4364,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8465075817475393
   },
   {
     "id_contrato": "110340",
@@ -4041,7 +4377,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0037035444886851406,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8502111262362244
   },
   {
     "id_contrato": "110340",
@@ -4053,7 +4390,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8502111262362244
   },
   {
     "id_contrato": "110340",
@@ -4065,7 +4403,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8502111262362244
   },
   {
     "id_contrato": "110340",
@@ -4077,7 +4416,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00391995111300165,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8541310773492261
   },
   {
     "id_contrato": "110340",
@@ -4089,7 +4429,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.003955113800307104,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8580861911495332
   },
   {
     "id_contrato": "110340",
@@ -4101,7 +4442,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8580861911495332
   },
   {
     "id_contrato": "110340",
@@ -4113,7 +4455,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8580861911495332
   },
   {
     "id_contrato": "110340",
@@ -4125,7 +4468,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0039725082215482065,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8620586993710814
   },
   {
     "id_contrato": "110340",
@@ -4137,7 +4481,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8620586993710814
   },
   {
     "id_contrato": "110340",
@@ -4149,7 +4494,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8620586993710814
   },
   {
     "id_contrato": "110340",
@@ -4161,7 +4507,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004192956447457144,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8662516558185385
   },
   {
     "id_contrato": "110340",
@@ -4173,7 +4520,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.005005635481905045,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8712572913004435
   },
   {
     "id_contrato": "110340",
@@ -4185,7 +4533,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8712572913004435
   },
   {
     "id_contrato": "110340",
@@ -4197,7 +4546,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8712572913004435
   },
   {
     "id_contrato": "110340",
@@ -4209,7 +4559,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0057378713983543056,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8769951626987978
   },
   {
     "id_contrato": "110340",
@@ -4221,7 +4572,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8769951626987978
   },
   {
     "id_contrato": "110340",
@@ -4233,7 +4585,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0057378713983543056,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8827330340971522
   },
   {
     "id_contrato": "110340",
@@ -4245,7 +4598,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0057378713983543056,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8884709054955066
   },
   {
     "id_contrato": "110340",
@@ -4257,7 +4611,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0057378713983543056,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8942087768938609
   },
   {
     "id_contrato": "110340",
@@ -4269,7 +4624,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8942087768938609
   },
   {
     "id_contrato": "110340",
@@ -4281,7 +4637,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8942087768938609
   },
   {
     "id_contrato": "110340",
@@ -4293,7 +4650,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.005188536014634063,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.899397312908495
   },
   {
     "id_contrato": "110340",
@@ -4305,7 +4663,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.899397312908495
   },
   {
     "id_contrato": "110340",
@@ -4317,7 +4676,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.899397312908495
   },
   {
     "id_contrato": "110340",
@@ -4329,7 +4689,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004266990575453888,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9036643034839489
   },
   {
     "id_contrato": "110340",
@@ -4341,7 +4702,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004128105229186676,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9077924087131356
   },
   {
     "id_contrato": "110340",
@@ -4353,7 +4715,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9077924087131356
   },
   {
     "id_contrato": "110340",
@@ -4365,7 +4728,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9077924087131356
   },
   {
     "id_contrato": "110340",
@@ -4377,7 +4741,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004146686114674178,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9119390948278098
   },
   {
     "id_contrato": "110340",
@@ -4389,7 +4754,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9119390948278098
   },
   {
     "id_contrato": "110340",
@@ -4401,7 +4767,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9119390948278098
   },
   {
     "id_contrato": "110340",
@@ -4413,7 +4780,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0041941856811468685,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9161332805089566
   },
   {
     "id_contrato": "110340",
@@ -4425,7 +4793,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004782182979606781,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9209154634885633
   },
   {
     "id_contrato": "110340",
@@ -4437,7 +4806,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9209154634885633
   },
   {
     "id_contrato": "110340",
@@ -4449,7 +4819,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9209154634885633
   },
   {
     "id_contrato": "110340",
@@ -4461,7 +4832,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004782182979606781,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9256976464681701
   },
   {
     "id_contrato": "110340",
@@ -4473,7 +4845,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004782182979606781,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9304798294477769
   },
   {
     "id_contrato": "110340",
@@ -4485,7 +4858,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004782182979606781,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9352620124273836
   },
   {
     "id_contrato": "110340",
@@ -4497,7 +4871,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9352620124273836
   },
   {
     "id_contrato": "110340",
@@ -4509,7 +4884,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9352620124273836
   },
   {
     "id_contrato": "110340",
@@ -4521,7 +4897,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9352620124273836
   },
   {
     "id_contrato": "110340",
@@ -4533,7 +4910,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9352620124273836
   },
   {
     "id_contrato": "110340",
@@ -4545,7 +4923,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9352620124273836
   },
   {
     "id_contrato": "110340",
@@ -4557,7 +4936,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9352620124273836
   },
   {
     "id_contrato": "110340",
@@ -4569,7 +4949,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00508340462328262,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9408454170506663
   },
   {
     "id_contrato": "110340",
@@ -4581,7 +4962,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00538896038495082,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9462343774356171
   },
   {
     "id_contrato": "110340",
@@ -4593,7 +4975,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.004591581177037824,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.950825958612655
   },
   {
     "id_contrato": "110340",
@@ -4605,7 +4988,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.950825958612655
   },
   {
     "id_contrato": "110340",
@@ -4617,7 +5001,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.950825958612655
   },
   {
     "id_contrato": "110340",
@@ -4629,7 +5014,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.006084425660308319,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9569103842729633
   },
   {
     "id_contrato": "110340",
@@ -4641,7 +5027,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.006084425660308319,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9629948099332716
   },
   {
     "id_contrato": "110340",
@@ -4653,7 +5040,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0035171754205835675,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9665119853538552
   },
   {
     "id_contrato": "110340",
@@ -4665,7 +5053,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.002059625035395163,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9685716103892503
   },
   {
     "id_contrato": "110340",
@@ -4677,7 +5066,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.002059625035395163,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9706312354246455
   },
   {
     "id_contrato": "110340",
@@ -4689,7 +5079,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9706312354246455
   },
   {
     "id_contrato": "110340",
@@ -4701,7 +5092,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9706312354246455
   },
   {
     "id_contrato": "110340",
@@ -4713,7 +5105,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.001766214798415908,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9726908604600406
   },
   {
     "id_contrato": "110340",
@@ -4725,7 +5118,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.001766214798415908,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9747504854954357
   },
   {
     "id_contrato": "110340",
@@ -4737,7 +5131,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.001766214798415908,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9768101105308309
   },
   {
     "id_contrato": "110340",
@@ -4749,7 +5144,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00154246745288271,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.978869735566226
   },
   {
     "id_contrato": "110340",
@@ -4761,7 +5157,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0013830108907901064,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9809293606016212
   },
   {
     "id_contrato": "110340",
@@ -4773,7 +5170,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9809293606016212
   },
   {
     "id_contrato": "110340",
@@ -4785,7 +5183,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9809293606016212
   },
   {
     "id_contrato": "110340",
@@ -4797,7 +5196,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.001280135753776491,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9822094963553977
   },
   {
     "id_contrato": "110340",
@@ -4809,7 +5209,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0010307439165073728,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.983240240271905
   },
   {
     "id_contrato": "110340",
@@ -4821,7 +5222,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0003017523836590525,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9835419926555641
   },
   {
     "id_contrato": "110340",
@@ -4833,7 +5235,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 3.271131123267032e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9835747039667968
   },
   {
     "id_contrato": "110340",
@@ -4845,7 +5248,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 3.271131123267032e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9836074152780295
   },
   {
     "id_contrato": "110340",
@@ -4857,7 +5261,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9836074152780295
   },
   {
     "id_contrato": "110340",
@@ -4869,7 +5274,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9836074152780295
   },
   {
     "id_contrato": "110340",
@@ -4881,7 +5287,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 3.271131123267032e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9836401265892623
   },
   {
     "id_contrato": "110340",
@@ -4893,7 +5300,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 3.271131123267032e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.983672837900495
   },
   {
     "id_contrato": "110340",
@@ -4905,7 +5313,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 3.271131123267032e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9837055492117277
   },
   {
     "id_contrato": "110340",
@@ -4917,7 +5326,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 3.271131123267032e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9837382605229604
   },
   {
     "id_contrato": "110340",
@@ -4929,7 +5339,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 3.271131123267032e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9837709718341932
   },
   {
     "id_contrato": "110340",
@@ -4941,7 +5352,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9837709718341932
   },
   {
     "id_contrato": "110340",
@@ -4953,7 +5365,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9837709718341932
   },
   {
     "id_contrato": "110340",
@@ -4965,7 +5378,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 3.271131123267032e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9838036831454259
   },
   {
     "id_contrato": "110340",
@@ -4977,7 +5391,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 3.271131123267032e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9838363944566586
   },
   {
     "id_contrato": "110340",
@@ -4989,7 +5404,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 3.271131123267032e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9838691057678913
   },
   {
     "id_contrato": "110340",
@@ -5001,7 +5417,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 3.271131123267032e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.983901817079124
   },
   {
     "id_contrato": "110340",
@@ -5013,7 +5430,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 3.271131123267032e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9839345283903568
   },
   {
     "id_contrato": "110340",
@@ -5025,7 +5443,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9839345283903568
   },
   {
     "id_contrato": "110340",
@@ -5037,7 +5456,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9839345283903568
   },
   {
     "id_contrato": "110340",
@@ -5049,7 +5469,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 3.271131123267032e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9839672397015895
   },
   {
     "id_contrato": "110340",
@@ -5061,7 +5482,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 3.271131123267032e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9839999510128222
   },
   {
     "id_contrato": "110340",
@@ -5073,7 +5495,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 3.271131123267032e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.984032662324055
   },
   {
     "id_contrato": "110340",
@@ -5085,7 +5508,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 3.271131123267032e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9840653736352877
   },
   {
     "id_contrato": "110340",
@@ -5097,7 +5521,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 3.271131123267032e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9840980849465204
   },
   {
     "id_contrato": "110340",
@@ -5109,7 +5534,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9840980849465204
   },
   {
     "id_contrato": "110340",
@@ -5121,7 +5547,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9840980849465204
   },
   {
     "id_contrato": "110340",
@@ -5133,7 +5560,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 1.8600608184165466e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9841166855547046
   },
   {
     "id_contrato": "110340",
@@ -5145,7 +5573,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9841166855547046
   },
   {
     "id_contrato": "110340",
@@ -5157,7 +5586,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9841166855547046
   },
   {
     "id_contrato": "4082325315",
@@ -5169,7 +5599,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5181,7 +5612,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5193,7 +5625,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5205,7 +5638,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5217,7 +5651,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5229,7 +5664,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5241,7 +5677,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5253,7 +5690,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5265,7 +5703,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5277,7 +5716,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5289,7 +5729,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5301,7 +5742,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5313,7 +5755,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5325,7 +5768,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5337,7 +5781,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5349,7 +5794,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5361,7 +5807,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5373,7 +5820,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5385,7 +5833,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5397,7 +5846,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5409,7 +5859,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5421,7 +5872,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5433,7 +5885,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5445,7 +5898,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5457,7 +5911,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5469,7 +5924,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5481,7 +5937,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5493,7 +5950,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5505,7 +5963,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.0
   },
   {
     "id_contrato": "106126",
@@ -5517,7 +5976,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.0037184364505930484
   },
   {
     "id_contrato": "106126",
@@ -5529,7 +5989,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.007436872901186097
   },
   {
     "id_contrato": "106126",
@@ -5541,7 +6002,8 @@
     "real_acum": 1e-05,
     "aderencia": 1.0,
     "baseline_1": 1e-05,
-    "real": 1e-05
+    "real": 1e-05,
+    "projetado_acum": null
   },
   {
     "id_contrato": "106126",
@@ -5553,7 +6015,8 @@
     "real_acum": 1e-05,
     "aderencia": 8.239704991939067e-05,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.019556319704083294
   },
   {
     "id_contrato": "106126",
@@ -5565,7 +6028,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.03906217491347997
   },
   {
     "id_contrato": "106126",
@@ -5577,7 +6041,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.058568030122876646
   },
   {
     "id_contrato": "106126",
@@ -5589,7 +6054,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.0773567583025161
   },
   {
     "id_contrato": "106126",
@@ -5601,7 +6067,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 1e-06,
-    "real": 1e-06
+    "real": 1e-06,
+    "projetado_acum": 0.09494407737180917
   },
   {
     "id_contrato": "106126",
@@ -5613,7 +6080,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.11150528504914096
   },
   {
     "id_contrato": "106126",
@@ -5625,7 +6093,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.12799478002349704
   },
   {
     "id_contrato": "106126",
@@ -5637,7 +6106,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.14485788932693652
   },
   {
     "id_contrato": "106126",
@@ -5649,7 +6119,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.16417428134575537
   },
   {
     "id_contrato": "106126",
@@ -5661,7 +6132,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.18307190659287648
   },
   {
     "id_contrato": "106126",
@@ -5673,7 +6145,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.20138697679607134
   },
   {
     "id_contrato": "106126",
@@ -5685,7 +6158,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.2205130202823003
   },
   {
     "id_contrato": "106126",
@@ -5697,7 +6171,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.23778781362134116
   },
   {
     "id_contrato": "106126",
@@ -5709,7 +6184,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.255062606960382
   },
   {
     "id_contrato": "106126",
@@ -5721,7 +6197,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.27056671627533097
   },
   {
     "id_contrato": "106126",
@@ -5733,7 +6210,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.2882841806203948
   },
   {
     "id_contrato": "106126",
@@ -5745,7 +6223,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.3064443159714816
   },
   {
     "id_contrato": "106126",
@@ -5757,7 +6236,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.3241272519780756
   },
   {
     "id_contrato": "106126",
@@ -5769,7 +6249,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.34125330785909275
   },
   {
     "id_contrato": "106126",
@@ -5781,7 +6262,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.35760468947956964
   },
   {
     "id_contrato": "106126",
@@ -5793,7 +6275,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.3738657662148179
   },
   {
     "id_contrato": "106126",
@@ -5805,7 +6288,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.39231629374585575
   },
   {
     "id_contrato": "106126",
@@ -5817,7 +6301,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.4107668212768936
   },
   {
     "id_contrato": "106126",
@@ -5829,7 +6314,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.43054536182600045
   },
   {
     "id_contrato": "106126",
@@ -5841,7 +6327,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.4665619602180423
   },
   {
     "id_contrato": "106126",
@@ -5853,7 +6340,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5025705905319757
   },
   {
     "id_contrato": "106126",
@@ -5865,7 +6353,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5385792208459091
   },
   {
     "id_contrato": "106126",
@@ -5877,7 +6366,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5745878511598426
   },
   {
     "id_contrato": "106126",
@@ -5889,7 +6379,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6090471329526955
   },
   {
     "id_contrato": "106126",
@@ -5901,7 +6392,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6362023431461693
   },
   {
     "id_contrato": "106126",
@@ -5913,7 +6405,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6641322276001833
   },
   {
     "id_contrato": "106126",
@@ -5925,7 +6418,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7213890662032199
   },
   {
     "id_contrato": "106126",
@@ -5937,7 +6431,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7585043740322107
   },
   {
     "id_contrato": "106126",
@@ -5949,7 +6444,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7755888188386617
   },
   {
     "id_contrato": "106126",
@@ -5961,7 +6457,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7850371887912162
   },
   {
     "id_contrato": "106126",
@@ -5973,7 +6470,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.794318229103494
   },
   {
     "id_contrato": "106126",
@@ -5985,7 +6483,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8033203866819774
   },
   {
     "id_contrato": "106126",
@@ -5997,7 +6496,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.823691221037143
   },
   {
     "id_contrato": "106126",
@@ -6009,7 +6509,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.845824771338292
   },
   {
     "id_contrato": "106126",
@@ -6021,7 +6522,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8601938721937981
   },
   {
     "id_contrato": "106126",
@@ -6033,7 +6535,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8653908298045079
   },
   {
     "id_contrato": "106126",
@@ -6045,7 +6548,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8707028818767837
   },
   {
     "id_contrato": "106126",
@@ -6057,7 +6561,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8802645756068801
   },
   {
     "id_contrato": "106126",
@@ -6069,7 +6574,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8981927513508109
   },
   {
     "id_contrato": "112410",
@@ -6081,7 +6587,8 @@
     "real_acum": 0.0,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "112410",
@@ -6093,7 +6600,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": null
   },
   {
     "id_contrato": "112410",
@@ -6105,7 +6613,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.0
   },
   {
     "id_contrato": "112410",
@@ -6117,7 +6626,8 @@
     "real_acum": 0.0,
     "aderencia": 0.0,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.0
   },
   {
     "id_contrato": "112410",
@@ -6129,7 +6639,8 @@
     "real_acum": 1e-05,
     "aderencia": 1.0,
     "baseline_1": 1e-05,
-    "real": 1e-05
+    "real": 1e-05,
+    "projetado_acum": null
   },
   {
     "id_contrato": "112410",
@@ -6141,7 +6652,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 1e-06,
-    "real": 1e-06
+    "real": 1e-06,
+    "projetado_acum": 0.0263
   },
   {
     "id_contrato": "112410",
@@ -6153,7 +6665,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.062
   },
   {
     "id_contrato": "112410",
@@ -6165,7 +6678,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.1043
   },
   {
     "id_contrato": "112410",
@@ -6177,7 +6691,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.1477
   },
   {
     "id_contrato": "112410",
@@ -6189,7 +6704,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.21548742123895373
   },
   {
     "id_contrato": "112410",
@@ -6201,7 +6717,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.2985046440174277
   },
   {
     "id_contrato": "112410",
@@ -6213,7 +6730,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.40365206372552687
   },
   {
     "id_contrato": "112410",
@@ -6225,7 +6743,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.5033585320808255
   },
   {
     "id_contrato": "112410",
@@ -6237,7 +6756,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.5974543509052815
   },
   {
     "id_contrato": "112410",
@@ -6249,7 +6769,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.6796339159342182
   },
   {
     "id_contrato": "112410",
@@ -6261,7 +6782,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.7123233661571008
   },
   {
     "id_contrato": "112410",
@@ -6273,7 +6795,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.7386680912685422
   },
   {
     "id_contrato": "112410",
@@ -6285,7 +6808,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.8361320145062586
   },
   {
     "id_contrato": "112410",
@@ -6297,7 +6821,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0,
-    "real": 0.0
+    "real": 0.0,
+    "projetado_acum": 0.9273471403027174
   },
   {
     "id_contrato": "123456",
@@ -6309,7 +6834,8 @@
     "real_acum": 1.2622528588036947e-05,
     "aderencia": 1.0,
     "baseline_1": 1.2622528588036947e-05,
-    "real": 1.2622528588036947e-05
+    "real": 1.2622528588036947e-05,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6321,7 +6847,8 @@
     "real_acum": 0.00011353947568351443,
     "aderencia": 1.0,
     "baseline_1": 0.00010091694709547748,
-    "real": 0.00010091694709547748
+    "real": 0.00010091694709547748,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6333,7 +6860,8 @@
     "real_acum": 0.00019008035464771278,
     "aderencia": 1.0,
     "baseline_1": 7.654087896419835e-05,
-    "real": 7.654087896419835e-05
+    "real": 7.654087896419835e-05,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6345,7 +6873,8 @@
     "real_acum": 0.00024782258498674576,
     "aderencia": 1.0,
     "baseline_1": 5.7742230339032994e-05,
-    "real": 5.7742230339032994e-05
+    "real": 5.7742230339032994e-05,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6357,7 +6886,8 @@
     "real_acum": 0.0005403059141288582,
     "aderencia": 1.0,
     "baseline_1": 0.0002924833291421124,
-    "real": 0.0002924833291421124
+    "real": 0.0002924833291421124,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6369,7 +6899,8 @@
     "real_acum": 0.0010764194453780462,
     "aderencia": 1.0,
     "baseline_1": 0.000536113531249188,
-    "real": 0.000536113531249188
+    "real": 0.000536113531249188,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6381,7 +6912,8 @@
     "real_acum": 0.0016333340700236125,
     "aderencia": 1.0,
     "baseline_1": 0.0005569146246455662,
-    "real": 0.0005569146246455662
+    "real": 0.0005569146246455662,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6393,7 +6925,8 @@
     "real_acum": 0.001982629852567525,
     "aderencia": 1.0,
     "baseline_1": 0.0003492957825439124,
-    "real": 0.0003492957825439124
+    "real": 0.0003492957825439124,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6405,7 +6938,8 @@
     "real_acum": 0.002356369194775765,
     "aderencia": 1.0,
     "baseline_1": 0.0003737393422082402,
-    "real": 0.0003737393422082402
+    "real": 0.0003737393422082402,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6417,7 +6951,8 @@
     "real_acum": 0.0035757057730726326,
     "aderencia": 1.0,
     "baseline_1": 0.0012193365782968675,
-    "real": 0.0012193365782968675
+    "real": 0.0012193365782968675,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6429,7 +6964,8 @@
     "real_acum": 0.004305435872059716,
     "aderencia": 1.0,
     "baseline_1": 0.0007297300989870836,
-    "real": 0.0007297300989870836
+    "real": 0.0007297300989870836,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6441,7 +6977,8 @@
     "real_acum": 0.005289836547739724,
     "aderencia": 1.0,
     "baseline_1": 0.0009844006756800081,
-    "real": 0.0009844006756800081
+    "real": 0.0009844006756800081,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6453,7 +6990,8 @@
     "real_acum": 0.00660991530438563,
     "aderencia": 1.0,
     "baseline_1": 0.0013200787566459056,
-    "real": 0.0013200787566459056
+    "real": 0.0013200787566459056,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6465,7 +7003,8 @@
     "real_acum": 0.007747957534653161,
     "aderencia": 1.0,
     "baseline_1": 0.0011380422302675313,
-    "real": 0.0011380422302675313
+    "real": 0.0011380422302675313,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6477,7 +7016,8 @@
     "real_acum": 0.008984197925880767,
     "aderencia": 1.0,
     "baseline_1": 0.001236240391227607,
-    "real": 0.001236240391227607
+    "real": 0.001236240391227607,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6489,7 +7029,8 @@
     "real_acum": 0.0105759615068069,
     "aderencia": 1.0,
     "baseline_1": 0.001591763580926133,
-    "real": 0.001591763580926133
+    "real": 0.001591763580926133,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6501,7 +7042,8 @@
     "real_acum": 0.012509712309067212,
     "aderencia": 1.0,
     "baseline_1": 0.0019337508022603113,
-    "real": 0.0019337508022603113
+    "real": 0.0019337508022603113,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6513,7 +7055,8 @@
     "real_acum": 0.02131137130531446,
     "aderencia": 1.0,
     "baseline_1": 0.008801658996247248,
-    "real": 0.008801658996247248
+    "real": 0.008801658996247248,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6525,7 +7068,8 @@
     "real_acum": 0.03610016809157619,
     "aderencia": 1.0,
     "baseline_1": 0.014788796786261733,
-    "real": 0.014788796786261733
+    "real": 0.014788796786261733,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6537,7 +7081,8 @@
     "real_acum": 0.0437,
     "aderencia": 0.956134190526581,
     "baseline_1": 0.0096047135379916,
-    "real": 0.00759983190842381
+    "real": 0.00759983190842381,
+    "projetado_acum": null
   },
   {
     "id_contrato": "123456",
@@ -6549,7 +7094,8 @@
     "real_acum": 0.049784159342385656,
     "aderencia": 0.9589891760327302,
     "baseline_1": 0.00620827921374764,
-    "real": 0.006084159342385653
+    "real": 0.006084159342385653,
+    "projetado_acum": 0.049784159342385656
   },
   {
     "id_contrato": "123456",
@@ -6561,7 +7107,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00560297629021568,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.0566798028226259
   },
   {
     "id_contrato": "123456",
@@ -6573,7 +7120,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00580779351702801,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.06377249460930617
   },
   {
     "id_contrato": "123456",
@@ -6585,7 +7133,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0095029493509414,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.07386238906575512
   },
   {
     "id_contrato": "123456",
@@ -6597,7 +7146,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00930416761701994,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.08318122220449177
   },
   {
     "id_contrato": "123456",
@@ -6609,7 +7159,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0088059638250515,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.0920579025886529
   },
   {
     "id_contrato": "123456",
@@ -6621,7 +7172,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0168059204520307,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.10807158912521328
   },
   {
     "id_contrato": "123456",
@@ -6633,7 +7185,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0167096223835334,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.12605765130966398
   },
   {
     "id_contrato": "123456",
@@ -6645,7 +7198,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.018904419473875,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.14387876118808493
   },
   {
     "id_contrato": "123456",
@@ -6657,7 +7211,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0227031410177234,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.16608705227415782
   },
   {
     "id_contrato": "123456",
@@ -6669,7 +7224,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0289095130870505,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.19437393661501068
   },
   {
     "id_contrato": "123456",
@@ -6681,7 +7237,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0245087794618453,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.21913420867246738
   },
   {
     "id_contrato": "123456",
@@ -6693,7 +7250,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0296002259931108,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.24852108324114777
   },
   {
     "id_contrato": "123456",
@@ -6705,7 +7263,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0258093013149955,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.2737133721034284
   },
   {
     "id_contrato": "123456",
@@ -6717,7 +7276,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0567084915368016,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.3310185829429692
   },
   {
     "id_contrato": "123456",
@@ -6729,7 +7289,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.06570547454079535,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.3963022240679042
   },
   {
     "id_contrato": "123456",
@@ -6741,7 +7302,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0589069749126276,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.4546286276158897
   },
   {
     "id_contrato": "123456",
@@ -6753,7 +7315,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0744006854490916,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.5286088847511679
   },
   {
     "id_contrato": "123456",
@@ -6765,7 +7328,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.132000794040255,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.6566040521751076
   },
   {
     "id_contrato": "123456",
@@ -6777,7 +7341,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0605014406630532,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7136054338035601
   },
   {
     "id_contrato": "123456",
@@ -6789,7 +7354,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0546065451283224,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.7681859292420777
   },
   {
     "id_contrato": "123456",
@@ -6801,7 +7367,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0476093853979634,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8160501109958359
   },
   {
     "id_contrato": "123456",
@@ -6813,7 +7380,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0335037151153447,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.8490796668289496
   },
   {
     "id_contrato": "123456",
@@ -6825,7 +7393,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0260052127372467,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.883346096172272
   },
   {
     "id_contrato": "123456",
@@ -6837,7 +7406,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0264074061244754,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.910487843218295
   },
   {
     "id_contrato": "123456",
@@ -6849,7 +7419,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.02530367284843038,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9353876425502945
   },
   {
     "id_contrato": "123456",
@@ -6861,7 +7432,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0117017460461577,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.947427016852632
   },
   {
     "id_contrato": "123456",
@@ -6873,7 +7445,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00940224744560553,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9567611204606221
   },
   {
     "id_contrato": "123456",
@@ -6885,7 +7458,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0063009380331382,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9632873143710681
   },
   {
     "id_contrato": "123456",
@@ -6897,7 +7471,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00500461592397536,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.968316149084394
   },
   {
     "id_contrato": "123456",
@@ -6909,7 +7484,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00390514620273154,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9722981255917651
   },
   {
     "id_contrato": "123456",
@@ -6921,7 +7497,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00510521757039525,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9774570833110384
   },
   {
     "id_contrato": "123456",
@@ -6933,7 +7510,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.008806081221739,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9862871554864217
   },
   {
     "id_contrato": "123456",
@@ -6945,7 +7523,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00250439915752826,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9888720390467491
   },
   {
     "id_contrato": "123456",
@@ -6957,7 +7536,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00230008253342503,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9911692291407509
   },
   {
     "id_contrato": "123456",
@@ -6969,7 +7549,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00240026308390327,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9935895006994541
   },
   {
     "id_contrato": "123456",
@@ -6981,7 +7562,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0020029217513570646,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9955847281865305
   },
   {
     "id_contrato": "123456",
@@ -6993,7 +7575,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.0012013455149112,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9968300845092924
   },
   {
     "id_contrato": "123456",
@@ -7005,7 +7588,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.000812076190345512,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.997638376299266
   },
   {
     "id_contrato": "123456",
@@ -7017,7 +7601,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.000500651420277431,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9982009572725564
   },
   {
     "id_contrato": "123456",
@@ -7029,7 +7614,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.000300570234164884,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9985717385258805
   },
   {
     "id_contrato": "123456",
@@ -7041,7 +7627,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.000201604751224425,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9988725551166455
   },
   {
     "id_contrato": "123456",
@@ -7053,7 +7640,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.000120709301310122,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9989959411379696
   },
   {
     "id_contrato": "123456",
@@ -7065,7 +7653,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 6.0404070672697044e-05,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9990561873593382
   },
   {
     "id_contrato": "123456",
@@ -7077,7 +7666,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.000322155037217604,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9993775005336173
   },
   {
     "id_contrato": "123456",
@@ -7089,7 +7679,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.000100801301467725,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9995578293609736
   },
   {
     "id_contrato": "123456",
@@ -7101,7 +7692,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.000105232702870924,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9997425780094932
   },
   {
     "id_contrato": "123456",
@@ -7113,7 +7705,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00013028328725057763,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9998635208374668
   },
   {
     "id_contrato": "123456",
@@ -7125,7 +7718,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 0.00013028328725057763,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9999934636654404
   },
   {
     "id_contrato": "123456",
@@ -7137,7 +7731,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": 6.203961964478262e-06,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.9999996514150691
   },
   {
     "id_contrato": "61667",
@@ -7149,7 +7744,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.193
   },
   {
     "id_contrato": "61667",
@@ -7161,7 +7757,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.232
   },
   {
     "id_contrato": "61667",
@@ -7173,7 +7770,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.266
   },
   {
     "id_contrato": "61667",
@@ -7185,7 +7783,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.3
   },
   {
     "id_contrato": "61667",
@@ -7197,7 +7796,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.335
   },
   {
     "id_contrato": "61667",
@@ -7209,7 +7809,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.377
   },
   {
     "id_contrato": "61667",
@@ -7221,7 +7822,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.42
   },
   {
     "id_contrato": "61667",
@@ -7233,7 +7835,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.462
   },
   {
     "id_contrato": "61667",
@@ -7245,7 +7848,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.504
   },
   {
     "id_contrato": "61667",
@@ -7257,7 +7861,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.546
   },
   {
     "id_contrato": "61667",
@@ -7269,7 +7874,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.589
   },
   {
     "id_contrato": "61667",
@@ -7281,7 +7887,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.631
   },
   {
     "id_contrato": "61667",
@@ -7293,7 +7900,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.663
   },
   {
     "id_contrato": "61667",
@@ -7305,7 +7913,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.697
   },
   {
     "id_contrato": "61667",
@@ -7317,7 +7926,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.731
   },
   {
     "id_contrato": "61667",
@@ -7329,7 +7939,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.765
   },
   {
     "id_contrato": "61667",
@@ -7341,7 +7952,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.799
   },
   {
     "id_contrato": "61667",
@@ -7353,7 +7965,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.833
   },
   {
     "id_contrato": "61667",
@@ -7365,7 +7978,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.867
   },
   {
     "id_contrato": "61667",
@@ -7377,7 +7991,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.909
   },
   {
     "id_contrato": "61667",
@@ -7389,7 +8004,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.938
   },
   {
     "id_contrato": "61667",
@@ -7401,7 +8017,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.967
   },
   {
     "id_contrato": "61667",
@@ -7413,7 +8030,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.983
   },
   {
     "id_contrato": "61667",
@@ -7425,7 +8043,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.99
   },
   {
     "id_contrato": "61667",
@@ -7437,7 +8056,8 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 0.995
   },
   {
     "id_contrato": "61667",
@@ -7449,6 +8069,7 @@
     "real_acum": null,
     "aderencia": null,
     "baseline_1": null,
-    "real": null
+    "real": null,
+    "projetado_acum": 1.0
   }
 ]

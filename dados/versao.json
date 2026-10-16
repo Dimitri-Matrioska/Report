@@ -1,7 +1,9 @@
 {
-  "gerado_em": "2026-10-14T21:07:06.653191",
-  "arquivos": [
-    "pluviometria.json",
-    "fisico_total.json"
-  ]
+  "gerado_em": "2026-10-16 06:28:55",
+  "fonte": "Dados_GeraisReport_AFR.xlsx",
+  "registros": {
+    "fisico_total": 621,
+    "pluviometria": 243,
+    "status_semanal": 120
+  }
 }

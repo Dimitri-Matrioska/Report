@@ -8,7 +8,7 @@
    Ao mudar qualquer filtro, KPIs e gráficos são recalculados.
    ============================================================ */
 
-let DADOS = { fisico: [], pluviometria: [] };
+let DADOS = { fisico: [], pluviometria: [], status: [] };
 let FILTROS = { contratada: null, mes: null, semana: null };
 const CHARTS = {};
 
@@ -102,32 +102,59 @@ function renderGraficos() {
 
 /* ============================================================
    Tabelas de texto (Status Semanal.Descrição)
-   Os dados não vêm de dados/*.json (tabela Status Semanal não
-   foi exportada). Por ora usamos o conteúdo do relatório vigente
-   (PDF). Substituir por fetch(BASE_URL+'/status_semanal.json')
-   quando o export existir.
+   Dados vindos de dados/status_semanal.json (aba "Status Semanal"
+   da planilha Dados_GeraisReport_AFR.xlsx).
+   Itens:
+     - Fatos Relevantes -> HIGHLIGHTS
+     - Pontos de Atenção -> PONTOS DE ATENÇÃO
+     - Próximos Passos   -> PRÓXIMOS PASSOS
    ============================================================ */
-const TEXTOS = {
-  highlights: [
-    'Recebimento de pleito de postergação de prazo do Contrato de Terraplanagem. Solicitado extensão de 87 dias, levando o final das atividades de 10/04/2027 para 06/07/2027. Em andamento análise de mérito pela AFRY.',
-    'Recebimento de planilha de Reequilíbrio do Contrato de Terraplanagem contemplando: (i) redução da drenagem profunda (ii) encaminhamento de drenagem para a APP (iii) dispositivos de drenagem provisória para o terreno (iiii) ampliação do prazo nos itens de indireto em 87 dias. Em andamento análise de mérito pela AFRY.'
-  ],
-  atencao: [
-    'Morosidade na recomposição dos tapumes danificados pós chuvas intensas. Solicitado tratativas para a Terram desde 01/09/26.',
-    'Manutenção da drenagem provisória para garantir encaminhamento das águas das chuvas.'
-  ],
-  proximos: [
-    'Término da recomposição dos tapumes.'
-  ]
-};
-
-function renderTabelasTexto() {
-  preencherTabela('table-b7008cbc', 'TERRAM', TEXTOS.highlights);
-  preencherTabela('table-9f78ce2d', 'TERRAM', TEXTOS.atencao);
-  preencherTabela('table-12e44aa3', 'TERRAM', TEXTOS.proximos);
+function statusDoPeriodo() {
+  // Filtra por contratada (substring) + semana vigente.
+  // Se a semana não tiver registros, cai para a maior semana disponível.
+  const base = DADOS.status.filter(d =>
+    FILTROS.contratada === null ||
+    (d.contratada && d.contratada.startsWith(DEF_CONTRATADA))
+  );
+  const daSemana = base.filter(d => Number(d.semana) === Number(FILTROS.semana));
+  if (daSemana.length) return daSemana;
+  const semanas = base.map(d => Number(d.semana)).filter(n => !isNaN(n));
+  if (!semanas.length) return [];
+  const maxSem = Math.max(...semanas);
+  return base.filter(d => Number(d.semana) === maxSem);
 }
 
-function preencherTabela(id, responsavel, itens) {
+/* Quebra a Descrição (bloco multi-linha com "•") em itens. */
+function itensDescricao(desc) {
+  if (!desc) return [];
+  return desc
+    .split(/\r?\n/)
+    .map(l => l.replace(/^[•\-\*]\s*/, '').trim())
+    .filter(l => l.length > 0)
+    // remove rótulos soltos tipo "TERRAM:" / "GERAL:"
+    .filter(l => !/^[A-ZÇÃÕÁÉÍÓÚÂÊÔ\- ]{2,20}:$/.test(l));
+}
+
+function itensDoStatus(registros, ...itens) {
+  const alvo = itens.map(s => s.toLowerCase());
+  const out = [];
+  registros
+    .filter(d => d.item && alvo.includes(d.item.toLowerCase()))
+    .forEach(d => itensDescricao(d.descricao).forEach(t => out.push(t)));
+  return out;
+}
+
+function renderTabelasTexto() {
+  const regs = statusDoPeriodo();
+  preencherTabela('table-b7008cbc', 'Fatos Relevantes',
+                  itensDoStatus(regs, 'Fatos Relevantes'));
+  preencherTabela('table-9f78ce2d', 'Pontos de Atenção',
+                  itensDoStatus(regs, 'Pontos de Atenção', 'Pontos de Atenção STMA'));
+  preencherTabela('table-12e44aa3', 'Próximos Passos',
+                  itensDoStatus(regs, 'Próximos Passos', 'Próximos Passos STMA'));
+}
+
+function preencherTabela(id, titulo, itens) {
   const el = document.getElementById(id);
   if (!el) return;
   el.innerHTML = '';
@@ -135,7 +162,7 @@ function preencherTabela(id, responsavel, itens) {
   const ul = document.createElement('div');
   ul.style.padding = '6px 8px';
   ul.innerHTML = '<div style="font-weight:700;font-size:8pt;margin-bottom:3px">' +
-    responsavel + ':</div>' +
+    titulo + ':</div>' +
     itens.map(t => '<div style="font-size:8pt;line-height:1.25;margin-bottom:4px">• ' +
       t + '</div>').join('');
   el.appendChild(ul);
@@ -152,9 +179,16 @@ function renderCurvaMensal() {
     const g = rows.filter(d => d.mes === m);
     prev.push(Math.max(...g.map(d => Number(d.baseline_1_acum) || 0)));
     real.push(Math.max(...g.map(d => Number(d.real_acum) || 0)));
-    const ord = g.map(d => Number(d.semana) || 0);
-    const ultima = g[ord.indexOf(Math.max(...ord))];
-    tend.push(ultima ? Number(ultima.real_acum) || 0 : 0);
+    // Tendência = Projetado Acum (coluna real de % Físico Total).
+    // Fallback: último real_acum conhecido do mês.
+    const proj = g.map(d => Number(d.projetado_acum)).filter(v => !isNaN(v));
+    if (proj.length) {
+      tend.push(Math.max(...proj));
+    } else {
+      const ord = g.map(d => Number(d.semana) || 0);
+      const ultima = g[ord.indexOf(Math.max(...ord))];
+      tend.push(ultima ? Number(ultima.real_acum) || 0 : 0);
+    }
   });
 
   CHARTS['1ecebfde'].setOption({
@@ -321,11 +355,13 @@ function atualizar() {
 
 async function carregarDados() {
   const v = Date.now();
-  const [fisico, pluviometria] = await Promise.all([
+  const [fisico, pluviometria, status] = await Promise.all([
     fetch(BASE_URL + '/fisico_total.json?v=' + v).then(r => r.json()),
-    fetch(BASE_URL + '/pluviometria.json?v=' + v).then(r => r.json())
+    fetch(BASE_URL + '/pluviometria.json?v=' + v).then(r => r.json()),
+    fetch(BASE_URL + '/status_semanal.json?v=' + v).then(r => r.json())
+      .catch(() => [])
   ]);
-  return { fisico, pluviometria };
+  return { fisico, pluviometria, status };
 }
 
 async function render() {
