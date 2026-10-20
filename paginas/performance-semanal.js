@@ -281,29 +281,37 @@ function renderCurvaS1() {
   
   const map = {};
   rows.forEach(d => {
-    if (!map[d.data]) map[d.data] = { prevAc: 0, realAc: 0 };
+    if (!map[d.data]) map[d.data] = { prevAc: 0, realAc: 0, prevDia: 0, realDia: 0 };
     map[d.data].prevAc = Math.max(map[d.data].prevAc, Number(d.baseline_1_acum) || 0);
     map[d.data].realAc = Math.max(map[d.data].realAc, Number(d.real_acum) || 0);
+    // Soma os valores diários (se houver mais de uma linha por data, tipo contrato)
+    map[d.data].prevDia += Number(d.baseline_1) || 0;
+    map[d.data].realDia += Number(d.real) || 0;
   });
 
   const datas = Object.keys(map).sort();
   const labels = datas.map(d => d.slice(8, 10) + '/' + d.slice(5, 7));
+  
   const prevAc = datas.map(d => map[d].prevAc);
   const realAc = datas.map(d => map[d].realAc);
+  const prevDia = datas.map(d => map[d].prevDia);
+  const realDia = datas.map(d => map[d].realDia);
 
   CHARTS['62f295f1'].setOption({
     backgroundColor: 'transparent',
-    grid: { left: 20, right: 20, top: 30, bottom: 30, containLabel: true },
+    grid: { left: 20, right: 20, top: 40, bottom: 30, containLabel: true },
     tooltip: { 
       trigger: 'axis',
-      backgroundColor: '#ffffff', // Tooltip sólido (100%)
-      borderColor: '#001d37',
+      backgroundColor: 'rgba(255, 255, 255, 0.95)',
+      borderColor: '#dcdcda',
       textStyle: { color: '#252423', fontSize: 10 },
       formatter: function(params) {
         let res = params[0].name + '<br/>';
         params.forEach(p => {
           if (p.value === undefined || p.value === null) return;
-          res += p.marker + p.seriesName + ': ' + (p.value * 100).toFixed(1) + '%<br/>';
+          let isAcum = p.seriesName.includes('Acum');
+          let val = isAcum ? (p.value * 100).toFixed(1) + '%' : p.value.toFixed(2);
+          res += p.marker + p.seriesName + ': ' + val + '<br/>';
         });
         return res;
       }
@@ -311,35 +319,118 @@ function renderCurvaS1() {
     legend: { 
       bottom: 0, itemWidth: 10, itemHeight: 8, textStyle: { fontSize: 8 },
       data: [
-        { name: 'Previsto', icon: 'circle', itemStyle: { color: '#001d37' } },
-        { name: 'Real', icon: 'circle', itemStyle: { color: '#ffbe83' } }
+        { name: 'Previsto Acum', icon: 'circle', itemStyle: { color: '#001d37' } },
+        { name: 'Real Acum', icon: 'circle', itemStyle: { color: '#ffbe83' } },
+        { name: 'Previsto Dia', icon: 'rect', itemStyle: { color: '#dcdcda' } },
+        { name: 'Real Dia', icon: 'rect', itemStyle: { color: '#f5e6d6' } }
       ]
     },
     xAxis: { 
-      type: 'category', data: labels, 
-      axisLabel: { fontSize: 9, color: '#605e5c' }, 
+      type: 'category', 
+      data: labels, 
+      axisLabel: { fontSize: 9, color: '#605e5c', interval: 0 }, // interval 0 = mostra todos
       axisTick: { show: false },
       axisLine: { lineStyle: { color: '#dcdcda' } } 
     },
-    yAxis: { type: 'value', show: false, min: 0, max: 1 },
-    series: [
+    yAxis: [
       { 
-        name: 'Previsto', type: 'line', data: prevAc, 
-        lineStyle: { color: '#001d37', width: 2 }, itemStyle: { color: '#001d37' }, symbol: 'none', z: 10,
+        type: 'value', 
+        show: false, 
+        min: 0, 
+        max: 1, 
+        axisLabel: { show: false },
+        splitLine: { show: false } 
+      }, // Eixo 0: % Acumulada (0 a 100%)
+      { 
+        type: 'value', 
+        show: false, 
+        min: 0,
+        // O max é dinâmico, mas limitamos para as barras não estourarem a tela
+        axisLabel: { show: false },
+        splitLine: { show: false } 
+      }  // Eixo 1: Valores diários
+    ],
+    series: [
+      // BARRAS (Eixo Y 1)
+      { 
+        name: 'Previsto Dia', 
+        type: 'bar', 
+        yAxisIndex: 1, 
+        data: prevDia, 
+        itemStyle: { color: '#001e38' },
+        barMaxWidth: 15,
+        z: 6
+      },
+      {
+        name: 'Real Dia', 
+        type: 'bar', 
+        yAxisIndex: 1, 
+        data: realDia, 
+        itemStyle: { color: '#ffbe83' },
+        barMaxWidth: 8,
+        z: 6,
         label: { 
-          show: true, position: 'top', formatter: (p) => (p.value * 100).toFixed(1) + '%',
-          color: '#001d37', backgroundColor: 'rgba(0, 29, 55, 0.3)', // <-- 30% de transparência (fundo clarinho)
-          padding: [2, 4], borderRadius: 2, fontSize: 8, fontWeight: 'bold'
-        }
+          show: true, 
+          position: 'top', 
+          distance: 8, 
+          formatter: (p) => (p.value * 100).toFixed(1) + '%',
+          color: '#fff', 
+          backgroundColor: 'rgb(255, 191, 131)', 
+          padding: [3, 5], 
+          borderRadius: 3, 
+          fontSize: 8, 
+          fontWeight: 'bold'
+        },
+      },
+      // LINHAS (Eixo Y 0)
+      { 
+        name: 'Previsto Acum', 
+        type: 'line', 
+        yAxisIndex: 1, 
+        data: prevAc, 
+        lineStyle: { color: '#001d37', width: 2 }, 
+        itemStyle: { color: '#001d37' }, 
+        symbol: 'circle', 
+        symbolSize: 0,
+        z: 10,
+        label: { 
+          show: true, 
+          position: 'top', 
+          distance: 8, 
+          formatter: (p) => (p.value * 100).toFixed(1) + '%',
+          color: '#001e38', 
+          backgroundColor: 'rgba(0, 29, 55, 0.3)', 
+          padding: [3, 5], 
+          borderRadius: 3, 
+          fontSize: 8, 
+          fontWeight: 'bold'
+        },
+        // TRUQUE PARA NÃO ESCONDER O RÓTULO:
+        labelLayout: { hideOverlap: false }
       },
       { 
-        name: 'Real', type: 'line', data: realAc, 
-        lineStyle: { color: '#ffbe83', width: 2 }, itemStyle: { color: '#ffbe83' }, symbol: 'none', z: 10,
+        name: 'Real Acum', 
+        type: 'line', 
+        yAxisIndex: 0, 
+        data: realAc, 
+        lineStyle: { color: '#ffbe83', width: 2 }, 
+        itemStyle: { color: '#ffbe83' }, 
+        symbol: 'circle', 
+        symbolSize: 0,
+        z: 10,
         label: { 
-          show: true, position: 'bottom', formatter: (p) => (p.value * 100).toFixed(1) + '%',
-          color: '#b06000', backgroundColor: 'rgba(255, 190, 131, 0.3)', // <-- 30% de transparência
-          padding: [2, 4], borderRadius: 2, fontSize: 8, fontWeight: 'bold'
-        }
+          show: true, 
+          position: 'bottom', 
+          distance: 8, 
+          formatter: (p) => (p.value * 100).toFixed(1) + '%',
+          color: '#001e38',
+          backgroundColor: 'rgba(255, 191, 131, 0.3)', 
+          padding: [3, 5], 
+          borderRadius: 3, 
+          fontSize: 8, 
+          fontWeight: 'bold'
+        },
+        labelLayout: { hideOverlap: false }
       }
     ]
   }, true);
@@ -353,14 +444,14 @@ function renderAderencia() {
 
   CHARTS['a2d9b88a'].setOption({
     series: [{
-      type: 'gauge', startAngle: 200, endAngle: -20, min: 0, max: 1,
-      center: ['50%', '90%'], radius: '120%',
+      type: 'gauge', startAngle: 180, endAngle: 0, min: 0, max: 1,
+      center: ['50%', '90%'], radius: '125%',
       axisLine: { lineStyle: { width: 9, color: [[1, '#f3f0eb']] } },
-      progress: { show: true, width: 9, roundCap: false,
+      progress: { show: true, width: 12, roundCap: false,
                   itemStyle: { color: '#ff3636' } },
       pointer: { show: false },
       axisTick: { show: false }, splitLine: { show: false }, axisLabel: { show: false },
-      detail: { fontSize: 16, fontWeight: 'bold', offsetCenter: [0, '-22%'],
+      detail: { fontSize: 12, fontWeight: 'bold', offsetCenter: [0, '-22%'],
                 formatter: () => fmtPct(ader), color: '#252423' },
       data: [{ value: ader }]
     }]
