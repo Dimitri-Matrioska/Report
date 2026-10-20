@@ -1,9 +1,26 @@
-/* PERFORMANCE SEMANAL - gerado automaticamente */
+/* PERFORMANCE SEMANAL - ajustado */
 
-/* Fundo: casca pré-renderizada do layout (sidebar + fundo bege).
-   Os visuais interativos são desenhados por cima via HTML/CSS/ECharts. */
 .pbi-canvas {
   background: var(--pbi-fundo-pagina) url('../imagens/fundo-duplicata-de-performance-semanal.jpg') center/cover no-repeat;
+}
+
+:root {
+  /* --- Suas cores mapeadas --- */
+  --bege-fundo: #f3f0eb;
+  --azul-prev: #001d37;
+  --real: #ffbe83;
+  --azul-tend: #2750ec;
+  --salmao-fundo: #f5e6d6;
+  --cinza-fundo: #dcdcda;
+
+  /* --- Paleta original do Power BI (mantida para compatibilidade) --- */
+  --pbi-foreground: #252423;
+  --pbi-background: #FFFFFF;
+  --pbi-accent: #118DFF;
+  --pbi-good: #1AAB40;
+  --pbi-bad: #D64550;
+  --pbi-azul-escuro: #001d37; /* Atualizado para o seu azul */
+  --fonte-principal: "Segoe UI", helvetica, arial, sans-serif;
 }
 
 /* ============================================================
@@ -11,14 +28,14 @@
    ============================================================ */
 .sidebar-filtro {
   position: absolute;
-  color: #ffffff;
+  color: var(--bege-fundo);
   font-weight: 700;
   text-align: center;
   letter-spacing: 0.5px;
   z-index: 10;
 }
-.st-projeto { left: 20px; top: 120px; width: 190px; font-size: 11px; }
-.st-titulo  { left: 20px; top: 150px; width: 190px; font-size: 13px; }
+.st-projeto { left: 20px; top: 70px; width: 190px; font-size: 11px; }
+.st-titulo  { left: 20px; top: 90px; width: 190px; font-size: 13px; }
 
 .sidebar-label {
   position: absolute;
@@ -29,21 +46,17 @@
   letter-spacing: 0.5px;
   z-index: 11;
 }
-/* Top dos labels = top do slicer (PBIP) menos ~18px */
 .st-label-1 { top: 128px; }
 .st-label-2 { top: 207px; }
 .st-label-3 { top: 287px; }
 
-/* Selects reais (interativos), alinhados ao slicer do PBIP:
-   left ~10-12, width ~212, top 145/224/304 */
 .sidebar-select {
   position: absolute;
   left: 10px;
   width: 212px;
-
   background: #001d37;
-  border: 1px solid #4a6fa5;
-  color: #ffffff;
+  border: 2px solid var(--bege-fundo);
+  color: var(--bege-fundo);
   padding: 8px 26px 8px 10px;
   border-radius: 2px;
   font-size: 11px;
@@ -57,8 +70,8 @@
   background-position: right 8px center;
   background-size: 12px;
 }
-.sidebar-select:hover { border-color: #6a8fc5; }
-.sidebar-select option { background: #0B1F3A; color: #ffffff; }
+.sidebar-select:hover { border-color: var(--bege-fundo); }
+.sidebar-select option { background: #0B1F3A; color: var(--bege-fundo); }
 .st-sel-1 { top: 145px; }
 .st-sel-2 { top: 224px; }
 .st-sel-3 { top: 304px; }
@@ -71,8 +84,8 @@
   left: 20px;
   width: 190px;
   text-align: center;
-  border: 1px solid #4a6fa5;
-  color: #ffffff;
+  border: 1px solid var(--bege-fundo);
+  color: var(--bege-fundo);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -105,35 +118,40 @@
    ============================================================ */
 #kpi-01b213fc { left: 944.23px; top: 158.12px; width: 150.0px; height: 50.0px; z-index: 260; }
 #kpi-02f6851e { left: 557.01px; top: 35.85px; width: 136.67px; height: 67.51px; z-index: 240; }
-#table-12e44aa3 { left: 940.51px; top: 565.48px; width: 319.07px; height: 120.28px; z-index: 120; background:#fff; }
-#chart-1ecebfde { left: 245.35px; top: 390.26px; width: 693.25px; height: 284.87px; z-index: 250; }
 #kpi-22e35e93 { left: 252.38px; top: 37.49px; width: 136.67px; height: 67.51px; z-index: 210; }
-#slicer-3e3c0cca { left: 9.94px; top: 144.73px; width: 212.28px; height: 80.0px; z-index: 20; }
-#slicer-47df692d { left: 12.17px; top: 224.38px; width: 210.87px; height: 79.75px; z-index: 20; }
 #kpi-613f2719 { left: 1103.94px; top: 157.83px; width: 150.74px; height: 50.0px; z-index: 270; }
-#chart-62f295f1 { left: 245.54px; top: 139.11px; width: 692.75px; height: 244.61px; z-index: 220; }
 #kpi-6b304c5c { left: 404.69px; top: 35.85px; width: 136.67px; height: 67.51px; z-index: 230; }
-#slicer-7a448040 { left: 10.81px; top: 304.14px; width: 212.22px; height: 79.75px; z-index: 20; }
-#table-9f78ce2d { left: 941.02px; top: 426.09px; width: 319.14px; height: 139.73px; z-index: 110; background:#fff; }
-#chart-a2d9b88a { left: 716.71px; top: 37.43px; width: 209.33px; height: 72.09px; z-index: 60; }
+
+/* Tabelas com fundo branco */
+#table-12e44aa3 { left: 940.51px; top: 565.48px; width: 319.07px; height: 120.28px; z-index: 120; background:var(--bege-fundo); border-radius: 2px; }
+#table-9f78ce2d { left: 941.02px; top: 426.09px; width: 319.14px; height: 139.73px; z-index: 110; background:var(--bege-fundo); border-radius: 2px; }
+#table-b7008cbc { left: 940.51px; top: 230px; width: 319px; height: 180px; z-index: 110; background:var(--bege-fundo); border-radius: 2px; } /* Ajustar posição se necessário */
+
+/* Gráficos (Adicionado fundo branco para simular o card do PBIP) */
+.chart-container {
+  position: absolute;
+  background: #ffffff00;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+#chart-1ecebfde { left: 245.35px; top: 390.26px; width: 693.25px; height: 284.87px; z-index: 250; }
+#chart-62f295f1 { left: 245.54px; top: 139.11px; width: 692.75px; height: 244.61px; z-index: 220; }
+
+/* Gauge Ajustado */
+#chart-a2d9b88a { left: 735px; top: 35px; width: 180px; height: 70px; z-index: 60; } /* Movido para a direita e levemente maior */
+
+/* Pluviometria */
 #chart-cfaada41 { left: 942.56px; top: 28.37px; width: 308.57px; height: 130.34px; z-index: 260; }
 
-/* Ocultar os containers de slicer do PBIP (os filtros reais
-   ficam na sidebar, como <select>) */
 .slicer-container { display: none !important; }
 
-/* Faixas de título dos gráficos (sobre o topo do visual) */
-#title-1ecebfde { left: 245.35px; top: 391px; width: 693.25px; height: 21px;
-                  z-index: 300; border-radius: 3px 3px 0 0; }
-#title-62f295f1 { left: 245.54px; top: 120px; width: 692.75px; height: 20px;
-                  z-index: 300; border-radius: 3px 3px 0 0; }
-#title-a2d9b88a { left: 780px; top: 43px; width: 82px; height: 7px;
-                  z-index: 300; font-size: 5pt; border-radius: 2px; }
-
-/* Títulos dos visuais (faixas), conforme visualContainerObjects.title */
+/* ============================================================
+   FAIXAS DE TÍTULO (Azul Escuro)
+   ============================================================ */
 .visual-title {
   position: absolute;
-
   background: #001d37;
   color: #ffffff;
   font-size: 9pt;
@@ -144,7 +162,13 @@
   text-align: center;
   letter-spacing: 0.4px;
   z-index: 300;
+  border-radius: 3px 3px 0 0;
 }
+
+#title-1ecebfde { left: 245.35px; top: 391px; width: 693.25px; height: 21px; }
+#title-62f295f1 { left: 245.54px; top: 120px; width: 692.75px; height: 20px; }
+#title-a2d9b88a { left: 735px; top: 35px; width: 180px; height: 18px; font-size: 8pt; }
+#title-cfaada41 { left: 942.56px; top: 12px; width: 308.57px; height: 16px; font-size: 8pt; border-radius: 2px; }
 
 /* Estados */
 .loading { color: #a0a0a0 !important; font-weight: 400 !important; }

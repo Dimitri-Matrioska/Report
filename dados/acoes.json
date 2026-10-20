@@ -1,0 +1,51 @@
+[
+  {
+    "data_acao": "2026-05-15",
+    "acao": "Incorporar contrato subestação (BAIKAL) no report",
+    "responsavel": "AFRY",
+    "status": "Concluído",
+    "data_conclusao": "2026-06-10"
+  },
+  {
+    "data_acao": "2026-05-15",
+    "acao": "Converter valor contrato Transelevador para R$",
+    "responsavel": "AFRY",
+    "status": "Concluído",
+    "data_conclusao": "2026-06-10"
+  },
+  {
+    "data_acao": "2026-05-15",
+    "acao": "Inserir SLA dos contratos (farol)",
+    "responsavel": "AFRY",
+    "status": "Em andamento",
+    "data_conclusao": "2026-07-10"
+  },
+  {
+    "data_acao": "2026-05-15",
+    "acao": "Incorporar contrato data-center (VIRTUAL) no report",
+    "responsavel": "AFRY",
+    "status": "Concluído",
+    "data_conclusao": "2026-06-10"
+  },
+  {
+    "data_acao": "2026-05-15",
+    "acao": "Inserir acompanhamento de % medido dos contratos",
+    "responsavel": "AFRY",
+    "status": "Concluído",
+    "data_conclusao": "2026-06-10"
+  },
+  {
+    "data_acao": "2026-05-15",
+    "acao": "Incluir visão contábil no controle de medições",
+    "responsavel": "GB / AFRY",
+    "status": "A iniciar",
+    "data_conclusao": "2026-07-10"
+  },
+  {
+    "data_acao": "2026-05-15",
+    "acao": "Incluir cronograma da subestação CEMIG no report",
+    "responsavel": "GB / AFRY",
+    "status": "A iniciar",
+    "data_conclusao": "2026-07-10"
+  }
+]

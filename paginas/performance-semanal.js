@@ -146,11 +146,11 @@ function itensDoStatus(registros, ...itens) {
 
 function renderTabelasTexto() {
   const regs = statusDoPeriodo();
-  preencherTabela('table-b7008cbc', 'Fatos Relevantes',
+  preencherTabela('table-b7008cbc', 'HIGHLIGHTS',
                   itensDoStatus(regs, 'Fatos Relevantes'));
-  preencherTabela('table-9f78ce2d', 'Pontos de Atenção',
+  preencherTabela('table-9f78ce2d', 'PONTOS DE ATENÇÃO',
                   itensDoStatus(regs, 'Pontos de Atenção', 'Pontos de Atenção STMA'));
-  preencherTabela('table-12e44aa3', 'Próximos Passos',
+  preencherTabela('table-12e44aa3', 'PRÓXIMOS PASSOS',
                   itensDoStatus(regs, 'Próximos Passos', 'Próximos Passos STMA'));
 }
 
@@ -172,41 +172,102 @@ function renderCurvaMensal() {
   const el = document.getElementById('chart-1ecebfde');
   if (!el) return;
   CHARTS['1ecebfde'] = CHARTS['1ecebfde'] || echarts.init(el);
-  const rows = fisicoFiltrado();
-  const meses = [...new Set(rows.map(d => d.mes))].sort();
-  const prev = [], real = [], tend = [];
-  meses.forEach(m => {
-    const g = rows.filter(d => d.mes === m);
-    prev.push(Math.max(...g.map(d => Number(d.baseline_1_acum) || 0)));
-    real.push(Math.max(...g.map(d => Number(d.real_acum) || 0)));
-    // Tendência = Projetado Acum (coluna real de % Físico Total).
-    // Fallback: último real_acum conhecido do mês.
-    const proj = g.map(d => Number(d.projetado_acum)).filter(v => !isNaN(v));
-    if (proj.length) {
-      tend.push(Math.max(...proj));
-    } else {
-      const ord = g.map(d => Number(d.semana) || 0);
-      const ultima = g[ord.indexOf(Math.max(...ord))];
-      tend.push(ultima ? Number(ultima.real_acum) || 0 : 0);
+  
+  const anoAlvo = FILTROS.mes ? FILTROS.mes.split('-')[0] : '2026';
+  
+  const rows = DADOS.fisico.filter(d => 
+    (FILTROS.contratada === null || d.contratada === FILTROS.contratada) &&
+    (d.mes && d.mes.startsWith(anoAlvo))
+  );
+
+  const map = {};
+  rows.forEach(d => {
+    if (!map[d.mes]) map[d.mes] = { prevAc: 0, realAc: 0, tend: 0 };
+    map[d.mes].prevAc = Math.max(map[d.mes].prevAc, Number(d.baseline_1_acum) || 0);
+    map[d.mes].realAc = Math.max(map[d.mes].realAc, Number(d.real_acum) || 0);
+    
+    const proj = Number(d.projetado_acum);
+    if (!isNaN(proj) && proj > 0) {
+      map[d.mes].tend = Math.max(map[d.mes].tend, proj);
     }
   });
 
+  const meses = Object.keys(map).sort();
+  const labels = meses.map(mesLabel); 
+  
+  const prev = [], real = [], tend = [];
+
+  meses.forEach((m) => {
+    const p = map[m].prevAc;
+    const r = map[m].realAc;
+    const t = map[m].tend > 0 ? map[m].tend : null; 
+
+    prev.push(p);
+    real.push(r);
+    tend.push(t);
+  });
+
   CHARTS['1ecebfde'].setOption({
-    grid: { left: 40, right: 16, top: 12, bottom: 30, containLabel: true },
-    tooltip: { trigger: 'axis' },
-    legend: { bottom: 0, itemWidth: 10, itemHeight: 8, textStyle: { fontSize: 8 } },
-    xAxis: { type: 'category', data: meses.map(mesLabel),
-             axisLabel: { fontSize: 9 }, axisTick: { show: false } },
-    yAxis: { type: 'value', show: false },
-    /* Cores conforme CY26SU02.json (ThemeDataColor do PBIP):
-         Previsto Acum  -> ColorId 2 = #12239E
-         Real Acum      -> ColorId 5 = #744EC2
-         Tendência Acum -> ColorId 3 = #E66C37 */
+    backgroundColor: 'transparent',
+    grid: { left: 20, right: 20, top: 30, bottom: 30, containLabel: true },
+    tooltip: { 
+      trigger: 'axis',
+      backgroundColor: '#ffffff', // Tooltip sólido
+      borderColor: '#001d37',
+      textStyle: { color: '#252423', fontSize: 10 },
+      formatter: function(params) {
+        let res = params[0].name + '<br/>';
+        params.forEach(p => {
+          if (p.value === undefined || p.value === null) return;
+          res += p.marker + p.seriesName + ': ' + (p.value * 100).toFixed(1) + '%<br/>';
+        });
+        return res;
+      }
+    },
+    legend: { 
+      bottom: 0, itemWidth: 10, itemHeight: 8, textStyle: { fontSize: 8 },
+      data: [
+        { name: 'Previsto Acum', icon: 'circle', itemStyle: { color: '#001d37' } },
+        { name: 'Real Acum', icon: 'circle', itemStyle: { color: '#ffbe83' } },
+        { name: 'Tendência Acum', icon: 'circle', itemStyle: { color: '#2750ec' } }
+      ]
+    },
+    xAxis: { 
+      type: 'category', data: labels, 
+      axisLabel: { fontSize: 9, color: '#605e5c', interval: 0 }, 
+      axisTick: { show: false },
+      axisLine: { lineStyle: { color: '#dcdcda' } },
+      boundaryGap: false 
+    },
+    yAxis: { type: 'value', show: false, min: 0, max: 1 },
     series: [
-      { name: 'Previsto Acum', type: 'bar', data: prev, itemStyle: { color: '#12239E' }, barMaxWidth: 12 },
-      { name: 'Real Acum', type: 'bar', data: real, itemStyle: { color: '#744EC2' }, barMaxWidth: 12 },
-      { name: 'Tendência Acum', type: 'line', data: tend, smooth: true,
-        itemStyle: { color: '#E66C37' }, lineStyle: { color: '#E66C37', width: 2 }, symbol: 'circle', symbolSize: 4 }
+      { 
+        name: 'Previsto Acum', type: 'line', data: prev, 
+        lineStyle: { color: '#001d37', width: 2 }, itemStyle: { color: '#001d37' }, symbol: 'none', z: 10,
+        label: { 
+          show: true, position: 'top', formatter: (p) => (p.value * 100).toFixed(1) + '%',
+          color: '#001d37', backgroundColor: 'rgba(0, 29, 55, 0.3)', // 30% transparência
+          padding: [2, 4], borderRadius: 2, fontSize: 8, fontWeight: 'bold'
+        }
+      },
+      { 
+        name: 'Real Acum', type: 'line', data: real, 
+        lineStyle: { color: '#ffbe83', width: 2 }, itemStyle: { color: '#ffbe83' }, symbol: 'none', z: 10,
+        label: { 
+          show: true, position: 'bottom', formatter: (p) => (p.value * 100).toFixed(1) + '%',
+          color: '#b06000', backgroundColor: 'rgba(255, 190, 131, 0.3)', // 30% transparência
+          padding: [2, 4], borderRadius: 2, fontSize: 8, fontWeight: 'bold'
+        }
+      },
+      { 
+        name: 'Tendência Acum', type: 'line', data: tend, smooth: true,
+        lineStyle: { color: '#2750ec', width: 2, type: 'dashed' }, itemStyle: { color: '#2750ec' }, symbol: 'none', z: 10,
+        label: { 
+          show: true, position: 'top', formatter: (p) => (p.value * 100).toFixed(1) + '%',
+          color: '#0020a0', backgroundColor: 'rgba(39, 80, 236, 0.3)', // 30% transparência
+          padding: [2, 4], borderRadius: 2, fontSize: 8, fontWeight: 'bold'
+        }
+      }
     ]
   }, true);
 }
@@ -215,42 +276,74 @@ function renderCurvaS1() {
   const el = document.getElementById('chart-62f295f1');
   if (!el) return;
   CHARTS['62f295f1'] = CHARTS['62f295f1'] || echarts.init(el);
+  
   const rows = fisicoFiltrado().sort((a, b) => (a.data || '').localeCompare(b.data || ''));
-  const dias = [], prev = [], real = [], prevAc = [], realAc = [];
+  
   const map = {};
   rows.forEach(d => {
-    if (!map[d.data]) map[d.data] = { prev: 0, real: 0, prevAc: 0, realAc: 0 };
-    map[d.data].prev += Number(d.baseline_1) || 0;
-    map[d.data].real += Number(d.real) || 0;
+    if (!map[d.data]) map[d.data] = { prevAc: 0, realAc: 0 };
     map[d.data].prevAc = Math.max(map[d.data].prevAc, Number(d.baseline_1_acum) || 0);
     map[d.data].realAc = Math.max(map[d.data].realAc, Number(d.real_acum) || 0);
   });
-  Object.keys(map).sort().forEach(k => {
-    dias.push(k.slice(8, 10) + '/' + k.slice(5, 7));
-    prev.push(map[k].prev); real.push(map[k].real);
-    prevAc.push(map[k].prevAc); realAc.push(map[k].realAc);
-  });
+
+  const datas = Object.keys(map).sort();
+  const labels = datas.map(d => d.slice(8, 10) + '/' + d.slice(5, 7));
+  const prevAc = datas.map(d => map[d].prevAc);
+  const realAc = datas.map(d => map[d].realAc);
 
   CHARTS['62f295f1'].setOption({
-    grid: { left: 40, right: 40, top: 12, bottom: 30, containLabel: true },
-    tooltip: { trigger: 'axis' },
-    legend: { bottom: 0, itemWidth: 10, itemHeight: 8, textStyle: { fontSize: 8 } },
-    xAxis: { type: 'category', data: dias, axisLabel: { fontSize: 8 }, axisTick: { show: false } },
-    yAxis: [{ type: 'value', show: false }, { type: 'value', show: false }],
-    /* Cores conforme CY26SU02.json (via ThemeDataColor do PBIP):
-         Previsto / Previsto Acum -> ColorId 2 = #12239E
-         Real     / Real Acum     -> ColorId 5 = #744EC2 */
+    backgroundColor: 'transparent',
+    grid: { left: 20, right: 20, top: 30, bottom: 30, containLabel: true },
+    tooltip: { 
+      trigger: 'axis',
+      backgroundColor: '#ffffff', // Tooltip sólido (100%)
+      borderColor: '#001d37',
+      textStyle: { color: '#252423', fontSize: 10 },
+      formatter: function(params) {
+        let res = params[0].name + '<br/>';
+        params.forEach(p => {
+          if (p.value === undefined || p.value === null) return;
+          res += p.marker + p.seriesName + ': ' + (p.value * 100).toFixed(1) + '%<br/>';
+        });
+        return res;
+      }
+    },
+    legend: { 
+      bottom: 0, itemWidth: 10, itemHeight: 8, textStyle: { fontSize: 8 },
+      data: [
+        { name: 'Previsto', icon: 'circle', itemStyle: { color: '#001d37' } },
+        { name: 'Real', icon: 'circle', itemStyle: { color: '#ffbe83' } }
+      ]
+    },
+    xAxis: { 
+      type: 'category', data: labels, 
+      axisLabel: { fontSize: 9, color: '#605e5c' }, 
+      axisTick: { show: false },
+      axisLine: { lineStyle: { color: '#dcdcda' } } 
+    },
+    yAxis: { type: 'value', show: false, min: 0, max: 1 },
     series: [
-      { name: 'Previsto', type: 'bar', data: prev, itemStyle: { color: '#12239E' }, barMaxWidth: 8 },
-      { name: 'Real', type: 'bar', data: real, itemStyle: { color: '#744EC2' }, barMaxWidth: 8 },
-      { name: 'Previsto Acum', type: 'line', yAxisIndex: 1, data: prevAc, smooth: true,
-        itemStyle: { color: '#12239E' }, lineStyle: { color: '#12239E', width: 2 }, symbol: 'circle', symbolSize: 4 },
-      { name: 'Real Acum', type: 'line', yAxisIndex: 1, data: realAc, smooth: true,
-        itemStyle: { color: '#744EC2' }, lineStyle: { color: '#744EC2', width: 2 }, symbol: 'circle', symbolSize: 4 }
+      { 
+        name: 'Previsto', type: 'line', data: prevAc, 
+        lineStyle: { color: '#001d37', width: 2 }, itemStyle: { color: '#001d37' }, symbol: 'none', z: 10,
+        label: { 
+          show: true, position: 'top', formatter: (p) => (p.value * 100).toFixed(1) + '%',
+          color: '#001d37', backgroundColor: 'rgba(0, 29, 55, 0.3)', // <-- 30% de transparência (fundo clarinho)
+          padding: [2, 4], borderRadius: 2, fontSize: 8, fontWeight: 'bold'
+        }
+      },
+      { 
+        name: 'Real', type: 'line', data: realAc, 
+        lineStyle: { color: '#ffbe83', width: 2 }, itemStyle: { color: '#ffbe83' }, symbol: 'none', z: 10,
+        label: { 
+          show: true, position: 'bottom', formatter: (p) => (p.value * 100).toFixed(1) + '%',
+          color: '#b06000', backgroundColor: 'rgba(255, 190, 131, 0.3)', // <-- 30% de transparência
+          padding: [2, 4], borderRadius: 2, fontSize: 8, fontWeight: 'bold'
+        }
+      }
     ]
   }, true);
 }
-
 function renderAderencia() {
   const el = document.getElementById('chart-a2d9b88a');
   if (!el) return;
@@ -287,10 +380,8 @@ function renderPluvioCurto() {
     real.push(Math.max(...g.map(d => Number(d.mm_acum) || 0)));
   });
 
-  CHARTS['cfaada41'].setOption({
-    title: { text: 'PLUVIOMETRIA HISTÓRICA X REAL (mm)', left: 'center', top: 0,
-             textStyle: { fontSize: 7.5, fontWeight: 'bold', color: '#252423' } },
-    grid: { left: 8, right: 8, top: 34, bottom: 22, containLabel: true },
+    CHARTS['cfaada41'].setOption({
+    grid: { left: 8, right: 8, top: 20, bottom: 22, containLabel: true },
     tooltip: { trigger: 'axis' },
     legend: { top: 16, itemWidth: 10, itemHeight: 8, textStyle: { fontSize: 8 } },
     xAxis: { type: 'category', data: meses.map(mesLabel),

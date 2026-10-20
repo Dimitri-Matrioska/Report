@@ -4,6 +4,25 @@
   background-image: url('../imagens/fundo-mapa-avanco-drenagem.jpg');
 }
 
+:root {
+  /* --- Suas cores mapeadas --- */
+  --bege-fundo: #f3f0eb;
+  --azul-prev: #001d37;
+  --real: #ffbe83;
+  --azul-tend: #2750ec;
+  --salmao-fundo: #f5e6d6;
+  --cinza-fundo: #dcdcda;
+
+  /* --- Paleta original do Power BI (mantida para compatibilidade) --- */
+  --pbi-foreground: #252423;
+  --pbi-background: #FFFFFF;
+  --pbi-accent: #118DFF;
+  --pbi-good: #1AAB40;
+  --pbi-bad: #D64550;
+  --pbi-azul-escuro: #001d37; /* Atualizado para o seu azul */
+  --fonte-principal: "Segoe UI", helvetica, arial, sans-serif;
+}
+
 /* ============================================================
    TEXTOS DA SIDEBAR (sobrepostos na imagem)
    ============================================================ */
