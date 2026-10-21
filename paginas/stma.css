@@ -41,20 +41,22 @@
   padding: 7px 8px;
   border-radius: 2px;
   font-size: 11px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   box-sizing: border-box;
   z-index: 10;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='%23b8c4d9' d='M1 3l4 4 4-4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
 }
 .st-sel-1 { top: 208px; }
 .st-sel-2 { top: 268px; }
 .st-sel-3 { top: 328px; }
 
-.sidebar-select .arrow {
-  color: #b8c4d9;
-  font-size: 10px;
-}
+.sidebar-select option { color: #252423; background: #ffffff; }
 
 /* ============================================================
    BOTÕES DO MENU
