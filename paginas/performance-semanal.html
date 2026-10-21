@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>PERFORMANCE SEMANAL</title>
-<link rel="stylesheet" href="../assets/style.css">
+<!--Comentei essa linha para não buscaar o style.css -->
+<!-- <link rel="stylesheet" href="../assets/style.css"> -->
 <link rel="stylesheet" href="performance-semanal.css">
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 </head>
@@ -15,12 +16,31 @@
     <!-- Filtros da sidebar (sobrepostos na imagem) -->
     <div class="sidebar-filtro st-projeto">PROJETO AFRODITE</div>
     <div class="sidebar-filtro st-titulo">PERFORMANCE<br>CONTRATADAS</div>
+
+
+    <!-- Filtro Contratada -->
     <div class="sidebar-label st-label-1">Contratada</div>
-    <select class="sidebar-select st-sel-1" id="sel-contratada"></select>
+    <div class="sidebar-select st-sel-1" id="btn-contratada" onclick="toggleDropdown('drop-contratada')">
+      <span id="txt-contratada">TERRAM ENGENHARIA</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="dropdown-menu st-drop-1" id="drop-contratada"></div>
+
+    <!-- Filtro Ano/Mês (Árvore de datas) -->
     <div class="sidebar-label st-label-2">Ano, Mês</div>
-    <select class="sidebar-select st-sel-2" id="sel-mes"></select>
+    <div class="sidebar-select st-sel-2" id="btn-mes" onclick="toggleDropdown('drop-mes')">
+      <span id="txt-mes">2026 (Ano) + outubro</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="dropdown-menu st-drop-2" id="drop-mes"></div>
+
+    <!-- Filtro Semana -->
     <div class="sidebar-label st-label-3">SemanaDoProjeto</div>
-    <select class="sidebar-select st-sel-3" id="sel-semana"></select>
+    <div class="sidebar-select st-sel-3" id="btn-semana" onclick="toggleDropdown('drop-semana')">
+      <span id="txt-semana">31</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="dropdown-menu st-drop-3" id="drop-semana"></div>
 
     <!-- Botões do menu -->
     <a href="./stma.html" class="menu-botao st-btn-1">STMA</a>
@@ -31,8 +51,8 @@
 
 
     <div class="kpi-flat boxed" id="kpi-01b213fc" data-visual="01b213fc53a59065b539">
+            <div class="kpi-value loading" data-kpi="01b213fc">...</div>
       <div class="kpi-label">mm acum no mês</div>
-      <div class="kpi-value loading" data-kpi="01b213fc">...</div>
     </div>
 
     <div class="kpi-flat" id="kpi-02f6851e" data-visual="02f6851e19016c5aa44b">
@@ -42,8 +62,8 @@
 
     <div id="table-12e44aa3" class="table-container" data-visual="12e44aa34324ad005080"></div>
 
-    <div id="chart-1ecebfde" class="chart-container" data-visual="1ecebfde6b209038d400"></div>
-    <div class="visual-title" id="title-1ecebfde">CURVA FÍSICA - ANO</div>
+    <div id="chart-grafico_curva_ano" class="chart-container" data-visual="grafico_curva_ano6b209038d400"></div>
+    <div class="visual-title" id="title-grafico_curva_ano">CURVA FÍSICA - ANO</div>
 
     <div class="kpi-flat" id="kpi-22e35e93" data-visual="22e35e935c0400d09c10">
       <div class="kpi-label">AVANÇO PREVISTO</div>
@@ -55,12 +75,12 @@
     <div id="slicer-47df692d" class="slicer-container" data-visual="47df692d5213d13b66d7"></div>
 
     <div class="kpi-flat boxed" id="kpi-613f2719" data-visual="613f27198068ddb9454f">
+           <div class="kpi-value loading" data-kpi="613f2719">...</div>
       <div class="kpi-label">Dias impactados</div>
-      <div class="kpi-value loading" data-kpi="613f2719">...</div>
     </div>
 
-    <div id="chart-62f295f1" class="chart-container" data-visual="62f295f1ed5151a2a32a"></div>
-    <div class="visual-title" id="title-62f295f1">CURVA FÍSICA - MÊS</div>
+    <div id="chart-grafico_curva_mes" class="chart-container" data-visual="grafico_curva_mesed5151a2a32a"></div>
+    <div class="visual-title" id="title-grafico_curva_mes">CURVA FÍSICA - MÊS</div>
 
     <div class="kpi-flat" id="kpi-6b304c5c" data-visual="6b304c5c9e460a16c440">
       <div class="kpi-label">AVANÇO REAL</div>
@@ -71,12 +91,12 @@
 
     <div id="table-9f78ce2d" class="table-container" data-visual="9f78ce2d3c7e56e6a151"></div>
 
-    <div id="chart-a2d9b88a" class="chart-container" data-visual="a2d9b88a5cde5097bc3a"></div>
-    <div class="visual-title" id="title-a2d9b88a">ADERÊNCIA REAL</div>
+    <div id="chart-aderencia" class="chart-container" data-visual="aderencia5cde5097bc3a"></div>
+    <div class="visual-title" id="title-aderencia">ADERÊNCIA REAL</div>
 
     <div id="table-b7008cbc" class="table-container" data-visual="b7008cbc001a2d800000"></div>
 
-    <div id="chart-cfaada41" class="chart-container" data-visual="cfaada418e21e30ee815"></div>
+    <div id="chart-grafico_pluviometro" class="chart-container" data-visual="grafico_pluviometro8e21e30ee815"></div>
 
 </div>
 </div>

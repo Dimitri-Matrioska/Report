@@ -1,19 +1,22 @@
 {
-  "gerado_em": "2026-10-20 16:03:42",
-  "fonte": "Dados_GeraisReport_AFR.xlsx",
-  "registros": {
-    "acoes": 7,
-    "dados_contrato": 16,
-    "desvios_stma": 741,
+  "gerado_em": "2026-10-21T17:42:31.786529",
+  "total_datasets": 14,
+  "inventario": {
     "fisico_total": 621,
-    "histograma": 599,
-    "igpp_gf": 96,
+    "pluviometria": 243,
+    "status_semanal": 120,
+    "stma": 526,
+    "desvios_stma": 741,
+    "acoes_desvios": 30,
+    "sla": 153,
     "medicoes": 237,
     "milestones": 48,
-    "pluviometria": 243,
-    "servicos_notaveis": 685,
-    "sla": 153,
-    "status_semanal": 120,
-    "stma": 526
-  }
+    "acoes": 7,
+    "dados_contrato": 16,
+    "histograma": 599,
+    "igpp_gf": 108,
+    "servicos_notaveis": 706
+  },
+  "arquivo_unificado": "dados.json",
+  "tamanho_unificado_kb": 1670.3
 }

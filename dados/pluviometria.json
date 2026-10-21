@@ -4,7 +4,7 @@
     "semana": 1,
     "data": "2026-03-09",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 16.0,
     "mm_acum": 16.0,
     "dia_paralisado": null
@@ -14,7 +14,7 @@
     "semana": 1,
     "data": "2026-03-10",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 1.0,
     "mm_acum": 17.0,
     "dia_paralisado": null
@@ -24,7 +24,7 @@
     "semana": 1,
     "data": "2026-03-11",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 39.0,
     "mm_acum": 56.0,
     "dia_paralisado": "sim"
@@ -34,7 +34,7 @@
     "semana": 2,
     "data": "2026-03-12",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 26.0,
     "mm_acum": 82.0,
     "dia_paralisado": "sim"
@@ -44,7 +44,7 @@
     "semana": 2,
     "data": "2026-03-13",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 14.0,
     "mm_acum": 96.0,
     "dia_paralisado": "sim"
@@ -54,7 +54,7 @@
     "semana": 2,
     "data": "2026-03-14",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 16.0,
     "mm_acum": 112.0,
     "dia_paralisado": null
@@ -64,7 +64,7 @@
     "semana": 2,
     "data": "2026-03-15",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 112.0,
     "dia_paralisado": null
@@ -74,7 +74,7 @@
     "semana": 2,
     "data": "2026-03-16",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 112.0,
     "dia_paralisado": null
@@ -84,7 +84,7 @@
     "semana": 2,
     "data": "2026-03-17",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 112.0,
     "dia_paralisado": null
@@ -94,7 +94,7 @@
     "semana": 2,
     "data": "2026-03-18",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 112.0,
     "dia_paralisado": null
@@ -104,7 +104,7 @@
     "semana": 3,
     "data": "2026-03-19",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 4.0,
     "mm_acum": 116.0,
     "dia_paralisado": null
@@ -114,7 +114,7 @@
     "semana": 3,
     "data": "2026-03-20",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 116.0,
     "dia_paralisado": null
@@ -124,7 +124,7 @@
     "semana": 3,
     "data": "2026-03-21",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 116.0,
     "dia_paralisado": null
@@ -134,7 +134,7 @@
     "semana": 3,
     "data": "2026-03-22",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 116.0,
     "dia_paralisado": null
@@ -144,7 +144,7 @@
     "semana": 3,
     "data": "2026-03-23",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 116.0,
     "dia_paralisado": null
@@ -154,7 +154,7 @@
     "semana": 3,
     "data": "2026-03-24",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 116.0,
     "dia_paralisado": null
@@ -164,7 +164,7 @@
     "semana": 3,
     "data": "2026-03-25",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 116.0,
     "dia_paralisado": null
@@ -174,7 +174,7 @@
     "semana": 4,
     "data": "2026-03-26",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 116.0,
     "dia_paralisado": null
@@ -184,7 +184,7 @@
     "semana": 4,
     "data": "2026-03-27",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 116.0,
     "dia_paralisado": null
@@ -194,7 +194,7 @@
     "semana": 4,
     "data": "2026-03-28",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 116.0,
     "dia_paralisado": null
@@ -204,7 +204,7 @@
     "semana": 4,
     "data": "2026-03-29",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 116.0,
     "dia_paralisado": null
@@ -214,7 +214,7 @@
     "semana": 4,
     "data": "2026-03-30",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": 116.0,
     "dia_paralisado": null
@@ -224,7 +224,7 @@
     "semana": 4,
     "data": "2026-03-31",
     "historica_acum": 166.0,
-    "historica_media_dia": 9.0,
+    "historica_media": 9.0,
     "mm_dia": 5.0,
     "mm_acum": 121.0,
     "dia_paralisado": null
@@ -234,7 +234,7 @@
     "semana": 4,
     "data": "2026-04-01",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 6.0,
     "mm_acum": 6.0,
     "dia_paralisado": null
@@ -244,7 +244,7 @@
     "semana": 5,
     "data": "2026-04-02",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": 6.0,
     "dia_paralisado": null
@@ -254,7 +254,7 @@
     "semana": 5,
     "data": "2026-04-03",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 35.0,
     "mm_acum": 41.0,
     "dia_paralisado": "sim"
@@ -264,7 +264,7 @@
     "semana": 5,
     "data": "2026-04-04",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": 41.0,
     "dia_paralisado": null
@@ -274,7 +274,7 @@
     "semana": 5,
     "data": "2026-04-05",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": 41.0,
     "dia_paralisado": null
@@ -284,7 +284,7 @@
     "semana": 5,
     "data": "2026-04-06",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 5.0,
     "mm_acum": 46.0,
     "dia_paralisado": null
@@ -294,7 +294,7 @@
     "semana": 5,
     "data": "2026-04-07",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 5.0,
     "mm_acum": 51.0,
     "dia_paralisado": null
@@ -304,7 +304,7 @@
     "semana": 5,
     "data": "2026-04-08",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 15.0,
     "mm_acum": 66.0,
     "dia_paralisado": "sim"
@@ -314,7 +314,7 @@
     "semana": 6,
     "data": "2026-04-09",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 15.0,
     "mm_acum": 81.0,
     "dia_paralisado": "sim"
@@ -324,7 +324,7 @@
     "semana": 6,
     "data": "2026-04-10",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 81.0,
     "dia_paralisado": null
@@ -334,7 +334,7 @@
     "semana": 6,
     "data": "2026-04-11",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 81.0,
     "dia_paralisado": null
@@ -344,7 +344,7 @@
     "semana": 6,
     "data": "2026-04-12",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 81.0,
     "dia_paralisado": null
@@ -354,7 +354,7 @@
     "semana": 6,
     "data": "2026-04-13",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 81.0,
     "dia_paralisado": null
@@ -364,7 +364,7 @@
     "semana": 6,
     "data": "2026-04-14",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 81.0,
     "dia_paralisado": null
@@ -374,7 +374,7 @@
     "semana": 6,
     "data": "2026-04-15",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 81.0,
     "dia_paralisado": null
@@ -384,7 +384,7 @@
     "semana": 7,
     "data": "2026-04-16",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 81.0,
     "dia_paralisado": null
@@ -394,7 +394,7 @@
     "semana": 7,
     "data": "2026-04-17",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 81.0,
     "dia_paralisado": null
@@ -404,7 +404,7 @@
     "semana": 7,
     "data": "2026-04-18",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 81.0,
     "dia_paralisado": null
@@ -414,7 +414,7 @@
     "semana": 7,
     "data": "2026-04-19",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 81.0,
     "dia_paralisado": null
@@ -424,7 +424,7 @@
     "semana": 7,
     "data": "2026-04-20",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 81.0,
     "dia_paralisado": null
@@ -434,7 +434,7 @@
     "semana": 7,
     "data": "2026-04-21",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 81.0,
     "dia_paralisado": null
@@ -444,7 +444,7 @@
     "semana": 7,
     "data": "2026-04-22",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 81.0,
     "dia_paralisado": null
@@ -454,7 +454,7 @@
     "semana": 8,
     "data": "2026-04-23",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 81.0,
     "dia_paralisado": null
@@ -464,7 +464,7 @@
     "semana": 8,
     "data": "2026-04-24",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 81.0,
     "dia_paralisado": null
@@ -474,7 +474,7 @@
     "semana": 8,
     "data": "2026-04-25",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 81.0,
     "dia_paralisado": null
@@ -484,7 +484,7 @@
     "semana": 8,
     "data": "2026-04-26",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 81.0,
     "dia_paralisado": null
@@ -494,7 +494,7 @@
     "semana": 8,
     "data": "2026-04-27",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 81.0,
     "dia_paralisado": null
@@ -504,7 +504,7 @@
     "semana": 8,
     "data": "2026-04-28",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 26.0,
     "mm_acum": 107.0,
     "dia_paralisado": "sim"
@@ -514,7 +514,7 @@
     "semana": 8,
     "data": "2026-04-29",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 107.0,
     "dia_paralisado": null
@@ -524,7 +524,7 @@
     "semana": 9,
     "data": "2026-04-30",
     "historica_acum": 80.0,
-    "historica_media_dia": 9.0,
+    "historica_media": 9.0,
     "mm_dia": 0.0,
     "mm_acum": 107.0,
     "dia_paralisado": null
@@ -534,7 +534,7 @@
     "semana": 9,
     "data": "2026-05-01",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -544,7 +544,7 @@
     "semana": 9,
     "data": "2026-05-02",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -554,7 +554,7 @@
     "semana": 9,
     "data": "2026-05-03",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -564,7 +564,7 @@
     "semana": 9,
     "data": "2026-05-04",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -574,7 +574,7 @@
     "semana": 9,
     "data": "2026-05-05",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -584,7 +584,7 @@
     "semana": 9,
     "data": "2026-05-06",
     "historica_acum": null,
-    "historica_media_dia": 9.0,
+    "historica_media": 9.0,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -594,7 +594,7 @@
     "semana": 10,
     "data": "2026-05-07",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -604,7 +604,7 @@
     "semana": 10,
     "data": "2026-05-08",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -614,7 +614,7 @@
     "semana": 10,
     "data": "2026-05-09",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -624,7 +624,7 @@
     "semana": 10,
     "data": "2026-05-10",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -634,7 +634,7 @@
     "semana": 10,
     "data": "2026-05-11",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 1.0,
     "mm_acum": 1.0,
     "dia_paralisado": null
@@ -644,7 +644,7 @@
     "semana": 10,
     "data": "2026-05-12",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 1.0,
     "dia_paralisado": null
@@ -654,7 +654,7 @@
     "semana": 10,
     "data": "2026-05-13",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 1.0,
     "dia_paralisado": null
@@ -664,7 +664,7 @@
     "semana": 11,
     "data": "2026-05-14",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 1.0,
     "dia_paralisado": null
@@ -674,7 +674,7 @@
     "semana": 11,
     "data": "2026-05-15",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 1.0,
     "dia_paralisado": null
@@ -684,7 +684,7 @@
     "semana": 11,
     "data": "2026-05-16",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 1.0,
     "dia_paralisado": null
@@ -694,7 +694,7 @@
     "semana": 11,
     "data": "2026-05-17",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 1.0,
     "dia_paralisado": null
@@ -704,7 +704,7 @@
     "semana": 11,
     "data": "2026-05-18",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 16.0,
     "mm_acum": 17.0,
     "dia_paralisado": "sim"
@@ -714,7 +714,7 @@
     "semana": 11,
     "data": "2026-05-19",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 17.0,
     "dia_paralisado": null
@@ -724,7 +724,7 @@
     "semana": 11,
     "data": "2026-05-20",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 6.0,
     "mm_acum": 23.0,
     "dia_paralisado": "sim"
@@ -734,7 +734,7 @@
     "semana": 12,
     "data": "2026-05-21",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 23.0,
     "dia_paralisado": null
@@ -744,7 +744,7 @@
     "semana": 12,
     "data": "2026-05-22",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 23.0,
     "dia_paralisado": null
@@ -754,7 +754,7 @@
     "semana": 12,
     "data": "2026-05-23",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 23.0,
     "dia_paralisado": null
@@ -764,7 +764,7 @@
     "semana": 12,
     "data": "2026-05-24",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 23.0,
     "dia_paralisado": null
@@ -774,7 +774,7 @@
     "semana": 12,
     "data": "2026-05-25",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 23.0,
     "dia_paralisado": null
@@ -784,7 +784,7 @@
     "semana": 12,
     "data": "2026-05-26",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 23.0,
     "dia_paralisado": null
@@ -794,7 +794,7 @@
     "semana": 12,
     "data": "2026-05-27",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 23.0,
     "dia_paralisado": null
@@ -804,7 +804,7 @@
     "semana": 13,
     "data": "2026-05-28",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 23.0,
     "dia_paralisado": null
@@ -814,7 +814,7 @@
     "semana": 13,
     "data": "2026-05-29",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 23.0,
     "dia_paralisado": null
@@ -824,7 +824,7 @@
     "semana": 13,
     "data": "2026-05-30",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 23.0,
     "dia_paralisado": null
@@ -834,7 +834,7 @@
     "semana": 13,
     "data": "2026-05-31",
     "historica_acum": 66.0,
-    "historica_media_dia": 7.0,
+    "historica_media": 7.0,
     "mm_dia": 0.0,
     "mm_acum": 23.0,
     "dia_paralisado": null
@@ -844,7 +844,7 @@
     "semana": 13,
     "data": "2026-06-01",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 8.0,
     "mm_acum": 8.0,
     "dia_paralisado": "sim"
@@ -854,7 +854,7 @@
     "semana": 13,
     "data": "2026-06-02",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 8.0,
     "dia_paralisado": null
@@ -864,7 +864,7 @@
     "semana": 13,
     "data": "2026-06-03",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 8.0,
     "dia_paralisado": null
@@ -874,7 +874,7 @@
     "semana": 14,
     "data": "2026-06-04",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 8.0,
     "dia_paralisado": null
@@ -884,7 +884,7 @@
     "semana": 14,
     "data": "2026-06-05",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 8.0,
     "dia_paralisado": null
@@ -894,7 +894,7 @@
     "semana": 14,
     "data": "2026-06-06",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 8.0,
     "dia_paralisado": null
@@ -904,7 +904,7 @@
     "semana": 14,
     "data": "2026-06-07",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 8.0,
     "dia_paralisado": null
@@ -914,7 +914,7 @@
     "semana": 14,
     "data": "2026-06-08",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 8.0,
     "dia_paralisado": null
@@ -924,7 +924,7 @@
     "semana": 14,
     "data": "2026-06-09",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 8.0,
     "dia_paralisado": null
@@ -934,7 +934,7 @@
     "semana": 14,
     "data": "2026-06-10",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 8.0,
     "dia_paralisado": null
@@ -944,7 +944,7 @@
     "semana": 15,
     "data": "2026-06-11",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 8.0,
     "mm_acum": 16.0,
     "dia_paralisado": "sim"
@@ -954,7 +954,7 @@
     "semana": 15,
     "data": "2026-06-12",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 3.0,
     "mm_acum": 19.0,
     "dia_paralisado": "sim"
@@ -964,7 +964,7 @@
     "semana": 15,
     "data": "2026-06-13",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 19.0,
     "dia_paralisado": null
@@ -974,7 +974,7 @@
     "semana": 15,
     "data": "2026-06-14",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 19.0,
     "dia_paralisado": null
@@ -984,7 +984,7 @@
     "semana": 15,
     "data": "2026-06-15",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 12.0,
     "mm_acum": 31.0,
     "dia_paralisado": "sim"
@@ -994,7 +994,7 @@
     "semana": 15,
     "data": "2026-06-16",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 12.0,
     "mm_acum": 43.0,
     "dia_paralisado": "sim"
@@ -1004,7 +1004,7 @@
     "semana": 15,
     "data": "2026-06-17",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 43.0,
     "dia_paralisado": null
@@ -1014,7 +1014,7 @@
     "semana": 16,
     "data": "2026-06-18",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 43.0,
     "dia_paralisado": null
@@ -1024,7 +1024,7 @@
     "semana": 16,
     "data": "2026-06-19",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 43.0,
     "dia_paralisado": null
@@ -1034,7 +1034,7 @@
     "semana": 16,
     "data": "2026-06-20",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 43.0,
     "dia_paralisado": null
@@ -1044,7 +1044,7 @@
     "semana": 16,
     "data": "2026-06-21",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 43.0,
     "dia_paralisado": null
@@ -1054,7 +1054,7 @@
     "semana": 16,
     "data": "2026-06-22",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 43.0,
     "dia_paralisado": null
@@ -1064,7 +1064,7 @@
     "semana": 16,
     "data": "2026-06-23",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 22.0,
     "mm_acum": 65.0,
     "dia_paralisado": "sim"
@@ -1074,7 +1074,7 @@
     "semana": 16,
     "data": "2026-06-24",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 11.0,
     "mm_acum": 76.0,
     "dia_paralisado": "sim"
@@ -1084,7 +1084,7 @@
     "semana": 17,
     "data": "2026-06-25",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 17.0,
     "mm_acum": 93.0,
     "dia_paralisado": null
@@ -1094,7 +1094,7 @@
     "semana": 17,
     "data": "2026-06-26",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 93.0,
     "dia_paralisado": null
@@ -1104,7 +1104,7 @@
     "semana": 17,
     "data": "2026-06-27",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 93.0,
     "dia_paralisado": null
@@ -1114,7 +1114,7 @@
     "semana": 17,
     "data": "2026-06-28",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 93.0,
     "dia_paralisado": null
@@ -1124,7 +1124,7 @@
     "semana": 17,
     "data": "2026-06-29",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 93.0,
     "dia_paralisado": null
@@ -1134,7 +1134,7 @@
     "semana": 17,
     "data": "2026-06-30",
     "historica_acum": 65.0,
-    "historica_media_dia": 8.0,
+    "historica_media": 8.0,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -1144,7 +1144,7 @@
     "semana": 17,
     "data": "2026-07-01",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -1154,7 +1154,7 @@
     "semana": 18,
     "data": "2026-07-02",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -1164,7 +1164,7 @@
     "semana": 18,
     "data": "2026-07-03",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -1174,7 +1174,7 @@
     "semana": 18,
     "data": "2026-07-04",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -1184,7 +1184,7 @@
     "semana": 18,
     "data": "2026-07-05",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -1194,7 +1194,7 @@
     "semana": 18,
     "data": "2026-07-06",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -1204,7 +1204,7 @@
     "semana": 18,
     "data": "2026-07-07",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -1214,7 +1214,7 @@
     "semana": 18,
     "data": "2026-07-08",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -1224,7 +1224,7 @@
     "semana": 19,
     "data": "2026-07-09",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -1234,7 +1234,7 @@
     "semana": 19,
     "data": "2026-07-10",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -1244,7 +1244,7 @@
     "semana": 19,
     "data": "2026-07-11",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 4.0,
     "mm_acum": 4.0,
     "dia_paralisado": null
@@ -1254,7 +1254,7 @@
     "semana": 19,
     "data": "2026-07-12",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 4.0,
     "dia_paralisado": null
@@ -1264,7 +1264,7 @@
     "semana": 19,
     "data": "2026-07-13",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 4.0,
     "dia_paralisado": null
@@ -1274,7 +1274,7 @@
     "semana": 19,
     "data": "2026-07-14",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 4.0,
     "dia_paralisado": null
@@ -1284,7 +1284,7 @@
     "semana": 19,
     "data": "2026-07-15",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 4.0,
     "dia_paralisado": null
@@ -1294,7 +1294,7 @@
     "semana": 20,
     "data": "2026-07-16",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 4.0,
     "dia_paralisado": null
@@ -1304,7 +1304,7 @@
     "semana": 20,
     "data": "2026-07-17",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 4.0,
     "dia_paralisado": null
@@ -1314,7 +1314,7 @@
     "semana": 20,
     "data": "2026-07-18",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 4.0,
     "dia_paralisado": null
@@ -1324,7 +1324,7 @@
     "semana": 20,
     "data": "2026-07-19",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 4.0,
     "dia_paralisado": null
@@ -1334,7 +1334,7 @@
     "semana": 20,
     "data": "2026-07-20",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 4.0,
     "dia_paralisado": null
@@ -1344,7 +1344,7 @@
     "semana": 20,
     "data": "2026-07-21",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 4.0,
     "dia_paralisado": null
@@ -1354,7 +1354,7 @@
     "semana": 20,
     "data": "2026-07-22",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 4.0,
     "dia_paralisado": null
@@ -1364,7 +1364,7 @@
     "semana": 21,
     "data": "2026-07-23",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 4.0,
     "dia_paralisado": null
@@ -1374,7 +1374,7 @@
     "semana": 21,
     "data": "2026-07-24",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 18.0,
     "mm_acum": 22.0,
     "dia_paralisado": "sim"
@@ -1384,7 +1384,7 @@
     "semana": 21,
     "data": "2026-07-25",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 4.0,
     "mm_acum": 26.0,
     "dia_paralisado": null
@@ -1394,7 +1394,7 @@
     "semana": 21,
     "data": "2026-07-26",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": 26.0,
     "dia_paralisado": null
@@ -1404,7 +1404,7 @@
     "semana": 21,
     "data": "2026-07-27",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": 26.0,
     "dia_paralisado": null
@@ -1414,7 +1414,7 @@
     "semana": 21,
     "data": "2026-07-28",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": 26.0,
     "dia_paralisado": null
@@ -1424,7 +1424,7 @@
     "semana": 21,
     "data": "2026-07-29",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": 26.0,
     "dia_paralisado": null
@@ -1434,7 +1434,7 @@
     "semana": 22,
     "data": "2026-07-30",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": 26.0,
     "dia_paralisado": null
@@ -1444,7 +1444,7 @@
     "semana": 22,
     "data": "2026-07-31",
     "historica_acum": 33.0,
-    "historica_media_dia": 5.0,
+    "historica_media": 5.0,
     "mm_dia": null,
     "mm_acum": 26.0,
     "dia_paralisado": null
@@ -1454,7 +1454,7 @@
     "semana": 22,
     "data": "2026-08-01",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -1464,7 +1464,7 @@
     "semana": 22,
     "data": "2026-08-02",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -1474,7 +1474,7 @@
     "semana": 22,
     "data": "2026-08-03",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -1484,7 +1484,7 @@
     "semana": 22,
     "data": "2026-08-04",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 0.0,
     "dia_paralisado": null
@@ -1494,7 +1494,7 @@
     "semana": 22,
     "data": "2026-08-05",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 2.0,
     "mm_acum": 2.0,
     "dia_paralisado": null
@@ -1504,7 +1504,7 @@
     "semana": 23,
     "data": "2026-08-06",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 1.0,
     "mm_acum": 3.0,
     "dia_paralisado": null
@@ -1514,7 +1514,7 @@
     "semana": 23,
     "data": "2026-08-07",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 3.0,
     "dia_paralisado": null
@@ -1524,7 +1524,7 @@
     "semana": 23,
     "data": "2026-08-08",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 8.0,
     "mm_acum": 11.0,
     "dia_paralisado": null
@@ -1534,7 +1534,7 @@
     "semana": 23,
     "data": "2026-08-09",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 11.0,
     "dia_paralisado": null
@@ -1544,7 +1544,7 @@
     "semana": 23,
     "data": "2026-08-10",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 11.0,
     "dia_paralisado": null
@@ -1554,7 +1554,7 @@
     "semana": 23,
     "data": "2026-08-11",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 11.0,
     "dia_paralisado": null
@@ -1564,7 +1564,7 @@
     "semana": 23,
     "data": "2026-08-12",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 11.0,
     "dia_paralisado": null
@@ -1574,7 +1574,7 @@
     "semana": 24,
     "data": "2026-08-13",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 11.0,
     "dia_paralisado": null
@@ -1584,7 +1584,7 @@
     "semana": 24,
     "data": "2026-08-14",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 11.0,
     "dia_paralisado": null
@@ -1594,7 +1594,7 @@
     "semana": 24,
     "data": "2026-08-15",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 11.0,
     "dia_paralisado": null
@@ -1604,7 +1604,7 @@
     "semana": 24,
     "data": "2026-08-16",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 11.0,
     "dia_paralisado": null
@@ -1614,7 +1614,7 @@
     "semana": 24,
     "data": "2026-08-17",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 11.0,
     "dia_paralisado": null
@@ -1624,7 +1624,7 @@
     "semana": 24,
     "data": "2026-08-18",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 11.0,
     "dia_paralisado": null
@@ -1634,7 +1634,7 @@
     "semana": 24,
     "data": "2026-08-19",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 11.0,
     "dia_paralisado": null
@@ -1644,7 +1644,7 @@
     "semana": 25,
     "data": "2026-08-20",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 11.0,
     "dia_paralisado": null
@@ -1654,7 +1654,7 @@
     "semana": 25,
     "data": "2026-08-21",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 11.0,
     "dia_paralisado": null
@@ -1664,7 +1664,7 @@
     "semana": 25,
     "data": "2026-08-22",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 11.0,
     "dia_paralisado": null
@@ -1674,7 +1674,7 @@
     "semana": 25,
     "data": "2026-08-23",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 11.0,
     "dia_paralisado": null
@@ -1684,7 +1684,7 @@
     "semana": 25,
     "data": "2026-08-24",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 11.0,
     "dia_paralisado": null
@@ -1694,7 +1694,7 @@
     "semana": 25,
     "data": "2026-08-25",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 11.0,
     "dia_paralisado": null
@@ -1704,7 +1704,7 @@
     "semana": 25,
     "data": "2026-08-26",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 2.0,
     "mm_acum": 13.0,
     "dia_paralisado": null
@@ -1714,7 +1714,7 @@
     "semana": 26,
     "data": "2026-08-27",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 8.0,
     "mm_acum": 21.0,
     "dia_paralisado": null
@@ -1724,7 +1724,7 @@
     "semana": 26,
     "data": "2026-08-28",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 21.0,
     "dia_paralisado": null
@@ -1734,7 +1734,7 @@
     "semana": 26,
     "data": "2026-08-29",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 21.0,
     "dia_paralisado": null
@@ -1744,7 +1744,7 @@
     "semana": 26,
     "data": "2026-08-30",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 21.0,
     "dia_paralisado": null
@@ -1754,7 +1754,7 @@
     "semana": 26,
     "data": "2026-08-31",
     "historica_acum": 31.0,
-    "historica_media_dia": 6.0,
+    "historica_media": 6.0,
     "mm_dia": 2.0,
     "mm_acum": 23.0,
     "dia_paralisado": null
@@ -1764,7 +1764,7 @@
     "semana": 26,
     "data": "2026-09-01",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 22.5,
     "mm_acum": 22.5,
     "dia_paralisado": "sim"
@@ -1774,7 +1774,7 @@
     "semana": 26,
     "data": "2026-09-02",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 22.5,
     "dia_paralisado": "sim"
@@ -1784,7 +1784,7 @@
     "semana": 27,
     "data": "2026-09-03",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 22.5,
     "dia_paralisado": null
@@ -1794,7 +1794,7 @@
     "semana": 27,
     "data": "2026-09-04",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 22.5,
     "dia_paralisado": null
@@ -1804,7 +1804,7 @@
     "semana": 27,
     "data": "2026-09-05",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 22.5,
     "dia_paralisado": null
@@ -1814,7 +1814,7 @@
     "semana": 27,
     "data": "2026-09-06",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 22.5,
     "dia_paralisado": null
@@ -1824,7 +1824,7 @@
     "semana": 27,
     "data": "2026-09-07",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 20.0,
     "mm_acum": 42.5,
     "dia_paralisado": null
@@ -1834,7 +1834,7 @@
     "semana": 27,
     "data": "2026-09-08",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 42.5,
     "dia_paralisado": "sim"
@@ -1844,7 +1844,7 @@
     "semana": 27,
     "data": "2026-09-09",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 58.0,
     "mm_acum": 100.5,
     "dia_paralisado": "sim"
@@ -1854,7 +1854,7 @@
     "semana": 28,
     "data": "2026-09-10",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 67.5,
     "mm_acum": 168.0,
     "dia_paralisado": "sim"
@@ -1864,7 +1864,7 @@
     "semana": 28,
     "data": "2026-09-11",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 168.0,
     "dia_paralisado": "sim"
@@ -1874,7 +1874,7 @@
     "semana": 28,
     "data": "2026-09-12",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 168.0,
     "dia_paralisado": null
@@ -1884,7 +1884,7 @@
     "semana": 28,
     "data": "2026-09-13",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 33.0,
     "mm_acum": 201.0,
     "dia_paralisado": null
@@ -1894,7 +1894,7 @@
     "semana": 28,
     "data": "2026-09-14",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 27.0,
     "mm_acum": 228.0,
     "dia_paralisado": "sim"
@@ -1904,7 +1904,7 @@
     "semana": 28,
     "data": "2026-09-15",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 228.0,
     "dia_paralisado": null
@@ -1914,7 +1914,7 @@
     "semana": 28,
     "data": "2026-09-16",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 228.0,
     "dia_paralisado": null
@@ -1924,7 +1924,7 @@
     "semana": 29,
     "data": "2026-09-17",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 228.0,
     "dia_paralisado": null
@@ -1934,7 +1934,7 @@
     "semana": 29,
     "data": "2026-09-18",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 228.0,
     "dia_paralisado": null
@@ -1944,7 +1944,7 @@
     "semana": 29,
     "data": "2026-09-19",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 228.0,
     "dia_paralisado": null
@@ -1954,7 +1954,7 @@
     "semana": 29,
     "data": "2026-09-20",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 228.0,
     "dia_paralisado": null
@@ -1964,7 +1964,7 @@
     "semana": 29,
     "data": "2026-09-21",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 30.0,
     "mm_acum": 258.0,
     "dia_paralisado": "sim"
@@ -1974,7 +1974,7 @@
     "semana": 29,
     "data": "2026-09-22",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.5,
     "mm_acum": 258.5,
     "dia_paralisado": "sim"
@@ -1984,7 +1984,7 @@
     "semana": 29,
     "data": "2026-09-23",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 258.5,
     "dia_paralisado": null
@@ -1994,7 +1994,7 @@
     "semana": 30,
     "data": "2026-09-24",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 258.5,
     "dia_paralisado": null
@@ -2004,7 +2004,7 @@
     "semana": 30,
     "data": "2026-09-25",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 258.5,
     "dia_paralisado": null
@@ -2014,7 +2014,7 @@
     "semana": 30,
     "data": "2026-09-26",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 258.5,
     "dia_paralisado": null
@@ -2024,7 +2024,7 @@
     "semana": 30,
     "data": "2026-09-27",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 258.5,
     "dia_paralisado": null
@@ -2034,7 +2034,7 @@
     "semana": 30,
     "data": "2026-09-28",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 258.5,
     "dia_paralisado": null
@@ -2044,7 +2044,7 @@
     "semana": 30,
     "data": "2026-09-29",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 258.5,
     "dia_paralisado": null
@@ -2054,7 +2054,7 @@
     "semana": 30,
     "data": "2026-09-30",
     "historica_acum": 55.0,
-    "historica_media_dia": 7.0,
+    "historica_media": 7.0,
     "mm_dia": 0.0,
     "mm_acum": 258.5,
     "dia_paralisado": null
@@ -2064,7 +2064,7 @@
     "semana": 31,
     "data": "2026-10-01",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 4.5,
     "mm_acum": 4.5,
     "dia_paralisado": null
@@ -2074,7 +2074,7 @@
     "semana": 31,
     "data": "2026-10-02",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 5.0,
     "mm_acum": 9.5,
     "dia_paralisado": null
@@ -2084,7 +2084,7 @@
     "semana": 31,
     "data": "2026-10-03",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 9.5,
     "dia_paralisado": null
@@ -2094,7 +2094,7 @@
     "semana": 31,
     "data": "2026-10-04",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 0.0,
     "mm_acum": 9.5,
     "dia_paralisado": null
@@ -2104,7 +2104,7 @@
     "semana": 31,
     "data": "2026-10-05",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 12.5,
     "mm_acum": 22.0,
     "dia_paralisado": "sim"
@@ -2114,7 +2114,7 @@
     "semana": 31,
     "data": "2026-10-06",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 22.5,
     "mm_acum": 44.5,
     "dia_paralisado": "sim"
@@ -2124,7 +2124,7 @@
     "semana": 31,
     "data": "2026-10-07",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": 1.0,
     "mm_acum": 45.5,
     "dia_paralisado": "sim"
@@ -2134,7 +2134,7 @@
     "semana": 32,
     "data": "2026-10-08",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2144,7 +2144,7 @@
     "semana": 32,
     "data": "2026-10-09",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2154,7 +2154,7 @@
     "semana": 32,
     "data": "2026-10-10",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2164,7 +2164,7 @@
     "semana": 32,
     "data": "2026-10-11",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2174,7 +2174,7 @@
     "semana": 32,
     "data": "2026-10-12",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2184,7 +2184,7 @@
     "semana": 32,
     "data": "2026-10-13",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2194,7 +2194,7 @@
     "semana": 32,
     "data": "2026-10-14",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2204,7 +2204,7 @@
     "semana": 33,
     "data": "2026-10-15",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2214,7 +2214,7 @@
     "semana": 33,
     "data": "2026-10-16",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2224,7 +2224,7 @@
     "semana": 33,
     "data": "2026-10-17",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2234,7 +2234,7 @@
     "semana": 33,
     "data": "2026-10-18",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2244,7 +2244,7 @@
     "semana": 33,
     "data": "2026-10-19",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2254,7 +2254,7 @@
     "semana": 33,
     "data": "2026-10-20",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2264,7 +2264,7 @@
     "semana": 33,
     "data": "2026-10-21",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2274,7 +2274,7 @@
     "semana": 34,
     "data": "2026-10-22",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2284,7 +2284,7 @@
     "semana": 34,
     "data": "2026-10-23",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2294,7 +2294,7 @@
     "semana": 34,
     "data": "2026-10-24",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2304,7 +2304,7 @@
     "semana": 34,
     "data": "2026-10-25",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2314,7 +2314,7 @@
     "semana": 34,
     "data": "2026-10-26",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2324,7 +2324,7 @@
     "semana": 34,
     "data": "2026-10-27",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2334,7 +2334,7 @@
     "semana": 34,
     "data": "2026-10-28",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2344,7 +2344,7 @@
     "semana": 35,
     "data": "2026-10-29",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2354,7 +2354,7 @@
     "semana": 35,
     "data": "2026-10-30",
     "historica_acum": null,
-    "historica_media_dia": null,
+    "historica_media": null,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2364,7 +2364,7 @@
     "semana": 35,
     "data": "2026-10-31",
     "historica_acum": 126.0,
-    "historica_media_dia": 10.0,
+    "historica_media": 10.0,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2374,7 +2374,7 @@
     "semana": 39,
     "data": "2026-11-30",
     "historica_acum": 145.0,
-    "historica_media_dia": 9.0,
+    "historica_media": 9.0,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2384,7 +2384,7 @@
     "semana": 44,
     "data": "2026-12-31",
     "historica_acum": 162.0,
-    "historica_media_dia": 10.0,
+    "historica_media": 10.0,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2394,7 +2394,7 @@
     "semana": 48,
     "data": "2027-01-31",
     "historica_acum": 213.0,
-    "historica_media_dia": 10.0,
+    "historica_media": 10.0,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2404,7 +2404,7 @@
     "semana": 52,
     "data": "2027-02-28",
     "historica_acum": 160.0,
-    "historica_media_dia": 11.0,
+    "historica_media": 11.0,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2414,7 +2414,7 @@
     "semana": 56,
     "data": "2027-03-31",
     "historica_acum": 166.0,
-    "historica_media_dia": 9.0,
+    "historica_media": 9.0,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null
@@ -2424,7 +2424,7 @@
     "semana": 61,
     "data": "2027-04-30",
     "historica_acum": 80.0,
-    "historica_media_dia": 9.0,
+    "historica_media": 9.0,
     "mm_dia": null,
     "mm_acum": null,
     "dia_paralisado": null

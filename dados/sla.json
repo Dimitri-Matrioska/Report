@@ -5,11 +5,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-04-30",
     "indicador": "Aderência ao Cronograma de Terraplenagem",
-    "descricao": "Mede o percentual de volume (m³) de corte e aterro executado frente ao cronograma físico-financeiro.\nFórmula: Índice = vol. executado no mês (m³) / vol. previsto no cronograma (m³) X 100.",
-    "meta": null,
+    "meta": "≥ 95% do volume previsto",
     "resultado": 1.435,
-    "aplicacao_sla": 0.02,
-    "observacao": null
+    "aplicacao": 0.02
   },
   {
     "validacao": "Atraso > 5 dias",
@@ -17,11 +15,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-04-30",
     "indicador": "Eficiência de Equipamentos (Histograma)",
-    "descricao": "Mede a disponibilidade e produtividade da frota mínima exigida para garantir o avanço das frentes (ex: escavadeiras, motoscrapers).\nHistograma de Equipamentos: Fórmula:  Disponibilidade  =  Total  de horas   operativas   /   Total   de   horas\nplanejadas no mês X 100.",
-    "meta": null,
+    "meta": "Manutenção de ≥ 90% da frota operacional",
     "resultado": 0.0,
-    "aplicacao_sla": -0.02,
-    "observacao": "Nenhuma evidência apresentada pela contratada"
+    "aplicacao": -0.02
   },
   {
     "validacao": "Estável",
@@ -29,11 +25,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-04-30",
     "indicador": "Qualidade da Compactação e Solo",
-    "descricao": "Percentual de ensaios de compactação (Proctor Normal) que atendem aos ≥ 98% exigidos.\nCálculo: Percentual de ensaios\naprovados com grau de compactação ≥ 98% do Proctor Normal.",
-    "meta": null,
+    "meta": "100% dos ensaios em conformidade",
     "resultado": 1.0,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": "Retrabalho em contenção",
@@ -41,11 +35,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-04-30",
     "indicador": "Gestão de Riscos e STMA",
-    "descricao": "Cumprimento do Plano de Gestão de Saúde, Segurança e Meio Ambiente (IGPP-GF-STMA)\n20% Proativo\n30% Reativo\n10% Participação\n40% Auditoria Trimestral",
-    "meta": null,
+    "meta": "≥ 82% de performance no índice GB",
     "resultado": null,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": "Conforme",
@@ -53,11 +45,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-04-30",
     "indicador": "Controle de Erosão e APP",
-    "descricao": "Mede a integridade das barreiras de sedimentos e contenções provisórias em áreas de APP.\nCritério: Avaliação visual e técnica da integridade das barreiras de sedimentos (silt fences) e bacias de decantação.\nApuração: Quinzenal ou após eventos de chuva superiores a 20mm/h",
-    "meta": null,
+    "meta": "Zero extravasamento de sedimentos para APP",
     "resultado": null,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": "Incidente grave",
@@ -65,11 +55,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-04-30",
     "indicador": "Incidentes de Alto Impacto",
-    "descricao": "Registro de eventos com risco grave à integridade física ou paralisação substancial das atividades.\nMedição: Registro oficial e Análise imediata de incidentes. Comunicação ao cliente em até 2h. Plano de resposta entregue em até 5 dias úteis",
-    "meta": null,
+    "meta": "≤ 2 por semestre",
     "resultado": 0.0,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -77,11 +65,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-04-30",
     "indicador": "Aderência aos Marcos do Projeto",
-    "descricao": "Cumprimento de datas críticas como término do cercamento perimetral e liberação para fundação (Transelevador)\nCritério de Medição: A apuração é binária (\"Entregue\" ou \"Não Entregue\") na data estipulada no cronograma físico-financeiro aprovado.\nTolerância: O Edital estabelece que atrasos não justificados por caso fortuito/força maior não geram aditivos de prazo\nProcedimento de Validação:A medição de volume topográfico e o Termo de Quitação de etapa assinado pelo Engenheiro Responsável validam o cumprimento do marco.",
-    "meta": null,
+    "meta": "Atraso zero em marcos críticos",
     "resultado": null,
-    "aplicacao_sla": -0.02,
-    "observacao": "Data Contratual de término do canteiro: 31/03/26. Não ocorreu."
+    "aplicacao": -0.02
   },
   {
     "validacao": null,
@@ -89,11 +75,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-04-30",
     "indicador": "Aprovação dos Projetos Otimizados",
-    "descricao": "Mede o prazo entre o aceite da proposta e a entrega dos projetos executivos (terraplenagem/drenagem) aprovados pela fiscalização (CQP)",
-    "meta": null,
+    "meta": "Entrega em até 15 dias após mobilização",
     "resultado": null,
-    "aplicacao_sla": -0.02,
-    "observacao": "Primeira emissão de projetos se deu em 16/03/26 com Geométrico e Geotécnico, pendente projeto de Drenagem (emitido somente em 20/05);"
+    "aplicacao": -0.02
   },
   {
     "validacao": null,
@@ -101,11 +85,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-04-30",
     "indicador": "Eficiência de Balanço de Solo)",
-    "descricao": "Adereço à meta de reengenharia de compensar volumes de corte e aterro, minimizando a necessidade de bota-fora externo ou importação.\nCálculo: Volume compensado internamente / Volume total escavado X 100.\nSe a contratada falhar em compensar o solo conforme prometido e o cliente tiver que pagar por bota-fora externo, a penalidade compensa parte desse custo.",
-    "meta": null,
+    "meta": "≥ 98% de solo compensado internamente",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -113,11 +95,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-04-30",
     "indicador": "Integridade das Contenções e Lagoas",
-    "descricao": "Mede a estabilidade das novas contenções e lagoas de retenção criadas pela solução de reengenharia.",
-    "meta": null,
+    "meta": "Zero ocorrências de instabilidade ou erosão",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -125,11 +105,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-05-31",
     "indicador": "Aderência ao Cronograma de Terraplenagem",
-    "descricao": "Mede o percentual de volume (m³) de corte e aterro executado frente ao cronograma físico-financeiro.\nFórmula: Índice = vol. executado no mês (m³) / vol. previsto no cronograma (m³) X 100.",
-    "meta": null,
+    "meta": "≥ 95% do volume previsto",
     "resultado": 0.9058,
-    "aplicacao_sla": -0.02,
-    "observacao": null
+    "aplicacao": -0.02
   },
   {
     "validacao": null,
@@ -137,11 +115,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-05-31",
     "indicador": "Eficiência de Equipamentos (Histograma)",
-    "descricao": "Mede a disponibilidade e produtividade da frota mínima exigida para garantir o avanço das frentes (ex: escavadeiras, motoscrapers).\nHistograma de Equipamentos: Fórmula:  Disponibilidade  =  Total  de horas   operativas   /   Total   de   horas\nplanejadas no mês X 100.",
-    "meta": null,
+    "meta": "Manutenção de ≥ 90% da frota operacional",
     "resultado": 0.8678,
-    "aplicacao_sla": 0.0,
-    "observacao": "Conforme planilha de disponibilidade apresentada pela Terram"
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -149,11 +125,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-05-31",
     "indicador": "Qualidade da Compactação e Solo",
-    "descricao": "Percentual de ensaios de compactação (Proctor Normal) que atendem aos ≥ 98% exigidos.\nCálculo: Percentual de ensaios aprovados com grau de compactação ≥ 98% do Proctor Normal.",
-    "meta": null,
+    "meta": "100% dos ensaios em conformidade",
     "resultado": 0.977,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -161,11 +135,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-05-31",
     "indicador": "Gestão de Riscos e STMA",
-    "descricao": "Cumprimento do Plano de Gestão de Saúde, Segurança e Meio Ambiente (IGPP-GF-STMA)\n20% Proativo\n30% Reativo\n10% Participação\n40% Auditoria Trimestral",
-    "meta": null,
+    "meta": "≥ 82% de performance no índice GB",
     "resultado": 0.8815,
-    "aplicacao_sla": 0.0,
-    "observacao": "Exclusão de bonificação por reincidência de desvios graves."
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -173,11 +145,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-05-31",
     "indicador": "Controle de Erosão e APP",
-    "descricao": "Mede a integridade das barreiras de sedimentos e contenções provisórias em áreas de APP.\nCritério: Avaliação visual e técnica da integridade das barreiras de sedimentos (silt fences) e bacias de decantação.\nApuração: Quinzenal ou após eventos de chuva superiores a 20mm/h",
-    "meta": null,
+    "meta": "Zero extravasamento de sedimentos para APP",
     "resultado": null,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -185,11 +155,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-05-31",
     "indicador": "Incidentes de Alto Impacto",
-    "descricao": "Registro de eventos com risco grave à integridade física ou paralisação substancial das atividades.\nMedição: Registro oficial e Análise imediata de incidentes. Comunicação ao cliente em até 2h. Plano de resposta entregue em até 5 dias úteis",
-    "meta": null,
+    "meta": "≤ 2 por semestre",
     "resultado": 0.0,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -197,11 +165,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-05-31",
     "indicador": "Aderência aos Marcos do Projeto",
-    "descricao": "Cumprimento de datas críticas como término do cercamento perimetral e liberação para fundação (Transelevador)\nCritério de Medição: A apuração é binária (\"Entregue\" ou \"Não Entregue\") na data estipulada no cronograma físico-financeiro aprovado.\nTolerância: O Edital estabelece que atrasos não justificados por caso fortuito/força maior não geram aditivos de prazo\nProcedimento de Validação:A medição de volume topográfico e o Termo de Quitação de etapa assinado pelo Engenheiro Responsável validam o cumprimento do marco.",
-    "meta": null,
+    "meta": "Atraso zero em marcos críticos",
     "resultado": null,
-    "aplicacao_sla": -0.04,
-    "observacao": "Canteiro de Obras (31/03)\nCercamento Perimetral (20/05)"
+    "aplicacao": -0.04
   },
   {
     "validacao": null,
@@ -209,11 +175,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-05-31",
     "indicador": "Aprovação dos Projetos Otimizados",
-    "descricao": "Mede o prazo entre o aceite da proposta e a entrega dos projetos executivos (terraplenagem/drenagem) aprovados pela fiscalização (CQP)",
-    "meta": null,
+    "meta": "Entrega em até 15 dias após mobilização",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -221,11 +185,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-05-31",
     "indicador": "Eficiência de Balanço de Solo",
-    "descricao": "Aderencia à meta de reengenharia de compensar volumes de corte e aterro, minimizando a necessidade de bota-fora externo ou importação.\nCálculo: Volume compensado internamente / Volume total escavado X 100.\nSe a contratada falhar em compensar o solo conforme prometido e o cliente tiver que pagar por bota-fora externo, a penalidade compensa parte desse custo.",
-    "meta": null,
+    "meta": "≥ 98% de solo compensado internamente",
     "resultado": 1.0,
-    "aplicacao_sla": 0.01,
-    "observacao": null
+    "aplicacao": 0.01
   },
   {
     "validacao": null,
@@ -233,11 +195,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-05-31",
     "indicador": "Integridade das Contenções e Lagoas",
-    "descricao": "Mede a estabilidade das novas contenções e lagoas de retenção criadas pela solução de reengenharia.",
-    "meta": null,
+    "meta": "Zero ocorrências de instabilidade ou erosão",
     "resultado": null,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -245,11 +205,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-02-28",
     "indicador": "Aderência ao Cronograma Físico-Financeiro",
-    "descricao": "Mede o percentual de atividades executadas dentro do prazo previsto no cronograma validado.\nSemanal: Atualização do status de tarefas no sistema (MS Project / PowerBI)\nMedição: Apresentação do relatório consolidado com curva física-financeira e análise de causas de desvio.",
-    "meta": null,
+    "meta": "≥ 95% das atividades no prazo",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -257,11 +215,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-02-28",
     "indicador": "Reprogramações do Cronograma",
-    "descricao": "Mede o número de reprogramações significativas no cronograma base.\nMedição: Reuniões mensais de controle de prazo e acompanhamento.\nA cada revisão a gerenciadora deve apresentar o histórico de reprogramações e justificativas documentadas.",
-    "meta": null,
+    "meta": "< 1 revisão significativa em 6 meses",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -269,11 +225,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-02-28",
     "indicador": "Variação Orçamentária",
-    "descricao": "Mede o desvio entre o orçamento aprovado e o custo real do projeto.\nMedição: Relatórios mensais de controle orçamentário e previsão de desembolso.\nCada pedido de aditivo deve vir acompanhado de planilha de impacto e parecer técnico da gerenciadora.",
-    "meta": null,
+    "meta": "≤ 1% de desvio mensal",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -281,11 +235,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-02-28",
     "indicador": "Gestão de Riscos",
-    "descricao": "Manter processo contínuo de identificação, avaliação e tratamento de riscos, garantindo que 100% dos riscos críticos sejam comunicados ao cliente em até 48 horas e que ao menos 95% de todos os riscos estejam acompanhados de ações definidas, prazos e responsáveis atribuídos para resolução em até 5 dias úteis",
-    "meta": null,
+    "meta": "≥ 95% riscos tratados em até 5 dias úteis",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -293,11 +245,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-02-28",
     "indicador": "Incidentes de Alto Impacto",
-    "descricao": "São classificados como Incidentes de Alto Impacto aqueles eventos que causem risco grave ou potencial risco à integridade física, causem paralisação substancial de atividades, gerem impacto ambiental relevante ou provoquem dano à imagem do cliente perante autoridades, mídia ou comunidade.\nMedição: Registro oficial e Análise imediata de incidentes. Comunicação ao cliente em até 2h. Plano de resposta entregue em até 5 dias úteis",
-    "meta": null,
+    "meta": "≤ 2 por semestre",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -305,11 +255,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-02-28",
     "indicador": "Qualidade – Não Conformidades",
-    "descricao": "Mede o percentual de não-conformidades críticas identificadas nas auditorias de qualidade.\nMedição: Acompanhamento de auditorias internas e externas mensais do checklist e registros fotográficos.",
-    "meta": null,
+    "meta": "< 95% NC identificadas e encaminhadas mensal",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -317,11 +265,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-02-28",
     "indicador": "IGPP-GF-STMA",
-    "descricao": "Detalhado no item (abaixo)\nÍNDICE GERAL DE PERFORMANCE DE PARCEIROS - GREENFIELD - IGPP-GF STMA\n20% Proativo\n30% Reativo\n10% Participação\n40% Auditoria Trimestral",
-    "meta": null,
+    "meta": "≥ 82% / 30 dias",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -329,11 +275,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-03-31",
     "indicador": "Aderência ao Cronograma Físico-Financeiro",
-    "descricao": "Mede o percentual de atividades executadas dentro do prazo previsto no cronograma validado.\nSemanal: Atualização do status de tarefas no sistema (MS Project / PowerBI)\nMedição: Apresentação do relatório consolidado com curva física-financeira e análise de causas de desvio.",
-    "meta": null,
+    "meta": "≥ 95% das atividades no prazo",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -341,11 +285,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-03-31",
     "indicador": "Reprogramações do Cronograma",
-    "descricao": "Mede o número de reprogramações significativas no cronograma base.\nMedição: Reuniões mensais de controle de prazo e acompanhamento.\nA cada revisão a gerenciadora deve apresentar o histórico de reprogramações e justificativas documentadas.",
-    "meta": null,
+    "meta": "< 1 revisão significativa em 6 meses",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -353,11 +295,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-03-31",
     "indicador": "Variação Orçamentária",
-    "descricao": "Mede o desvio entre o orçamento aprovado e o custo real do projeto.\nMedição: Relatórios mensais de controle orçamentário e previsão de desembolso.\nCada pedido de aditivo deve vir acompanhado de planilha de impacto e parecer técnico da gerenciadora.",
-    "meta": null,
+    "meta": "≤ 1% de desvio mensal",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -365,11 +305,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-03-31",
     "indicador": "Gestão de Riscos",
-    "descricao": "Manter processo contínuo de identificação, avaliação e tratamento de riscos, garantindo que 100% dos riscos críticos sejam comunicados ao cliente em até 48 horas e que ao menos 95% de todos os riscos estejam acompanhados de ações definidas, prazos e responsáveis atribuídos para resolução em até 5 dias úteis",
-    "meta": null,
+    "meta": "≥ 95% riscos tratados em até 5 dias úteis",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -377,11 +315,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-03-31",
     "indicador": "Incidentes de Alto Impacto",
-    "descricao": "São classificados como Incidentes de Alto Impacto aqueles eventos que causem risco grave ou potencial risco à integridade física, causem paralisação substancial de atividades, gerem impacto ambiental relevante ou provoquem dano à imagem do cliente perante autoridades, mídia ou comunidade.\nMedição: Registro oficial e Análise imediata de incidentes. Comunicação ao cliente em até 2h. Plano de resposta entregue em até 5 dias úteis",
-    "meta": null,
+    "meta": "≤ 2 por semestre",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -389,11 +325,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-03-31",
     "indicador": "Qualidade – Não Conformidades",
-    "descricao": "Mede o percentual de não-conformidades críticas identificadas nas auditorias de qualidade.\nMedição: Acompanhamento de auditorias internas e externas mensais do checklist e registros fotográficos.",
-    "meta": null,
+    "meta": "< 95% NC identificadas e encaminhadas mensal",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -401,11 +335,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-03-31",
     "indicador": "IGPP-GF-STMA",
-    "descricao": "Detalhado no item (abaixo)\nÍNDICE GERAL DE PERFORMANCE DE PARCEIROS - GREENFIELD - IGPP-GF STMA\n20% Proativo\n30% Reativo\n10% Participação\n40% Auditoria Trimestral",
-    "meta": null,
+    "meta": "≥ 82% / 30 dias",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -413,11 +345,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-04-30",
     "indicador": "Aderência ao Cronograma Físico-Financeiro",
-    "descricao": "Mede o percentual de atividades executadas dentro do prazo previsto no cronograma validado.\nSemanal: Atualização do status de tarefas no sistema (MS Project / PowerBI)\nMedição: Apresentação do relatório consolidado com curva física-financeira e análise de causas de desvio.",
-    "meta": null,
+    "meta": "≥ 95% das atividades no prazo",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": "Cronograma Terram"
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -425,11 +355,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-04-30",
     "indicador": "Reprogramações do Cronograma",
-    "descricao": "Mede o número de reprogramações significativas no cronograma base.\nMedição: Reuniões mensais de controle de prazo e acompanhamento.\nA cada revisão a gerenciadora deve apresentar o histórico de reprogramações e justificativas documentadas.",
-    "meta": null,
+    "meta": "< 1 revisão significativa em 6 meses",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": "Houve revisão somente de sequencia executiva"
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -437,11 +365,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-04-30",
     "indicador": "Variação Orçamentária",
-    "descricao": "Mede o desvio entre o orçamento aprovado e o custo real do projeto.\nMedição: Relatórios mensais de controle orçamentário e previsão de desembolso.\nCada pedido de aditivo deve vir acompanhado de planilha de impacto e parecer técnico da gerenciadora.",
-    "meta": null,
+    "meta": "≤ 1% de desvio mensal",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -449,11 +375,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-04-30",
     "indicador": "Gestão de Riscos",
-    "descricao": "Manter processo contínuo de identificação, avaliação e tratamento de riscos, garantindo que 100% dos riscos críticos sejam comunicados ao cliente em até 48 horas e que ao menos 95% de todos os riscos estejam acompanhados de ações definidas, prazos e responsáveis atribuídos para resolução em até 5 dias úteis",
-    "meta": null,
+    "meta": "≥ 95% riscos tratados em até 5 dias úteis",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -461,11 +385,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-04-30",
     "indicador": "Incidentes de Alto Impacto",
-    "descricao": "São classificados como Incidentes de Alto Impacto aqueles eventos que causem risco grave ou potencial risco à integridade física, causem paralisação substancial de atividades, gerem impacto ambiental relevante ou provoquem dano à imagem do cliente perante autoridades, mídia ou comunidade.\nMedição: Registro oficial e Análise imediata de incidentes. Comunicação ao cliente em até 2h. Plano de resposta entregue em até 5 dias úteis",
-    "meta": null,
+    "meta": "≤ 2 por semestre",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -473,11 +395,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-04-30",
     "indicador": "Qualidade – Não Conformidades",
-    "descricao": "Mede o percentual de não-conformidades críticas identificadas nas auditorias de qualidade.\nMedição: Acompanhamento de auditorias internas e externas mensais do checklist e registros fotográficos.",
-    "meta": null,
+    "meta": "< 95% NC identificadas e encaminhadas mensal",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -485,11 +405,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-04-30",
     "indicador": "IGPP-GF-STMA",
-    "descricao": "Detalhado no item (abaixo)\nÍNDICE GERAL DE PERFORMANCE DE PARCEIROS - GREENFIELD - IGPP-GF STMA\n20% Proativo\n30% Reativo\n10% Participação\n40% Auditoria Trimestral",
-    "meta": null,
+    "meta": "≥ 82% / 30 dias",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -497,11 +415,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-05-31",
     "indicador": "Aderência ao Cronograma Físico-Financeiro",
-    "descricao": "Mede o percentual de atividades executadas dentro do prazo previsto no cronograma validado.\nSemanal: Atualização do status de tarefas no sistema (MS Project / PowerBI)\nMedição: Apresentação do relatório consolidado com curva física-financeira e análise de causas de desvio.",
-    "meta": null,
+    "meta": "≥ 95% das atividades no prazo",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -509,11 +425,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-05-31",
     "indicador": "Reprogramações do Cronograma",
-    "descricao": "Mede o número de reprogramações significativas no cronograma base.\nMedição: Reuniões mensais de controle de prazo e acompanhamento.\nA cada revisão a gerenciadora deve apresentar o histórico de reprogramações e justificativas documentadas.",
-    "meta": null,
+    "meta": "< 1 revisão significativa em 6 meses",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": "Replanejamento em função de reengenharia da contratada sem alteração de datas"
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -521,11 +435,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-05-31",
     "indicador": "Variação Orçamentária",
-    "descricao": "Mede o desvio entre o orçamento aprovado e o custo real do projeto.\nMedição: Relatórios mensais de controle orçamentário e previsão de desembolso.\nCada pedido de aditivo deve vir acompanhado de planilha de impacto e parecer técnico da gerenciadora.",
-    "meta": null,
+    "meta": "≤ 1% de desvio mensal",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -533,11 +445,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-05-31",
     "indicador": "Gestão de Riscos",
-    "descricao": "Manter processo contínuo de identificação, avaliação e tratamento de riscos, garantindo que 100% dos riscos críticos sejam comunicados ao cliente em até 48 horas e que ao menos 95% de todos os riscos estejam acompanhados de ações definidas, prazos e responsáveis atribuídos para resolução em até 5 dias úteis",
-    "meta": null,
+    "meta": "≥ 95% riscos tratados em até 5 dias úteis",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -545,11 +455,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-05-31",
     "indicador": "Incidentes de Alto Impacto",
-    "descricao": "São classificados como Incidentes de Alto Impacto aqueles eventos que causem risco grave ou potencial risco à integridade física, causem paralisação substancial de atividades, gerem impacto ambiental relevante ou provoquem dano à imagem do cliente perante autoridades, mídia ou comunidade.\nMedição: Registro oficial e Análise imediata de incidentes. Comunicação ao cliente em até 2h. Plano de resposta entregue em até 5 dias úteis",
-    "meta": null,
+    "meta": "≤ 2 por semestre",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -557,11 +465,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-05-31",
     "indicador": "Qualidade – Não Conformidades",
-    "descricao": "Mede o percentual de não-conformidades críticas identificadas nas auditorias de qualidade.\nMedição: Acompanhamento de auditorias internas e externas mensais do checklist e registros fotográficos.",
-    "meta": null,
+    "meta": "< 95% NC identificadas e encaminhadas mensal",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -569,11 +475,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-05-31",
     "indicador": "IGPP-GF-STMA",
-    "descricao": "Detalhado no item (abaixo)\nÍNDICE GERAL DE PERFORMANCE DE PARCEIROS - GREENFIELD - IGPP-GF STMA\n20% Proativo\n30% Reativo\n10% Participação\n40% Auditoria Trimestral",
-    "meta": null,
+    "meta": "≥ 82% / 30 dias",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -581,11 +485,9 @@
     "contratada": "VIRTUAL INFRAESTRUTURA E ENERGIA LTDA",
     "mes": "2026-06-30",
     "indicador": "Cumprimento do Cronograma (Parcial)",
-    "descricao": "Atraso nas entregas parciais alinhadas em edital/kickoff.",
-    "meta": null,
+    "meta": "0 dias de atraso (100% de aderência às datas parciais).",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -593,11 +495,9 @@
     "contratada": "VIRTUAL INFRAESTRUTURA E ENERGIA LTDA",
     "mes": "2026-06-30",
     "indicador": "Cumprimento do Cronograma (Final)",
-    "descricao": "Atraso na data final de entrega dos equipamentos operantes.",
-    "meta": null,
+    "meta": "0 dias de atraso na entrega final da obra.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -605,11 +505,9 @@
     "contratada": "VIRTUAL INFRAESTRUTURA E ENERGIA LTDA",
     "mes": "2026-06-30",
     "indicador": "Gestão de Terceiros",
-    "descricao": "Descumprimento no cadastro da contratada e empregados no sistema SG3.",
-    "meta": null,
+    "meta": "100% de conformidade dos cadastros no sistema.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -617,11 +515,9 @@
     "contratada": "VIRTUAL INFRAESTRUTURA E ENERGIA LTDA",
     "mes": "2026-06-30",
     "indicador": "Fornecimento de ART",
-    "descricao": "Atraso na entrega da ART de execução antes da mobilização.",
-    "meta": null,
+    "meta": "Entrega em até 7 dias após aprovação da contratação.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -629,11 +525,9 @@
     "contratada": "VIRTUAL INFRAESTRUTURA E ENERGIA LTDA",
     "mes": "2026-06-30",
     "indicador": "Entrega técnica e Documentação",
-    "descricao": "Atraso na entrega de Data book, manuais e documentação periódica.",
-    "meta": null,
+    "meta": "100% de entrega no prazo estipulado.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -641,11 +535,9 @@
     "contratada": "VIRTUAL INFRAESTRUTURA E ENERGIA LTDA",
     "mes": "2026-06-30",
     "indicador": "Qualidade da entrega",
-    "descricao": "Entrega dos serviços fora das especificações técnicas exigidas.",
-    "meta": null,
+    "meta": "100% de aderência às especificações técnicas (0 retrabalho).",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -653,11 +545,9 @@
     "contratada": "VIRTUAL INFRAESTRUTURA E ENERGIA LTDA",
     "mes": "2026-06-30",
     "indicador": "Pós Projeto (Garantia)",
-    "descricao": "Não atendimento aos acionamentos de garantia da Contratante.",
-    "meta": null,
+    "meta": "100% de atendimento aos chamados de garantia.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -665,11 +555,9 @@
     "contratada": "VIRTUAL INFRAESTRUTURA E ENERGIA LTDA",
     "mes": "2026-06-30",
     "indicador": "SLA Manutenção (Crítico)",
-    "descricao": "Incidente que torne inoperante o Data Center.",
-    "meta": null,
+    "meta": "Atendimento ≤ 4h; Contorno ≤ 48h; Solução ≤ 72h.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -677,11 +565,9 @@
     "contratada": "VIRTUAL INFRAESTRUTURA E ENERGIA LTDA",
     "mes": "2026-06-30",
     "indicador": "SLA Manutenção (Urgente)",
-    "descricao": "Degradação do ambiente da Sala de Equipamentos.",
-    "meta": null,
+    "meta": "Atendimento ≤ 8h; Contorno ≤ 48h.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -689,11 +575,9 @@
     "contratada": "VIRTUAL INFRAESTRUTURA E ENERGIA LTDA",
     "mes": "2026-06-30",
     "indicador": "SLA Manutenção (Rotina)",
-    "descricao": "Falhas mínimas que não afetam a performance.",
-    "meta": null,
+    "meta": "Atendimento ≤ 12h; Contorno ≤ 72h; Solução ≤ 5 dias.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -701,11 +585,9 @@
     "contratada": "VIRTUAL INFRAESTRUTURA E ENERGIA LTDA",
     "mes": "2026-06-30",
     "indicador": "Segurança do Trabalho",
-    "descricao": "Desvios, falta de EPIs/EPCs ou acidentes de trabalho.",
-    "meta": null,
+    "meta": "0 Acidentes e 0 Desvios de comportamento.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -713,11 +595,9 @@
     "contratada": "SOTTOMAIOR CONSULTORIA LTDA",
     "mes": "2026-06-30",
     "indicador": "Multas por atraso (Parcial)",
-    "descricao": "Atraso nas entregas parciais alinhadas em edital/kickoff.",
-    "meta": null,
+    "meta": "0 dias de atraso.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -725,11 +605,9 @@
     "contratada": "SOTTOMAIOR CONSULTORIA LTDA",
     "mes": "2026-06-30",
     "indicador": "Multas por atraso (Final)",
-    "descricao": "Atraso na data final do cronograma estabelecido.",
-    "meta": null,
+    "meta": "0 dias de atraso na entrega final.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -737,11 +615,9 @@
     "contratada": "SOTTOMAIOR CONSULTORIA LTDA",
     "mes": "2026-06-30",
     "indicador": "Cadastro de terceiros",
-    "descricao": "Falha em manter cadastros aprovados no sistema de terceiros.",
-    "meta": null,
+    "meta": "100% de cadastros regulares no SG3.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -749,11 +625,9 @@
     "contratada": "SOTTOMAIOR CONSULTORIA LTDA",
     "mes": "2026-06-30",
     "indicador": "Qualidade da entrega",
-    "descricao": "Descumprimento das especificações técnicas.",
-    "meta": null,
+    "meta": "100% de aderência técnica.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -761,11 +635,9 @@
     "contratada": "SOTTOMAIOR CONSULTORIA LTDA",
     "mes": "2026-06-30",
     "indicador": "Segurança do Trabalho",
-    "descricao": "Desvios de comportamento ou acidentes de trabalho.",
-    "meta": null,
+    "meta": "0 Acidentes e 0 Desvios.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -773,11 +645,9 @@
     "contratada": "BAIKAL CONSTRUÇÕES E INSTALAÇÕES LTDA.",
     "mes": "2026-06-30",
     "indicador": "Atraso do Cronograma (Parcial)",
-    "descricao": "Atraso nas entregas parciais alinhadas em ata de reunião.",
-    "meta": null,
+    "meta": "0 dias de atraso.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -785,11 +655,9 @@
     "contratada": "BAIKAL CONSTRUÇÕES E INSTALAÇÕES LTDA.",
     "mes": "2026-06-30",
     "indicador": "Atraso do Cronograma (Final)",
-    "descricao": "Atraso na data final de conclusão da obra.",
-    "meta": null,
+    "meta": "0 dias de atraso na conclusão.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -797,11 +665,9 @@
     "contratada": "BAIKAL CONSTRUÇÕES E INSTALAÇÕES LTDA.",
     "mes": "2026-06-30",
     "indicador": "Cadastros de terceiros",
-    "descricao": "Descumprimento no sistema de gestão de terceiros (SG3).",
-    "meta": null,
+    "meta": "100% de regularidade.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -809,11 +675,9 @@
     "contratada": "BAIKAL CONSTRUÇÕES E INSTALAÇÕES LTDA.",
     "mes": "2026-06-30",
     "indicador": "Documentação e ARTs",
-    "descricao": "Atraso no diário de obras, Data book, MTR, cronograma.",
-    "meta": null,
+    "meta": "100% de entrega no prazo.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -821,11 +685,9 @@
     "contratada": "BAIKAL CONSTRUÇÕES E INSTALAÇÕES LTDA.",
     "mes": "2026-06-30",
     "indicador": "Qualidade da entrega",
-    "descricao": "Descumprimento das especificações técnicas.",
-    "meta": null,
+    "meta": "100% de aderência técnica.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -833,11 +695,9 @@
     "contratada": "BAIKAL CONSTRUÇÕES E INSTALAÇÕES LTDA.",
     "mes": "2026-06-30",
     "indicador": "Segurança do Trabalho",
-    "descricao": "Desvios comportamentais ou acidentes.",
-    "meta": null,
+    "meta": "0 Acidentes e 0 Desvios.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -845,11 +705,9 @@
     "contratada": "SSI SCHAEFER LTDA.",
     "mes": "2026-06-30",
     "indicador": "Retenção de Pagamento (HOLD)",
-    "descricao": "Atraso de cronograma imputável à contratada.",
-    "meta": null,
+    "meta": "0 dias de atraso nos marcos do projeto.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -857,11 +715,9 @@
     "contratada": "SSI SCHAEFER LTDA.",
     "mes": "2026-06-30",
     "indicador": "Multa Moratória (Atrasos/Shortage)",
-    "descricao": "Atraso em equipamentos, start-up, falta de peças ou mobilização.",
-    "meta": null,
+    "meta": "0 dias de atraso (entregas de equipamentos e vistos).",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -869,11 +725,9 @@
     "contratada": "SSI SCHAEFER LTDA.",
     "mes": "2026-06-30",
     "indicador": "Teto (Cap) para penalidades",
-    "descricao": "Soma das penalidades do SLA atinge teto.",
-    "meta": null,
+    "meta": "Não aplicável (Garantia do Teto)",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -881,11 +735,9 @@
     "contratada": "SSI SCHAEFER LTDA.",
     "mes": "2026-06-30",
     "indicador": "Não Conformidade Técnica (NCT)",
-    "descricao": "Falha em cumprir itens do ERU (Especificação de Requisitos).",
-    "meta": null,
+    "meta": "100% de aderência ao ERU.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -893,11 +745,9 @@
     "contratada": "SSI SCHAEFER LTDA.",
     "mes": "2026-06-30",
     "indicador": "Não Conformidade Crítica (NCC)",
-    "descricao": "Vício que impede funcionamento, compromete segurança ou performance.",
-    "meta": null,
+    "meta": "0 vícios ou falhas críticas.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -905,11 +755,9 @@
     "contratada": "SSI SCHAEFER LTDA.",
     "mes": "2026-06-30",
     "indicador": "Segurança do Trabalho",
-    "descricao": "Fatalidade, Acidente Grave ou desvios de \"Regras pela Vida\".",
-    "meta": null,
+    "meta": "0 Acidentes Graves e 0 Desvios.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -917,11 +765,9 @@
     "contratada": "SSI SCHAEFER LTDA.",
     "mes": "2026-06-30",
     "indicador": "Penalidades por Desempenho (IGPP)",
-    "descricao": "Índice Global de Performance do Parceiro (IGPP) for inferior a 84%.",
-    "meta": null,
+    "meta": "≥ 84% no Índice IGPP.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -929,11 +775,9 @@
     "contratada": "CTE - CENTRO DE TECNOLOGIA DE EDIFICAÇÕES E HOLDING LTDA",
     "mes": "2026-06-30",
     "indicador": "Multas por atraso (Até 30 dias)",
-    "descricao": "Atraso no cumprimento dos prazos estabelecidos.",
-    "meta": null,
+    "meta": "0 dias de atraso (100% de cumprimento do cronograma).",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -941,11 +785,9 @@
     "contratada": "CTE - CENTRO DE TECNOLOGIA DE EDIFICAÇÕES E HOLDING LTDA",
     "mes": "2026-06-30",
     "indicador": "Multas por atraso (A partir de 31 dias)",
-    "descricao": "Atraso no cumprimento dos prazos a partir do 31º dia.",
-    "meta": null,
+    "meta": "0 dias de atraso (100% de cumprimento do cronograma).",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -953,11 +795,9 @@
     "contratada": "CTE - CENTRO DE TECNOLOGIA DE EDIFICAÇÕES E HOLDING LTDA",
     "mes": "2026-06-30",
     "indicador": "Controle e entrega de documentações",
-    "descricao": "Falha na destinação correta de resíduos com MTR, PGRCC, ARTs, entrega técnica e memorial.",
-    "meta": null,
+    "meta": "100% de entrega no prazo e conformidade.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -965,11 +805,9 @@
     "contratada": "CTE - CENTRO DE TECNOLOGIA DE EDIFICAÇÕES E HOLDING LTDA",
     "mes": "2026-06-30",
     "indicador": "Qualidade da entrega dos serviços",
-    "descricao": "Descumprimento das entregas segundo as especificações técnicas exigidas.",
-    "meta": null,
+    "meta": "100% de aderência às especificações (0 retrabalho).",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -977,11 +815,9 @@
     "contratada": "CTE - CENTRO DE TECNOLOGIA DE EDIFICAÇÕES E HOLDING LTDA",
     "mes": "2026-06-30",
     "indicador": "Pós Projeto",
-    "descricao": "Necessidade de garantia ou correções após o encerramento do projeto.",
-    "meta": null,
+    "meta": "100% de atendimento à garantia acionada.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -989,11 +825,9 @@
     "contratada": "CTE - CENTRO DE TECNOLOGIA DE EDIFICAÇÕES E HOLDING LTDA",
     "mes": "2026-06-30",
     "indicador": "Segurança do Trabalho (Desvios)",
-    "descricao": "Descumprimento das normas de segurança do trabalho (1º, 2º e 3º desvios).",
-    "meta": null,
+    "meta": "0 Desvios de comportamento (100% aderência às normas).",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1001,11 +835,9 @@
     "contratada": "CTE - CENTRO DE TECNOLOGIA DE EDIFICAÇÕES E HOLDING LTDA",
     "mes": "2026-06-30",
     "indicador": "Segurança do Trabalho (Acidentes)",
-    "descricao": "Acidentes de trabalho com ou sem afastamento.",
-    "meta": null,
+    "meta": "0 Acidentes de trabalho.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1013,11 +845,9 @@
     "contratada": "CTE - CENTRO DE TECNOLOGIA DE EDIFICAÇÕES E HOLDING LTDA",
     "mes": "2026-06-30",
     "indicador": "Segurança do Trabalho (Óbito)",
-    "descricao": "Acidente de trabalho com fatalidade (óbito).",
-    "meta": null,
+    "meta": "0 Acidentes com fatalidade.",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1025,11 +855,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-06-30",
     "indicador": "Aderência ao Cronograma de Terraplenagem",
-    "descricao": "Mede o percentual de volume (m³) de corte e aterro executado frente ao cronograma físico-financeiro.\nFórmula: Índice = vol. executado no mês (m³) / vol. previsto no cronograma (m³) X 100.",
-    "meta": null,
+    "meta": "≥ 95% do volume previsto",
     "resultado": 1.0189,
-    "aplicacao_sla": 0.02,
-    "observacao": null
+    "aplicacao": 0.02
   },
   {
     "validacao": null,
@@ -1037,11 +865,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-06-30",
     "indicador": "Eficiência de Equipamentos (Histograma)",
-    "descricao": "Mede a disponibilidade e produtividade da frota mínima exigida para garantir o avanço das frentes (ex: escavadeiras, motoscrapers).\nHistograma de Equipamentos: Fórmula:  Disponibilidade  =  Total  de horas   operativas   /   Total   de   horas\nplanejadas no mês X 100.",
-    "meta": null,
+    "meta": "Manutenção de ≥ 90% da frota operacional",
     "resultado": 0.8685,
-    "aplicacao_sla": 0.0,
-    "observacao": "Conforme planilha de disponibilidade apresentada pela Terram"
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1049,11 +875,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-06-30",
     "indicador": "Qualidade da Compactação e Solo",
-    "descricao": "Percentual de ensaios de compactação (Proctor Normal) que atendem aos ≥ 98% exigidos.\nCálculo: Percentual de ensaios\naprovados com grau de compactação ≥ 98% do Proctor Normal.",
-    "meta": null,
+    "meta": "100% dos ensaios em conformidade",
     "resultado": 0.9722,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1061,11 +885,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-06-30",
     "indicador": "Gestão de Riscos e STMA",
-    "descricao": "Cumprimento do Plano de Gestão de Saúde, Segurança e Meio Ambiente (IGPP-GF-STMA)\n20% Proativo\n30% Reativo\n10% Participação\n40% Auditoria Trimestral",
-    "meta": null,
+    "meta": "≥ 82% de performance no índice GB",
     "resultado": 0.8722,
-    "aplicacao_sla": 0.0,
-    "observacao": "Exclusão de bonificação por reincidência de desvios graves."
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1073,11 +895,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-06-30",
     "indicador": "Controle de Erosão e APP",
-    "descricao": "Mede a integridade das barreiras de sedimentos e contenções provisórias em áreas de APP.\nCritério: Avaliação visual e técnica da integridade das barreiras de sedimentos (silt fences) e bacias de decantação.\nApuração: Quinzenal ou após eventos de chuva superiores a 20mm/h",
-    "meta": null,
+    "meta": "Zero extravasamento de sedimentos para APP",
     "resultado": null,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1085,11 +905,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-06-30",
     "indicador": "Incidentes de Alto Impacto",
-    "descricao": "Registro de eventos com risco grave à integridade física ou paralisação substancial das atividades.\nMedição: Registro oficial e Análise imediata de incidentes. Comunicação ao cliente em até 2h. Plano de resposta entregue em até 5 dias úteis",
-    "meta": null,
+    "meta": "≤ 2 por semestre",
     "resultado": 0.0,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1097,11 +915,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-06-30",
     "indicador": "Aderência aos Marcos do Projeto",
-    "descricao": "Cumprimento de datas críticas como término do cercamento perimetral e liberação para fundação (Transelevador)\nCritério de Medição: A apuração é binária (\"Entregue\" ou \"Não Entregue\") na data estipulada no cronograma físico-financeiro aprovado.\nTolerância: O Edital estabelece que atrasos não justificados por caso fortuito/força maior não geram aditivos de prazo\nProcedimento de Validação:A medição de volume topográfico e o Termo de Quitação de etapa assinado pelo Engenheiro Responsável validam o cumprimento do marco.",
-    "meta": null,
+    "meta": "Atraso zero em marcos críticos",
     "resultado": null,
-    "aplicacao_sla": -0.02,
-    "observacao": "Canteiro de Obras (31/03)"
+    "aplicacao": -0.02
   },
   {
     "validacao": null,
@@ -1109,11 +925,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-06-30",
     "indicador": "Aprovação dos Projetos Otimizados",
-    "descricao": "Mede o prazo entre o aceite da proposta e a entrega dos projetos executivos (terraplenagem/drenagem) aprovados pela fiscalização (CQP)",
-    "meta": null,
+    "meta": "Entrega em até 15 dias após mobilização",
     "resultado": null,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1121,11 +935,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-06-30",
     "indicador": "Eficiência de Balanço de Solo",
-    "descricao": "Aderencia à meta de reengenharia de compensar volumes de corte e aterro, minimizando a necessidade de bota-fora externo ou importação.\nCálculo: Volume compensado internamente / Volume total escavado X 100.\nSe a contratada falhar em compensar o solo conforme prometido e o cliente tiver que pagar por bota-fora externo, a penalidade compensa parte desse custo.",
-    "meta": null,
+    "meta": "≥ 98% de solo compensado internamente",
     "resultado": null,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1133,11 +945,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-06-30",
     "indicador": "Integridade das Contenções e Lagoas",
-    "descricao": "Mede a estabilidade das novas contenções e lagoas de retenção criadas pela solução de reengenharia.",
-    "meta": null,
+    "meta": "Zero ocorrências de instabilidade ou erosão",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1145,11 +955,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-06-30",
     "indicador": "Aderência ao Cronograma Físico-Financeiro",
-    "descricao": "Mede o percentual de atividades executadas dentro do prazo previsto no cronograma validado.\nSemanal: Atualização do status de tarefas no sistema (MS Project / PowerBI)\nMedição: Apresentação do relatório consolidado com curva física-financeira e análise de causas de desvio.",
-    "meta": null,
+    "meta": "≥ 95% das atividades no prazo",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1157,11 +965,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-06-30",
     "indicador": "Reprogramações do Cronograma",
-    "descricao": "Mede o número de reprogramações significativas no cronograma base.\nMedição: Reuniões mensais de controle de prazo e acompanhamento.\nA cada revisão a gerenciadora deve apresentar o histórico de reprogramações e justificativas documentadas.",
-    "meta": null,
+    "meta": "< 1 revisão significativa em 6 meses",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1169,11 +975,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-06-30",
     "indicador": "Variação Orçamentária",
-    "descricao": "Mede o desvio entre o orçamento aprovado e o custo real do projeto.\nMedição: Relatórios mensais de controle orçamentário e previsão de desembolso.\nCada pedido de aditivo deve vir acompanhado de planilha de impacto e parecer técnico da gerenciadora.",
-    "meta": null,
+    "meta": "≤ 1% de desvio mensal",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1181,11 +985,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-06-30",
     "indicador": "Gestão de Riscos",
-    "descricao": "Manter processo contínuo de identificação, avaliação e tratamento de riscos, garantindo que 100% dos riscos críticos sejam comunicados ao cliente em até 48 horas e que ao menos 95% de todos os riscos estejam acompanhados de ações definidas, prazos e responsáveis atribuídos para resolução em até 5 dias úteis",
-    "meta": null,
+    "meta": "≥ 95% riscos tratados em até 5 dias úteis",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1193,11 +995,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-06-30",
     "indicador": "Incidentes de Alto Impacto",
-    "descricao": "São classificados como Incidentes de Alto Impacto aqueles eventos que causem risco grave ou potencial risco à integridade física, causem paralisação substancial de atividades, gerem impacto ambiental relevante ou provoquem dano à imagem do cliente perante autoridades, mídia ou comunidade.\nMedição: Registro oficial e Análise imediata de incidentes. Comunicação ao cliente em até 2h. Plano de resposta entregue em até 5 dias úteis",
-    "meta": null,
+    "meta": "≤ 2 por semestre",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1205,11 +1005,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-06-30",
     "indicador": "Qualidade – Não Conformidades",
-    "descricao": "Mede o percentual de não-conformidades críticas identificadas nas auditorias de qualidade.\nMedição: Acompanhamento de auditorias internas e externas mensais do checklist e registros fotográficos.",
-    "meta": null,
+    "meta": "< 95% NC identificadas e encaminhadas mensal",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1217,11 +1015,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-06-30",
     "indicador": "IGPP-GF-STMA",
-    "descricao": "Detalhado no item (abaixo)\nÍNDICE GERAL DE PERFORMANCE DE PARCEIROS - GREENFIELD - IGPP-GF STMA\n20% Proativo\n30% Reativo\n10% Participação\n40% Auditoria Trimestral",
-    "meta": null,
+    "meta": "≥ 82% / 30 dias",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1229,11 +1025,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-07-31",
     "indicador": "Aderência ao Cronograma de Terraplenagem",
-    "descricao": "Mede o percentual de avanço físico realizado em relação ao avanço previsto no cronograma executivo validado, considerando a ponderação financeira das atividades cadastradas no MS Project.\n\nMedição:\nApresentação de relatório consolidado contendo:\n\n- Curva de avanço físico prevista e realizada;\n- Indicadores de aderência ao cronograma;\n- Análise dos desvios identificados;\n- Plano de ação para tratamento e recuperação dos desvios.",
-    "meta": null,
+    "meta": "≥ 95% Aderência",
     "resultado": 0.9074,
-    "aplicacao_sla": -0.02,
-    "observacao": null
+    "aplicacao": -0.02
   },
   {
     "validacao": null,
@@ -1241,11 +1035,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-07-31",
     "indicador": "Eficiência de Equipamentos (Histograma)",
-    "descricao": "Mede a disponibilidade e produtividade da frota mínima exigida para garantir o avanço das frentes (ex: escavadeiras, motoscrapers).\nHistograma de Equipamentos: Fórmula:  Disponibilidade  =  Total  de horas   operativas   /   Total   de   horas\nplanejadas no mês X 100.",
-    "meta": null,
+    "meta": "Manutenção de ≥ 90% da frota operacional",
     "resultado": 0.8406,
-    "aplicacao_sla": -0.02,
-    "observacao": "Conforme levantamento de equipamentos indisponíveis apontado em RDO."
+    "aplicacao": -0.02
   },
   {
     "validacao": null,
@@ -1253,11 +1045,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-07-31",
     "indicador": "Qualidade da Compactação e Solo",
-    "descricao": "Mede a conformidade da compactação com base nos ensaios de controle tecnológico, considerando a aprovação dos ensaios e a quantidade mínima exigível em função do volume executado no período.\n\nÍndice = Quantidade de ensaios aprovados com grau de compactação ≥ 98% do Proctor Normal / Quantidade mínima de ensaios exigível no período X 100\n\nQuantidade mínima de ensaios exigível = (Volume de aterro + volume de recompactação executados no período) / 1.000",
-    "meta": null,
+    "meta": "100% Ensaio AP",
     "resultado": 0.9902,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1265,11 +1055,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-07-31",
     "indicador": "Gestão de Riscos e STMA",
-    "descricao": "Cumprimento do Plano de Gestão de Saúde, Segurança e Meio Ambiente (IGPP-GF-STMA)\n20% Proativo\n30% Reativo\n10% Participação\n40% Auditoria Trimestral\n\nClausula 5.2 - A reincidência em falhas graves por culpa exclusiva da CONTRATADA poderá ensejar a critério da CONTRATANTE, a exclusão de bônus.",
-    "meta": null,
+    "meta": "≥ 82% de performance no índice GB",
     "resultado": 0.9087,
-    "aplicacao_sla": 0.0,
-    "observacao": "Exclusão de bonificação por recorrência em desvios graves."
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1277,11 +1065,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-07-31",
     "indicador": "Controle de Erosão e APP",
-    "descricao": "Mede a integridade das barreiras de sedimentos e contenções provisórias em áreas de APP.\nCritério: Avaliação visual e técnica da integridade das barreiras de sedimentos (silt fences) e bacias de decantação.\nApuração: Quinzenal ou após eventos de chuva superiores a 20mm/h",
-    "meta": null,
+    "meta": "Zero extravasamento de sedimentos para APP",
     "resultado": null,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1289,11 +1075,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-07-31",
     "indicador": "Incidentes de Alto Impacto",
-    "descricao": "Registro de eventos com risco grave à integridade física ou paralisação substancial das atividades.\nMedição: Registro oficial e Análise imediata de incidentes. Comunicação ao cliente em até 2h. Plano de resposta entregue em até 5 dias úteis",
-    "meta": null,
+    "meta": "≤ 2 por semestre",
     "resultado": 0.0,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1301,11 +1085,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-07-31",
     "indicador": "Aderência aos Marcos do Projeto",
-    "descricao": "Cumprimento de datas críticas como término do cercamento perimetral e liberação para fundação (Transelevador)\nCritério de Medição: A apuração é binária (\"Entregue\" ou \"Não Entregue\") na data estipulada no cronograma físico-financeiro aprovado.\nTolerância: O Edital estabelece que atrasos não justificados por caso fortuito/força maior não geram aditivos de prazo\nProcedimento de Validação:A medição de volume topográfico e o Termo de Quitação de etapa assinado pelo Engenheiro Responsável validam o cumprimento do marco.",
-    "meta": null,
+    "meta": "Atraso zero em marcos críticos",
     "resultado": null,
-    "aplicacao_sla": -0.02,
-    "observacao": "Canteiro de Obras (31/03)"
+    "aplicacao": -0.02
   },
   {
     "validacao": null,
@@ -1313,11 +1095,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-07-31",
     "indicador": "Aprovação dos Projetos Otimizados",
-    "descricao": "Mede o prazo entre o aceite da proposta e a entrega dos projetos executivos (terraplenagem/drenagem) aprovados pela fiscalização (CQP)",
-    "meta": null,
+    "meta": "Entrega em até 15 dias após mobilização",
     "resultado": null,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1325,11 +1105,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-07-31",
     "indicador": "Eficiência de Balanço de Solo",
-    "descricao": "Aderencia à meta de reengenharia de compensar volumes de corte e aterro, minimizando a necessidade de bota-fora externo ou importação.\nCálculo: Volume compensado internamente / Volume total escavado X 100.\nSe a contratada falhar em compensar o solo conforme prometido e o cliente tiver que pagar por bota-fora externo, a penalidade compensa parte desse custo.",
-    "meta": null,
+    "meta": "≥ 98% de solo compensado internamente",
     "resultado": 1.0,
-    "aplicacao_sla": 0.01,
-    "observacao": null
+    "aplicacao": 0.01
   },
   {
     "validacao": null,
@@ -1337,11 +1115,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-07-31",
     "indicador": "Integridade das Contenções e Lagoas",
-    "descricao": "Mede a estabilidade das novas contenções e lagoas de retenção criadas pela solução de reengenharia.",
-    "meta": null,
+    "meta": "Zero ocorrências de instabilidade ou erosão",
     "resultado": null,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1349,11 +1125,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-08-31",
     "indicador": "Aderência ao Cronograma de Terraplenagem",
-    "descricao": "Mede o percentual de avanço físico realizado em relação ao avanço previsto no cronograma executivo validado, considerando a ponderação financeira das atividades cadastradas no MS Project.\nMedição:\nApresentação de relatório consolidado contendo:\n- Curva de avanço físico prevista e realizada;\n- Indicadores de aderência ao cronograma;\n- Análise dos desvios identificados;\n- Plano de ação para tratamento e recuperação dos desvios.",
-    "meta": null,
+    "meta": "≥ 95% Aderência",
     "resultado": 0.9506,
-    "aplicacao_sla": 0.0,
-    "observacao": "SLA alterado no take-off de contrato para refletir corretamente a performance de execução."
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1361,11 +1135,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-08-31",
     "indicador": "Eficiência de Equipamentos (Histograma)",
-    "descricao": "Mede a disponibilidade da frota mínima exigida para garantir o avanço das frentes, com base nos apontamentos registrados em RDO e devidamente chancelados, considerando a praticabilidade executiva diária e o planejamento das frentes previsto para o período.\nFórmula: Disponbilidade = Total de equipamento-hora disponíveis chanceladas em RDO / (Quantidade de equipamentos previstos no histograma × horas de praticabilidade diária × número de dias aplicáveis do período) X 100.",
-    "meta": null,
+    "meta": "≥ 90% de disponibilidade",
     "resultado": 0.771,
-    "aplicacao_sla": -0.02,
-    "observacao": "Conforme levantamento de equipamentos indisponíveis apontado em RDO."
+    "aplicacao": -0.02
   },
   {
     "validacao": null,
@@ -1373,11 +1145,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-08-31",
     "indicador": "Qualidade da Compactação e Solo",
-    "descricao": "Mede a conformidade da compactação com base nos ensaios de controle tecnológico, considerando a aprovação dos ensaios e a quantidade mínima exigível em função do volume executado no período.\nÍndice = Quantidade de ensaios aprovados com grau de compactação ≥ 98% do Proctor Normal / Quantidade mínima de ensaios exigível no período X 100\nQuantidade mínima de ensaios exigível = (Volume de aterro + volume de recompactação executados no período) / 1.000",
-    "meta": null,
+    "meta": "100% Ensaio AP",
     "resultado": 2.0434,
-    "aplicacao_sla": null,
-    "observacao": "SLA alterado no take-off de contrato para refletir corretamente a performance de execução."
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1385,11 +1155,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-08-31",
     "indicador": "Gestão de Riscos e STMA",
-    "descricao": "Cumprimento do Plano de Gestão de Saúde, Segurança e Meio Ambiente (IGPP-GF-STMA)\n20% Proativo\n30% Reativo\n10% Participação\n40% Auditoria Trimestral\n\nClausula 5.2 - A reincidência em falhas graves por culpa exclusiva da CONTRATADA poderá ensejar a critério da CONTRATANTE, a exclusão de bônus.",
-    "meta": null,
+    "meta": "≥ 82% de performance no índice GB",
     "resultado": 0.9298,
-    "aplicacao_sla": 0.0,
-    "observacao": "Exclusão de bonificação por recorrência em desvios graves."
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1397,11 +1165,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-08-31",
     "indicador": "Controle de Erosão e APP",
-    "descricao": "Mede a integridade das barreiras de sedimentos e contenções provisórias em áreas de APP.\nCritério: Avaliação visual e técnica da integridade das barreiras de sedimentos (silt fences) e bacias de decantação.\nApuração: Quinzenal ou após eventos de chuva superiores a 20mm/h",
-    "meta": null,
+    "meta": "Zero extravasamento de sedimentos para APP",
     "resultado": null,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1409,11 +1175,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-08-31",
     "indicador": "Incidentes de Alto Impacto",
-    "descricao": "Registro de eventos com risco grave à integridade física ou paralisação substancial das atividades.\nMedição: Registro oficial e Análise imediata de incidentes. Comunicação ao cliente em até 2h. Plano de resposta entregue em até 5 dias úteis",
-    "meta": null,
+    "meta": "≤ 2 por semestre",
     "resultado": 1.0,
-    "aplicacao_sla": 0.0,
-    "observacao": "Ocorrência de incidente patrimonial sem registro oficial e análise imediata enviado pela Contratada no prazo:\n18/08: Colisão Hyster x Tapume;"
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1421,11 +1185,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-08-31",
     "indicador": "Aderência aos Marcos do Projeto",
-    "descricao": "Cumprimento de datas críticas como término do cercamento perimetral e liberação para fundação (Transelevador)\nCritério de Medição: A apuração é binária (\"Entregue\" ou \"Não Entregue\") na data estipulada no cronograma físico-financeiro aprovado.\nTolerância: O Edital estabelece que atrasos não justificados por caso fortuito/força maior não geram aditivos de prazo\nProcedimento de Validação:A medição de volume topográfico e o Termo de Quitação de etapa assinado pelo Engenheiro Responsável validam o cumprimento do marco.",
-    "meta": null,
+    "meta": "Atraso zero em marcos críticos",
     "resultado": null,
-    "aplicacao_sla": -0.02,
-    "observacao": "Canteiro de Obras (31/03)"
+    "aplicacao": -0.02
   },
   {
     "validacao": null,
@@ -1433,11 +1195,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-08-31",
     "indicador": "Aprovação dos Projetos Otimizados",
-    "descricao": "Mede o prazo entre o aceite da proposta e a entrega dos projetos executivos (terraplenagem/drenagem) aprovados pela fiscalização (CQP)",
-    "meta": null,
+    "meta": "Entrega em até 15 dias após mobilização",
     "resultado": null,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1445,11 +1205,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-08-31",
     "indicador": "Eficiência de Balanço de Solo",
-    "descricao": "Aderencia à meta de reengenharia de compensar volumes de corte e aterro, minimizando a necessidade de bota-fora externo ou importação.\nCálculo: Volume compensado internamente / Volume total escavado X 100.\nSe a contratada falhar em compensar o solo conforme prometido e o cliente tiver que pagar por bota-fora externo, a penalidade compensa parte desse custo.",
-    "meta": null,
+    "meta": "≥ 98% de solo compensado internamente",
     "resultado": null,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1457,11 +1215,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-08-31",
     "indicador": "Integridade das Contenções e Lagoas",
-    "descricao": "Mede a estabilidade das novas contenções e lagoas de retenção criadas pela solução de reengenharia.",
-    "meta": null,
+    "meta": "Zero ocorrências de instabilidade ou erosão",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1469,11 +1225,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-09-30",
     "indicador": "Aderência ao Cronograma de Terraplenagem",
-    "descricao": "Mede o percentual de avanço físico realizado em relação ao avanço previsto no cronograma executivo validado, considerando a ponderação financeira das atividades cadastradas no MS Project.\nMedição:\nApresentação de relatório consolidado contendo:\n- Curva de avanço físico prevista e realizada;\n- Indicadores de aderência ao cronograma;\n- Análise dos desvios identificados;\n- Plano de ação para tratamento e recuperação dos desvios.",
-    "meta": null,
+    "meta": "≥ 95% Aderência",
     "resultado": 0.8604,
-    "aplicacao_sla": -0.02,
-    "observacao": "SLA alterado no take-off de contrato para refletir corretamente a performance de execução."
+    "aplicacao": -0.02
   },
   {
     "validacao": null,
@@ -1481,11 +1235,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-09-30",
     "indicador": "Eficiência de Equipamentos (Histograma)",
-    "descricao": "Mede a disponibilidade da frota mínima exigida para garantir o avanço das frentes, com base nos apontamentos registrados em RDO e devidamente chancelados, considerando a praticabilidade executiva diária e o planejamento das frentes previsto para o período.\nFórmula: Disponbilidade = Total de equipamento-hora disponíveis chanceladas em RDO / (Quantidade de equipamentos previstos no histograma × horas de praticabilidade diária × número de dias aplicáveis do período) X 100.",
-    "meta": null,
+    "meta": "≥ 90% de disponibilidade",
     "resultado": null,
-    "aplicacao_sla": -0.02,
-    "observacao": "Conforme levantamento de equipamentos indisponíveis apontado em RDO."
+    "aplicacao": -0.02
   },
   {
     "validacao": null,
@@ -1493,11 +1245,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-09-30",
     "indicador": "Qualidade da Compactação e Solo",
-    "descricao": "Mede a conformidade da compactação com base nos ensaios de controle tecnológico, considerando a aprovação dos ensaios e a quantidade mínima exigível em função do volume executado no período.\nÍndice = Quantidade de ensaios aprovados com grau de compactação ≥ 98% do Proctor Normal / Quantidade mínima de ensaios exigível no período X 100\nQuantidade mínima de ensaios exigível = (Volume de aterro + volume de recompactação executados no período) / 1.000",
-    "meta": null,
+    "meta": "100% Ensaio AP",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": "SLA alterado no take-off de contrato para refletir corretamente a performance de execução."
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1505,11 +1255,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-09-30",
     "indicador": "Gestão de Riscos e STMA",
-    "descricao": "Cumprimento do Plano de Gestão de Saúde, Segurança e Meio Ambiente (IGPP-GF-STMA)\n20% Proativo\n30% Reativo\n10% Participação\n40% Auditoria Trimestral\n\nClausula 5.2 - A reincidência em falhas graves por culpa exclusiva da CONTRATADA poderá ensejar a critério da CONTRATANTE, a exclusão de bônus.",
-    "meta": null,
+    "meta": "≥ 82% de performance no índice GB",
     "resultado": 0.9543,
-    "aplicacao_sla": 0.0,
-    "observacao": "Exclusão de bonificação por recorrência em desvios graves."
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1517,11 +1265,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-09-30",
     "indicador": "Controle de Erosão e APP",
-    "descricao": "Mede a integridade das barreiras de sedimentos e contenções provisórias em áreas de APP.\nCritério: Avaliação visual e técnica da integridade das barreiras de sedimentos (silt fences) e bacias de decantação.\nApuração: Quinzenal ou após eventos de chuva superiores a 20mm/h",
-    "meta": null,
+    "meta": "Zero extravasamento de sedimentos para APP",
     "resultado": null,
-    "aplicacao_sla": 0.0,
-    "observacao": "Ocorrência de extravasamento de sedimentos para APP durante ocorrência de chuvas no mês de setembro."
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1529,11 +1275,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-09-30",
     "indicador": "Incidentes de Alto Impacto",
-    "descricao": "Registro de eventos com risco grave à integridade física ou paralisação substancial das atividades.\nMedição: Registro oficial e Análise imediata de incidentes. Comunicação ao cliente em até 2h. Plano de resposta entregue em até 5 dias úteis",
-    "meta": null,
+    "meta": "≤ 2 por semestre",
     "resultado": 1.0,
-    "aplicacao_sla": 0.0,
-    "observacao": "Ocorrência de incidente patrimonial sem registro oficial e análise imediata enviado pela Contratada no prazo:\n18/08: Colisão Hyster x Tapume;"
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1541,11 +1285,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-09-30",
     "indicador": "Aderência aos Marcos do Projeto",
-    "descricao": "Cumprimento de datas críticas como término do cercamento perimetral e liberação para fundação (Transelevador)\nCritério de Medição: A apuração é binária (\"Entregue\" ou \"Não Entregue\") na data estipulada no cronograma físico-financeiro aprovado.\nTolerância: O Edital estabelece que atrasos não justificados por caso fortuito/força maior não geram aditivos de prazo\nProcedimento de Validação:A medição de volume topográfico e o Termo de Quitação de etapa assinado pelo Engenheiro Responsável validam o cumprimento do marco.",
-    "meta": null,
+    "meta": "Atraso zero em marcos críticos",
     "resultado": null,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1553,11 +1295,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-09-30",
     "indicador": "Aprovação dos Projetos Otimizados",
-    "descricao": "Mede o prazo entre o aceite da proposta e a entrega dos projetos executivos (terraplenagem/drenagem) aprovados pela fiscalização (CQP)",
-    "meta": null,
+    "meta": "Entrega em até 15 dias após mobilização",
     "resultado": null,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1565,11 +1305,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-09-30",
     "indicador": "Eficiência de Balanço de Solo",
-    "descricao": "Aderencia à meta de reengenharia de compensar volumes de corte e aterro, minimizando a necessidade de bota-fora externo ou importação.\nCálculo: Volume compensado internamente / Volume total escavado X 100.\nSe a contratada falhar em compensar o solo conforme prometido e o cliente tiver que pagar por bota-fora externo, a penalidade compensa parte desse custo.",
-    "meta": null,
+    "meta": "≥ 98% de solo compensado internamente",
     "resultado": null,
-    "aplicacao_sla": 0.0,
-    "observacao": null
+    "aplicacao": 0.0
   },
   {
     "validacao": null,
@@ -1577,11 +1315,9 @@
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
     "mes": "2026-09-30",
     "indicador": "Integridade das Contenções e Lagoas",
-    "descricao": "Mede a estabilidade das novas contenções e lagoas de retenção criadas pela solução de reengenharia.",
-    "meta": null,
+    "meta": "Zero ocorrências de instabilidade ou erosão",
     "resultado": null,
-    "aplicacao_sla": -0.03,
-    "observacao": null
+    "aplicacao": -0.03
   },
   {
     "validacao": null,
@@ -1589,11 +1325,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-07-31",
     "indicador": "Aderência ao Cronograma Físico-Financeiro",
-    "descricao": "Mede o percentual de atividades executadas dentro do prazo previsto no cronograma validado.\nSemanal: Atualização do status de tarefas no sistema (MS Project / PowerBI)\nMedição: Apresentação do relatório consolidado com curva física-financeira e análise de causas de desvio.",
-    "meta": null,
+    "meta": "≥ 95% das atividades no prazo",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1601,11 +1335,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-07-31",
     "indicador": "Reprogramações do Cronograma",
-    "descricao": "Mede o número de reprogramações significativas no cronograma base.\nMedição: Reuniões mensais de controle de prazo e acompanhamento.\nA cada revisão a gerenciadora deve apresentar o histórico de reprogramações e justificativas documentadas.",
-    "meta": null,
+    "meta": "< 1 revisão significativa em 6 meses",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1613,11 +1345,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-07-31",
     "indicador": "Variação Orçamentária",
-    "descricao": "Mede o desvio entre o orçamento aprovado e o custo real do projeto.\nMedição: Relatórios mensais de controle orçamentário e previsão de desembolso.\nCada pedido de aditivo deve vir acompanhado de planilha de impacto e parecer técnico da gerenciadora.",
-    "meta": null,
+    "meta": "≤ 1% de desvio mensal",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1625,11 +1355,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-07-31",
     "indicador": "Gestão de Riscos",
-    "descricao": "Manter processo contínuo de identificação, avaliação e tratamento de riscos, garantindo que 100% dos riscos críticos sejam comunicados ao cliente em até 48 horas e que ao menos 95% de todos os riscos estejam acompanhados de ações definidas, prazos e responsáveis atribuídos para resolução em até 5 dias úteis",
-    "meta": null,
+    "meta": "≥ 95% riscos tratados em até 5 dias úteis",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1637,11 +1365,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-07-31",
     "indicador": "Incidentes de Alto Impacto",
-    "descricao": "São classificados como Incidentes de Alto Impacto aqueles eventos que causem risco grave ou potencial risco à integridade física, causem paralisação substancial de atividades, gerem impacto ambiental relevante ou provoquem dano à imagem do cliente perante autoridades, mídia ou comunidade.\nMedição: Registro oficial e Análise imediata de incidentes. Comunicação ao cliente em até 2h. Plano de resposta entregue em até 5 dias úteis.",
-    "meta": null,
+    "meta": "≤ 2 por semestre",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1649,11 +1375,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-07-31",
     "indicador": "Qualidade – Não Conformidades",
-    "descricao": "Mede o percentual de não-conformidades críticas identificadas nas auditorias de qualidade.\nMedição: Acompanhamento de auditorias internas e externas mensais do checklist e registros fotográficos.",
-    "meta": null,
+    "meta": "< 95% NC identificadas e encaminhadas mensal",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1661,11 +1385,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-07-31",
     "indicador": "IGPP-GF-STMA",
-    "descricao": "Detalhado no item (abaixo)\nÍNDICE GERAL DE PERFORMANCE DE PARCEIROS - GREENFIELD - IGPP-GF STMA\n20% Proativo\n30% Reativo\n10% Participação\n40% Auditoria Trimestral",
-    "meta": null,
+    "meta": "≥ 82% / 30 dias",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1673,11 +1395,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-08-31",
     "indicador": "Aderência ao Cronograma Físico-Financeiro",
-    "descricao": "Mede o percentual de atividades executadas dentro do prazo previsto no cronograma validado.\nSemanal: Atualização do status de tarefas no sistema (MS Project / PowerBI)\nMedição: Apresentação do relatório consolidado com curva física-financeira e análise de causas de desvio.",
-    "meta": null,
+    "meta": "≥ 95% das atividades no prazo",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1685,11 +1405,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-08-31",
     "indicador": "Reprogramações do Cronograma",
-    "descricao": "Mede o número de reprogramações significativas no cronograma base.\nMedição: Reuniões mensais de controle de prazo e acompanhamento.\nA cada revisão a gerenciadora deve apresentar o histórico de reprogramações e justificativas documentadas.",
-    "meta": null,
+    "meta": "< 1 revisão significativa em 6 meses",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1697,11 +1415,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-08-31",
     "indicador": "Variação Orçamentária",
-    "descricao": "Mede o desvio entre o orçamento aprovado e o custo real do projeto.\nMedição: Relatórios mensais de controle orçamentário e previsão de desembolso.\nCada pedido de aditivo deve vir acompanhado de planilha de impacto e parecer técnico da gerenciadora.",
-    "meta": null,
+    "meta": "≤ 1% de desvio mensal",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1709,11 +1425,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-08-31",
     "indicador": "Gestão de Riscos",
-    "descricao": "Manter processo contínuo de identificação, avaliação e tratamento de riscos, garantindo que 100% dos riscos críticos sejam comunicados ao cliente em até 48 horas e que ao menos 95% de todos os riscos estejam acompanhados de ações definidas, prazos e responsáveis atribuídos para resolução em até 5 dias úteis",
-    "meta": null,
+    "meta": "≥ 95% riscos tratados em até 5 dias úteis",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1721,11 +1435,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-08-31",
     "indicador": "Incidentes de Alto Impacto",
-    "descricao": "São classificados como Incidentes de Alto Impacto aqueles eventos que causem risco grave ou potencial risco à integridade física, causem paralisação substancial de atividades, gerem impacto ambiental relevante ou provoquem dano à imagem do cliente perante autoridades, mídia ou comunidade.\nMedição: Registro oficial e Análise imediata de incidentes. Comunicação ao cliente em até 2h. Plano de resposta entregue em até 5 dias úteis.",
-    "meta": null,
+    "meta": "≤ 2 por semestre",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1733,11 +1445,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-08-31",
     "indicador": "Qualidade – Não Conformidades",
-    "descricao": "Mede o percentual de não-conformidades críticas identificadas nas auditorias de qualidade.\nMedição: Acompanhamento de auditorias internas e externas mensais do checklist e registros fotográficos.",
-    "meta": null,
+    "meta": "< 95% NC identificadas e encaminhadas mensal",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1745,11 +1455,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-08-31",
     "indicador": "IGPP-GF-STMA",
-    "descricao": "Detalhado no item (abaixo)\nÍNDICE GERAL DE PERFORMANCE DE PARCEIROS - GREENFIELD - IGPP-GF STMA\n20% Proativo\n30% Reativo\n10% Participação\n40% Auditoria Trimestral",
-    "meta": null,
+    "meta": "≥ 82% / 30 dias",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1757,11 +1465,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-09-30",
     "indicador": "Aderência ao Cronograma Físico-Financeiro",
-    "descricao": "Mede o percentual de atividades executadas dentro do prazo previsto no cronograma validado.\nSemanal: Atualização do status de tarefas no sistema (MS Project / PowerBI)\nMedição: Apresentação do relatório consolidado com curva física-financeira e análise de causas de desvio.",
-    "meta": null,
+    "meta": "≥ 95% das atividades no prazo",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1769,11 +1475,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-09-30",
     "indicador": "Reprogramações do Cronograma",
-    "descricao": "Mede o número de reprogramações significativas no cronograma base.\nMedição: Reuniões mensais de controle de prazo e acompanhamento.\nA cada revisão a gerenciadora deve apresentar o histórico de reprogramações e justificativas documentadas.",
-    "meta": null,
+    "meta": "< 1 revisão significativa em 6 meses",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1781,11 +1485,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-09-30",
     "indicador": "Variação Orçamentária",
-    "descricao": "Mede o desvio entre o orçamento aprovado e o custo real do projeto.\nMedição: Relatórios mensais de controle orçamentário e previsão de desembolso.\nCada pedido de aditivo deve vir acompanhado de planilha de impacto e parecer técnico da gerenciadora.",
-    "meta": null,
+    "meta": "≤ 1% de desvio mensal",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1793,11 +1495,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-09-30",
     "indicador": "Gestão de Riscos",
-    "descricao": "Manter processo contínuo de identificação, avaliação e tratamento de riscos, garantindo que 100% dos riscos críticos sejam comunicados ao cliente em até 48 horas e que ao menos 95% de todos os riscos estejam acompanhados de ações definidas, prazos e responsáveis atribuídos para resolução em até 5 dias úteis",
-    "meta": null,
+    "meta": "≥ 95% riscos tratados em até 5 dias úteis",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1805,11 +1505,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-09-30",
     "indicador": "Incidentes de Alto Impacto",
-    "descricao": "São classificados como Incidentes de Alto Impacto aqueles eventos que causem risco grave ou potencial risco à integridade física, causem paralisação substancial de atividades, gerem impacto ambiental relevante ou provoquem dano à imagem do cliente perante autoridades, mídia ou comunidade.\nMedição: Registro oficial e Análise imediata de incidentes. Comunicação ao cliente em até 2h. Plano de resposta entregue em até 5 dias úteis.",
-    "meta": null,
+    "meta": "≤ 2 por semestre",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1817,11 +1515,9 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-09-30",
     "indicador": "Qualidade – Não Conformidades",
-    "descricao": "Mede o percentual de não-conformidades críticas identificadas nas auditorias de qualidade.\nMedição: Acompanhamento de auditorias internas e externas mensais do checklist e registros fotográficos.",
-    "meta": null,
+    "meta": "< 95% NC identificadas e encaminhadas mensal",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   },
   {
     "validacao": null,
@@ -1829,10 +1525,8 @@
     "contratada": "AFRY BRASIL LTDA.",
     "mes": "2026-09-30",
     "indicador": "IGPP-GF-STMA",
-    "descricao": "Detalhado no item (abaixo)\nÍNDICE GERAL DE PERFORMANCE DE PARCEIROS - GREENFIELD - IGPP-GF STMA\n20% Proativo\n30% Reativo\n10% Participação\n40% Auditoria Trimestral",
-    "meta": null,
+    "meta": "≥ 82% / 30 dias",
     "resultado": null,
-    "aplicacao_sla": null,
-    "observacao": null
+    "aplicacao": null
   }
 ]

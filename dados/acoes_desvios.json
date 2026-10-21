@@ -1,0 +1,302 @@
+[
+  {
+    "id_desvio": "336020",
+    "data_desvio": "2026-09-30",
+    "acao": "Evidenciar a aplicação de leiras de terra para segurança nas cristas dos taludes.",
+    "status": "Andamento",
+    "prazo": "2026-10-16",
+    "data_conclusao": null,
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "314457",
+    "data_desvio": "2026-07-06",
+    "acao": "Envio semanal de comprovação de atendimento de todos os critérios de estabilidade em taludes da obra.",
+    "status": "Concluído",
+    "prazo": "2026-07-31",
+    "data_conclusao": null,
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "321503",
+    "data_desvio": "2026-07-30",
+    "acao": "Elaborar APR para atividade de ensaio.",
+    "status": "Concluído",
+    "prazo": "2026-08-14",
+    "data_conclusao": null,
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "321503",
+    "data_desvio": "2026-07-30",
+    "acao": "Definir método de ensaio utilizando exclusivamente equipamentos apropriados (catraca hidráulica, macaco hidráulico ou equipamento homologado), conforme normas técnicas e fabricante.",
+    "status": "Concluído",
+    "prazo": "2026-08-07",
+    "data_conclusao": null,
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "314457",
+    "data_desvio": "2026-07-06",
+    "acao": "Adequação de todos os taludes provisórios da obra, envio de relatório fotográfico como evidência.",
+    "status": "Concluído",
+    "prazo": "2026-07-17",
+    "data_conclusao": null,
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "314457",
+    "data_desvio": "2026-07-06",
+    "acao": "Interdição de acesso sob o bota espera e próximo a crista devido ao risco de erosão.",
+    "status": "Concluído",
+    "prazo": "2026-07-10",
+    "data_conclusao": null,
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "318282",
+    "data_desvio": "2026-07-20",
+    "acao": "Elaborar planos de ação para mitigar a causa raiz.",
+    "status": "Concluído",
+    "prazo": "2026-08-28",
+    "data_conclusao": "2026-08-13",
+    "potencial_gravidade": "Grave",
+    "tipo": "Comportamento de risco"
+  },
+  {
+    "id_desvio": "314457",
+    "data_desvio": "2026-07-06",
+    "acao": "Envio de relatório topográfico comprovando a adequação e atendimento das alturas e inclinações para segurança e estabilidade dos taludes.",
+    "status": "Concluído",
+    "prazo": "2026-07-24",
+    "data_conclusao": "2026-10-08",
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "305761",
+    "data_desvio": "2026-06-02",
+    "acao": "Reciclagem do treinamento do procedimento de credenciamento de APR/PTR aos técnicos de segurança do trabalho TERRAM responsável pela liberação e acompanhamento da atividade.",
+    "status": "Concluído",
+    "prazo": "2026-07-30",
+    "data_conclusao": "2026-09-10",
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "315829",
+    "data_desvio": "2026-07-09",
+    "acao": "Reciclagem NR 20 de todos os colaboradores que realizam o abastecimento, normas e procedimentos STMA Boticário.",
+    "status": "Concluído",
+    "prazo": "2026-07-31",
+    "data_conclusao": "2026-09-10",
+    "potencial_gravidade": "Grave",
+    "tipo": "Comportamento de risco"
+  },
+  {
+    "id_desvio": "317734",
+    "data_desvio": "2026-07-17",
+    "acao": "Realizar investigação da causa raiz sobre a continuidade da atividade.",
+    "status": "Concluído",
+    "prazo": "2026-07-31",
+    "data_conclusao": "2026-08-03",
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "317189",
+    "data_desvio": "2026-07-13",
+    "acao": "Revisão da APR da atividade implementação do LOTO.",
+    "status": "Concluído",
+    "prazo": "2026-08-28",
+    "data_conclusao": "2026-09-10",
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "317189",
+    "data_desvio": "2026-07-13",
+    "acao": "Treinamento com o time de manutenção sobre a importância dos protecionais para trabalhos de manutenção com segurança.",
+    "status": "Concluído",
+    "prazo": "2026-08-14",
+    "data_conclusao": "2026-09-10",
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "317783",
+    "data_desvio": "2026-07-17",
+    "acao": "Fornecimento de recipiente para armazenamento conforme NR 20 e procedimentos internos boticário.",
+    "status": "Concluído",
+    "prazo": "2026-08-28",
+    "data_conclusao": "2026-09-10",
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "317783",
+    "data_desvio": "2026-07-17",
+    "acao": "Retirada dos galões de armazenamento inadequados da obra.",
+    "status": "Concluído",
+    "prazo": "2026-08-14",
+    "data_conclusao": "2026-09-10",
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "311053",
+    "data_desvio": "2026-06-23",
+    "acao": "Realizar a adequação da área destinada ao armazenamento de líquidos inflamáveis e combustíveis, garantindo atendimento aos requisitos estabelecidos pela Instrução Técnica nº 22 do CBMMG, ABNT NBR 17505 e demais legislações aplicáveis.",
+    "status": "Concluído",
+    "prazo": "2026-07-24",
+    "data_conclusao": "2026-09-10",
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "318282",
+    "data_desvio": "2026-07-20",
+    "acao": "Investigação para identificar a causa raiz.",
+    "status": "Concluído",
+    "prazo": "2026-08-14",
+    "data_conclusao": "2026-08-13",
+    "potencial_gravidade": "Grave",
+    "tipo": "Comportamento de risco"
+  },
+  {
+    "id_desvio": "302332",
+    "data_desvio": "2026-05-21",
+    "acao": "Apresentar documentação legal para descarte de resíduos da obra.",
+    "status": "Concluído",
+    "prazo": "2026-07-24",
+    "data_conclusao": "2026-09-10",
+    "potencial_gravidade": "Grave",
+    "tipo": "Desvio de meio ambiente"
+  },
+  {
+    "id_desvio": "296856",
+    "data_desvio": "2026-05-04",
+    "acao": "Solicitar a utilização de crachá com certificações NR11 para serviço de içamento de carga",
+    "status": "Concluído",
+    "prazo": "2026-05-15",
+    "data_conclusao": "2026-05-18",
+    "potencial_gravidade": "Grave",
+    "tipo": "Comportamento de risco"
+  },
+  {
+    "id_desvio": "325930",
+    "data_desvio": "2026-08-11",
+    "acao": "Instruir as equipes de abastecimento sobre o novo POP, Overfilling (abastecer além da capacidade máxima permitida), má vedação/fechamento inadequado da tampa após o abastecimento ou falta de inspeção pós-combustível.",
+    "status": "Concluído",
+    "prazo": "2026-08-28",
+    "data_conclusao": "2026-10-08",
+    "potencial_gravidade": "Grave",
+    "tipo": "Desvio de meio ambiente"
+  },
+  {
+    "id_desvio": "325930",
+    "data_desvio": "2026-08-11",
+    "acao": "Elaboração de Procedimento Operacional Padrão (POP) de abastecimento limitando o nível máximo a 90% da capacidade do tanque (evitando transbordamento por expansão térmica e agitação do combustível durante a operação).",
+    "status": "Concluído",
+    "prazo": "2026-08-21",
+    "data_conclusao": "2026-10-08",
+    "potencial_gravidade": "Grave",
+    "tipo": "Desvio de meio ambiente"
+  },
+  {
+    "id_desvio": "325989",
+    "data_desvio": "2026-08-14",
+    "acao": "DDC reforçando a proibição de fumar dentro das dependências do site e política de consequências da contratada",
+    "status": "Concluído",
+    "prazo": "2026-08-28",
+    "data_conclusao": "2026-10-08",
+    "potencial_gravidade": "Grave",
+    "tipo": "Comportamento de risco"
+  },
+  {
+    "id_desvio": "325989",
+    "data_desvio": "2026-08-14",
+    "acao": "Treinamento com operadores  e equipe de abastecimento quanto ao perigos de incêndio próximo a atividades com alto risco",
+    "status": "Concluído",
+    "prazo": "2026-08-21",
+    "data_conclusao": "2026-10-08",
+    "potencial_gravidade": "Grave",
+    "tipo": "Comportamento de risco"
+  },
+  {
+    "id_desvio": "326163",
+    "data_desvio": "2026-08-15",
+    "acao": "Implantar sinalização, definir fluxo seguro de circulação e disponibilizar sinaleiro para controlar as manobras até a adequação definitiva do acesso.",
+    "status": "Concluído",
+    "prazo": "2026-08-21",
+    "data_conclusao": "2026-10-08",
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "329524",
+    "data_desvio": "2026-08-26",
+    "acao": "Comunicar e solicitar aprovação prévia para qualquer mudança de rota de atuação dos Scrapers.",
+    "status": "Concluído",
+    "prazo": "2026-09-11",
+    "data_conclusao": "2026-10-08",
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "329680",
+    "data_desvio": "2026-08-27",
+    "acao": "Envio de evidência (levantamento topográfico) atestando a altura máxima de 6 metros.",
+    "status": "Concluído",
+    "prazo": "2026-09-18",
+    "data_conclusao": "2026-10-08",
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "329680",
+    "data_desvio": "2026-08-27",
+    "acao": "Adequação do talude conforme projeto.",
+    "status": "Concluído",
+    "prazo": "2026-09-11",
+    "data_conclusao": "2026-10-08",
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "329680",
+    "data_desvio": "2026-08-27",
+    "acao": "Interdição das vias sob o talude",
+    "status": "Concluído",
+    "prazo": "2026-09-02",
+    "data_conclusao": "2026-10-08",
+    "potencial_gravidade": "Grave",
+    "tipo": "Condição insegura"
+  },
+  {
+    "id_desvio": "333120",
+    "data_desvio": "2026-09-15",
+    "acao": "Ação de conscientização de segurança, mostrando que a segurança no trabalho e responsabilidade de todos, visto que haviam dois colaboradores do abastecimento acompanhando.",
+    "status": "Concluído",
+    "prazo": "2026-09-30",
+    "data_conclusao": "2026-10-08",
+    "potencial_gravidade": "Grave",
+    "tipo": "Comportamento de risco"
+  },
+  {
+    "id_desvio": "296856",
+    "data_desvio": "2026-05-04",
+    "acao": "Evidência da entrega e utilização dos crachás",
+    "status": "Concluído",
+    "prazo": "2026-06-19",
+    "data_conclusao": "2026-08-14",
+    "potencial_gravidade": "Grave",
+    "tipo": "Comportamento de risco"
+  }
+]

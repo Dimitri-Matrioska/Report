@@ -2,8 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>STMA </title>
-<link rel="stylesheet" href="../assets/style.css">
+<title>STMA</title>
 <link rel="stylesheet" href="stma.css">
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 </head>
@@ -12,15 +11,30 @@
 <div class="canvas-wrapper" id="canvasWrapper">
 <div class="pbi-canvas" id="pbiCanvas">
 
-    <!-- Filtros da sidebar (sobrepostos na imagem) -->
+    <!-- Filtros da sidebar -->
     <div class="sidebar-filtro st-projeto">PROJETO AFRODITE</div>
-    <div class="sidebar-filtro st-titulo">PERFORMANCE GERAL</div>
+    <div class="sidebar-filtro st-titulo">PERFORMANCE<br>GERAL</div>
+
     <div class="sidebar-label st-label-1">Contratada</div>
-    <select class="sidebar-select st-sel-1" id="sel-contratada"></select>
+    <div class="sidebar-select st-sel-1" id="btn-contratada" onclick="toggleDropdown('drop-contratada')">
+      <span id="txt-contratada">TERRAM ENGENHARIA</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="dropdown-menu st-drop-1" id="drop-contratada"></div>
+
     <div class="sidebar-label st-label-2">Ano, Mês</div>
-    <select class="sidebar-select st-sel-2" id="sel-mes"></select>
+    <div class="sidebar-select st-sel-2" id="btn-mes" onclick="toggleDropdown('drop-mes')">
+      <span id="txt-mes">2026 (Ano) + outubro</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="dropdown-menu st-drop-2" id="drop-mes"></div>
+
     <div class="sidebar-label st-label-3">SemanaDoProjeto</div>
-    <select class="sidebar-select st-sel-3" id="sel-semana"></select>
+    <div class="sidebar-select st-sel-3" id="btn-semana" onclick="toggleDropdown('drop-semana')">
+      <span id="txt-semana">31</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="dropdown-menu st-drop-3" id="drop-semana"></div>
 
     <!-- Botões do menu -->
     <a href="./stma.html" class="menu-botao ativo st-btn-1">STMA</a>
@@ -29,41 +43,49 @@
     <a href="./mapa-avanco-drenagem.html" class="menu-botao st-btn-4">MAPA AVANÇO DRENAGEM</a>
     <a href="./pluviometria.html" class="menu-botao st-btn-5">PLUVIOMETRIA</a>
 
-
-    <div class="kpi-flat" id="kpi-17a2d7b6" data-visual="17a2d7b692df82d196c9">
-      <div class="kpi-label">CURVA FÍSICA SEMANA</div>
-      <div class="kpi-value loading" data-kpi="17a2d7b6">...</div>
+    <!-- ========================================== -->
+    <!-- CONTEÚDO DA STMA                           -->
+    <!-- ========================================== -->
+    
+    <!-- KPI Dias Seguros com o Retângulo -->
+    <div class="kpi-bordered" id="kpi-dias_seguros" data-visual="56b0aaba72ddc9320366">
+      <div class="kpi-accent"></div>
+      <div class="kpi-content">
+        <div class="kpi-value loading" data-kpi="dias_seguros">...</div>
+        <div class="kpi-label">Dias Seguros</div>
+      </div>
     </div>
 
-    <div id="chart-1bedbc29" class="chart-container" data-visual="1bedbc29b9902dcccc0b"></div>
+    <!-- Pirâmide e seus KPIs (Números soltos) -->
+    <img src="../imagens/Imagem_Piramide.png" style="position: absolute; left: 240px; top: 50px; width: 530px; height: 350px; z-index: 1;">
+    
+    <div class="kpi-raw" id="kpi-f69b4746"><div class="kpi-value loading" data-kpi="acid_graves">...</div></div>
+    <div class="kpi-raw" id="kpi-1bedbc29"><div class="kpi-value loading" data-kpi="acid_leves">...</div></div>
+    <div class="kpi-raw" id="kpi-4ab2cd84"><div class="kpi-value loading" data-kpi="quase_acid">...</div></div>
+    <div class="kpi-raw" id="kpi-69b3af43"><div class="kpi-value loading" data-kpi="desvios_total">...</div></div>
 
-    <div id="chart-4ab2cd84" class="chart-container" data-visual="4ab2cd8430bdde0b8941"></div>
+    <!-- Total Desvios (Donut) -->
+    <div id="chart-donut" class="chart-container"></div>
+    <div class="visual-title" id="title-donut">TOTAL DESVIOS</div>
 
-    <div class="kpi-flat" id="kpi-56b0aaba" data-visual="56b0aaba72ddc9320366">
-      <div class="kpi-label">CURVA FÍSICA SEMANA</div>
-      <div class="kpi-value loading" data-kpi="56b0aaba">...</div>
-    </div>
+    <!-- Classificação Desvios (Barras Horizontais) -->
+    <div id="chart-barras_horiz" class="chart-container"></div>
+    <div class="visual-title" id="title-barras_horiz">CLASSIFICAÇÃO DESVIOS GRAVES</div>
 
-    <div class="kpi-flat" id="kpi-69b3af43" data-visual="69b3af430ba44ae52c2e">
-      <div class="kpi-label">CURVA FÍSICA SEMANA</div>
-      <div class="kpi-value loading" data-kpi="69b3af43">...</div>
-    </div>
+    <!-- Desvios Graves (Linha) -->
+    <div id="chart-linha" class="chart-container"></div>
+    <div class="visual-title" id="title-linha">DESVIOS GRAVES</div>
 
-    <div id="slicer-71f0fb2f" class="slicer-container" data-visual="71f0fb2f9ea0c8942146"></div>
+    <!-- Ações Desvios (Pizza) -->
+    <div id="chart-pizza" class="chart-container"></div>
+    <div class="visual-title" id="title-pizza">AÇÕES DESVIOS GRAVES</div>
 
-    <!-- Visual nao suportado: advancedSlicerVisual (id: a1605a684fdd84fbcf76) -->
+    <!-- Desvios no mês vigente (Barras) -->
+    <div id="chart-barras_vert" class="chart-container"></div>
+    <div class="visual-title" id="title-barras_vert">DESVIOS NO MÊS VIGENTE</div>
 
-    <div id="chart-c125deaf" class="chart-container" data-visual="c125deaf40812a9561d7"></div>
-
-    <div id="slicer-c8f4afef" class="slicer-container" data-visual="c8f4afefc0333ab3ba30"></div>
-
-    <div id="slicer-cf67fc4f" class="slicer-container" data-visual="cf67fc4f3a7951e846ca"></div>
-
-    <div id="table-e561f6cc" class="table-container" data-visual="e561f6cc955afb2db7da"></div>
-
-    <div id="chart-e8ef26fc" class="chart-container" data-visual="e8ef26fc5778d67a0081"></div>
-
-    <div id="chart-f69b4746" class="chart-container" data-visual="f69b4746387968b8a0bd"></div>
+    <!-- Tabela -->
+    <div id="table-descricao" class="table-container"></div>
 
 </div>
 </div>

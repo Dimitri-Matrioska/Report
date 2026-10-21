@@ -1,30 +1,94 @@
-/* PERFORMANCE SEMANAL - ajustado */
-
-.pbi-canvas {
-  background: var(--pbi-fundo-pagina) url('../imagens/fundo-duplicata-de-performance-semanal.jpg') center/cover no-repeat;
-}
+/* ============================================================
+   STYLE.CSS — Estilos Globais (Estrutura e Canvas)
+   ============================================================ */
 
 :root {
-  /* --- Suas cores mapeadas --- */
+  /* Paleta do tema CY26SU02 */
+  --pbi-foreground: #252423;
+  --pbi-background: #FFFFFF;
+  --pbi-accent: #118DFF;
+  --pbi-cor-1: #118DFF;
+  --pbi-cor-2: #12239E;
+  --pbi-cor-3: #E66C37;
+  --pbi-cor-4: #6B007B;
+  --pbi-cor-5: #E044A7;
+  --pbi-good: #1AAB40;
+  --pbi-bad: #D64550;
+
+  --pbi-azul-escuro: #001d37;
+  --pbi-sidebar-fundo: #001d37;
+  --pbi-sidebar-borda: #4a6fa5;
+  --pbi-botao-ativo: #3a2a20;
+  --pbi-fundo-pagina: #f3f0eb;
+
+  --fonte-principal: "Segoe UI", helvetica, arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  font-family: var(--fonte-principal);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.canvas-wrapper {
+  display: block;
+  flex-shrink: 0;
+}
+
+.pbi-canvas {
+  position: relative;
+  width: 1280px;
+  height: 720px;
+  background: var(--pbi-fundo-pagina);
+  border-radius: 4px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  flex-shrink: 0;
+  
+  /* Controle de escala via JS */
+  --escala: 1;
+  zoom: var(--escala);
+}
+
+/* Estados globais */
+.loading { color: #a0a0a0 !important; font-weight: 400 !important; }
+.error { color: var(--pbi-bad) !important; font-size: 8pt !important; }
+
+/* ============================================================
+   PERFORMANCE SEMANAL — Estilos Específicos
+   ============================================================ */
+
+/* Cores específicas desta página (mapeadas para facilitar) */
+:root {
   --bege-fundo: #f3f0eb;
   --azul-prev: #001d37;
   --real: #ffbe83;
   --azul-tend: #2750ec;
   --salmao-fundo: #f5e6d6;
   --cinza-fundo: #dcdcda;
+}
 
-  /* --- Paleta original do Power BI (mantida para compatibilidade) --- */
-  --pbi-foreground: #252423;
-  --pbi-background: #FFFFFF;
-  --pbi-accent: #118DFF;
-  --pbi-good: #1AAB40;
-  --pbi-bad: #D64550;
-  --pbi-azul-escuro: #001d37; /* Atualizado para o seu azul */
-  --fonte-principal: "Segoe UI", helvetica, arial, sans-serif;
+/* Fundo específico desta página */
+.pbi-canvas {
+  background: var(--pbi-fundo-pagina) url('../imagens/fundo-duplicata-de-performance-semanal.jpg') center/cover no-repeat;
 }
 
 /* ============================================================
-   TEXTOS DA SIDEBAR (sobrepostos na imagem)
+   SIDEBAR (Sobreposta na imagem)
    ============================================================ */
 .sidebar-filtro {
   position: absolute;
@@ -114,42 +178,93 @@
 .st-btn-5 { top: 585px; height: 40px; }
 
 /* ============================================================
-   VISUAIS (posições extraídas do PBIP)
+   COMPONENTES VISUAIS (KPIs, Tabelas, Gráficos)
    ============================================================ */
-#kpi-01b213fc { left: 944.23px; top: 158.12px; width: 150.0px; height: 50.0px; z-index: 260; }
-#kpi-02f6851e { left: 557.01px; top: 35.85px; width: 136.67px; height: 67.51px; z-index: 240; }
-#kpi-22e35e93 { left: 252.38px; top: 37.49px; width: 136.67px; height: 67.51px; z-index: 210; }
-#kpi-613f2719 { left: 1103.94px; top: 157.83px; width: 150.74px; height: 50.0px; z-index: 270; }
-#kpi-6b304c5c { left: 404.69px; top: 35.85px; width: 136.67px; height: 67.51px; z-index: 230; }
-
-/* Tabelas com fundo branco */
-#table-12e44aa3 { left: 940.51px; top: 565.48px; width: 319.07px; height: 120.28px; z-index: 120; background:var(--bege-fundo); border-radius: 2px; }
-#table-9f78ce2d { left: 941.02px; top: 426.09px; width: 319.14px; height: 139.73px; z-index: 110; background:var(--bege-fundo); border-radius: 2px; }
-#table-b7008cbc { left: 940.51px; top: 230px; width: 319px; height: 180px; z-index: 110; background:var(--bege-fundo); border-radius: 2px; } /* Ajustar posição se necessário */
-
-/* Gráficos (Adicionado fundo branco para simular o card do PBIP) */
-.chart-container {
+.kpi-flat {
   position: absolute;
-  background: #ffffff00;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  z-index: 10;
+  background: transparent;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 3px;
+}
+.kpi-flat.boxed { background: #ffffff; }
+.kpi-flat .kpi-label {
+  font-size: 10pt;
+  color: #0b1f3a79;
+  margin-bottom: 2px;
+  line-height: 1;
+  font-weight: 400;
+}
+.kpi-flat .kpi-value {
+  font-size: 13pt;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: var(--pbi-foreground);
+  line-height: 1;
+}
+.kpi-flat .kpi-value.negative { color: var(--pbi-bad); }
+
+.kpi-bordered {
+  position: absolute;
+  background: #FFFFFF;
+  border: 1px solid #e0e0e0;
+  padding: 5px;
+  display: flex;
+  align-items: stretch;
+  border-radius: 3px;
+}
+.kpi-bordered .kpi-accent {
+  width: 3px;
+  background: var(--pbi-accent);
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+.kpi-bordered .kpi-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 0;
+}
+.kpi-bordered .kpi-label {
+  font-size: 12pt;
+  color: #605e5c;
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+.kpi-bordered .kpi-value {
+  font-size: 10pt;
+  font-weight: 600;
+  color: var(--pbi-foreground);
 }
 
-#chart-1ecebfde { left: 245.35px; top: 390.26px; width: 693.25px; height: 284.87px; z-index: 250; }
-#chart-62f295f1 { left: 245.54px; top: 139.11px; width: 692.75px; height: 244.61px; z-index: 220; }
+.table-container {
+  position: absolute;
+  overflow: auto;
+  font-size: 12pt;
+  color: var(--pbi-foreground);
+  background: var(--bege-fundo);
+  border-radius: 2px;
+}
+.table-container table { width: 100%; border-collapse: collapse; }
+.table-container th, .table-container td { padding: 2px 6px; border: 0; text-align: left; vertical-align: top; }
 
-/* Gauge Ajustado */
-#chart-a2d9b88a { left: 735px; top: 35px; width: 180px; height: 70px; z-index: 60; } /* Movido para a direita e levemente maior */
+.chart-container {
+  position: absolute;
+  background: var(--bege-fundo);
+  border-radius: 0px;
+  box-shadow: null;
+  overflow: hidden;
+  z-index: 10;
+  min-height: 10px;
+}
 
-/* Pluviometria */
-#chart-cfaada41 { left: 942.56px; top: 28.37px; width: 308.57px; height: 130.34px; z-index: 260; }
-
-.slicer-container { display: none !important; }
-
-/* ============================================================
-   FAIXAS DE TÍTULO (Azul Escuro)
-   ============================================================ */
 .visual-title {
   position: absolute;
   background: #001d37;
@@ -165,11 +280,89 @@
   border-radius: 3px 3px 0 0;
 }
 
-#title-1ecebfde { left: 245.35px; top: 391px; width: 693.25px; height: 21px; }
-#title-62f295f1 { left: 245.54px; top: 120px; width: 692.75px; height: 20px; }
-#title-a2d9b88a { left: 735px; top: 35px; width: 180px; height: 18px; font-size: 8pt; }
-#title-cfaada41 { left: 942.56px; top: 12px; width: 308.57px; height: 16px; font-size: 8pt; border-radius: 2px; }
+/* ============================================================
+   POSIÇÕES DOS ELEMENTOS (Extraídas do PBIP)
+   ============================================================ */
+   
+#kpi-01b213fc { left: 944.23px; top: 158.0px; width: 150.0px; height: 50.0px; z-index: 260; } 
+#kpi-613f2719 { left: 1103.94px; top:158.0px; width: 150.0px; height: 50.0px; z-index: 270; }
+#kpi-02f6851e { left: 557.01px; top: 35.85px; width: 136.67px; height: 67.51px; z-index: 240; }
+#kpi-22e35e93 { left: 252.38px; top: 37.49px; width: 136.67px; height: 67.51px; z-index: 210; }
 
-/* Estados */
-.loading { color: #a0a0a0 !important; font-weight: 400 !important; }
-.error   { color: #d13438 !important; font-size: 8pt !important; }
+#kpi-6b304c5c { left: 404.69px; top: 35.85px; width: 136.67px; height: 67.51px; z-index: 230; }
+
+#table-12e44aa3 { left: 940.51px; top: 565.48px; width: 319px; height: 120.28px; z-index: 120;font-size: 10pt; }
+#table-9f78ce2d { left: 941.02px; top: 426.09px; width: 319px; height: 139.73px; z-index: 110; }
+#table-b7008cbc { left: 940.51px; top: 230px; width: 319px; height: 180px; z-index: 110; }
+
+#chart-grafico_curva_ano { left: 245.35px; top: 390.26px; width: 693.25px; height: 284.87px; z-index: 250; }
+#chart-grafico_curva_mes { left: 245.54px; top: 139.11px; width: 692.75px; height: 244.61px; z-index: 220; }
+#chart-aderencia { left: 735px; top: 35px; width: 180px; height: 70px; z-index: 60; }
+#chart-grafico_pluviometro { left: 942.56px; top: 28.37px; width: 308.57px; height: 130.34px; z-index: 260; }
+
+#title-grafico_curva_ano { left: 245.35px; top: 391px; width: 693.25px; height: 21px; }
+#title-grafico_curva_mes { left: 245.54px; top: 120px; width: 692.75px; height: 20px; }
+#title-aderencia { left: 735px; top: 35px; width: 180px; height: 18px; font-size: 8pt; font-weight: 700;color: #001d37; border-radius: 2px; background: #001d3700; }
+#title-grafico_pluviometro { left: 942.56px; top: 12px; width: 308.57px; height: 16px; font-size: 8pt; border-radius: 2px; }
+
+/* Ocultar containers de filtro originais */
+.slicer-container { display: none !important; } 
+
+
+/* ============================================================
+   DROPDOWNS CUSTOMIZADOS (Filtros)
+   ============================================================ */
+.dropdown-menu {
+  position: absolute;
+  background: var(--pbi-sidebar-fundo);
+  border: 1px solid var(--bege-fundo);
+  border-radius: 2px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  z-index: 9999; /* Fica acima de tudo */
+  display: none; /* Escondido por padrão */
+  max-height: 250px;
+  overflow-y: auto;
+  width: 212px;
+}
+
+.dropdown-menu.active { display: block; }
+
+/* Posições dos Dropdowns abertos (abaixo dos botões) */
+.st-drop-1 { left: 10px; top: 175px; } /* Abre logo abaixo do botão 1 */
+.st-drop-2 { left: 10px; top: 255px; }
+.st-drop-3 { left: 10px; top: 335px; }
+
+/* Itens dentro do Dropdown */
+.dropdown-item {
+  padding: 6px 10px;
+  color: var(--bege-fundo);
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dropdown-item:hover { background: #16294a; }
+
+/* Checkboxes customizados */
+.dropdown-item input[type="checkbox"] {
+  accent-color: var(--pbi-accent);
+  cursor: pointer;
+}
+
+/* Grupo de Ano/Mês (Acordeão) */
+.dropdown-group-title {
+  padding: 6px 10px;
+  color: var(--bege-fundo);
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  justify-content: space-between;
+}
+.dropdown-group-items {
+  display: none; /* Meses ficam escondidos até expandir o ano */
+  padding-left: 15px;
+}
+.dropdown-group-items.active { display: block; }

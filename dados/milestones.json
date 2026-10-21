@@ -2,625 +2,481 @@
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": "OLD",
-    "sequencia": "1",
+    "sequencia": 1,
     "etapa": "Terraplanagem",
     "milestone": "Cercamento perimetral",
     "data_baseline": "2026-05-20",
     "data_real": "2026-06-05",
-    "data_replan": "2026-05-20",
-    "farol": "Concluído com atraso",
-    "farol_plano_acao": null
+    "farol": "Concluído com atraso"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": "OLD",
-    "sequencia": "2",
+    "sequencia": 2,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem Canteiro GC - A1 -33%",
     "data_baseline": null,
     "data_real": "2026-08-03",
-    "data_replan": "2026-06-02",
-    "farol": "Concluído com atraso",
-    "farol_plano_acao": null
+    "farol": "Concluído com atraso"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": "OLD",
-    "sequencia": "3",
+    "sequencia": 3,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem Canteiro GC - A2 - 66%",
     "data_baseline": null,
     "data_real": "2026-08-03",
-    "data_replan": "2026-07-02",
-    "farol": "Concluído com atraso",
-    "farol_plano_acao": null
+    "farol": "Concluído com atraso"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": "OLD",
-    "sequencia": "4",
+    "sequencia": 4,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem Canteiro GC - A3 - 100%",
     "data_baseline": "2026-05-11",
     "data_real": "2026-08-03",
-    "data_replan": "2026-08-03",
-    "farol": "Concluído",
-    "farol_plano_acao": null
+    "farol": "Concluído"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": "OLD",
-    "sequencia": "5",
+    "sequencia": 5,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem Monobloco - A1 - 50%",
     "data_baseline": null,
     "data_real": "2026-07-05",
-    "data_replan": "2026-07-05",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": "OLD",
-    "sequencia": "6",
+    "sequencia": 6,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem Monobloco - A 2 - 100%",
     "data_baseline": null,
     "data_real": "2026-08-10",
-    "data_replan": "2026-08-10",
-    "farol": "Concluído",
-    "farol_plano_acao": null
+    "farol": "Concluído"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": "OLD",
-    "sequencia": "7",
+    "sequencia": 7,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem Subestação - A1 - 40%",
     "data_baseline": null,
     "data_real": "2026-06-25",
-    "data_replan": "2026-05-11",
-    "farol": "Concluído com atraso",
-    "farol_plano_acao": null
+    "farol": "Concluído com atraso"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": "OLD",
-    "sequencia": "8",
+    "sequencia": 8,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem Subestação - A2 - 100%",
     "data_baseline": "2026-08-25",
     "data_real": "2026-06-25",
-    "data_replan": "2026-06-15",
-    "farol": "Concluído com atraso",
-    "farol_plano_acao": null
+    "farol": "Concluído com atraso"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": "OLD",
-    "sequencia": "9",
+    "sequencia": 9,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem Transelevador - A1 - 15%",
     "data_baseline": null,
     "data_real": "2026-08-10",
-    "data_replan": "2026-08-10",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": "OLD",
-    "sequencia": "99",
+    "sequencia": 99,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem Transelevador - A2 - 100%",
     "data_baseline": "2026-06-09",
     "data_real": "2026-09-23",
-    "data_replan": "2026-09-23",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": "OLD",
-    "sequencia": "999",
+    "sequencia": 999,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem Canteiro transelevador",
     "data_baseline": "2026-12-23",
     "data_real": "2026-12-24",
-    "data_replan": "2026-12-24",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": "OLD",
-    "sequencia": "9999",
+    "sequencia": 9999,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem Data center",
     "data_baseline": "2026-12-14",
     "data_real": "2026-08-10",
-    "data_replan": "2026-08-10",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": "OLD",
-    "sequencia": "99999",
+    "sequencia": 99999,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem Utilidades",
     "data_baseline": "2026-12-14",
     "data_real": "2026-12-14",
-    "data_replan": "2026-12-14",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "61667",
     "contratada": "SSI SCHAEFER LTDA.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Transelevador",
     "milestone": "System Design",
     "data_baseline": "2026-06-05",
     "data_real": "2026-08-31",
-    "data_replan": "2026-06-05",
-    "farol": "Atrasado",
-    "farol_plano_acao": null
+    "farol": "Atrasado"
   },
   {
     "id_contrato": "61667",
     "contratada": "SSI SCHAEFER LTDA.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Transelevador",
     "milestone": "Aprovação do design do sistema",
     "data_baseline": "2027-05-21",
     "data_real": "2026-09-30",
-    "data_replan": "2026-07-03",
-    "farol": "Atrasado",
-    "farol_plano_acao": null
+    "farol": "Atrasado"
   },
   {
     "id_contrato": "61667",
     "contratada": "SSI SCHAEFER LTDA.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Transelevador",
     "milestone": "Início de produção dos racks",
     "data_baseline": null,
     "data_real": "2026-11-09",
-    "data_replan": "2026-11-09",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "61667",
     "contratada": "SSI SCHAEFER LTDA.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Transelevador",
     "milestone": "Start Site Installation",
     "data_baseline": "2027-02-24",
     "data_real": "2027-02-24",
-    "data_replan": "2027-02-24",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "61667",
     "contratada": "SSI SCHAEFER LTDA.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Transelevador",
     "milestone": "Finish  Site Installation",
     "data_baseline": "2028-04-11",
     "data_real": "2028-04-11",
-    "data_replan": "2028-04-11",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "61667",
     "contratada": "SSI SCHAEFER LTDA.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Transelevador",
     "milestone": "Start of Production & Warranty",
     "data_baseline": "2028-05-02",
     "data_real": "2028-05-02",
-    "data_replan": "2028-05-02",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "61667",
     "contratada": "SSI SCHAEFER LTDA.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Transelevador",
     "milestone": "Final Acceptance",
     "data_baseline": "2028-07-25",
     "data_real": "2028-07-25",
-    "data_replan": "2028-07-25",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "4082325315",
     "contratada": "CEMIG DISTRIBUIÇÃO S/A",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Subestação Cemig",
     "milestone": "Início execução Subestação Cemig",
     "data_baseline": "2028-02-01",
     "data_real": "2028-02-01",
-    "data_replan": "2028-02-01",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "106126",
     "contratada": "BAIKAL CONSTRUÇÕES E INSTALAÇÕES LTDA.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Subestação 138/13,8KV",
     "milestone": "Término da engenharia integrada",
     "data_baseline": "2026-12-29",
     "data_real": "2026-12-29",
-    "data_replan": "2026-12-29",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "106126",
     "contratada": "BAIKAL CONSTRUÇÕES E INSTALAÇÕES LTDA.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Subestação 138/13,8KV",
     "milestone": "Mobilização",
     "data_baseline": "2027-02-02",
     "data_real": "2027-02-02",
-    "data_replan": "2027-02-02",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "106126",
     "contratada": "BAIKAL CONSTRUÇÕES E INSTALAÇÕES LTDA.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Subestação 138/13,8KV",
     "milestone": "Término de montagem civil e eletromecânica",
     "data_baseline": "2027-10-26",
     "data_real": "2027-10-26",
-    "data_replan": "2027-10-26",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "106126",
     "contratada": "BAIKAL CONSTRUÇÕES E INSTALAÇÕES LTDA.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Subestação 138/13,8KV",
     "milestone": "Assinatura do Termo de Aceitação Final",
     "data_baseline": "2027-11-02",
     "data_real": "2027-11-02",
-    "data_replan": "2027-11-02",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "106126",
     "contratada": "BAIKAL CONSTRUÇÕES E INSTALAÇÕES LTDA.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Subestação 138/13,8KV",
     "milestone": "Desmobilização",
     "data_baseline": "2027-11-03",
     "data_real": "2027-11-03",
-    "data_replan": "2027-11-03",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "112410",
     "contratada": "VIRTUAL INFRAESTRUTURA E ENERGIA LTDA",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Data Center",
     "milestone": "Projeto Executivo",
     "data_baseline": "2027-01-02",
     "data_real": "2027-01-02",
-    "data_replan": "2027-01-02",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "112410",
     "contratada": "VIRTUAL INFRAESTRUTURA E ENERGIA LTDA",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Data Center",
     "milestone": "Fabricação das Salas Seguras (As duas)",
     "data_baseline": "2027-05-02",
     "data_real": "2027-05-02",
-    "data_replan": "2027-05-02",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "112410",
     "contratada": "VIRTUAL INFRAESTRUTURA E ENERGIA LTDA",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Data Center",
     "milestone": "Montagem Sala Segura + Piso Elevado",
     "data_baseline": "2027-06-01",
     "data_real": "2027-06-01",
-    "data_replan": "2027-06-01",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "112410",
     "contratada": "VIRTUAL INFRAESTRUTURA E ENERGIA LTDA",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Data Center",
     "milestone": "Cubículo de Média Tensão",
     "data_baseline": "2027-06-01",
     "data_real": "2027-06-01",
-    "data_replan": "2027-06-01",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "112410",
     "contratada": "VIRTUAL INFRAESTRUTURA E ENERGIA LTDA",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Data Center",
     "milestone": "Trafos e Cabos Sala Segura 2",
     "data_baseline": "2027-06-01",
     "data_real": "2027-06-01",
-    "data_replan": "2027-06-01",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Terraplanagem",
     "milestone": "Cercamento Perimetral Concluído",
     "data_baseline": "2026-06-05",
     "data_real": "2026-06-05",
-    "data_replan": "2026-05-20",
-    "farol": "Concluído com atraso",
-    "farol_plano_acao": null
+    "farol": "Concluído com atraso"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem Subestação concluída",
     "data_baseline": "2026-06-25",
     "data_real": "2026-06-25",
-    "data_replan": "2026-06-15",
-    "farol": "Concluído com atraso",
-    "farol_plano_acao": null
+    "farol": "Concluído com atraso"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem Canteiro GC concluída",
     "data_baseline": "2026-08-03",
     "data_real": "2026-08-03",
-    "data_replan": "2026-08-03",
-    "farol": "Concluído",
-    "farol_plano_acao": null
+    "farol": "Concluído"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem área dos 2 Data Centers concluída",
     "data_baseline": "2026-11-30",
     "data_real": "2026-11-30",
-    "data_replan": "2026-11-30",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem Monobloco concluída",
     "data_baseline": "2026-08-10",
     "data_real": "2026-08-10",
-    "data_replan": "2026-08-10",
-    "farol": "Concluído",
-    "farol_plano_acao": null
+    "farol": "Concluído"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Terraplanagem",
     "milestone": "Conclusão da drenagem e proteção de taludes da área do Canteiro GC",
     "data_baseline": "2026-09-25",
     "data_real": "2026-11-10",
-    "data_replan": "2026-09-25",
-    "farol": "Atrasado",
-    "farol_plano_acao": null
+    "farol": "Atrasado"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem Transelevador concluída",
     "data_baseline": "2026-09-25",
     "data_real": "2026-09-25",
-    "data_replan": "2026-09-25",
-    "farol": "Concluído",
-    "farol_plano_acao": null
+    "farol": "Concluído"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem Área de Utilidades concluída",
     "data_baseline": "2026-12-14",
     "data_real": "2026-12-14",
-    "data_replan": "2026-12-14",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Terraplanagem",
     "milestone": "Terraplanagem Canteiro Transelevador concluída",
     "data_baseline": "2026-12-24",
     "data_real": "2026-12-24",
-    "data_replan": "2026-12-24",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Terraplanagem",
     "milestone": "Conclusão da drenagem da área do Canteiro Transelevador",
     "data_baseline": "2027-01-31",
     "data_real": "2027-01-31",
-    "data_replan": "2027-01-31",
-    "farol": "verde",
-    "farol_plano_acao": null
+    "farol": "verde"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Terraplanagem",
     "milestone": "Compactação Dinâmica área A",
     "data_baseline": "2026-08-07",
     "data_real": "2026-08-07",
-    "data_replan": "2026-07-19",
-    "farol": "Concluído com atraso",
-    "farol_plano_acao": null
+    "farol": "Concluído com atraso"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Terraplanagem",
     "milestone": "Compactação Dinâmica área B",
     "data_baseline": "2026-07-14",
     "data_real": "2026-07-14",
-    "data_replan": "2026-07-09",
-    "farol": "Concluído com atraso",
-    "farol_plano_acao": null
+    "farol": "Concluído com atraso"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Terraplanagem",
     "milestone": "Compactação Dinâmica área C",
     "data_baseline": "2026-08-07",
     "data_real": "2026-08-07",
-    "data_replan": "2026-08-07",
-    "farol": "Concluído",
-    "farol_plano_acao": null
+    "farol": "Concluído"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Terraplanagem",
     "milestone": "Recompactação Area D",
     "data_baseline": "2026-07-22",
     "data_real": "2026-07-22",
-    "data_replan": "2026-05-05",
-    "farol": "Concluído com atraso",
-    "farol_plano_acao": null
+    "farol": "Concluído com atraso"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Terraplanagem",
     "milestone": "Recompactação Area E",
     "data_baseline": "2026-07-29",
     "data_real": "2026-07-29",
-    "data_replan": "2026-06-09",
-    "farol": "Concluído com atraso",
-    "farol_plano_acao": null
+    "farol": "Concluído com atraso"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Terraplanagem",
     "milestone": "Compactação Dinâmica área F",
     "data_baseline": "2026-08-28",
     "data_real": "2026-08-28",
-    "data_replan": "2026-09-04",
-    "farol": "Concluído",
-    "farol_plano_acao": null
+    "farol": "Concluído"
   },
   {
     "id_contrato": "110340",
     "contratada": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
-    "mes_referencia": null,
     "sequencia": null,
     "etapa": "Terraplanagem",
     "milestone": "Compactação Dinâmica área G",
     "data_baseline": "2026-08-28",
     "data_real": "2026-08-28",
-    "data_replan": "2026-08-14",
-    "farol": "Concluído com atraso",
-    "farol_plano_acao": null
+    "farol": "Concluído com atraso"
   }
 ]

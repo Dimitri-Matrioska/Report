@@ -8,13 +8,22 @@
    Ao mudar qualquer filtro, KPIs e gráficos são recalculados.
    ============================================================ */
 
+  function toggleDropdown(id) {
+  // Fecha todos os outros
+  document.querySelectorAll('.dropdown-menu').forEach(el => {
+    if (el.id !== id) el.classList.remove('active');
+  });
+  // Alterna o atual
+  document.getElementById(id).classList.toggle('active');
+  }
+
 let DADOS = { fisico: [], pluviometria: [], status: [] };
 let FILTROS = { contratada: null, mes: null, semana: null };
 const CHARTS = {};
 
 // Defaults conforme o relatório vigente (PBIP / PDF):
 // Contratada=TERRAM, Ano/Mês=2026+outubro, SemanaDoProjeto=31
-const DEF_CONTRATADA = 'TERRAM';
+const DEF_CONTRATADA = 'TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.';
 const DEF_MES = '2026-10-31';
 const DEF_SEMANA = 31;
 
@@ -63,7 +72,7 @@ function pluvioFiltrado() {
   );
 }
 
-function renderKPIs() {
+function render_KPIs() {
   const rows = fisicoFiltrado();       // avanço/desvio: mês + semana
   const pluv = pluvioDoMes();          // mm/dias: mês inteiro
 
@@ -93,11 +102,11 @@ function setKPI(vid, valor) {
   el.textContent = valor;
 }
 
-function renderGraficos() {
-  renderCurvaMensal();
-  renderCurvaS1();
-  renderAderencia();
-  renderPluvioCurto();
+function render_Graficos() {
+  render_curva_ano();
+  render_curva_mes();
+  render_Aderencia();
+  render_PluvioCurto();
 }
 
 /* ============================================================
@@ -125,7 +134,7 @@ function statusDoPeriodo() {
 }
 
 /* Quebra a Descrição (bloco multi-linha com "•") em itens. */
-function itensDescricao(desc) {
+  function itensDescricao(desc) {
   if (!desc) return [];
   return desc
     .split(/\r?\n/)
@@ -133,7 +142,7 @@ function itensDescricao(desc) {
     .filter(l => l.length > 0)
     // remove rótulos soltos tipo "TERRAM:" / "GERAL:"
     .filter(l => !/^[A-ZÇÃÕÁÉÍÓÚÂÊÔ\- ]{2,20}:$/.test(l));
-}
+  }
 
 function itensDoStatus(registros, ...itens) {
   const alvo = itens.map(s => s.toLowerCase());
@@ -144,7 +153,7 @@ function itensDoStatus(registros, ...itens) {
   return out;
 }
 
-function renderTabelasTexto() {
+function render_TabelasTexto() {
   const regs = statusDoPeriodo();
   preencherTabela('table-b7008cbc', 'HIGHLIGHTS',
                   itensDoStatus(regs, 'Fatos Relevantes'));
@@ -168,10 +177,10 @@ function preencherTabela(id, titulo, itens) {
   el.appendChild(ul);
 }
 
-function renderCurvaMensal() {
-  const el = document.getElementById('chart-1ecebfde');
+function render_curva_ano() {
+  const el = document.getElementById('chart-grafico_curva_ano');
   if (!el) return;
-  CHARTS['1ecebfde'] = CHARTS['1ecebfde'] || echarts.init(el);
+  CHARTS['grafico_curva_ano'] = CHARTS['grafico_curva_ano'] || echarts.init(el);
   
   const anoAlvo = FILTROS.mes ? FILTROS.mes.split('-')[0] : '2026';
   
@@ -207,7 +216,7 @@ function renderCurvaMensal() {
     tend.push(t);
   });
 
-  CHARTS['1ecebfde'].setOption({
+  CHARTS['grafico_curva_ano'].setOption({
     backgroundColor: 'transparent',
     grid: { left: 20, right: 20, top: 30, bottom: 30, containLabel: true },
     tooltip: { 
@@ -272,10 +281,10 @@ function renderCurvaMensal() {
   }, true);
 }
 
-function renderCurvaS1() {
-  const el = document.getElementById('chart-62f295f1');
+function render_curva_mes() {
+  const el = document.getElementById('chart-grafico_curva_mes');
   if (!el) return;
-  CHARTS['62f295f1'] = CHARTS['62f295f1'] || echarts.init(el);
+  CHARTS['grafico_curva_mes'] = CHARTS['grafico_curva_mes'] || echarts.init(el);
   
   const rows = fisicoFiltrado().sort((a, b) => (a.data || '').localeCompare(b.data || ''));
   
@@ -297,10 +306,12 @@ function renderCurvaS1() {
   const prevDia = datas.map(d => map[d].prevDia);
   const realDia = datas.map(d => map[d].realDia);
 
-  CHARTS['62f295f1'].setOption({
+  CHARTS['grafico_curva_mes'].setOption({
     backgroundColor: 'transparent',
-    grid: { left: 20, right: 20, top: 40, bottom: 30, containLabel: true },
-        tooltip: { 
+    grid: { left: 20, right: 20, top: 30, bottom: 30, containLabel: true },
+      
+    // Evento ao passar o mouse  (Previsto/real + Previsto/Real Acum)
+    tooltip: { 
       trigger: 'axis',
       axisPointer: { type: 'shadow' },
       backgroundColor: 'rgba(255, 255, 255, 0.95)',
@@ -322,19 +333,22 @@ function renderCurvaS1() {
           { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
         return nome + '<br/>' +
-          linha('Previsto Dia', bruto['Previsto Dia'], num) +
-          linha('Real Dia', bruto['Real Dia'], num) +
+          linha('Previsto', bruto['Previsto'], num) +
+          linha('Real', bruto['Real'], num) +
           linha('Previsto Acum', bruto['Previsto Acum'], pct) +
           linha('Real Acum', bruto['Real Acum'], pct);
       }
     },
+    // Legenda (Previsto/real + Previsto/Real Acum)
     legend: { 
-      bottom: 0, itemWidth: 10, itemHeight: 8, textStyle: { fontSize: 8 },
+      bottom: 0, itemWidth: 10, itemHeight: 8, textStyle: { fontSize: 12},
       data: [
+        { name: 'Previsto', icon: 'circle', itemStyle: { color: '#001d37' } },
+        { name: 'Real', icon: 'circle', itemStyle: { color: '#ffbe83' } },
         { name: 'Previsto Acum', icon: 'circle', itemStyle: { color: '#001d37' } },
-        { name: 'Real Acum', icon: 'circle', itemStyle: { color: '#ffbe83' } },
-        { name: 'Previsto Dia', icon: 'rect', itemStyle: { color: '#dcdcda' } },
-        { name: 'Real Dia', icon: 'rect', itemStyle: { color: '#f5e6d6' } }
+        { name: 'Real Acum', icon: 'circle', itemStyle: { color: '#ffbe83' } }
+        
+        
       ]
     },
     xAxis: { 
@@ -345,60 +359,92 @@ function renderCurvaS1() {
       axisLine: { lineStyle: { color: '#dcdcda' } } 
     },
         yAxis: [
-      { 
-        // Eixo 0: % Acumulada (0 a 100%) — usado SÓ pelas linhas
-        type: 'value', 
-        show: false, 
-        min: 0, 
-        max: 1, 
-        axisLabel: { show: false },
-        splitLine: { show: false } 
+       { 
+        // Eixo 1: Valores diários (ex: 0.013 = 1.3%)
+        type: 'value',  
+        show: false,       // Mude para true se quiser ver as linhas de grade de fundo
+        min: 0,         // Valor mínimo do eixo (permite negativo)
+        max: 0.65,          // Valor máximo do eixo
+        interval: 0.1,     // Força o eixo a pular de 0.1 em 0.1 (opcional, ajuda na precisão)
+        axisLabel: { 
+          show: true, 
+          // AQUI ESTÁ O SEGREDO DOS DECIMAIS:
+          // formatter converte o valor bruto (ex: 0.5) para porcentagem (50.0%)
+          formatter: function (value) {
+            return (value * 100).toFixed(1) + '%'; 
+          },
+          color: '#605e5c',
+          fontSize: 9
+        },
+        splitLine: { 
+          show: true, 
+          lineStyle: { color: '#f3f0eb' } // Cor da linha de grade (bege-fundo)
+        } 
       },
       { 
                 // Eixo 1: Valores diários — usado SÓ pelas barras.
-                // Escala fixa em 130% (barra máxima ocupa ~77% da altura).
+                
         type: 'value',  
         show: false, 
         min: 0,
-        max: 1.3,
+        max: 0.05,
         axisLabel: { show: true },
         splitLine: { show: true } 
       }
     ],
     series: [
-            // BARRAS (Eixo Y 1) — lado a lado
+            // BARRAS (Eixo Y 1) — lado a lado Previsto
       { 
-        name: 'Previsto Dia', 
+        name: 'Previsto', 
         type: 'bar', 
         yAxisIndex: 1, 
         data: prevDia, 
         itemStyle: { color: '#001e38' },
-        barMaxWidth: 14,
-        barGap: '10%',
-        z: 6
+        barMaxWidth: 27,
+        barGap: '5%',
+        z: 6,
+        // Rótulo de valor no topo da barra
+        label: {
+          show: true, 
+          position: 'top', 
+          distance: 5, 
+                    rotate: 90,
+          align: 'left',
+          verticalAlign: 'center',
+          formatter: (p) => (p.value * 100).toFixed(1) + '%',
+          color: '#001e38', 
+          backgroundColor: 'rgba(0, 29, 55, 0.2)', 
+          padding: [5, 8], 
+          borderRadius: 3, 
+          fontSize: 10, 
+          //fontWeight: 'bold'
+         },
+
+
       },
       {
-        name: 'Real Dia', 
+        name: 'Real', // real
         type: 'bar', 
         yAxisIndex: 1, 
         data: realDia, 
         itemStyle: { color: '#ffbe83' },
-        barMaxWidth: 14,
+        barMaxWidth: 27,
         z: 6,
+        // Rótulo de valor no topo da barra
         label: { 
           show: true, 
           position: 'top', 
-          distance: 6, 
+          distance: 5, 
                     rotate: 90,
           align: 'left',
-          verticalAlign: 'bottom',
+          verticalAlign: 'center',
           formatter: (p) => (p.value * 100).toFixed(1) + '%',
-          color: '#fff', 
-          backgroundColor: 'rgb(255, 191, 131)', 
-          padding: [2, 3], 
+          color: '#001e38', 
+          backgroundColor: 'rgba(255, 191, 131, 0.2)', 
+          padding: [5, 8], 
           borderRadius: 3, 
-          fontSize: 8, 
-          fontWeight: 'bold'
+          fontSize: 10, 
+          //fontWeight: 'bold'
         },
       },
       // LINHAS (Eixo Y 0)
@@ -412,17 +458,19 @@ function renderCurvaS1() {
         symbol: 'circle', 
         symbolSize: 0,
         z: 10,
+        
+        // rotulo de valor no topo da linha
         label: { 
           show: true, 
           position: 'top', 
           distance: 5, 
           formatter: (p) => (p.value * 100).toFixed(1) + '%',
           color: '#001e38', 
-          backgroundColor: 'rgba(0, 29, 55, 0.3)', 
-          padding: [3, 5], 
+          backgroundColor: 'rgba(0, 29, 55, 0.2)', 
+          padding: [5, 8], 
           borderRadius: 3, 
           fontSize: 10, 
-          fontWeight: 'bold'
+          //fontWeight: 'bold'
         },
         // TRUQUE PARA NÃO ESCONDER O RÓTULO:
         labelLayout: { hideOverlap: false }
@@ -437,43 +485,72 @@ function renderCurvaS1() {
         symbol: 'circle', 
         symbolSize: 0,
         z: 10,
+        // rotulo de valor no topo da linha
         label: { 
           show: true, 
           position: 'bottom', 
           distance: 5, 
           formatter: (p) => (p.value * 100).toFixed(1) + '%',
           color: '#001e38',
-          backgroundColor: 'rgba(255, 191, 131, 0.5)', 
-          padding: [3, 5], 
+          backgroundColor: 'rgba(255, 191, 131, 0.2)', 
+          padding: [5, 8], 
           borderRadius: 3, 
           fontSize: 10, 
-          fontWeight: 'bold'
+          //fontWeight: 'bold'
         },
         labelLayout: { hideOverlap: false }
       }
     ]
   }, true);
 }
-function renderAderencia() {
-  const el = document.getElementById('chart-a2d9b88a');
+function render_Aderencia() {
+  const el = document.getElementById('chart-aderencia');
   if (!el) return;
-  CHARTS['a2d9b88a'] = CHARTS['a2d9b88a'] || echarts.init(el);
+  CHARTS['aderencia'] = CHARTS['aderencia'] || echarts.init(el);
   const rows = fisicoFiltrado();
   const ader = rows.length ? Math.max(...rows.map(d => Number(d.aderencia) || 0)) : 0;
 
-  CHARTS['a2d9b88a'].setOption({
-    series: [{
-      type: 'gauge', startAngle: 180, endAngle: 0, min: 0, max: 1,
-      center: ['50%', '90%'], radius: '125%',
-      axisLine: { lineStyle: { width: 9, color: [[1, '#f3f0eb']] } },
-      progress: { show: true, width: 12, roundCap: false,
-                  itemStyle: { color: '#ff3636' } },
-      pointer: { show: false },
-      axisTick: { show: false }, splitLine: { show: false }, axisLabel: { show: false },
-      detail: { fontSize: 12, fontWeight: 'bold', offsetCenter: [0, '-22%'],
-                formatter: () => fmtPct(ader), color: '#252423' },
-      data: [{ value: ader }]
-    }]
+  CHARTS['aderencia'].setOption({
+  series: [{
+    type: 'gauge', 
+    startAngle: 180, 
+    endAngle: 0, 
+    min: 0, 
+    max: 1,
+    center: ['50%', '90%'], 
+    radius: '125%',
+    axisLine: { lineStyle: { width: 9, color: [[1, '#f3f0eb']] } },
+    progress: { 
+      show: true, 
+      width: 12, 
+      roundCap: false,
+      itemStyle: { color: ader > 0.95 ? '' : '#ff3636' } 
+    
+    },
+    pointer: { show: false },
+    axisTick: { show: false }, 
+    splitLine: { show: false }, 
+    
+    // --- ADICIONE ESTES DOIS ITENS AQUI ---
+    axisLabel: {
+      show: true,
+      distance: 75, // Distância das legendas em relação à linha do gráfico (ajuste se necessário)
+      formatter: (value) => `${Math.round(value * 100)}%`, // Converte 0 e 1 para "0%" e "100%"
+      color: '#001e38a4',
+      fontSize: 10
+    },
+    splitNumber: 1, // Garante que existirá apenas 1 divisão (mostrando apenas os extremos: min e max)
+    // ---------------------------------------
+
+    detail: { 
+      fontSize: 12, 
+      fontWeight: 'bold', 
+      offsetCenter: [0, '-22%'],
+      formatter: () => fmtPct(ader), 
+      color: '#252423' 
+    },
+    data: [{ value: ader }]
+  }]
   }, true);
 }
 
@@ -483,10 +560,10 @@ function renderAderencia() {
    A alternância é feita clicando no próprio gráfico. */
 let pluvioTodosMeses = false;
 
-function renderPluvioCurto() {
-  const el = document.getElementById('chart-cfaada41');
+function render_PluvioCurto() {
+  const el = document.getElementById('chart-grafico_pluviometro');
   if (!el) return;
-  CHARTS['cfaada41'] = CHARTS['cfaada41'] || echarts.init(el);
+  CHARTS['grafico_pluviometro'] = CHARTS['grafico_pluviometro'] || echarts.init(el);
   const pluv = DADOS.pluviometria;
   const todosMeses = [...new Set(pluv.map(d => d.mes))].sort();
 
@@ -506,7 +583,7 @@ function renderPluvioCurto() {
     real.push(g.length ? Math.max(...g.map(d => Number(d.mm_acum) || 0)) : 0);
   });
 
-  CHARTS['cfaada41'].setOption({
+  CHARTS['grafico_pluviometro'].setOption({
     grid: { left: 8, right: 8, top: 20, bottom: 22, containLabel: true },
     tooltip: {
       trigger: 'axis',
@@ -543,7 +620,7 @@ function renderPluvioCurto() {
 
 /* Clique no gráfico alterna entre mês vigente e ano inteiro. */
 function configurarCliquePluvio() {
-  const chart = CHARTS['cfaada41'];
+  const chart = CHARTS['grafico_pluviometro'];
   if (!chart) return;
   chart.off && chart.off('click');
   chart.getZr().off('click');
@@ -551,64 +628,141 @@ function configurarCliquePluvio() {
     const n = [...new Set(DADOS.pluviometria.map(d => d.mes))].length;
     if (n <= 1) return;           // só 1 mês: nada a alternar
     pluvioTodosMeses = !pluvioTodosMeses;
-    renderPluvioCurto();
+    render_PluvioCurto();
   });
 }
 
 /* Atualiza o cursor para indicar que o gráfico é clicável. */
 (function indicarClicavel() {
-  var el = document.getElementById('chart-cfaada41');
+  var el = document.getElementById('chart-grafico_pluviometro');
   if (el) el.style.cursor = 'pointer';
 })();
 
 function popularFiltros() {
-  const selContr = document.getElementById('sel-contratada');
-  const selMes = document.getElementById('sel-mes');
-  const selSem = document.getElementById('sel-semana');
-
+  // 1. Popular Contratada
   const contratadas = [...new Set(DADOS.fisico.map(d => d.contratada))].sort();
-  contratadas.forEach(c => selContr.appendChild(new Option(abrevia(c, 20), c)));
-  FILTROS.contratada = contratadas.find(c => c.startsWith(DEF_CONTRATADA)) || contratadas[0] || null;
-  selContr.value = FILTROS.contratada;
+  const dropContratada = document.getElementById('drop-contratada');
+  dropContratada.innerHTML = '';
+  contratadas.forEach(c => {
+    const label = document.createElement('label');
+    label.className = 'dropdown-item';
+    label.innerHTML = `<input type="checkbox" value="${c}" onchange="filtrarContratada(this)"> ${abrevia(c, 20)}`;
+    dropContratada.appendChild(label);
+  });
 
+  // 2. Popular Ano/Mês (Acordeão)
   const meses = [...new Set(DADOS.fisico.map(d => d.mes))].sort();
-  meses.forEach(m => selMes.appendChild(new Option(mesValor(m), m)));
-  FILTROS.mes = meses.includes(DEF_MES) ? DEF_MES : (meses[meses.length - 1] || null);
-  selMes.value = FILTROS.mes;
+  const anos = [...new Set(meses.map(m => m.split('-')[0]))];
+  const dropMes = document.getElementById('drop-mes');
+  dropMes.innerHTML = '';
+
+  anos.forEach(ano => {
+    // Título do Ano
+    const grupo = document.createElement('div');
+    grupo.innerHTML = `
+      <div class="dropdown-group-title" onclick="this.nextElementSibling.classList.toggle('active')">
+        ${ano} <span>▾</span>
+      </div>
+      <div class="dropdown-group-items" id="meses-${ano}"></div>
+    `;
+    
+    // Meses dentro do Ano
+    const containerMeses = grupo.querySelector(`#meses-${ano}`);
+    const mesesDoAno = meses.filter(m => m.startsWith(ano));
+    
+    mesesDoAno.forEach(m => {
+      const label = document.createElement('label');
+      label.className = 'dropdown-item';
+      label.innerHTML = `<input type="checkbox" value="${m}" onchange="filtrarMes(this)"> ${mesLabel(m)}`;
+      containerMeses.appendChild(label);
+    });
+
+    dropMes.appendChild(grupo);
+  });
+
+  // 3. Popular Semanas
+  const dropSemana = document.getElementById('drop-semana');
+  dropSemana.innerHTML = '';
+  // O resto da função chamará popularSemanas, que já existe no seu código.
+  
+  // Resetar filtros para os defaults do relatório
+  FILTROS.contratada = DEF_CONTRATADA;
+  FILTROS.mes = DEF_MES;
+  
+  // Atualiza os textos visuais nos botões
+  document.getElementById('txt-contratada').textContent = abrevia(DEF_CONTRATADA, 20);
+  document.getElementById('txt-mes').textContent = mesValor(DEF_MES);
+
+  // Marca o checkbox correto
+  document.querySelector(`#drop-contratada input[value="${DEF_CONTRATADA}"]`).checked = true;
+  document.querySelector(`#drop-mes input[value="${DEF_MES}"]`).checked = true;
 
   popularSemanas();
+}
 
-  selContr.addEventListener('change', () => {
-    FILTROS.contratada = selContr.value;
-    atualizar();
-  });
-  selMes.addEventListener('change', () => {
-    FILTROS.mes = selMes.value;
-    popularSemanas();
-    atualizar();
-  });
-  selSem.addEventListener('change', () => {
-    FILTROS.semana = selSem.value === '' ? null : Number(selSem.value);
-    atualizar();
-  });
+// Funções chamadas pelos checkboxes:
+function filtrarContratada(el) {
+  FILTROS.contratada = el.checked ? el.value : null;
+  document.getElementById('txt-contratada').textContent = el.checked ? abrevia(el.value, 20) : 'Todas';
+  
+  // Desmarca os outros (só permite 1)
+  const checkboxes = document.querySelectorAll('#drop-contratada input');
+  checkboxes.forEach(cb => { if (cb !== el) cb.checked = false; });
+
+  atualizar();
+}
+
+function filtrarMes(el) {
+  FILTROS.mes = el.checked ? el.value : null;
+  document.getElementById('txt-mes').textContent = el.checked ? mesValor(el.value) : 'Todos';
+
+  const checkboxes = document.querySelectorAll('#drop-mes input');
+  checkboxes.forEach(cb => { if (cb !== el) cb.checked = false; });
+
+  popularSemanas(); // Recalcula as semanas
+  atualizar();
 }
 
 function popularSemanas() {
-  const selSem = document.getElementById('sel-semana');
+  const dropSemana = document.getElementById('drop-semana');
   const base = DADOS.fisico.filter(d => FILTROS.mes === null || d.mes === FILTROS.mes);
   const semanas = [...new Set(base.map(d => Number(d.semana)))].sort((a, b) => a - b);
-  selSem.innerHTML = '';
-  semanas.forEach(s => selSem.appendChild(new Option(s, s)));
-  // Semana vigente: a do relatório (DEF_SEMANA) se existir; senão a maior
-  FILTROS.semana = semanas.includes(DEF_SEMANA) ? DEF_SEMANA
-                   : (semanas[semanas.length - 1] || null);
-  if (FILTROS.semana !== null) selSem.value = FILTROS.semana;
+  
+  dropSemana.innerHTML = '';
+  
+  semanas.forEach(s => {
+    const label = document.createElement('label');
+    label.className = 'dropdown-item';
+    label.innerHTML = `<input type="checkbox" value="${s}" onchange="filtrarSemana(this)"> ${s}`;
+    dropSemana.appendChild(label);
+  });
+
+  // Define a semana atual
+  FILTROS.semana = semanas.includes(DEF_SEMANA) ? DEF_SEMANA : (semanas[semanas.length - 1] || null);
+  
+  if (FILTROS.semana !== null) {
+    document.getElementById('txt-semana').textContent = FILTROS.semana;
+    const cb = document.querySelector(`#drop-semana input[value="${FILTROS.semana}"]`);
+    if (cb) cb.checked = true;
+  } else {
+    document.getElementById('txt-semana').textContent = '-';
+  }
+}
+
+function filtrarSemana(el) {
+  FILTROS.semana = el.checked ? Number(el.value) : null;
+  document.getElementById('txt-semana').textContent = el.checked ? el.value : '-';
+
+  const checkboxes = document.querySelectorAll('#drop-semana input');
+  checkboxes.forEach(cb => { if (cb !== el) cb.checked = false; });
+
+  atualizar();
 }
 
 function atualizar() {
-  renderKPIs();
-  renderGraficos();
-  renderTabelasTexto();
+  render_KPIs();
+  render_Graficos();
+  render_TabelasTexto();
 }
 
 async function carregarDados() {
@@ -622,7 +776,7 @@ async function carregarDados() {
   return { fisico, pluviometria, status };
 }
 
-async function render() {
+async function render_() {
   try {
     DADOS = await carregarDados();
     popularFiltros();
@@ -639,4 +793,4 @@ async function render() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', render);
+document.addEventListener('DOMContentLoaded', render_);

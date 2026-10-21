@@ -1,25 +1,26 @@
-/* ============================================================
-   PERFORMANCE-SEMANAL.CSS
-   Canvas 1280x720 com imagem de fundo inteira (com sidebar nativa)
-   Elementos interativos sobrepostos por cima
-   ============================================================ */
+/* PERFORMANCE SEMANAL - ajustado */
 
 .pbi-canvas {
-  position: relative;
-  width: 1280px;
-  height: 720px;
-  background-image: url('../imagens/fundo-performance-semanal.jpg');
-  background-size: 1280px 720px;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  border-radius: 4px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-  overflow: hidden;
-  flex-shrink: 0;
-  font-family: "Segoe UI", helvetica, arial, sans-serif;
-  /* A escala proporcional (zoom) é definida em assets/style.css
-     e o fator --escala é calculado via JS (performance-semanal.js).
-     As posições internas abaixo permanecem em px absolutos do canvas 1280x720. */
+  background: var(--pbi-fundo-pagina) url('../imagens/fundo-duplicata-de-performance-semanal.jpg') center/cover no-repeat;
+}
+
+:root {
+  /* --- Suas cores mapeadas --- */
+  --bege-fundo: #f3f0eb;
+  --azul-prev: #001d37;
+  --real: #ffbe83;
+  --azul-tend: #2750ec;
+  --salmao-fundo: #f5e6d6;
+  --cinza-fundo: #dcdcda;
+
+  /* --- Paleta original do Power BI (mantida para compatibilidade) --- */
+  --pbi-foreground: #252423;
+  --pbi-background: #FFFFFF;
+  --pbi-accent: #118DFF;
+  --pbi-good: #1AAB40;
+  --pbi-bad: #D64550;
+  --pbi-azul-escuro: #001d37; /* Atualizado para o seu azul */
+  --fonte-principal: "Segoe UI", helvetica, arial, sans-serif;
 }
 
 /* ============================================================
@@ -27,58 +28,53 @@
    ============================================================ */
 .sidebar-filtro {
   position: absolute;
-  color: #ffffff;
+  color: var(--bege-fundo);
   font-weight: 700;
   text-align: center;
   letter-spacing: 0.5px;
   z-index: 10;
 }
-.st-projeto {
-  left: 20px; top: 120px; width: 190px;
-  font-size: 11px;
-}
-.st-titulo {
-  left: 20px; top: 150px; width: 190px;
-  font-size: 13px;
-}
+.st-projeto { left: 20px; top: 70px; width: 190px; font-size: 11px; }
+.st-titulo  { left: 20px; top: 90px; width: 190px; font-size: 13px; }
 
 .sidebar-label {
   position: absolute;
-  left: 20px;
+  left: 12px;
   color: #b8c4d9;
   font-size: 10px;
   font-weight: 400;
   letter-spacing: 0.5px;
-  z-index: 10;
+  z-index: 11;
 }
-.st-label-1 { top: 190px; }
-.st-label-2 { top: 250px; }
-.st-label-3 { top: 310px; }
+.st-label-1 { top: 128px; }
+.st-label-2 { top: 207px; }
+.st-label-3 { top: 287px; }
 
 .sidebar-select {
   position: absolute;
-  left: 20px;
-  width: 190px;
-  background: transparent;
-  border: 1px solid #4a6fa5;
-  color: #ffffff;
-  padding: 7px 8px;
+  left: 10px;
+  width: 212px;
+  background: #001d37;
+  border: 2px solid var(--bege-fundo);
+  color: var(--bege-fundo);
+  padding: 8px 26px 8px 10px;
   border-radius: 2px;
   font-size: 11px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-family: inherit;
   box-sizing: border-box;
-  z-index: 10;
+  z-index: 12;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8c4d9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px;
 }
-.st-sel-1 { top: 208px; }
-.st-sel-2 { top: 268px; }
-.st-sel-3 { top: 328px; }
-
-.sidebar-select .arrow {
-  color: #b8c4d9;
-  font-size: 10px;
-}
+.sidebar-select:hover { border-color: var(--bege-fundo); }
+.sidebar-select option { background: #0B1F3A; color: var(--bege-fundo); }
+.st-sel-1 { top: 145px; }
+.st-sel-2 { top: 224px; }
+.st-sel-3 { top: 304px; }
 
 /* ============================================================
    BOTÕES DO MENU
@@ -88,8 +84,8 @@
   left: 20px;
   width: 190px;
   text-align: center;
-  border: 1px solid #4a6fa5;
-  color: #ffffff;
+  border: 1px solid var(--bege-fundo);
+  color: var(--bege-fundo);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -111,7 +107,6 @@
   background: #3a2a20;
   border-color: #3a2a20;
 }
-
 .st-btn-1 { top: 370px; height: 35px; }
 .st-btn-2 { top: 415px; height: 50px; }
 .st-btn-3 { top: 475px; height: 40px; }
@@ -119,117 +114,62 @@
 .st-btn-5 { top: 585px; height: 40px; }
 
 /* ============================================================
-   KPI - TOPO (AVANÇO PREVISTO / REAL / DESVIO)
+   VISUAIS (posições extraídas do PBIP)
    ============================================================ */
-.kpi-flat {
+#kpi-01b213fc { left: 944.23px; top: 158.12px; width: 150.0px; height: 50.0px; z-index: 260; }
+#kpi-02f6851e { left: 557.01px; top: 35.85px; width: 136.67px; height: 67.51px; z-index: 240; }
+#kpi-22e35e93 { left: 252.38px; top: 37.49px; width: 136.67px; height: 67.51px; z-index: 210; }
+#kpi-613f2719 { left: 1103.94px; top: 157.83px; width: 150.74px; height: 50.0px; z-index: 270; }
+#kpi-6b304c5c { left: 404.69px; top: 35.85px; width: 136.67px; height: 67.51px; z-index: 230; }
+
+/* Tabelas com fundo branco */
+#table-12e44aa3 { left: 940.51px; top: 565.48px; width: 319.07px; height: 120.28px; z-index: 120; background:var(--bege-fundo); border-radius: 2px; }
+#table-9f78ce2d { left: 941.02px; top: 426.09px; width: 319.14px; height: 139.73px; z-index: 110; background:var(--bege-fundo); border-radius: 2px; }
+#table-b7008cbc { left: 940.51px; top: 230px; width: 319px; height: 180px; z-index: 110; background:var(--bege-fundo); border-radius: 2px; } /* Ajustar posição se necessário */
+
+/* Gráficos (Adicionado fundo branco para simular o card do PBIP) */
+.chart-container {
   position: absolute;
-  background: #F5F5F5;
-  padding: 8px 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-radius: 3px;
+  background: #ffffff00;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   z-index: 10;
 }
-.kpi-flat .kpi-label {
-  font-size: 9pt;
-  color: #252423;
-  margin-bottom: 4px;
-  line-height: 1;
-  font-weight: 600;
-}
-.kpi-flat .kpi-value {
-  font-size: 22pt;
-  font-weight: 600;
-  color: #252423;
-  line-height: 1;
-}
-.kpi-flat .kpi-value.negative { color: #E53935; }
 
-#kpi-previsto { left: 252px; top: 37px; width: 137px; height: 68px; }
-#kpi-real     { left: 405px; top: 36px; width: 137px; height: 68px; }
-#kpi-desvio   { left: 557px; top: 36px; width: 137px; height: 68px; }
+#chart-1ecebfde { left: 245.35px; top: 390.26px; width: 693.25px; height: 284.87px; z-index: 250; }
+#chart-62f295f1 { left: 245.54px; top: 139.11px; width: 692.75px; height: 244.61px; z-index: 220; }
+
+/* Gauge Ajustado */
+#chart-a2d9b88a { left: 735px; top: 35px; width: 180px; height: 70px; z-index: 60; } /* Movido para a direita e levemente maior */
+
+/* Pluviometria */
+#chart-cfaada41 { left: 942.56px; top: 28.37px; width: 308.57px; height: 130.34px; z-index: 260; }
+
+.slicer-container { display: none !important; }
 
 /* ============================================================
-   KPI - DIREITA (mm acum / dias impactados)
+   FAIXAS DE TÍTULO (Azul Escuro)
    ============================================================ */
-.kpi-bordered {
+.visual-title {
   position: absolute;
-  background: #FFFFFF;
-  border: 1px solid #e0e0e0;
-  padding: 5px;
-  display: flex;
-  align-items: stretch;
-  border-radius: 3px;
-  z-index: 10;
-}
-.kpi-bordered .kpi-accent {
-  width: 3px;
-  background: #118DFF;
-  margin-right: 6px;
-  flex-shrink: 0;
-}
-.kpi-bordered .kpi-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-width: 0;
-}
-.kpi-bordered .kpi-label {
-  font-size: 8pt;
-  color: #605e5c;
-  line-height: 1.1;
-  margin-bottom: 2px;
-}
-.kpi-bordered .kpi-value {
-  font-size: 10pt;
-  font-weight: 600;
-  color: #252423;
-}
-
-#kpi-mm-acum         { left: 944px;  top: 158px; width: 150px; height: 50px; }
-#kpi-dias-impactados { left: 1104px; top: 158px; width: 151px; height: 50px; }
-
-/* ============================================================
-   FAIXAS AZUIS DE TÍTULO
-   ============================================================ */
-.faixa-azul {
-  position: absolute;
-  background: #0B1F3A;
+  background: #001d37;
   color: #ffffff;
+  font-size: 9pt;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  border-radius: 2px;
-  font-family: "DIN", "Segoe UI", sans-serif;
-  z-index: 10;
-}
-#faixa-curva-fisica  { left: 245px; top: 120px; width: 697px; height: 20px; }
-#faixa-pluviometria  { left: 943px; top: 12px;  width: 309px; height: 16px; }
-
-/* ============================================================
-   GRÁFICO
-   ============================================================ */
-#chart-pluviometria {
-  position: absolute;
-  left: 943px;
-  top: 28px;
-  width: 309px;
-  height: 130px;
-  z-index: 10;
+  text-align: center;
+  letter-spacing: 0.4px;
+  z-index: 300;
+  border-radius: 3px 3px 0 0;
 }
 
-/* ============================================================
-   ESTADOS
-   ============================================================ */
+#title-1ecebfde { left: 245.35px; top: 391px; width: 693.25px; height: 21px; }
+#title-62f295f1 { left: 245.54px; top: 120px; width: 692.75px; height: 20px; }
+#title-a2d9b88a { left: 735px; top: 35px; width: 180px; height: 18px; font-size: 8pt; }
+#title-cfaada41 { left: 942.56px; top: 12px; width: 308.57px; height: 16px; font-size: 8pt; border-radius: 2px; }
+
+/* Estados */
 .loading { color: #a0a0a0 !important; font-weight: 400 !important; }
 .error   { color: #d13438 !important; font-size: 8pt !important; }
