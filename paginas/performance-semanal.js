@@ -300,20 +300,32 @@ function renderCurvaS1() {
   CHARTS['62f295f1'].setOption({
     backgroundColor: 'transparent',
     grid: { left: 20, right: 20, top: 40, bottom: 30, containLabel: true },
-    tooltip: { 
+        tooltip: { 
       trigger: 'axis',
+      axisPointer: { type: 'shadow' },
       backgroundColor: 'rgba(255, 255, 255, 0.95)',
       borderColor: '#dcdcda',
       textStyle: { color: '#252423', fontSize: 10 },
       formatter: function(params) {
-        let res = params[0].name + '<br/>';
+        const nome = (params[0] && params[0].axisValue) || '';
+        const bruto = {};
         params.forEach(p => {
-          if (p.value === undefined || p.value === null) return;
-          let isAcum = p.seriesName.includes('Acum');
-          let val = isAcum ? (p.value * 100).toFixed(1) + '%' : p.value.toFixed(2);
-          res += p.marker + p.seriesName + ': ' + val + '<br/>';
+          bruto[p.seriesName] = (p.value === undefined || p.value === null)
+            ? null : Number(p.value);
         });
-        return res;
+        const linha = (rotulo, valor, fmt) => {
+          if (valor === null || isNaN(valor)) return '';
+          return rotulo + ': <b>' + fmt(valor) + '</b><br/>';
+        };
+        const pct = v => (v * 100).toFixed(1) + '%';
+        const num = v => v.toLocaleString('pt-BR',
+          { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+        return nome + '<br/>' +
+          linha('Previsto Dia', bruto['Previsto Dia'], num) +
+          linha('Real Dia', bruto['Real Dia'], num) +
+          linha('Previsto Acum', bruto['Previsto Acum'], pct) +
+          linha('Real Acum', bruto['Real Acum'], pct);
       }
     },
     legend: { 
@@ -328,37 +340,41 @@ function renderCurvaS1() {
     xAxis: { 
       type: 'category', 
       data: labels, 
-      axisLabel: { fontSize: 9, color: '#605e5c', interval: 0 }, // interval 0 = mostra todos
+      axisLabel: { fontSize: 12, color: '#605e5c', interval: 0 }, // interval 0 = mostra todos
       axisTick: { show: false },
       axisLine: { lineStyle: { color: '#dcdcda' } } 
     },
-    yAxis: [
+        yAxis: [
       { 
+        // Eixo 0: % Acumulada (0 a 100%) — usado SÓ pelas linhas
         type: 'value', 
         show: false, 
         min: 0, 
         max: 1, 
         axisLabel: { show: false },
         splitLine: { show: false } 
-      }, // Eixo 0: % Acumulada (0 a 100%)
+      },
       { 
-        type: 'value', 
+                // Eixo 1: Valores diários — usado SÓ pelas barras.
+                // Escala fixa em 130% (barra máxima ocupa ~77% da altura).
+        type: 'value',  
         show: false, 
         min: 0,
-        // O max é dinâmico, mas limitamos para as barras não estourarem a tela
-        axisLabel: { show: false },
-        splitLine: { show: false } 
-      }  // Eixo 1: Valores diários
+        max: 1.3,
+        axisLabel: { show: true },
+        splitLine: { show: true } 
+      }
     ],
     series: [
-      // BARRAS (Eixo Y 1)
+            // BARRAS (Eixo Y 1) — lado a lado
       { 
         name: 'Previsto Dia', 
         type: 'bar', 
         yAxisIndex: 1, 
         data: prevDia, 
         itemStyle: { color: '#001e38' },
-        barMaxWidth: 15,
+        barMaxWidth: 14,
+        barGap: '10%',
         z: 6
       },
       {
@@ -367,27 +383,30 @@ function renderCurvaS1() {
         yAxisIndex: 1, 
         data: realDia, 
         itemStyle: { color: '#ffbe83' },
-        barMaxWidth: 8,
+        barMaxWidth: 14,
         z: 6,
         label: { 
           show: true, 
           position: 'top', 
-          distance: 8, 
+          distance: 6, 
+                    rotate: 90,
+          align: 'left',
+          verticalAlign: 'bottom',
           formatter: (p) => (p.value * 100).toFixed(1) + '%',
           color: '#fff', 
           backgroundColor: 'rgb(255, 191, 131)', 
-          padding: [3, 5], 
+          padding: [2, 3], 
           borderRadius: 3, 
           fontSize: 8, 
           fontWeight: 'bold'
         },
       },
       // LINHAS (Eixo Y 0)
-      { 
-        name: 'Previsto Acum', 
+            { 
+                name: 'Previsto Acum', 
         type: 'line', 
-        yAxisIndex: 1, 
-        data: prevAc, 
+        yAxisIndex: 0, 
+        data: prevAc,    
         lineStyle: { color: '#001d37', width: 2 }, 
         itemStyle: { color: '#001d37' }, 
         symbol: 'circle', 
@@ -396,23 +415,23 @@ function renderCurvaS1() {
         label: { 
           show: true, 
           position: 'top', 
-          distance: 8, 
+          distance: 5, 
           formatter: (p) => (p.value * 100).toFixed(1) + '%',
           color: '#001e38', 
           backgroundColor: 'rgba(0, 29, 55, 0.3)', 
           padding: [3, 5], 
           borderRadius: 3, 
-          fontSize: 8, 
+          fontSize: 10, 
           fontWeight: 'bold'
         },
         // TRUQUE PARA NÃO ESCONDER O RÓTULO:
         labelLayout: { hideOverlap: false }
       },
       { 
-        name: 'Real Acum', 
+                name: 'Real Acum', 
         type: 'line', 
         yAxisIndex: 0, 
-        data: realAc, 
+        data: realAc,  
         lineStyle: { color: '#ffbe83', width: 2 }, 
         itemStyle: { color: '#ffbe83' }, 
         symbol: 'circle', 
@@ -421,13 +440,13 @@ function renderCurvaS1() {
         label: { 
           show: true, 
           position: 'bottom', 
-          distance: 8, 
+          distance: 5, 
           formatter: (p) => (p.value * 100).toFixed(1) + '%',
           color: '#001e38',
-          backgroundColor: 'rgba(255, 191, 131, 0.3)', 
+          backgroundColor: 'rgba(255, 191, 131, 0.5)', 
           padding: [3, 5], 
           borderRadius: 3, 
-          fontSize: 8, 
+          fontSize: 10, 
           fontWeight: 'bold'
         },
         labelLayout: { hideOverlap: false }
@@ -458,32 +477,89 @@ function renderAderencia() {
   }, true);
 }
 
+/* Estado do gráfico pluviométrico.
+   pluvioTodosMeses=false -> mostra só o mês vigente (do filtro)
+   pluvioTodosMeses=true  -> mostra o ano inteiro
+   A alternância é feita clicando no próprio gráfico. */
+let pluvioTodosMeses = false;
+
 function renderPluvioCurto() {
   const el = document.getElementById('chart-cfaada41');
   if (!el) return;
   CHARTS['cfaada41'] = CHARTS['cfaada41'] || echarts.init(el);
   const pluv = DADOS.pluviometria;
-  const meses = [...new Set(pluv.map(d => d.mes))].sort();
+  const todosMeses = [...new Set(pluv.map(d => d.mes))].sort();
+
+  let meses;
+  if (pluvioTodosMeses || FILTROS.mes === null) {
+    meses = todosMeses;
+  } else {
+    meses = todosMeses.includes(FILTROS.mes)
+      ? [FILTROS.mes]
+      : [todosMeses[todosMeses.length - 1]];
+  }
+
   const hist = [], real = [];
   meses.forEach(m => {
     const g = pluv.filter(d => d.mes === m);
-    hist.push(Math.max(...g.map(d => Number(d.historica_acum) || 0)));
-    real.push(Math.max(...g.map(d => Number(d.mm_acum) || 0)));
+    hist.push(g.length ? Math.max(...g.map(d => Number(d.historica_acum) || 0)) : 0);
+    real.push(g.length ? Math.max(...g.map(d => Number(d.mm_acum) || 0)) : 0);
   });
 
-    CHARTS['cfaada41'].setOption({
+  CHARTS['cfaada41'].setOption({
     grid: { left: 8, right: 8, top: 20, bottom: 22, containLabel: true },
-    tooltip: { trigger: 'axis' },
+    tooltip: {
+      trigger: 'axis',
+      backgroundColor: '#ffffff',
+      borderColor: '#dcdcda',
+      padding: [3, 6],
+      textStyle: { color: '#252423', fontSize: 8 },
+      formatter: function (params) {
+        if (!params || !params.length) return '';
+        var nome = params[0].axisValue || '';
+        var res = '<div style="font-size:8px;font-weight:600">' + nome + '</div>';
+        params.forEach(function (p) {
+          if (p.value === undefined || p.value === null) return;
+          res += p.marker +
+            '<span style="font-size:8px">' + p.seriesName + ': <b>' +
+            fmtInt(p.value) + ' mm</b></span><br/>';
+        });
+        return res;
+      }
+    },
     legend: { top: 16, itemWidth: 10, itemHeight: 8, textStyle: { fontSize: 8 } },
     xAxis: { type: 'category', data: meses.map(mesLabel),
-             axisLabel: { fontSize: 8 }, axisTick: { show: false } },
+             axisLabel: { fontSize: 8, color: '#605e5c' }, axisTick: { show: false },
+             axisLine: { lineStyle: { color: '#dcdcda' } } },
     yAxis: { type: 'value', show: false },
     series: [
-      { name: 'Histórica acum', type: 'bar', data: hist, itemStyle: { color: '#118DFF' }, barMaxWidth: 8 },
-      { name: 'Real acum', type: 'bar', data: real, itemStyle: { color: '#12239E' }, barMaxWidth: 8 }
+      { name: 'Histórica acum', type: 'bar', data: hist, itemStyle: { color: '#001d37' }, barMaxWidth: 18 },
+      { name: 'Real acum', type: 'bar', data: real, itemStyle: { color: '#ffbe83' }, barMaxWidth: 18 }
     ]
   }, true);
+
+  configurarCliquePluvio();
 }
+
+/* Clique no gráfico alterna entre mês vigente e ano inteiro. */
+function configurarCliquePluvio() {
+  const chart = CHARTS['cfaada41'];
+  if (!chart) return;
+  chart.off && chart.off('click');
+  chart.getZr().off('click');
+  chart.getZr().on('click', function () {
+    const n = [...new Set(DADOS.pluviometria.map(d => d.mes))].length;
+    if (n <= 1) return;           // só 1 mês: nada a alternar
+    pluvioTodosMeses = !pluvioTodosMeses;
+    renderPluvioCurto();
+  });
+}
+
+/* Atualiza o cursor para indicar que o gráfico é clicável. */
+(function indicarClicavel() {
+  var el = document.getElementById('chart-cfaada41');
+  if (el) el.style.cursor = 'pointer';
+})();
 
 function popularFiltros() {
   const selContr = document.getElementById('sel-contratada');
