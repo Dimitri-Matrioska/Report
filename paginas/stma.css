@@ -68,27 +68,30 @@ html, body { margin: 0; padding: 0; background: #ffffff; font-family: var(--font
 .visual-title { position: absolute; background: #001d37; color: #ffffff; font-size: 9pt; font-weight: 700; display: flex; align-items: center; justify-content: center; text-align: center; letter-spacing: 0.4px; z-index: 300; border-radius: 3px 3px 0 0; }
 
 /* Posições da STMA */
-#kpi-dias_seguros { left: 245px; top: 40px; width: 100px; height: 45px; }
-#kpi-f69b4746 { left: 400px; top: 135px; width: 60px; height: 30px; }
-#kpi-1bedbc29 { left: 400px; top: 205px; width: 60px; height: 30px; }
-#kpi-4ab2cd84 { left: 400px; top: 275px; width: 60px; height: 30px; }
-#kpi-69b3af43 { left: 400px; top: 365px; width: 60px; height: 30px; }
+#title-stma {position: absolute; left: 240px;  top: 35px;  width: 1010px;height: 35px;z-index: 9999; text-align: center; font-size: 14pt; font-weight: 700; color: var(--bege-fundo); background: var(--pbi-azul-escuro); border-radius: 3px; line-height: 1.2; }
 
-#chart-donut { left: 240px; top: 450px; width: 350px; height: 160px; }
-#title-donut { left: 240px; top: 430px; width: 350px; height: 18px; }
+#kpi-dias_seguros { left: 245px; top: 75px; width: 100px; height: 45px; }
+#kpi-f69b4746 {justify-content: flex-start; left: 400px; top: 135px; width: 60px; height: 30px; }
+#kpi-1bedbc29 {justify-content: flex-start; left: 400px; top: 200px; width: 60px; height: 30px; }
+#kpi-4ab2cd84 {justify-content: flex-start; left: 400px; top: 255px; width: 60px; height: 30px;  }
+#kpi-69b3af43 {justify-content: flex-start; left: 400px; top: 325px; width: 60px; height: 30px}
+
+#chart-donut { left: 240px; top: 400px; width: 350px; height: 160px; }
+#title-donut { left: 240px; top: 380px; width: 350px; height: 18px; }
 
 #chart-barras_horiz { left: 240px; top: 640px; width: 350px; height: 80px; }
 #title-barras_horiz { left: 240px; top: 620px; width: 350px; height: 18px; }
 
-#chart-linha { left: 750px; top: 50px; width: 300px; height: 200px; }
-#title-linha { left: 750px; top: 35px; width: 300px; height: 18px; }
+#chart-linha { left: 750px; top: 110px; width: 300px; height: 200px; }
+#title-linha { left: 750px; top: 75px; width: 300px; height: 18px; }
 
-#chart-pizza { left: 1070px; top: 50px; width: 180px; height: 180px; }
-#title-pizza { left: 1070px; top: 35px; width: 180px; height: 18px; }
+#chart-pizza { left: 1070px; top: 110px; width: 180px; height: 180px; }
+#title-pizza { left: 1070px; top: 75px; width: 180px; height: 18px; }
 
 #chart-barras_vert { left: 750px; top: 380px; width: 500px; height: 130px; }
 #title-barras_vert { left: 750px; top: 365px; width: 500px; height: 18px; }
 
 #table-descricao { left: 750px; top: 550px; width: 510px; height: 160px; }
+
 
 .loading { color: #a0a0a0 !important; font-weight: 400 !important; }
