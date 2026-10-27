@@ -180,7 +180,9 @@ function preencherTabela(id, titulo, itens) {
 function render_curva_ano() {
   const el = document.getElementById('chart-grafico_curva_ano');
   if (!el) return;
-  CHARTS['grafico_curva_ano'] = CHARTS['grafico_curva_ano'] || echarts.init(el);
+  
+  const chartInstance = CHARTS['grafico_curva_ano'] || echarts.init(el);
+  CHARTS['grafico_curva_ano'] = chartInstance;
   
   const anoAlvo = FILTROS.mes ? FILTROS.mes.split('-')[0] : '2026';
   
@@ -191,59 +193,77 @@ function render_curva_ano() {
 
   const map = {};
   rows.forEach(d => {
-    if (!map[d.mes]) map[d.mes] = { prevAc: 0, realAc: 0, tend: 0 };
+    if (!map[d.mes]) map[d.mes] = { prevAc: 0, realAc: null, tend: null };
+    
     map[d.mes].prevAc = Math.max(map[d.mes].prevAc, Number(d.baseline_1_acum) || 0);
-    map[d.mes].realAc = Math.max(map[d.mes].realAc, Number(d.real_acum) || 0);
+    
+    const rVal = Number(d.real_acum);
+    if (d.real_acum !== null && d.real_acum !== undefined && d.real_acum !== '' && !isNaN(rVal)) {
+      map[d.mes].realAc = map[d.mes].realAc === null ? rVal : Math.max(map[d.mes].realAc, rVal);
+    }
     
     const proj = Number(d.projetado_acum);
     if (!isNaN(proj) && proj > 0) {
-      map[d.mes].tend = Math.max(map[d.mes].tend, proj);
+      map[d.mes].tend = map[d.mes].tend === null ? proj : Math.max(map[d.mes].tend, proj);
     }
   });
 
   const meses = Object.keys(map).sort();
-  const labels = meses.map(mesLabel); 
+
+  // Só o nome do mês (sem "/26"), igual à imagem
+  const labels = meses.map(m => {
+    const mm = m.split('-')[1];
+    return MESES[parseInt(mm, 10) - 1];
+  });
   
   const prev = [], real = [], tend = [];
 
   meses.forEach((m) => {
     const p = map[m].prevAc;
     const r = map[m].realAc;
-    const t = map[m].tend > 0 ? map[m].tend : null; 
+    const t = map[m].tend; 
 
     prev.push(p);
-    real.push(r);
-    tend.push(t);
+    real.push(r !== null && r !== undefined ? r : null);
+    tend.push(t !== null && t !== undefined ? t : null);
   });
 
-  CHARTS['grafico_curva_ano'].setOption({
+  // Formata "5,4%" (vírgula no lugar de ponto)
+  const fmt = v => (Number(v) * 100).toFixed(1).replace('.', ',') + '%';
+
+  chartInstance.setOption({
     backgroundColor: 'transparent',
-    grid: { left: 20, right: 20, top: 30, bottom: 30, containLabel: true },
+    // Top/bottom maiores pra dar espaço aos rótulos
+    grid: { left: 20, right: 20, top: 50, bottom: 55, containLabel: true },
+    // Só zoom com a roda do mouse — sem slider
+    dataZoom: [{ type: 'inside', xAxisIndex: 0 }],
     tooltip: { 
       trigger: 'axis',
-      backgroundColor: '#ffffff', // Tooltip sólido
+      backgroundColor: '#ffffff', 
       borderColor: '#001d37',
       textStyle: { color: '#252423', fontSize: 10 },
       formatter: function(params) {
         let res = params[0].name + '<br/>';
         params.forEach(p => {
           if (p.value === undefined || p.value === null) return;
-          res += p.marker + p.seriesName + ': ' + (p.value * 100).toFixed(1) + '%<br/>';
+          res += p.marker + p.seriesName + ': ' + fmt(p.value) + '<br/>';
         });
         return res;
       }
     },
-    legend: { 
-      bottom: 0, itemWidth: 10, itemHeight: 8, textStyle: { fontSize: 8 },
-      data: [
-        { name: 'Previsto Acum', icon: 'circle', itemStyle: { color: '#001d37' } },
-        { name: 'Real Acum', icon: 'circle', itemStyle: { color: '#ffbe83' } },
-        { name: 'Tendência Acum', icon: 'circle', itemStyle: { color: '#2750ec' } }
-      ]
-    },
     xAxis: { 
-      type: 'category', data: labels, 
-      axisLabel: { fontSize: 9, color: '#605e5c', interval: 0 }, 
+      type: 'category', 
+      data: labels,
+      name: anoAlvo,
+      nameLocation: 'middle',
+      nameGap: 32,
+      nameTextStyle: { fontSize: 13, color: '#605e5c' },
+      axisLabel: { 
+        fontSize: 11, 
+        color: '#605e5c', 
+        interval: 0,
+        margin: 12
+      }, 
       axisTick: { show: false },
       axisLine: { lineStyle: { color: '#dcdcda' } },
       boundaryGap: false 
@@ -251,34 +271,106 @@ function render_curva_ano() {
     yAxis: { type: 'value', show: false, min: 0, max: 1 },
     series: [
       { 
-        name: 'Previsto Acum', type: 'line', data: prev, 
-        lineStyle: { color: '#001d37', width: 2 }, itemStyle: { color: '#001d37' }, symbol: 'none', z: 10,
+        name: 'Previsto Acum', 
+        type: 'line', 
+        data: prev, 
+        // CORREÇÃO: usa showSymbol:false em vez de symbol:'none' 
+        // (mantém o anchor para o rótulo, mas esconde o ponto)
+        showSymbol: false,
+        clip: false,                                 // não recorta rótulos nas bordas
+        lineStyle: { color: '#001d37', width: 2 }, 
+        itemStyle: { color: '#001d37' },
+        z: 10,
         label: { 
-          show: true, position: 'top', formatter: (p) => (p.value * 100).toFixed(1) + '%',
-          color: '#001d37', backgroundColor: 'rgba(0, 29, 55, 0.3)', // 30% transparência
-          padding: [2, 4], borderRadius: 2, fontSize: 8, fontWeight: 'bold'
-        }
+          show: true, 
+          position: 'top',
+          distance: 6,
+          formatter: (p) => fmt(p.value),
+          color: '#001d37', 
+          backgroundColor: 'rgba(0, 29, 55, 0.10)', 
+          padding: [4, 6], 
+          borderRadius: 3, 
+          fontSize: 10, 
+          fontWeight: 'bold'
+        },
+        emphasis: { label: { show: true } }         // reforço no hover
       },
       { 
-        name: 'Real Acum', type: 'line', data: real, 
-        lineStyle: { color: '#ffbe83', width: 2 }, itemStyle: { color: '#ffbe83' }, symbol: 'none', z: 10,
+        name: 'Real Acum', 
+        type: 'line', 
+        data: real, 
+        showSymbol: false,
+        clip: false,
+        lineStyle: { color: '#ffbe83', width: 2 }, 
+        itemStyle: { color: '#ffbe83' }, 
+        z: 10,
         label: { 
-          show: true, position: 'bottom', formatter: (p) => (p.value * 100).toFixed(1) + '%',
-          color: '#b06000', backgroundColor: 'rgba(255, 190, 131, 0.3)', // 30% transparência
-          padding: [2, 4], borderRadius: 2, fontSize: 8, fontWeight: 'bold'
-        }
+          show: true, 
+          position: 'bottom',
+          distance: 6,
+          formatter: (p) => fmt(p.value),
+          color: '#b06000', 
+          backgroundColor: 'rgba(255, 190, 131, 0.15)', 
+          padding: [4, 6], 
+          borderRadius: 3, 
+          fontSize: 10, 
+          fontWeight: 'bold'
+        },
+        emphasis: { label: { show: true } }
       },
       { 
-        name: 'Tendência Acum', type: 'line', data: tend, smooth: true,
-        lineStyle: { color: '#2750ec', width: 2, type: 'dashed' }, itemStyle: { color: '#2750ec' }, symbol: 'none', z: 10,
+        name: 'Tendência Acum', 
+        type: 'line', 
+        data: tend, 
+        smooth: true,
+        showSymbol: false,
+        clip: false,
+        lineStyle: { color: '#2750ec', width: 2, type: 'dashed' }, 
+        itemStyle: { color: '#2750ec' }, 
+        z: 10,
         label: { 
-          show: true, position: 'top', formatter: (p) => (p.value * 100).toFixed(1) + '%',
-          color: '#0020a0', backgroundColor: 'rgba(39, 80, 236, 0.3)', // 30% transparência
-          padding: [2, 4], borderRadius: 2, fontSize: 8, fontWeight: 'bold'
-        }
+          show: true, 
+          position: 'bottom',       // abaixo da linha, como na imagem
+          distance: 6,
+          formatter: (p) => fmt(p.value),
+          color: '#0020a0', 
+          backgroundColor: 'rgba(39, 80, 236, 0.10)', 
+          padding: [4, 6], 
+          borderRadius: 3, 
+          fontSize: 10, 
+          fontWeight: 'bold'
+        },
+        emphasis: { label: { show: true } }
       }
     ]
   }, true);
+
+  // Mantém o clique para dar zoom no mês
+  chartInstance.off('click');
+  chartInstance.on('click', function(params) {
+    let index = null;
+
+    if (params.dataIndex !== undefined) {
+      index = params.dataIndex;
+    } else if (params.offsetX !== undefined && params.offsetY !== undefined) {
+      const coord = chartInstance.convertFromPixel({ gridIndex: 0 }, [params.offsetX, params.offsetY]);
+      if (coord && !isNaN(coord[0])) {
+        index = Math.round(coord[0]);
+      }
+    }
+
+    if (index !== null && index >= 0 && index < meses.length) {
+      if (chartInstance._zoomedIndex === index) {
+        chartInstance.dispatchAction({ type: 'dataZoom', startValue: 0, endValue: meses.length - 1 });
+        chartInstance._zoomedIndex = null;
+      } else {
+        const startIdx = Math.max(0, index - 1);
+        const endIdx = Math.min(meses.length - 1, index + 1);
+        chartInstance.dispatchAction({ type: 'dataZoom', startValue: startIdx, endValue: endIdx });
+        chartInstance._zoomedIndex = index;
+      }
+    }
+  });
 }
 
 function render_curva_mes() {
