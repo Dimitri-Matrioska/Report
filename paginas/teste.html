@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calendário Climático</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    display: flex; justify-content: center; align-items: center;
+    padding: 20px; color: #fff;
+  }
+  .calendario {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 24px;
+    padding: 28px;
+    width: 100%; max-width: 760px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+  }
+  .topo {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 24px; gap: 12px;
+  }
+  .topo h1 { font-size: 1.5rem; font-weight: 600; text-transform: capitalize; flex: 1; text-align: center; }
+  .btn-nav {
+    background: rgba(255,255,255,0.1); border: none; color: #fff;
+    width: 46px; height: 46px; border-radius: 50%; font-size: 1.3rem;
+    cursor: pointer; transition: background .2s, transform .2s;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .btn-nav:hover { background: rgba(255,255,255,0.25); transform: scale(1.1); }
+
+  .dias-semana, .grade {
+    display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px;
+  }
+  .dias-semana div {
+    text-align: center; font-size: .72rem; font-weight: 600;
+    text-transform: uppercase; opacity: .6; padding: 6px 0; letter-spacing: .6px;
+  }
+  .dia {
+    aspect-ratio: 1; border-radius: 14px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative; transition: transform .25s, background .25s, box-shadow .25s;
+    overflow: hidden;
+  }
+  .dia:hover {
+    transform: translateY(-4px);
+    background: rgba(255,255,255,0.12);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+  .dia.vazio { background: transparent; border: none; }
+  .dia .numero {
+    position: absolute; top: 6px; left: 9px;
+    font-size: .72rem; font-weight: 600; opacity: .8; z-index: 2;
+  }
+  .dia.hoje {
+    border: 2px solid #ffd93d;
+    box-shadow: 0 0 16px rgba(255,217,61,.4);
+  }
+  .icone-clima {
+    width: 62%; height: 62%; margin-top: 8px;
+    object-fit: contain;
+    /* garante que o SVG animado escale bem */
+    image-rendering: auto;
+  }
+
+  .legenda {
+    display: flex; flex-wrap: wrap; gap: 18px; justify-content: center;
+    margin-top: 24px; padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,.1);
+    font-size: .78rem; opacity: .85;
+  }
+  .legenda span { display: flex; align-items: center; gap: 6px; }
+  .legenda img { width: 24px; height: 24px; }
+</style>
+</head>
+<body>
+
+<div class="calendario">
+  <div class="topo">
+    <button class="btn-nav" id="prev" aria-label="Mês anterior">‹</button>
+    <h1 id="titulo-mes"></h1>
+    <button class="btn-nav" id="next" aria-label="Próximo mês">›</button>
+  </div>
+
+  <div class="dias-semana">
+    <div>Dom</div><div>Seg</div><div>Ter</div><div>Qua</div><div>Qui</div><div>Sex</div><div>Sáb</div>
+  </div>
+
+  <div class="grade" id="grade"></div>
+
+  <div class="legenda" id="legenda"></div>
+</div>
+
+<script>
+  // ============================================================
+  // CDN DOS ÍCONES METEOCONS (SVG animados)
+  // Base: https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/
+  // ============================================================
+  const BASE = 'https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/';
+
+  const ICONES = {
+    'sol':         BASE + 'clear-day.svg',
+    'nublado':     BASE + 'cloudy.svg',
+    'chuva-leve':  BASE + 'drizzle.svg',
+    'chuva-forte': BASE + 'rain.svg'
+  };
+
+  const ROTULOS = {
+    'sol': 'Ensolarado',
+    'nublado': 'Nublado',
+    'chuva-leve': 'Chuva leve',
+    'chuva-forte': 'Chuva forte'
+  };
+
+  // ============================================================
+  // DADOS DE CLIMA (SIMULADOS)
+  // Substitua este objeto pelos seus dados pluviométricos reais.
+  // Formato: 'AAAA-MM-DD': 'sol' | 'nublado' | 'chuva-leve' | 'chuva-forte'
+  // ============================================================
+  const dadosClima = {};
+
+  (function gerarSimulados() {
+    const condicoes = ['sol', 'sol', 'sol', 'nublado', 'nublado', 'chuva-leve', 'chuva-forte'];
+    const hoje = new Date();
+    for (let offset = -3; offset <= 3; offset++) {
+      const base = new Date(hoje.getFullYear(), hoje.getMonth() + offset, 1);
+      const diasNoMes = new Date(base.getFullYear(), base.getMonth() + 1, 0).getDate();
+      for (let d = 1; d <= diasNoMes; d++) {
+        const chave = `${base.getFullYear()}-${String(base.getMonth()+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+        dadosClima[chave] = condicoes[Math.floor(Math.random() * condicoes.length)];
+      }
+    }
+  })();
+
+  // ============================================================
+  // RENDERIZAÇÃO
+  // ============================================================
+  const grade = document.getElementById('grade');
+  const titulo = document.getElementById('titulo-mes');
+  const legenda = document.getElementById('legenda');
+  const meses = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho',
+                 'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+
+  let dataAtual = new Date();
+
+  function chaveDia(ano, mes, dia) {
+    return `${ano}-${String(mes+1).padStart(2,'0')}-${String(dia).padStart(2,'0')}`;
+  }
+
+  function criarIcone(tipo) {
+    if (!ICONES[tipo]) return null;
+    const img = document.createElement('img');
+    img.src = ICONES[tipo];
+    img.alt = ROTULOS[tipo];
+    img.className = 'icone-clima';
+    img.loading = 'lazy'; // carrega sob demanda
+    return img;
+  }
+
+  function renderizar() {
+    const ano = dataAtual.getFullYear();
+    const mes = dataAtual.getMonth();
+    titulo.textContent = `${meses[mes]} ${ano}`;
+    grade.innerHTML = '';
+
+    const primeiroDia = new Date(ano, mes, 1).getDay();
+    const totalDias = new Date(ano, mes + 1, 0).getDate();
+    const hoje = new Date();
+
+    for (let i = 0; i < primeiroDia; i++) {
+      const vazio = document.createElement('div');
+      vazio.className = 'dia vazio';
+      grade.appendChild(vazio);
+    }
+
+    for (let d = 1; d <= totalDias; d++) {
+      const celula = document.createElement('div');
+      celula.className = 'dia';
+
+      const ehHoje = hoje.getFullYear() === ano &&
+                     hoje.getMonth() === mes &&
+                     hoje.getDate() === d;
+      if (ehHoje) celula.classList.add('hoje');
+
+      const num = document.createElement('div');
+      num.className = 'numero';
+      num.textContent = d;
+      celula.appendChild(num);
+
+      const tipo = dadosClima[chaveDia(ano, mes, d)];
+      if (tipo) {
+        const icone = criarIcone(tipo);
+        if (icone) {
+          celula.appendChild(icone);
+          celula.title = `${d}/${String(mes+1).padStart(2,'0')}/${ano} — ${ROTULOS[tipo]}`;
+        }
+      }
+
+      grade.appendChild(celula);
+    }
+  }
+
+  function renderizarLegenda() {
+    legenda.innerHTML = '';
+    for (const tipo of Object.keys(ICONES)) {
+      const span = document.createElement('span');
+      const img = document.createElement('img');
+      img.src = ICONES[tipo];
+      img.alt = ROTULOS[tipo];
+      span.appendChild(img);
+      span.appendChild(document.createTextNode(ROTULOS[tipo]));
+      legenda.appendChild(span);
+    }
+  }
+
+  document.getElementById('prev').addEventListener('click', () => {
+    dataAtual.setMonth(dataAtual.getMonth() - 1);
+    renderizar();
+  });
+  document.getElementById('next').addEventListener('click', () => {
+    dataAtual.setMonth(dataAtual.getMonth() + 1);
+    renderizar();
+  });
+
+  renderizarLegenda();
+  renderizar();
+</script>
+
+</body>
+</html>
