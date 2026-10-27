@@ -1,0 +1,79 @@
+:root {
+  --pbi-foreground: #252423;
+  --pbi-background: #FFFFFF;
+  --pbi-accent: #118DFF;
+  --pbi-bad: #D64550;
+  --pbi-azul-escuro: #001d37;
+  --pbi-sidebar-fundo: #001d37;
+  --pbi-sidebar-borda: #4a6fa5;
+  --pbi-botao-ativo: #3a2a20;
+  --pbi-fundo-pagina: #f3f0eb;
+  --fonte-principal: "Segoe UI", helvetica, arial, sans-serif;
+  --bege-fundo: #f3f0eb;
+  --azul-prev: #001d37;
+  --real: #ffbe83;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #ffffff; font-family: var(--fonte-principal); height: 100vh; overflow: hidden; display: flex; justify-content: center; align-items: center; }
+.app { display: flex; width: 100vw; height: 100vh; }
+.canvas-wrapper { display: block; flex-shrink: 0; }
+.pbi-canvas { position: relative; width: 1280px; height: 725px; background: var(--pbi-fundo-pagina) url('../imagens/fundo-stma-.jpg') center/cover no-repeat; border-radius: 4px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); overflow: hidden; flex-shrink: 0; --escala: 1; zoom: var(--escala); }
+
+/* Sidebar (Padrão) */
+.sidebar-filtro { position: absolute; color: var(--bege-fundo); font-weight: 700; text-align: center; letter-spacing: 0.5px; z-index: 10; }
+.st-projeto { left: 22px; top: 70px; width: 190px; font-size: 11px; }
+.st-titulo  { left: 22px; top: 90px; width: 190px; font-size: 13px; }
+.sidebar-label { position: absolute; left: 12px; color: #b8c4d9; font-size: 10px; font-weight: 400; letter-spacing: 0.5px; z-index: 11; }
+.st-label-1 { top: 145px; } /* Ajustado */
+.sidebar-select { position: absolute; left: 10px; width: 212px; background: #001d37; border: 2px solid var(--bege-fundo); color: var(--bege-fundo); padding: 8px 26px 8px 10px; border-radius: 2px; font-size: 11px; font-family: inherit; box-sizing: border-box; z-index: 12; cursor: pointer; appearance: none; background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8c4d9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 8px center; background-size: 12px; }
+.st-sel-1 { top: 162px; } /* Ajustado */
+.dropdown-menu { position: absolute; background: #001d37; border: 2px solid var(--bege-fundo); border-radius: 2px; box-shadow: 0 4px 12px rgba(0,0,0,0.6); z-index: 9999; display: none; max-height: 250px; overflow-y: auto; width: 212px; }
+.dropdown-menu.active { display: block; }
+.st-drop-1 { left: 10px; top: 192px; } /* Ajustado */
+.dropdown-item { padding: 6px 10px; color: var(--bege-fundo); font-size: 11px; cursor: pointer; display: flex; align-items: center; gap: 8px; }
+.dropdown-item:hover { background: #16294a; }
+.dropdown-item input[type="checkbox"] { accent-color: var(--pbi-accent); cursor: pointer; }
+.dropdown-group-title { padding: 6px 10px; color: var(--bege-fundo); font-size: 11px; font-weight: bold; cursor: pointer; background: rgba(255,255,255,0.05); display: flex; justify-content: space-between; }
+.dropdown-group-items { display: none; padding-left: 15px; }
+.dropdown-group-items.active { display: block; }
+.menu-botao { position: absolute; left: 22px; width: 190px; text-align: center; border: 1px solid var(--bege-fundo); color: var(--bege-fundo); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border-radius: 2px; display: flex; align-items: center; justify-content: center; box-sizing: border-box; background: transparent; transition: all 0.15s ease; cursor: pointer; font-family: inherit; z-index: 10; }
+.menu-botao:hover { background: #16294a; }
+.menu-botao.ativo { background: #3a2a20; border-color: #3a2a20; }
+.st-btn-1 { top: 370px; height: 35px; } .st-btn-2 { top: 415px; height: 50px; }
+.st-btn-3 { top: 475px; height: 40px; } .st-btn-4 { top: 525px; height: 50px; }
+.st-btn-5 { top: 585px; height: 40px; }
+
+/* Título Azul Topo */
+#title-pluviometria { position: absolute; left: 240px; top: 15px; width: 1020px; height: 30px; z-index: 9999; text-align: center; font-size: 14pt; font-weight: 700; color: var(--bege-fundo); background: var(--pbi-azul-escuro); border-radius: 3px; line-height: 1.2; }
+
+/* Componentes Visuais */
+.chart-container { position: absolute; background: transparent; border-radius: 0px; z-index: 10; }
+.visual-title { position: absolute; background: #001d37; color: #ffffff; font-size: 9pt; font-weight: 700; display: flex; align-items: center; justify-content: center; text-align: center; letter-spacing: 0.4px; z-index: 300; border-radius: 3px 3px 0 0; }
+
+/* KPIs do PDF */
+.kpi-pluvio {
+  position: absolute; background: #FFFFFF; border: 1px solid #e0e0e0;
+  padding: 15px; display: flex; flex-direction: column; align-items: flex-start; border-radius: 4px; z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 4px solid var(--pbi-accent);
+}
+.kpi-pluvio .kpi-value { font-size: 20pt; font-weight: 400; color: #252423; line-height: 1; margin-bottom: 4px;}
+.kpi-pluvio .kpi-label { font-size: 9pt; color: #605e5c; font-weight: 400; }
+
+/* Posicionamento */
+#kpi-mm-mes { left: 240px; top: 60px; width: 200px; height: 70px; }
+#kpi-media-dia { left: 240px; top: 140px; width: 200px; height: 70px; }
+#kpi-dias-impactados { left: 240px; top: 220px; width: 200px; height: 70px; }
+
+/* Gráfico Barras (Topo) */
+#chart-pluvio-historico { left: 460px; top: 60px; width: 800px; height: 230px; }
+#title-pluvio-historico { left: 460px; top: 38px; width: 800px; height: 22px; }
+
+/* Gráfico Área (Inferior) */
+#chart-pluvio-mes { left: 240px; top: 330px; width: 650px; height: 350px; }
+#title-pluvio-mes { left: 240px; top: 308px; width: 650px; height: 22px; }
+
+/* Calendário */
+#chart-calendario { left: 910px; top: 330px; width: 350px; height: 350px; }
+#title-calendario { left: 910px; top: 308px; width: 350px; height: 22px; }
+
+.loading { color: #a0a0a0 !important; font-weight: 400 !important; }

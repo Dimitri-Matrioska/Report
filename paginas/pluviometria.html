@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Pluviometria</title>
+<link rel="stylesheet" href="pluviometria.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+</head>
+<body>
+
+<div class="canvas-wrapper" id="canvasWrapper">
+<div class="pbi-canvas" id="pbiCanvas">
+     <div class="faixa-azul" id="title-pluviometria">PLUVIOMETRIA</div> 
+
+    <!-- Filtros da sidebar -->
+    <div class="sidebar-filtro st-projeto">PROJETO AFRODITE</div>
+    <div class="sidebar-filtro st-titulo">PERFORMANCE<br>GERAL</div>
+
+    <!-- Filtro Ano/Mês -->
+    <div class="sidebar-label st-label-1">Ano, Mês</div>
+    <div class="sidebar-select st-sel-1" id="btn-mes" onclick="toggleDropdown('drop-mes')">
+      <span id="txt-mes">Carregando...</span>
+      <span class="arrow">▾</span>
+    </div>
+    <div class="dropdown-menu st-drop-1" id="drop-mes"></div>
+    
+    <!-- Botões do menu -->
+    <a href="./stma.html" class="menu-botao st-btn-1">STMA</a>
+    <a href="./performance-semanal.html" class="menu-botao st-btn-2">PERFORMANCE SEMANAL</a>
+    <a href="./mapa-avanco.html" class="menu-botao st-btn-3">MAPA AVANÇO</a>
+    <a href="./mapa-avanco-drenagem.html" class="menu-botao st-btn-4">MAPA AVANÇO DRENAGEM</a>
+    <a href="./pluviometria.html" class="menu-botao ativo st-btn-5">PLUVIOMETRIA</a>
+
+    <!-- ========================================== -->
+    <!-- CONTEÚDO DA PLUVIOMETRIA                   -->
+    <!-- ========================================== -->
+       
+    <!-- KPIs Laterais -->
+    <div class="kpi-pluvio" id="kpi-mm-mes">
+      <div class="kpi-value loading" data-kpi="mm_acum_mes">...</div>
+      <div class="kpi-label">mm acum no mês</div>
+    </div>
+    
+    <div class="kpi-pluvio" id="kpi-media-dia">
+      <div class="kpi-value loading" data-kpi="media_mm_dia">...</div>
+      <div class="kpi-label">Média mm/dia</div>
+    </div>
+
+    <div class="kpi-pluvio" id="kpi-dias-impactados">
+      <div class="kpi-value loading" data-kpi="dias_impactados">...</div>
+      <div class="kpi-label">Dias impactados</div>
+    </div>
+
+    <!-- Gráficos -->
+    <div id="chart-pluvio-historico" class="chart-container"></div>
+    <div class="visual-title" id="title-pluvio-historico">PLUVIOMETRIA HISTÓRICA X REAL</div>
+
+    <div id="chart-pluvio-mes" class="chart-container"></div>
+    <div class="visual-title" id="title-pluvio-mes">PLUVIOMETRIA AO LONGO DO MÊS</div>
+
+    <div id="chart-calendario" class="chart-container"></div>
+    <div class="visual-title" id="title-calendario">CALENDÁRIO DE CHUVAS</div>
+
+</div>
+</div>
+
+<script src="../assets/config.js"></script>
+<script src="../assets/pbi.js"></script>
+<script src="../assets/charts.js"></script>
+<script src="pluviometria.js"></script>
+
+</body>
+</html>
