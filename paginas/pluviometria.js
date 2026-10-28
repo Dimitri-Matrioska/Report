@@ -2,11 +2,28 @@ let DADOS = { pluviometria: [] };
 let FILTROS = { mes: null };
 const CHARTS = {};
 const MESES = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+const DIAS_SEMANA = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+const CALENDARIO_ICONS = {
+  sol: 'https://cdn.meteocons.com/3.0.0-next.10/svg/flat/clear-day.svg',
+  nublado: 'https://cdn.meteocons.com/3.0.0-next.10/svg/flat/extreme-day.svg',
+  chuva: 'https://cdn.meteocons.com/3.0.0-next.10/svg/flat/extreme-rain.svg',
+  tempestade: 'https://cdn.meteocons.com/3.0.0-next.10/svg/flat/extreme-thunderstorms-extreme-night-rain.svg'
+};
+const CALENDARIO_ROTULOS = {
+  sol: 'Ensolarado',
+  nublado: 'Nublado',
+  chuva: 'Chuva',
+  tempestade: 'Tempestade'
+};
 
 function mesLabel(m) { if(!m) return ''; const [a, mes] = m.split('-'); return MESES[parseInt(mes,10)-1] + '/' + a.slice(2); }
 function mesValor(m) { if(!m) return ''; const [a, mes] = m.split('-'); return a + ' (Ano) + ' + MESES[parseInt(mes,10)-1]; }
 function fmtNum(v) { return Number(v || 0).toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }); }
 function fmtInt(v) { return Math.round(Number(v) || 0).toString(); }
+function formatarData(dataStr) {
+  const data = new Date(`${dataStr}T00:00:00`);
+  return data.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+}
 
 // ==========================================
 // SISTEMA DE FILTROS (Dropdown)
@@ -25,6 +42,7 @@ document.addEventListener('click', function(event) {
 
 function popularFiltros() {
   const meses = [...new Set(DADOS.pluviometria.map(d => d.mes))].sort();
+  FILTROS.mesesDisponiveis = meses;
   const anos = [...new Set(meses.map(m => m.split('-')[0]))];
   const dropMes = document.getElementById('drop-mes');
   dropMes.innerHTML = '';
@@ -45,11 +63,11 @@ function popularFiltros() {
     dropMes.appendChild(grupo);
   });
 
-  // Inicia no último mês disponível (ex: Outubro de 2026)
-  FILTROS.mes = meses[meses.length - 1];
-  document.getElementById('txt-mes').textContent = mesValor(FILTROS.mes);
+  const ultimoMes = meses[meses.length - 1] || null;
+  FILTROS.mes = ultimoMes;
+  document.getElementById('txt-mes').textContent = ultimoMes ? mesValor(ultimoMes) : 'Todos';
   
-  const cbMes = document.querySelector(`#drop-mes input[value="${FILTROS.mes}"]`);
+  const cbMes = ultimoMes ? document.querySelector(`#drop-mes input[value="${ultimoMes}"]`) : null;
   if (cbMes) cbMes.checked = true;
 }
 
@@ -58,6 +76,31 @@ function filtrarMes(el) {
   document.getElementById('txt-mes').textContent = el.checked ? mesValor(el.value) : 'Todos';
   document.querySelectorAll('#drop-mes input').forEach(cb => { if (cb !== el) cb.checked = false; });
   atualizar();
+}
+
+function navegarMes(delta) {
+  const meses = FILTROS.mesesDisponiveis || [];
+  if (!meses.length) return;
+
+  const indiceAtual = meses.indexOf(FILTROS.mes);
+  const novoIndice = indiceAtual === -1 ? meses.length - 1 + delta : indiceAtual + delta;
+  const proximoMes = meses[Math.max(0, Math.min(meses.length - 1, novoIndice))];
+
+  if (!proximoMes) return;
+  FILTROS.mes = proximoMes;
+  document.getElementById('txt-mes').textContent = mesValor(proximoMes);
+  document.querySelectorAll('#drop-mes input').forEach(cb => {
+    cb.checked = cb.value === proximoMes;
+  });
+  atualizar();
+}
+
+function getIconeChuva(mm) {
+  const valor = Number(mm || 0);
+  if (valor < 2) return 'sol';
+  if (valor < 5) return 'nublado';
+  if (valor < 15) return 'chuva';
+  return 'tempestade';
 }
 
 // ==========================================
@@ -146,59 +189,122 @@ function render_GraficoMes() {
 }
 
 function render_Calendario() {
-  const dadosMes = DADOS.pluviometria.filter(d => d.mes === FILTROS.mes);
-  const dadosHeatmap = [];
-  
-  // Encontra a semana do primeiro dia
-  let semanaIndex = 0;
-  let diaAnterior = 0;
+  const container = document.getElementById('chart-calendario');
+  if (!container) return;
 
-  dadosMes.forEach(item => {
-    const dia = parseInt(item.data.slice(8, 10), 10);
-    const dataObj = new Date(item.data + 'T00:00:00');
-    const diaSemana = dataObj.getDay(); 
+  const mesSelecionado = FILTROS.mes;
+  if (!mesSelecionado) {
+    container.innerHTML = '<div class="calendario-vazio">Sem dados para exibir</div>';
+    return;
+  }
 
-    if (dia < diaAnterior) semanaIndex++; 
-    diaAnterior = dia;
+  const [ano, mesNum] = mesSelecionado.split('-');
+  const mesIndex = Number(mesNum) - 1;
+  const totalDias = new Date(Number(ano), Number(mesNum), 0).getDate();
+  const primeiroDiaSemana = new Date(Number(ano), mesIndex, 1).getDay();
+  const diasDoMes = DADOS.pluviometria.filter(d => d.mes === mesSelecionado);
+  const porData = Object.fromEntries(diasDoMes.map(d => [d.data, d]));
 
-    const valorChuva = item.mm_dia || 0;
-    const textoDia = dia.toString();
-    
-    dadosHeatmap.push({
-      value: [diaSemana, semanaIndex, valorChuva],
-      dia: textoDia,
-      paralisado: item.dia_paralisado === 'sim',
-      itemStyle: item.dia_paralisado === 'sim' ? { borderColor: '#ff0000', borderWidth: 2 } : {}
-    });
+  const header = document.createElement('div');
+  header.className = 'calendario-header';
+  header.innerHTML = `
+    <button type="button" class="calendario-nav" data-direcao="-1" aria-label="Mês anterior">‹</button>
+    <div class="calendario-titulo">${MESES[mesIndex]} ${ano}</div>
+    <button type="button" class="calendario-nav" data-direcao="1" aria-label="Próximo mês">›</button>
+  `;
+  header.querySelector('[data-direcao="-1"]').addEventListener('click', () => navegarMes(-1));
+  header.querySelector('[data-direcao="1"]').addEventListener('click', () => navegarMes(1));
+
+  const semana = document.createElement('div');
+  semana.className = 'calendario-semana';
+  DIAS_SEMANA.forEach(dia => {
+    const el = document.createElement('div');
+    el.className = 'calendario-dia-semana';
+    el.textContent = dia;
+    semana.appendChild(el);
   });
 
-  CHARTS['calendario'] = CHARTS['calendario'] || echarts.init(document.getElementById('chart-calendario'));
-  CHARTS['calendario'].setOption({
-    tooltip: {
-      formatter: function (params) {
-        const val = params.value[2];
-        return `Dia ${params.data.dia}<br/>Chuva: ${val} mm<br/>Paralisado: ${params.data.paralisado ? 'Sim' : 'Não'}`;
-      }
-    },
-    grid: { top: 30, left: 30, right: 20, bottom: 20 },
-    xAxis: {
-      type: 'category', data: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
-      splitArea: { show: true }, axisLabel: { fontSize: 9, color: '#605e5c' }
-    },
-    yAxis: {
-      type: 'category', data: ['Sem 1', 'Sem 2', 'Sem 3', 'Sem 4', 'Sem 5'],
-      splitArea: { show: true }, axisLabel: { show: false }
-    },
-    visualMap: {
-      min: 0, max: 80, show: false,
-      inRange: { color: ['#f3f0eb', '#ffbe83', '#e66c37', '#d64550'] }
-    },
-    series: [{
-      name: 'Calendário', type: 'heatmap', data: dadosHeatmap,
-      label: { show: true, formatter: (params) => params.data.dia, fontSize: 10, color: '#252423' },
-      itemStyle: { borderColor: '#fff', borderWidth: 1 }
-    }]
-  }, true);
+  const grade = document.createElement('div');
+  grade.className = 'calendario-grade';
+
+  for (let i = 0; i < primeiroDiaSemana; i++) {
+    const vazio = document.createElement('div');
+    vazio.className = 'calendario-dia vazio';
+    grade.appendChild(vazio);
+  }
+
+  const tooltipExiste = document.querySelector('.calendario-tooltip');
+  if (tooltipExiste) tooltipExiste.remove();
+
+  const tooltip = document.createElement('div');
+  tooltip.className = 'calendario-tooltip';
+  tooltip.style.display = 'none';
+  document.body.appendChild(tooltip);
+
+  for (let dia = 1; dia <= totalDias; dia++) {
+    const dataStr = `${ano}-${String(mesIndex + 1).padStart(2, '0')}-${String(dia).padStart(2, '0')}`;
+    const item = porData[dataStr];
+    const valor = item ? Number(item.mm_dia || 0) : 0;
+    const paralisado = item && item.dia_paralisado === 'sim';
+
+    const celula = document.createElement('div');
+    celula.className = 'calendario-dia';
+    if (paralisado) celula.classList.add('paralisado');
+    if (valor <= 0) celula.classList.add('sem-chuva');
+
+    const numero = document.createElement('span');
+    numero.className = 'calendario-numero';
+    numero.textContent = dia;
+    celula.appendChild(numero);
+
+    const temDadoReal = !!item && item.mm_dia != null && item.mm_dia !== '';
+    if (temDadoReal) {
+      const tipo = getIconeChuva(valor);
+      const icone = document.createElement('img');
+      icone.src = CALENDARIO_ICONS[tipo];
+      icone.alt = CALENDARIO_ROTULOS[tipo];
+      icone.className = 'calendario-icone';
+      icone.loading = 'lazy';
+      celula.appendChild(icone);
+
+      celula.addEventListener('mousemove', (event) => {
+        tooltip.innerHTML = `
+          <div><strong>${formatarData(dataStr)}</strong></div>
+          <div><span class="tooltip-label">Chuva:</span> <span class="tooltip-value">${valor.toFixed(1).replace('.', ',')} mm</span></div>
+          <div><span class="tooltip-label">Acumulado:</span> <span class="tooltip-status">${item && item.mm_acum != null ? Number(item.mm_acum).toFixed(1).replace('.', ',') + ' mm' : '—'}</span></div>
+        `;
+        tooltip.style.display = 'block';
+        tooltip.style.left = `${event.clientX + 12}px`;
+        tooltip.style.top = `${event.clientY + 12}px`;
+      });
+      celula.addEventListener('mouseleave', () => {
+        tooltip.style.display = 'none';
+      });
+    } else {
+      celula.classList.add('vazio');
+      celula.style.background = 'transparent';
+      celula.style.borderColor = 'transparent';
+      celula.title = 'Sem dado realizado';
+    }
+
+    grade.appendChild(celula);
+  }
+
+  const legenda = document.createElement('div');
+  legenda.className = 'calendario-legenda';
+
+  Object.entries(CALENDARIO_ICONS).forEach(([tipo, src]) => {
+    const linha = document.createElement('span');
+    linha.className = 'calendario-legenda-item';
+    linha.innerHTML = `<img src="${src}" alt="${CALENDARIO_ROTULOS[tipo]}" />${CALENDARIO_ROTULOS[tipo]}`;
+    legenda.appendChild(linha);
+  });
+
+  container.innerHTML = '';
+  container.appendChild(header);
+  container.appendChild(semana);
+  container.appendChild(grade);
+  container.appendChild(legenda);
 }
 
 function atualizar() {
