@@ -22,10 +22,24 @@ let FILTROS = { contratada: null, mes: null, semana: null };
 const CHARTS = {};
 
 // Defaults conforme o relatório vigente (PBIP / PDF):
-// Contratada=TERRAM, Ano/Mês=2026+outubro, SemanaDoProjeto=31
+// Contratada=TERRAM e período mais recente presente nos dados
 const DEF_CONTRATADA = 'TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.';
-const DEF_MES = '2026-10-31';
-const DEF_SEMANA = 31;
+
+async function carregarConfigRelatorio() {
+  try {
+    const resp = await fetch(BASE_URL + '/config.json?v=' + Date.now());
+    if (!resp.ok) {
+      const fallback = await fetch(BASE_URL + '/dados.json?v=' + Date.now());
+      if (!fallback.ok) return null;
+      const json = await fallback.json();
+      return json.config_padrao || null;
+    }
+    return resp.json();
+  } catch (err) {
+    console.warn('Config padrao do relatorio nao foi encontrada.', err);
+    return null;
+  }
+}
 
 const MESES = ['janeiro','fevereiro','março','abril','maio','junho',
                'julho','agosto','setembro','outubro','novembro','dezembro'];
@@ -731,6 +745,7 @@ function configurarCliquePluvio() {
 })();
 
 function popularFiltros() {
+  const cfg = window.__CONFIG_PADRAO__ || {};
   // 1. Popular Contratada
   const contratadas = [...new Set(DADOS.fisico.map(d => d.contratada))].sort();
   const dropContratada = document.getElementById('drop-contratada');
@@ -777,19 +792,26 @@ function popularFiltros() {
   dropSemana.innerHTML = '';
   // O resto da função chamará popularSemanas, que já existe no seu código.
   
-  // Resetar filtros para os defaults do relatório
-  FILTROS.contratada = DEF_CONTRATADA;
-  FILTROS.mes = DEF_MES;
+  // Resetar filtros para a contratada/mês do config global quando possível
+  const mesCfg = cfg.mes_referencia || (cfg.data_status ? String(cfg.data_status).slice(0, 7) : null);
+  const semanaCfg = cfg.semana != null ? Number(cfg.semana) : null;
+
+  FILTROS.contratada = (cfg.contratada_principal && contratadas.includes(cfg.contratada_principal))
+    ? cfg.contratada_principal
+    : (contratadas.includes(DEF_CONTRATADA) ? DEF_CONTRATADA : (contratadas[0] || null));
+  FILTROS.mes = mesCfg && meses.includes(mesCfg) ? mesCfg : (meses[meses.length - 1] || null);
   
   // Atualiza os textos visuais nos botões
-  document.getElementById('txt-contratada').textContent = abrevia(DEF_CONTRATADA, 20);
-  document.getElementById('txt-mes').textContent = mesValor(DEF_MES);
+  document.getElementById('txt-contratada').textContent = FILTROS.contratada ? abrevia(FILTROS.contratada, 20) : 'Todas';
+  document.getElementById('txt-mes').textContent = FILTROS.mes ? mesValor(FILTROS.mes) : 'Todos';
 
   // Marca o checkbox correto
-  document.querySelector(`#drop-contratada input[value="${DEF_CONTRATADA}"]`).checked = true;
-  document.querySelector(`#drop-mes input[value="${DEF_MES}"]`).checked = true;
+  const cbContratada = FILTROS.contratada ? document.querySelector(`#drop-contratada input[value="${FILTROS.contratada}"]`) : null;
+  if (cbContratada) cbContratada.checked = true;
+  const cbMes = FILTROS.mes ? document.querySelector(`#drop-mes input[value="${FILTROS.mes}"]`) : null;
+  if (cbMes) cbMes.checked = true;
 
-  popularSemanas();
+  popularSemanas(semanaCfg);
 }
 
 // Funções chamadas pelos checkboxes:
@@ -815,7 +837,7 @@ function filtrarMes(el) {
   atualizar();
 }
 
-function popularSemanas() {
+function popularSemanas(semanaPreferida = null) {
   const dropSemana = document.getElementById('drop-semana');
   const base = DADOS.fisico.filter(d => FILTROS.mes === null || d.mes === FILTROS.mes);
   const semanas = [...new Set(base.map(d => Number(d.semana)))].sort((a, b) => a - b);
@@ -829,8 +851,10 @@ function popularSemanas() {
     dropSemana.appendChild(label);
   });
 
-  // Define a semana atual
-  FILTROS.semana = semanas.includes(DEF_SEMANA) ? DEF_SEMANA : (semanas[semanas.length - 1] || null);
+  // Define semana do config (se valida) ou a mais recente disponível
+  FILTROS.semana = (semanaPreferida != null && semanas.includes(Number(semanaPreferida)))
+    ? Number(semanaPreferida)
+    : (semanas.length ? semanas[semanas.length - 1] : null);
   
   if (FILTROS.semana !== null) {
     document.getElementById('txt-semana').textContent = FILTROS.semana;
@@ -871,6 +895,7 @@ async function carregarDados() {
 async function render_() {
   try {
     DADOS = await carregarDados();
+    window.__CONFIG_PADRAO__ = await carregarConfigRelatorio();
     popularFiltros();
     atualizar();
     window.addEventListener('resize', () =>

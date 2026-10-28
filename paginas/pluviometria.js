@@ -118,18 +118,18 @@ function render_KPIs() {
   const ultimoDia = dadosMes.filter(d => d.mm_acum !== null).pop();
   const mmAcum = ultimoDia ? ultimoDia.mm_acum : 0;
   
-  // 2. Média mm/dia
-  const diasComHistorico = dadosMes.filter(d => d.historica_media !== null);
-  let mediaHist = 0;
-  if (diasComHistorico.length > 0) {
-      mediaHist = diasComHistorico.reduce((acc, curr) => acc + Number(curr.historica_media), 0) / diasComHistorico.length;
-  }
+    // 2. Média mm/dia realizado no mês (meses sem medição ficam com 0)
+    const diasComMedicao = dadosMes.filter(d => d.mm_dia !== null && d.mm_dia !== '');
+    let mediaReal = 0;
+    if (diasComMedicao.length > 0) {
+      mediaReal = diasComMedicao.reduce((acc, curr) => acc + Number(curr.mm_dia || 0), 0) / diasComMedicao.length;
+    }
   
   // 3. Dias impactados
   const diasImpactados = dadosMes.filter(d => d.dia_paralisado === 'sim').length;
 
   setKPI('mm_acum_mes', fmtInt(mmAcum));
-  setKPI('media_mm_dia', fmtNum(mediaHist).replace('.', ','));
+  setKPI('media_mm_dia', fmtNum(mediaReal).replace('.', ','));
   setKPI('dias_impactados', fmtInt(diasImpactados));
 }
 
@@ -158,16 +158,61 @@ function render_GraficoHistorico() {
 }
 
 function render_GraficoMes() {
-  const dadosMes = DADOS.pluviometria.filter(d => d.mes === FILTROS.mes).filter(d => d.mm_dia !== null);
-  
-  const labels = dadosMes.map(d => d.data.slice(8, 10) + '/' + d.data.slice(5, 7));
-  const valReal = dadosMes.map(d => d.mm_dia || 0);
-  const valHistorica = dadosMes.map(d => d.historica_media || 0);
+  const dadosMes = DADOS.pluviometria
+    .filter(d => d.mes === FILTROS.mes)
+    .sort((a, b) => a.data.localeCompare(b.data));
+
+  const mesSelecionado = FILTROS.mes;
+  if (!mesSelecionado) return;
+
+  const [ano, mesNum] = mesSelecionado.split('-');
+  const totalDias = new Date(Number(ano), Number(mesNum), 0).getDate();
+  const porData = Object.fromEntries(dadosMes.map(d => [d.data, d]));
+
+  const labels = [];
+  const valReal = [];
+  const diasParalisados = [];
+
+  for (let dia = 1; dia <= totalDias; dia++) {
+    const dataStr = `${ano}-${mesNum}-${String(dia).padStart(2, '0')}`;
+    const item = porData[dataStr] || null;
+
+    labels.push(`${String(dia).padStart(2, '0')}/${mesNum}`);
+    valReal.push(item && item.mm_dia != null && item.mm_dia !== '' ? Number(item.mm_dia) : null);
+    diasParalisados.push(!!item && item.dia_paralisado === 'sim');
+  }
+
+  const indicesParalisados = diasParalisados
+    .map((isParalisado, i) => isParalisado ? i : -1)
+    .filter(i => i >= 0);
+
+  const blocosParalisados = [];
+  indicesParalisados.forEach((indice) => {
+    const ultimo = blocosParalisados[blocosParalisados.length - 1];
+    if (!ultimo || indice > ultimo.fim + 1) {
+      blocosParalisados.push({ inicio: indice, fim: indice });
+      return;
+    }
+    ultimo.fim = indice;
+  });
+
+  const faixaParalisada = blocosParalisados.map((bloco) => ([
+    { xAxis: labels[bloco.inicio] },
+    { xAxis: labels[bloco.fim] }
+  ]));
 
   CHARTS['mes'] = CHARTS['mes'] || echarts.init(document.getElementById('chart-pluvio-mes'));
   CHARTS['mes'].setOption({
     tooltip: { trigger: 'axis' },
-    legend: { bottom: 0, icon: 'circle', itemGap: 15, textStyle: { fontSize: 10, color: '#605e5c' } },
+    legend: {
+      bottom: 0,
+      itemGap: 15,
+      textStyle: { fontSize: 10, color: '#605e5c' },
+      data: [
+        { name: 'mm/dia', icon: 'circle' },
+        { name: 'Dias paralisados', icon: 'roundRect' }
+      ]
+    },
     grid: { left: 20, right: 20, top: 20, bottom: 40, containLabel: true },
     xAxis: { 
       type: 'category', data: labels, 
@@ -176,13 +221,39 @@ function render_GraficoMes() {
     yAxis: { type: 'value', show: false },
     series: [
       { 
-        name: 'mm/dia', type: 'line', data: valReal, smooth: false, 
-        areaStyle: { color: 'rgba(0, 29, 55, 0.2)' },
-        lineStyle: { color: '#001d37', width: 2 }, itemStyle: { color: '#001d37' }, symbol: 'circle', symbolSize: 4
+        name: 'mm/dia', type: 'line', data: valReal, smooth: 0.35,
+        areaStyle: { color: 'rgba(0, 29, 55, 0.35)' },
+        lineStyle: { color: '#001d37', width: 2, type: 'dashed' },
+        itemStyle: { color: '#001d37' },
+        symbol: 'circle',
+        symbolSize: 5,
+        label: {
+          show: true,
+          position: 'top',
+          color: '#001d37',
+          fontSize: 12,
+          fontWeight: '600',
+          formatter: (p) => {
+            const v = p.value;
+            if (v == null || Number(v) <= 0) return '';
+            const n = Number(v);
+            return Number.isInteger(n) ? String(n) : n.toFixed(1).replace('.', ',');
+          }
+        },
+        markArea: {
+          silent: true,
+          itemStyle: { color: 'rgba(39, 80, 236, 0.5)' },
+          data: faixaParalisada
+        }
       },
-      { 
-        name: 'Histórica média', type: 'line', data: valHistorica, smooth: false, 
-        lineStyle: { color: '#a0a0a0', width: 2, type: 'dashed' }, itemStyle: { color: '#a0a0a0' }, symbol: 'none'
+      {
+        name: 'Dias paralisados',
+        type: 'line',
+        data: [],
+        showSymbol: false,
+        lineStyle: { color: 'rgba(39, 80, 236, 0.5)', width: 8 },
+        itemStyle: { color: 'rgba(39, 80, 236, 0.5)' },
+        tooltip: { show: false }
       }
     ]
   }, true);

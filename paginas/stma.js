@@ -1,10 +1,24 @@
 let DADOS = { fisico: [], desvios: [], stma: [] };
-let FILTROS = { contratada: null, mes: null, semana: null };
+let FILTROS = { contratada: null, ano: null, mes: null, semana: null };
 const CHARTS = {};
 
-const DEF_CONTRATADA = 'TERRAM';
-const DEF_MES = '2026-09-30';
-const DEF_SEMANA = "30";
+async function carregarConfigRelatorio() {
+  try {
+    const resp = await fetch(BASE_URL + '/config.json?v=' + Date.now());
+    if (!resp.ok) {
+      const fallback = await fetch(BASE_URL + '/dados.json?v=' + Date.now());
+      if (!fallback.ok) return null;
+      const json = await fallback.json();
+      return json.config_padrao || null;
+    }
+    return resp.json();
+  } catch (err) {
+    console.warn('Config padrao do relatorio nao foi encontrada.', err);
+    return null;
+  }
+}
+
+const DEF_CONTRATADA = 'TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.';
 const MESES = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
 
 function mesLabel(m) { if(!m) return ''; const [a, mes] = m.split('-'); return MESES[parseInt(mes,10)-1] + '/' + a.slice(2); }
@@ -443,6 +457,7 @@ document.addEventListener('click', function(event) {
 });
 
 function popularFiltros() {
+  const cfg = window.__CONFIG_PADRAO__ || {};
   const contratadas = [...new Set(DADOS.fisico.map(d => d.contratada))].sort();
   const dropContratada = document.getElementById('drop-contratada');
   dropContratada.innerHTML = '';
@@ -473,8 +488,14 @@ function popularFiltros() {
     dropMes.appendChild(grupo);
   });
 
-  FILTROS.contratada = contratadas.find(c => c.startsWith(DEF_CONTRATADA)) || contratadas[0];
-  FILTROS.mes = meses.includes(DEF_MES) ? DEF_MES : meses[meses.length - 1];
+  const mesCfg = cfg.mes_referencia || (cfg.data_status ? String(cfg.data_status).slice(0, 7) : null);
+  const semanaCfg = cfg.semana != null ? Number(cfg.semana) : null;
+
+  FILTROS.contratada = (cfg.contratada_principal && contratadas.includes(cfg.contratada_principal))
+    ? cfg.contratada_principal
+    : (contratadas.find(c => c.startsWith(DEF_CONTRATADA)) || contratadas[0]);
+  FILTROS.mes = mesCfg && meses.includes(mesCfg) ? mesCfg : (meses[meses.length - 1] || null);
+  FILTROS.ano = FILTROS.mes ? String(FILTROS.mes).slice(0, 4) : null;
   
   document.getElementById('txt-contratada').textContent = abrevia(FILTROS.contratada, 20);
   document.getElementById('txt-mes').textContent = mesValor(FILTROS.mes);
@@ -484,21 +505,30 @@ function popularFiltros() {
   const cbMes = document.querySelector(`#drop-mes input[value="${FILTROS.mes}"]`);
   if (cbMes) cbMes.checked = true;
 
-  popularSemanas();
+  popularSemanas(semanaCfg);
 }
 
-function popularSemanas() {
+function popularSemanas(semanaPreferida = null) {
   const dropSemana = document.getElementById('drop-semana');
-  const base = DADOS.fisico.filter(d => FILTROS.mes === null || d.mes === FILTROS.mes);
-  const semanas = [...new Set(base.map(d => Number(d.semana)))].sort((a, b) => a - b);
+  const base = DADOS.fisico.filter(d => {
+    if (FILTROS.ano && String(d.mes || '').slice(0, 4) !== String(FILTROS.ano)) return false;
+    if (FILTROS.mes && d.mes !== FILTROS.mes) return false;
+    return true;
+  });
+  const semanas = [...new Set(base.map(d => Number(d.semana)))].filter(n => !Number.isNaN(n)).sort((a, b) => a - b);
   dropSemana.innerHTML = '';
   semanas.forEach(s => {
     const label = document.createElement('label');
     label.className = 'dropdown-item';
-    label.innerHTML = `<input type="checkbox" value="${s}" onchange="filtrarSemana(this)"> ${s}`;
+    const checked = FILTROS.semana !== null && Number(FILTROS.semana) === Number(s) ? 'checked' : '';
+    label.innerHTML = `<input type="checkbox" value="${s}" ${checked} onchange="filtrarSemana(this)"> ${s}`;
     dropSemana.appendChild(label);
   });
-  FILTROS.semana = semanas.includes(DEF_SEMANA) ? DEF_SEMANA : (semanas[semanas.length - 1] || null);
+
+  const semanaPadrao = (semanaPreferida != null && semanas.includes(Number(semanaPreferida)))
+    ? Number(semanaPreferida)
+    : (semanas.length ? semanas[semanas.length - 1] : null);
+  FILTROS.semana = semanaPadrao;
   if (FILTROS.semana !== null) {
     document.getElementById('txt-semana').textContent = FILTROS.semana;
     const cb = document.querySelector(`#drop-semana input[value="${FILTROS.semana}"]`);
@@ -507,7 +537,14 @@ function popularSemanas() {
 }
 
 function filtrarContratada(el) { FILTROS.contratada = el.checked ? el.value : null; document.getElementById('txt-contratada').textContent = el.checked ? abrevia(el.value, 20) : 'Todas'; document.querySelectorAll('#drop-contratada input').forEach(cb => { if (cb !== el) cb.checked = false; }); atualizar(); }
-function filtrarMes(el) { FILTROS.mes = el.checked ? el.value : null; document.getElementById('txt-mes').textContent = el.checked ? mesValor(el.value) : 'Todos'; document.querySelectorAll('#drop-mes input').forEach(cb => { if (cb !== el) cb.checked = false; }); popularSemanas(); atualizar(); }
+function filtrarMes(el) {
+  FILTROS.mes = el.checked ? el.value : null;
+  FILTROS.ano = FILTROS.mes ? String(FILTROS.mes).slice(0, 4) : null;
+  document.getElementById('txt-mes').textContent = el.checked ? mesValor(el.value) : 'Todos';
+  document.querySelectorAll('#drop-mes input').forEach(cb => { if (cb !== el) cb.checked = false; });
+  popularSemanas();
+  atualizar();
+}
 function filtrarSemana(el) { FILTROS.semana = el.checked ? Number(el.value) : null; document.getElementById('txt-semana').textContent = el.checked ? el.value : '-'; document.querySelectorAll('#drop-semana input').forEach(cb => { if (cb !== el) cb.checked = false; }); atualizar(); }
 
 function atualizar() { render_KPIs(); render_Graficos(); }
@@ -528,6 +565,7 @@ async function render_() {
     DADOS.fisico = dados.fisico;
     DADOS.desvios = dados.desvios;
     DADOS.stma = dados.stma;
+    window.__CONFIG_PADRAO__ = await carregarConfigRelatorio();
     popularFiltros();
     atualizar();
     window.addEventListener('resize', () => Object.values(CHARTS).forEach(c => c && c.resize()));

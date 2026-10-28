@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>MAPA AVANCO DRENAGEM</title>
+<link rel="stylesheet" href="../assets/sidebar-padrao.css">
+<link rel="stylesheet" href="stma.css">
+<link rel="stylesheet" href="mapa-avanco-drenagem.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/geotiff@2.1.3/dist-browser/geotiff.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/georaster@1.6.0/dist/georaster.browserify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/georaster-layer-for-leaflet@3.10.0/dist/georaster-layer-for-leaflet.min.js"></script>
+</head>
+<body>
+
+<div class="canvas-wrapper" id="canvasWrapper">
+<div class="pbi-canvas" id="pbiCanvas">
+
+  <div class="faixa-azul" id="title-mapa">MAPA AVANCO DRENAGEM</div>
+  <div class="status-superior" id="status-superior">Carregando base geoespacial...</div>
+
+  <div class="sidebar-filtro st-projeto">PROJETO AFRODITE</div>
+  <div class="sidebar-filtro st-titulo">PERFORMANCE<br>CONTRATADAS</div>
+
+  <div class="sidebar-label st-label-1">Contratada</div>
+  <div class="sidebar-select st-sel-1" id="btn-contratada" onclick="toggleDropdown('drop-contratada')">
+    <span id="txt-contratada">-</span>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="dropdown-menu st-drop-1" id="drop-contratada"></div>
+
+  <div class="sidebar-label st-label-2">Ano, Mes</div>
+  <div class="sidebar-select st-sel-2" id="btn-mes" onclick="toggleDropdown('drop-mes')">
+    <span id="txt-mes">-</span>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="dropdown-menu st-drop-2" id="drop-mes"></div>
+
+  <div class="sidebar-label st-label-3">SemanaDoProjeto</div>
+  <div class="sidebar-select st-sel-3" id="btn-semana" onclick="toggleDropdown('drop-semana')">
+    <span id="txt-semana">-</span>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="dropdown-menu st-drop-3" id="drop-semana"></div>
+
+  <a href="./stma.html" class="menu-botao st-btn-1">STMA</a>
+  <a href="./performance-semanal.html" class="menu-botao st-btn-2">PERFORMANCE SEMANAL</a>
+  <a href="./mapa-avanco.html" class="menu-botao st-btn-3">MAPA AVANCO</a>
+  <a href="./mapa-avanco-drenagem.html" class="menu-botao ativo st-btn-4">MAPA AVANCO DRENAGEM</a>
+  <a href="./pluviometria.html" class="menu-botao st-btn-5">PLUVIOMETRIA</a>
+
+  <section class="kpi-painel" id="kpi-escadas">
+    <div class="kpi-titulo">DREN. SUPERFICIAL - ESCADAS</div>
+    <div class="kpi-grid">
+      <div><span class="kpi-valor" id="kpi-escadas-prev">--</span><span class="kpi-legenda">Previsto</span></div>
+      <div><span class="kpi-valor real" id="kpi-escadas-real">--</span><span class="kpi-legenda">Real</span></div>
+    </div>
+  </section>
+
+  <section class="kpi-painel" id="kpi-subestacao">
+    <div class="kpi-titulo">DREN. PROF. - SUBESTACAO</div>
+    <div class="kpi-grid">
+      <div><span class="kpi-valor" id="kpi-sub-prev">--</span><span class="kpi-legenda">Previsto</span></div>
+      <div><span class="kpi-valor real" id="kpi-sub-real">--</span><span class="kpi-legenda">Real</span></div>
+    </div>
+  </section>
+
+  <section class="kpi-painel" id="kpi-canteiro">
+    <div class="kpi-titulo">DREN. PROF. - CANTEIRO GC</div>
+    <div class="kpi-grid">
+      <div><span class="kpi-valor" id="kpi-cant-prev">--</span><span class="kpi-legenda">Previsto</span></div>
+      <div><span class="kpi-valor real" id="kpi-cant-real">--</span><span class="kpi-legenda">Real</span></div>
+    </div>
+  </section>
+
+  <div id="mapa-wrapper">
+    <div id="mapa-leaflet"></div>
+    <div id="mapa-mensagem" class="mapa-mensagem" hidden></div>
+  </div>
+
+  <div class="foto-inset inset-top"></div>
+  <div class="foto-inset inset-mid"></div>
+  <div class="foto-inset inset-bot"></div>
+  <div class="foto-inset inset-left"></div>
+
+  <div class="rodape-legenda">Base cartografica: GeoTIFF georreferenciado + poligonais em JSON</div>
+
+</div>
+</div>
+
+<script src="../assets/config.js"></script>
+<script src="mapa-avanco-drenagem.js"></script>
+
+</body>
+</html>

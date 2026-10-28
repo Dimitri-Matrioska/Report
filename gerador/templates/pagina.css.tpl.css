@@ -2,10 +2,12 @@
    {{TITULO}} — gerado automaticamente
    ============================================================ */
 
+@import url('../../assets/sidebar-padrao.css');
+
 .pbi-canvas {
   position: relative;
   width: 1280px;
-  height: 720px;
+  height: 725px;
   background-image: url('../imagens/{{FUNDO}}');
   background-size: 1280px 720px;
   background-position: 0 0;
@@ -16,6 +18,8 @@
   flex-shrink: 0;
   font-family: "Segoe UI", helvetica, arial, sans-serif;
 }
+
+/* Sidebar padrao vem de ../../assets/sidebar-padrao.css */
 
 {{CSS_ELEMENTOS}}
 

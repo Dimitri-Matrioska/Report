@@ -1,22 +1,9 @@
 {
-  "gerado_em": "2026-10-27T09:53:47.117958",
-  "total_datasets": 14,
+  "gerado_em": "2026-10-28T15:06:33.788387",
+  "total_datasets": 1,
   "inventario": {
-    "fisico_total": 621,
-    "pluviometria": 243,
-    "status_semanal": 120,
-    "stma": 526,
-    "desvios_stma": 741,
-    "acoes_desvios": 30,
-    "sla": 153,
-    "medicoes": 237,
-    "milestones": 48,
-    "acoes": 7,
-    "dados_contrato": 16,
-    "histograma": 599,
-    "igpp_gf": 108,
-    "servicos_notaveis": 706
+    "servicos_notaveis": 56
   },
   "arquivo_unificado": "dados.json",
-  "tamanho_unificado_kb": 1670.3
+  "tamanho_unificado_kb": 17.1
 }

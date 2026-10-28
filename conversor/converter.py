@@ -310,7 +310,7 @@ SPECS = {
             "servico_notavel":  (["Serviço Notável"], to_str),
             "un":               (["Un"], to_str),
             "total":            (["Total"], to_num),
-            "previsto":         (["Previsto"], to_num),
+            "previsto":         (["Avanço Previsto"], to_num),
             "real":             (["Real"], to_num),
             "avanco":           (["Avanço"], to_num),
             "aderencia_real":   (["Aderência Real"], to_num),
@@ -341,6 +341,80 @@ def processar_aba(df, spec):
         if any(v is not None for v in reg.values()):
             registros.append(reg)
     return registros
+
+
+def filtrar_servicos_notaveis(registros):
+    """Mantém apenas os serviços notáveis relacionados a drenagem."""
+    filtrados = []
+    for r in registros:
+        servico = str(r.get("servico_notavel") or "")
+        if "drenagem" in normalizar(servico):
+            filtrados.append(r)
+    return filtrados
+
+
+def extrair_config_padrao(excel_path):
+    """Lê a aba Config da planilha e retorna os valores de A1:A3/B1:B3 padronizados."""
+    padrao = {
+        "raw": {},
+        "data_status": None,
+        "semana": None,
+        "ano": None,
+        "mes_referencia": None,
+    }
+    try:
+        xls = pd.ExcelFile(excel_path)
+        aba_config = achar_aba(xls, ["Config"])
+        if not aba_config:
+            return padrao
+
+        df = pd.read_excel(excel_path, sheet_name=aba_config, header=None)
+        if df.empty or df.shape[1] < 2:
+            return padrao
+
+        for idx in range(3):
+            if idx >= len(df):
+                continue
+            label = df.iloc[idx, 0]
+            valor = df.iloc[idx, 1]
+            if pd.isna(label) or str(label).strip() == "":
+                continue
+            chave = str(label).strip()
+            
+            # Converte objetos datetime/timestamp para string ISO evitando erro no JSON
+            if isinstance(valor, (pd.Timestamp, datetime)):
+                valor = to_iso(valor)
+            elif hasattr(valor, "strftime"):
+                valor = valor.strftime("%Y-%m-%d")
+
+            padrao["raw"][chave] = valor
+
+        chaves_norm = {normalizar(k): k for k in padrao["raw"]}
+
+        for nome, destino in [
+            ("Data de status", "data_status"),
+            ("Data Status", "data_status"),
+            ("Data status", "data_status"),
+            ("Semana", "semana"),
+            ("Ano", "ano"),
+        ]:
+            chave = chaves_norm.get(normalizar(nome))
+            if chave is None:
+                continue
+            valor = padrao["raw"][chave]
+            if destino == "data_status":
+                padrao[destino] = to_iso(valor)
+            elif destino == "semana":
+                padrao[destino] = to_int(valor)
+            elif destino == "ano":
+                padrao[destino] = to_int(valor)
+
+        if padrao["data_status"]:
+            padrao["mes_referencia"] = padrao["data_status"][:7]
+
+        return padrao
+    except Exception:
+        return padrao
 
 
 # ============================================================
@@ -485,6 +559,7 @@ class AppConversor(tk.Tk):
             self.log(f"Lendo: {excel_path}")
             xls = pd.ExcelFile(excel_path)
             todos = {}
+            config_padrao = extrair_config_padrao(excel_path)
 
             total_specs = len(SPECS)
             self.progress["maximum"] = total_specs
@@ -510,6 +585,8 @@ class AppConversor(tk.Tk):
                     self.log(f"    linhas: {len(df)} | colunas: {len(df.columns)}")
 
                     registros = processar_aba(df, spec)
+                    if nome == "servicos_notaveis":
+                        registros = filtrar_servicos_notaveis(registros)
                     todos[nome] = registros
 
                     # Salva o JSON individual
@@ -536,6 +613,13 @@ class AppConversor(tk.Tk):
                 "contexto": {
                     "contratada_principal": "TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.",
                 },
+                "config_padrao": {
+                    "data_status": config_padrao.get("data_status"),
+                    "semana": config_padrao.get("semana"),
+                    "ano": config_padrao.get("ano"),
+                    "mes_referencia": config_padrao.get("mes_referencia"),
+                    "raw": config_padrao.get("raw", {}),
+                },
                 **todos
             }
 
@@ -544,9 +628,14 @@ class AppConversor(tk.Tk):
             with open(tmp, "w", encoding="utf-8") as f:
                 json.dump(dados_unificados, f, ensure_ascii=False)
             os.replace(tmp, caminho_unif)
-            
+
+            caminho_config = os.path.join(DADOS_DIR, "config.json")
+            with open(caminho_config, "w", encoding="utf-8") as f:
+                json.dump(dados_unificados.get("config_padrao", {}), f, ensure_ascii=False, indent=2)
+
             tamanho_kb = os.path.getsize(caminho_unif) / 1024
             self.log(f"[ok] dados.json criado: {tamanho_kb:.1f} KB")
+            self.log(f"[ok] config.json criado: {os.path.basename(caminho_config)}")
 
             # ============================================================
             # MANIFESTO (versao.json)

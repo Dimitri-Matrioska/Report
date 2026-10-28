@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<script src="https://cdn.jsdelivr.net/npm/geotiff"></script>
+<meta charset="UTF-8">
+<title>MAPA AVANCO DRENAGEM</title>
+<link rel="stylesheet" href="../assets/sidebar-padrao.css">
+<link rel="stylesheet" href="stma.css">
+<link rel="stylesheet" href="mapa-avanco-drenagem.css">
+</head>
+<body>
+
+<div class="canvas-wrapper" id="canvasWrapper">
+<div class="pbi-canvas" id="pbiCanvas">
+
+  <div class="faixa-azul" id="title-mapa">MAPA AVANCO DRENAGEM</div>
+  <div class="status-superior" id="status-superior">Carregando ortofoto e servicos notaveis...</div>
+
+  <div class="sidebar-filtro st-projeto">PROJETO AFRODITE</div>
+  <div class="sidebar-filtro st-titulo">PERFORMANCE<br>CONTRATADAS</div>
+
+  <div class="sidebar-label st-label-1">Contratada</div>
+  <div class="sidebar-select st-sel-1" id="btn-contratada" onclick="toggleDropdown('drop-contratada')">
+    <span id="txt-contratada">-</span>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="dropdown-menu st-drop-1" id="drop-contratada"></div>
+
+  <div class="sidebar-label st-label-2">Ano, Mes</div>
+  <div class="sidebar-select st-sel-2" id="btn-mes" onclick="toggleDropdown('drop-mes')">
+    <span id="txt-mes">-</span>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="dropdown-menu st-drop-2" id="drop-mes"></div>
+
+  <div class="sidebar-label st-label-3">SemanaDoProjeto</div>
+  <div class="sidebar-select st-sel-3" id="btn-semana" onclick="toggleDropdown('drop-semana')">
+    <span id="txt-semana">-</span>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="dropdown-menu st-drop-3" id="drop-semana"></div>
+
+  <a href="./stma.html" class="menu-botao st-btn-1">STMA</a>
+  <a href="./performance-semanal.html" class="menu-botao st-btn-2">PERFORMANCE SEMANAL</a>
+  <a href="./mapa-avanco.html" class="menu-botao st-btn-3">MAPA AVANCO</a>
+  <a href="./mapa-avanco-drenagem.html" class="menu-botao ativo st-btn-4">MAPA AVANCO DRENAGEM</a>
+  <a href="./pluviometria.html" class="menu-botao st-btn-5">PLUVIOMETRIA</a>
+
+  <div id="mapa-wrapper">
+    <img id="ortofoto-img" alt="Ortofoto drenagem" src="../ortofoto/ortofoto-drenagem.jpg">
+    <div id="mapa-mensagem" class="mapa-mensagem" hidden></div>
+  </div>
+
+  <div id="lista-servicos-kpi" class="lista-servicos-kpi">
+    <div class="painel-titulo">SERVICOS NOTAVEIS</div>
+    <div id="kpi-servicos-host"></div>
+  </div>
+
+  <div class="rodape-legenda">
+    <div class="rodape-linha">
+      <div class="rodape-farol">
+        <span class="farol-titulo">Farol Físico:</span>
+        <span class="farol-item"><span class="farol-cor red"></span> &lt;95%</span>
+        <span class="farol-item"><span class="farol-cor yellow"></span> &gt;=95% e &lt;100%</span>
+        <span class="farol-item"><span class="farol-cor green"></span> &gt;=100%</span>
+      </div>
+      <div class="rodape-status">
+        <span class="estado-item"><span class="status-marker prazo"></span>No prazo</span>
+        <span class="estado-item"><span class="status-marker tendencia"></span>Tendência de Atraso</span>
+        <span class="estado-item"><span class="status-marker atrasado"></span>Atrasado</span>
+        <span class="estado-item"><span class="status-marker atraso-concluido"></span>Concluído com atraso</span>
+      </div>
+    </div>
+    <div class="rodape-imagem">Imagem anexada: ortofoto-drenagem.jpg — base de referência para acompanhamento do avanço de drenagem.</div>
+  </div>
+
+</div>
+</div>
+
+<script src="../assets/config.js"></script>
+<script src="mapa-avanco-drenagem.js"></script>
+
+</body>
+</html>

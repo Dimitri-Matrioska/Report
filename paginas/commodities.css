@@ -1,0 +1,124 @@
+#pbiCanvas {
+  background: var(--pbi-fundo-pagina) url('../imagens/fundo-commodities.jpg') center/cover no-repeat;
+}
+
+#title-commodities {
+  position: absolute;
+  left: 240px;
+  top: 35px;
+  width: 1020px;
+  height: 30px;
+  z-index: 9999;
+  text-align: center;
+  font-size: 14pt;
+  font-weight: 700;
+  color: var(--bege-fundo);
+  background: var(--pbi-azul-escuro);
+  border-radius: 3px;
+  line-height: 1.2;
+}
+
+.svc-label {
+  left: 240px;
+  top: 80px;
+  color: #b8c4d9;
+  background: #001d37;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+.svc-select {
+  left: 240px;
+  top: 98px;
+  width: 300px;
+  background: #001d37;
+  border-color: #dcdcda;
+}
+
+.svc-drop {
+  left: 240px;
+  top: 132px;
+  width: 300px;
+  max-height: 220px;
+}
+
+#kpi-aderencia {
+  position: absolute;
+  left: 240px;
+  top: 165px;
+  width: 230px;
+  height: 95px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid #dcdcda;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 30;
+}
+
+#kpi-aderencia .kpi-label {
+  font-size: 10pt;
+  color: #605e5c;
+}
+
+#kpi-aderencia .kpi-value {
+  margin-top: 6px;
+  font-size: 28pt;
+  font-weight: 700;
+  line-height: 1;
+}
+
+#title-servicos {
+  left: 240px;
+  top: 320px;
+  width: 1020px;
+  height: 24px;
+}
+
+#chart-servicos {
+  left: 240px;
+  top: 346px;
+  width: 1020px;
+  height: 352px;
+}
+
+#table-servicos {
+  left: 550px;
+  top: 80px;
+  width: 710px;
+  height: 242px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  padding: 6px;
+}
+
+#table-servicos table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 8.5pt;
+}
+
+#table-servicos th,
+#table-servicos td {
+  border-bottom: 1px solid #dcdcda;
+  padding: 4px 6px;
+  text-align: left;
+  color: #252423;
+}
+
+#table-servicos th {
+  position: sticky;
+  top: 0;
+  background: #f3f0eb;
+  color: #001d37;
+  font-weight: 700;
+  font-size: 9pt;
+}
+
+#table-servicos td.num,
+#table-servicos th.num {
+  text-align: right;
+}

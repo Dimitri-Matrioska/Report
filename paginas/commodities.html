@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Serviços Notáveis</title>
+<link rel="stylesheet" href="../assets/sidebar-padrao.css">
+<link rel="stylesheet" href="stma.css">
+<link rel="stylesheet" href="commodities.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+</head>
+<body>
+
+<div class="canvas-wrapper" id="canvasWrapper">
+<div class="pbi-canvas" id="pbiCanvas">
+  <div class="faixa-azul" id="title-commodities">SERVIÇOS NOTÁVEIS</div>
+
+  <div class="sidebar-filtro st-projeto">PROJETO AFRODITE</div>
+  <div class="sidebar-filtro st-titulo">PERFORMANCE<br>GERAL</div>
+
+  <div class="sidebar-label st-label-1">Contratada</div>
+  <div class="sidebar-select st-sel-1" id="btn-contratada" onclick="toggleDropdown('drop-contratada')">
+    <span id="txt-contratada">-</span>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="dropdown-menu st-drop-1" id="drop-contratada"></div>
+
+  <div class="sidebar-label st-label-2">Ano, Mês</div>
+  <div class="sidebar-select st-sel-2" id="btn-mes" onclick="toggleDropdown('drop-mes')">
+    <span id="txt-mes">-</span>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="dropdown-menu st-drop-2" id="drop-mes"></div>
+
+  <div class="sidebar-label st-label-3">SemanaDoProjeto</div>
+  <div class="sidebar-select st-sel-3" id="btn-semana" onclick="toggleDropdown('drop-semana')">
+    <span id="txt-semana">-</span>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="dropdown-menu st-drop-3" id="drop-semana"></div>
+
+  <a href="./stma.html" class="menu-botao st-btn-1">STMA</a>
+  <a href="./performance-semanal.html" class="menu-botao st-btn-2">PERFORMANCE SEMANAL</a>
+  <a href="./mapa-avanco.html" class="menu-botao st-btn-3">MAPA AVANÇO</a>
+  <a href="./mapa-avanco-drenagem.html" class="menu-botao st-btn-4">MAPA AVANÇO DRENAGEM</a>
+  <a href="./pluviometria.html" class="menu-botao st-btn-5">PLUVIOMETRIA</a>
+
+  <div class="sidebar-label svc-label">Serviço notável</div>
+  <div class="sidebar-select svc-select" id="btn-servico" onclick="toggleDropdown('drop-servico')">
+    <span id="txt-servico">-</span>
+    <span class="arrow">▾</span>
+  </div>
+  <div class="dropdown-menu svc-drop" id="drop-servico"></div>
+
+  <div class="kpi-flat" id="kpi-aderencia">
+    <div class="kpi-label">Aderência</div>
+    <div class="kpi-value loading" data-kpi="aderencia">...</div>
+  </div>
+
+  <div id="chart-servicos" class="chart-container"></div>
+  <div class="visual-title" id="title-servicos">CURVA DE SERVIÇOS NOTÁVEIS</div>
+
+  <div id="table-servicos" class="table-container"></div>
+</div>
+</div>
+
+<script src="../assets/config.js"></script>
+<script src="commodities.js"></script>
+
+</body>
+</html>

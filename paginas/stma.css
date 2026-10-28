@@ -23,39 +23,16 @@ html, body { margin: 0; padding: 0; background: #ffffff; font-family: var(--font
 .canvas-wrapper { display: block; flex-shrink: 0; }
 .pbi-canvas { position: relative; width: 1280px; height: 725px; background: var(--pbi-fundo-pagina) url('../imagens/fundo-stma-.jpg') center/cover no-repeat; border-radius: 4px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); overflow: hidden; flex-shrink: 0; --escala: 1; zoom: var(--escala); }
 
-/* Sidebar e dropdowns (mantidos) */
-.sidebar-filtro { position: absolute; color: var(--bege-fundo); font-weight: 700; text-align: center; letter-spacing: 0.5px; z-index: 10; }
-.st-projeto { left: 22px; top: 70px; width: 190px; font-size: 11px; }
-.st-titulo  { left: 22px; top: 90px; width: 190px; font-size: 13px; }
-.sidebar-label { position: absolute; left: 12px; color: #b8c4d9; font-size: 10px; font-weight: 400; letter-spacing: 0.5px; z-index: 11; }
-.st-label-1 { top: 128px; } .st-label-2 { top: 207px; } .st-label-3 { top: 287px; }
-.sidebar-select { position: absolute; left: 10px; width: 212px; background: #001d37; border: 2px solid var(--bege-fundo); color: var(--bege-fundo); padding: 8px 26px 8px 10px; border-radius: 2px; font-size: 11px; font-family: inherit; box-sizing: border-box; z-index: 12; cursor: pointer; appearance: none; background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8c4d9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 8px center; background-size: 12px; }
-.sidebar-select:hover { border-color: var(--bege-fundo); }
-.st-sel-1 { top: 145px; } .st-sel-2 { top: 224px; } .st-sel-3 { top: 304px; }
-.dropdown-menu { position: absolute; background: #001d37; border: 2px solid var(--bege-fundo); border-radius: 2px; box-shadow: 0 4px 12px rgba(0,0,0,0.6); z-index: 9999; display: none; max-height: 250px; overflow-y: auto; width: 212px; }
-.dropdown-menu.active { display: block; }
-.st-drop-1 { left: 10px; top: 175px; } .st-drop-2 { left: 10px; top: 255px; } .st-drop-3 { left: 10px; top: 335px; }
-.dropdown-item { padding: 6px 10px; color: var(--bege-fundo); font-size: 11px; cursor: pointer; display: flex; align-items: center; gap: 8px; }
-.dropdown-item:hover { background: #16294a; }
-.dropdown-item input[type="checkbox"] { accent-color: var(--pbi-accent); cursor: pointer; }
-.dropdown-group-title { padding: 6px 10px; color: var(--bege-fundo); font-size: 11px; font-weight: bold; cursor: pointer; background: rgba(255,255,255,0.05); display: flex; justify-content: space-between; }
-.dropdown-group-items { display: none; padding-left: 15px; }
-.dropdown-group-items.active { display: block; }
-.menu-botao { position: absolute; left: 22px; width: 190px; text-align: center; border: 1px solid var(--bege-fundo); color: var(--bege-fundo); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border-radius: 2px; display: flex; align-items: center; justify-content: center; box-sizing: border-box; background: transparent; transition: all 0.15s ease; cursor: pointer; font-family: inherit; z-index: 10; }
-.menu-botao:hover { background: #16294a; }
-.menu-botao.ativo { background: #3a2a20; border-color: #3a2a20; }
-.st-btn-1 { top: 370px; height: 35px; } .st-btn-2 { top: 415px; height: 50px; }
-.st-btn-3 { top: 475px; height: 40px; } .st-btn-4 { top: 525px; height: 50px; }
-.st-btn-5 { top: 585px; height: 40px; }
+/* Sidebar padrao compartilhada em ../assets/sidebar-padrao.css */
 
 /* Componentes */
 .kpi-raw { position: absolute; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; z-index: 10; }
-.kpi-raw .kpi-title { font-size: 8pt; font-weight: 400; color: var(--pbi-foreground); line-height: 1.1; background: rgba(255,255,255,0.5); padding: 1px 4px; border-radius: 2px; margin-bottom: 2px; white-space: nowrap; }
+.kpi-raw .kpi-title { font-size: 8pt; font-weight: 400; color: var(--pbi-foreground); line-height: 1.1; background: rgba(255,255,255,0.5); padding: 0.5px 4px; border-radius: 0.5px; margin-bottom: 2px; white-space: nowrap; }
 .kpi-raw .kpi-value { font-size: 13pt; font-weight: 650; color: #605d5c; line-height: 1; }
 
 /* KPI com borda (Dias Seguros) */
 .kpi-bordered {
-  position: absolute; background: #FFFFFF; border: 1px solid #e0e0e0;
+  position: absolute; background: #FFFFFF; border: 0.5px solid #e0e0e0;
   padding: 5px; display: flex; align-items: stretch; border-radius: 3px; z-index: 10;
 }
 .kpi-bordered .kpi-accent { width: 3px; background: var(--pbi-accent); margin-right: 6px; flex-shrink: 0; }
