@@ -1,11 +1,16 @@
 #pbiCanvas {
-  background: var(--pbi-fundo-pagina) url('../imagens/fundo-mapa-avanco-drenagem.jpg') center/cover no-repeat;
+  background: var(--pbi-fundo-pagina) url('../imagens/bacground-padrão.png') center/cover no-repeat;
+}
+
+#leaflet-map {
+  width: 100%;
+  height: 100%;
 }
 
 #title-mapa {
   position: absolute;
   left: 240px;
-  top: 16px;
+  top: 35px;
   width: 1020px;
   height: 30px;
   z-index: 999;
@@ -93,19 +98,19 @@
   position: absolute;
   left: 515px;
   top: 78px;
-  width: 560px;
+  width: 650px;
   height: 520px;
   z-index: 70;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
   overflow: hidden;
-  background: #d0733e;
+  background: #d0743e00;
 }
 
 #ortofoto-img {
-  width: 110%;
-  height: 110%;
+  width: 90%;
+  height: 90%;
   object-fit: contain;
   display: block;
   background: #fff;
@@ -260,6 +265,124 @@
 .status-marker.tendencia {
   border-radius: 0;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.popup-area-drenagem .leaflet-popup-content-wrapper {
+  border-radius: 4px;
+  border: 1px solid rgba(0, 29, 55, 0.2);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+}
+
+.popup-area-drenagem .leaflet-popup-content {
+  margin: 8px;
+}
+
+.popup-area-box {
+  width: 175px;
+  font-size: 11px;
+  color: #19324d;
+}
+
+.popup-area-thumb {
+  width: 100%;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 3px;
+  border: 1px solid #d8dee6;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.popup-area-sem-foto {
+  width: 100%;
+  height: 52px;
+  border-radius: 3px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2f6;
+  color: #6b7786;
+  border: 1px solid #d8dee6;
+}
+
+.popup-area-titulo {
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #001d37;
+}
+
+.popup-area-linha {
+  line-height: 1.35;
+}
+
+.foto-area-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+}
+
+.foto-area-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.foto-area-modal-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(88vw, 980px);
+  max-height: 88vh;
+  background: #f7f8fa;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  padding: 12px 12px 14px;
+}
+
+.foto-area-modal-titulo {
+  padding: 0 32px 8px 0;
+  color: #0f2741;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.foto-area-modal-img {
+  width: 100%;
+  max-height: calc(88vh - 64px);
+  object-fit: contain;
+  background: #ffffff;
+  border: 1px solid #d3d9e0;
+  border-radius: 5px;
+  display: block;
+}
+
+.foto-area-modal-fechar {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: 4px;
+  background: #17324d;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.foto-area-modal-fechar:hover {
+  background: #0f2438;
+}
+
+body.foto-area-modal-open {
+  overflow: hidden;
 }
 
 

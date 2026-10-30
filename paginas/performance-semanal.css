@@ -84,7 +84,7 @@ html, body {
 
 /* Fundo específico desta página */
 .pbi-canvas {
-  background: var(--pbi-fundo-pagina) url('../imagens/fundo-duplicata-de-performance-semanal.jpg') center/cover no-repeat;
+  background: var(--pbi-fundo-pagina) url('../imagens/bacground-padrão.png') center/cover no-repeat;
 }
 
 /* Sidebar padrao compartilhada em ../assets/sidebar-padrao.css */
@@ -116,23 +116,24 @@ html, body {
   font-size: 13pt;
   font-weight: 500;
   margin-bottom: 5px;
-  color: var(--pbi-foreground);
+  color: #0b1f3a;
   line-height: 1;
 }
-.kpi-flat .kpi-value.negative { color: var(--pbi-bad); }
+.kpi-flat .kpi-value.negative { color: #D64550; }
 
 .kpi-bordered {
   position: absolute;
   background: #FFFFFF;
-  border: 1px solid #e0e0e0;
+  border: 0.5px solid #413d3d;
   padding: 5px;
   display: flex;
   align-items: stretch;
   border-radius: 3px;
+  z-index: 10;
 }
 .kpi-bordered .kpi-accent {
   width: 3px;
-  background: var(--pbi-accent);
+  background:  #2750ec;
   margin-right: 6px;
   flex-shrink: 0;
 }
@@ -146,15 +147,16 @@ html, body {
   min-width: 0;
 }
 .kpi-bordered .kpi-label {
-  font-size: 12pt;
+  font-size: 8pt;
   color: #605e5c;
   line-height: 1.1;
-  margin-bottom: 2px;
+  margin-top: 2px;
 }
 .kpi-bordered .kpi-value {
-  font-size: 10pt;
-  font-weight: 600;
+  font-size: 14pt;
+  font-weight: 700;
   color: var(--pbi-foreground);
+  line-height: 1;
 }
 
 .table-container {

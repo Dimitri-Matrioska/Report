@@ -53,7 +53,37 @@
 .dropdown-item { padding: 6px 10px; color: var(--bege-fundo); font-size: 11px; cursor: pointer; display: flex; align-items: center; gap: 8px; }
 .dropdown-item:hover { background: #16294a; }
 .dropdown-item input[type="checkbox"] { accent-color: var(--pbi-accent); cursor: pointer; }
-.dropdown-group-title { padding: 6px 10px; color: var(--bege-fundo); font-size: 11px; font-weight: bold; cursor: pointer; background: rgba(255,255,255,0.05); display: flex; justify-content: space-between; }
+.dropdown-group-title {
+  padding: 6px 10px;
+  color: var(--bege-fundo);
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.dropdown-year-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  cursor: pointer;
+}
+.dropdown-year-item input[type="checkbox"] {
+  accent-color: var(--pbi-accent);
+  cursor: pointer;
+}
+.dropdown-year-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
 .dropdown-group-items { display: none; padding-left: 15px; }
 .dropdown-group-items.active { display: block; }
 

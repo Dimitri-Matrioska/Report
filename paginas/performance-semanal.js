@@ -17,6 +17,15 @@
   document.getElementById(id).classList.toggle('active');
   }
 
+  // Fecha dropdown ao clicar fora
+  document.addEventListener('click', function(event) {
+  if (!event.target.closest('.sidebar-select') && !event.target.closest('.dropdown-menu')) {
+    document.querySelectorAll('.dropdown-menu').forEach(el => el.classList.remove('active'));
+  }
+  });
+
+
+
 let DADOS = { fisico: [], pluviometria: [], status: [] };
 let FILTROS = { contratada: null, mes: null, semana: null };
 const CHARTS = {};
@@ -25,7 +34,7 @@ const CHARTS = {};
 // Contratada=TERRAM e período mais recente presente nos dados
 const DEF_CONTRATADA = 'TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.';
 
-async function carregarConfigRelatorio() {
+async function carregarConfigRelatorio() { // busca config.json (ou fallback para dados.json)
   try {
     const resp = await fetch(BASE_URL + '/config.json?v=' + Date.now());
     if (!resp.ok) {
@@ -630,7 +639,7 @@ function render_Aderencia() {
       show: true, 
       width: 12, 
       roundCap: false,
-      itemStyle: { color: ader > 0.95 ? '' : '#ff3636' } 
+      itemStyle: { color: ader > 0.95 ? '#22c55e' : '#ff3636' } 
     
     },
     pointer: { show: false },
@@ -710,7 +719,7 @@ function render_PluvioCurto() {
         return res;
       }
     },
-    legend: { top: 16, itemWidth: 10, itemHeight: 8, textStyle: { fontSize: 8 } },
+    legend: { top: 5, itemWidth: 10, itemHeight: 8, textStyle: { fontSize: 8 } },
     xAxis: { type: 'category', data: meses.map(mesLabel),
              axisLabel: { fontSize: 8, color: '#605e5c' }, axisTick: { show: false },
              axisLine: { lineStyle: { color: '#dcdcda' } } },

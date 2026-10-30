@@ -1,0 +1,133 @@
+[
+  {
+    "id": "area_1_31497",
+    "tipo": "poligono",
+    "nome_area": "Canteiro GC",
+    "servico_notavel": "Drenagem Profunda - Canteiro GC",
+    "foto_miniatura": "ortofoto/imagem-detalhe/teste.jpg",
+    "pontos": [
+      [
+        1712,
+        1353
+      ],
+      [
+        1955,
+        1500
+      ],
+      [
+        2288,
+        1392
+      ],
+      [
+        2083,
+        1100
+      ],
+      [
+        1708,
+        1363
+      ]
+    ]
+  },
+  {
+    "id": "area_2_48315",
+    "tipo": "polilinha",
+    "nome_area": "Canaleta de drenagem",
+    "servico_notavel": "",
+    "pontos": [
+      [
+        1708,
+        1132
+      ],
+      [
+        1504,
+        1292
+      ],
+      [
+        1372,
+        1331
+      ],
+      [
+        1257,
+        1280
+      ],
+      [
+        1187,
+        1216
+      ]
+    ],
+    "realizado_ranges": [
+      {
+        "start_seg": 0,
+        "start_t": 0.0,
+        "end_seg": 0,
+        "end_t": 0.24047845751011665
+      },
+      {
+        "start_seg": 0,
+        "start_t": 0.4514401333015949,
+        "end_seg": 0,
+        "end_t": 0.8899666746012854
+      },
+      {
+        "start_seg": 0,
+        "start_t": 0.5491549631040229,
+        "end_seg": 2,
+        "end_t": 0.7384683432326551
+      },
+      {
+        "start_seg": 1,
+        "start_t": 0.7920823436262866,
+        "end_seg": 3,
+        "end_t": 0.6702979101823032
+      }
+    ]
+  },
+  {
+    "id": "area_3_7122",
+    "tipo": "polilinha",
+    "nome_area": "Canaleta / Drenagem",
+    "servico_notavel": "",
+    "realizado_ranges": [
+      {
+        "start_seg": 4,
+        "start_t": 0.593320235756385,
+        "end_seg": 6,
+        "end_t": 0.8865771812080537
+      }
+    ],
+    "pontos": [
+      [
+        1190,
+        1219
+      ],
+      [
+        1142,
+        1209
+      ],
+      [
+        1116,
+        1244
+      ],
+      [
+        1129,
+        1280
+      ],
+      [
+        1158,
+        1324
+      ],
+      [
+        1190,
+        1363
+      ],
+      [
+        1232,
+        1398
+      ],
+      [
+        1280,
+        1424
+      ]
+    ]
+  }
+]

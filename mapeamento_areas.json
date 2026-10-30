@@ -1,0 +1,12 @@
+[
+  {
+    "id": "area_1_59227",
+    "tipo": "ponto",
+    "nome_area": "Trecho Drenagem",
+    "servico_notavel": "Drenagem Profunda",
+    "foto_miniatura": "Report/ortofoto/fotos-detalhe/teste.JPG",
+    "x": 1177,
+    "y": 1212,
+    "raio": 50
+  }
+]

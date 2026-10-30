@@ -17,12 +17,12 @@
 html, body { margin: 0; padding: 0; background: #ffffff; font-family: var(--fonte-principal); height: 100vh; overflow: hidden; display: flex; justify-content: center; align-items: center; }
 .app { display: flex; width: 100vw; height: 100vh; }
 .canvas-wrapper { display: block; flex-shrink: 0; }
-.pbi-canvas { position: relative; width: 1280px; height: 725px; background: var(--pbi-fundo-pagina) url('../imagens/fundo-stma-.jpg') center/cover no-repeat; border-radius: 4px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); overflow: hidden; flex-shrink: 0; --escala: 1; zoom: var(--escala); }
+.pbi-canvas { position: relative; width: 1280px; height: 725px; background: var(--pbi-fundo-pagina) url('../imagens/bacground-padrão.png') center/cover no-repeat; border-radius: 4px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); overflow: hidden; flex-shrink: 0; --escala: 1; zoom: var(--escala); }
 
 /* Sidebar padrao compartilhada em ../assets/sidebar-padrao.css */
 
 /* Título Azul Topo */
-#title-pluviometria { position: absolute; left: 240px; top: 15px; width: 1020px; height: 30px; z-index: 9999; text-align: center; font-size: 14pt; font-weight: 700; color: var(--bege-fundo); background: var(--pbi-azul-escuro); border-radius: 3px; line-height: 1.2; }
+#title-pluviometria { position: absolute; left: 240px; top: 35px; width: 1020px; height: 30px; z-index: 9999; text-align: center; font-size: 14pt; font-weight: 700; color: var(--bege-fundo); background: var(--pbi-azul-escuro); border-radius: 3px; line-height: 1.2; }
 
 /* Componentes Visuais */
 .chart-container { position: absolute; background: transparent; border-radius: 0px; z-index: 10; }
@@ -34,17 +34,17 @@ html, body { margin: 0; padding: 0; background: #ffffff; font-family: var(--font
   padding: 15px; display: flex; flex-direction: column; align-items: flex-start; border-radius: 4px; z-index: 10;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 4px solid var(--pbi-accent);
 }
-.kpi-pluvio .kpi-value { font-size: 20pt; font-weight: 400; color: #252423; line-height: 1; margin-bottom: 4px;}
+.kpi-pluvio .kpi-value { font-size: 16pt; font-weight: 400; color: #252423; line-height: 1; margin-bottom: 1px;}
 .kpi-pluvio .kpi-label { font-size: 9pt; color: #605e5c; font-weight: 400; }
 
 /* Posicionamento */
-#kpi-mm-mes { left: 240px; top: 60px; width: 200px; height: 70px; }
-#kpi-media-dia { left: 240px; top: 140px; width: 200px; height: 70px; }
-#kpi-dias-impactados { left: 240px; top: 220px; width: 200px; height: 70px; }
+#kpi-mm-mes { left: 240px; top: 70px; width: 200px; height: 60px; }
+#kpi-media-dia { left: 240px; top: 140px; width: 200px; height: 60px; }
+#kpi-dias-impactados { left: 240px; top: 210px; width: 200px; height: 60px; }
 
 /* Gráfico Barras (Topo) */
-#chart-pluvio-historico { left: 460px; top: 60px; width: 800px; height: 230px; }
-#title-pluvio-historico { left: 460px; top: 38px; width: 800px; height: 22px; }
+#chart-pluvio-historico { left: 460px; top: 80px; width: 800px; height: 200px; }
+#title-pluvio-historico { left: 460px; top: 70px; width: 800px; height: 22px; }
 
 /* Gráfico Área (Inferior) */
 #chart-pluvio-mes { left: 240px; top: 330px; width: 650px; height: 350px; }

@@ -29,6 +29,44 @@ function mesChave(m) {
 
 function mesLabel(m) { if(!m) return ''; const [a, mes] = m.split('-'); return MESES[parseInt(mes, 10) - 1] + '/' + a.slice(2); }
 function mesValor(m) { if(!m) return ''; const [a, mes] = m.split('-'); return a + ' (Ano) + ' + MESES[parseInt(mes,10)-1]; }
+function normalizarMesConfig(cfg, mesesDisponiveis = []) {
+  if (!cfg) return mesesDisponiveis.length ? mesesDisponiveis[mesesDisponiveis.length - 1] : null;
+
+  const candidatos = [];
+  if (cfg.mes_referencia) candidatos.push(String(cfg.mes_referencia));
+  if (cfg.data_status) candidatos.push(String(cfg.data_status).slice(0, 7));
+
+  const anoRef = cfg.ano != null ? String(cfg.ano) : (cfg.data_status ? String(cfg.data_status).slice(0, 4) : null);
+  for (const candidato of candidatos) {
+    const valor = String(candidato).trim();
+    if (/^\d{4}-\d{2}(-\d{2})?$/.test(valor)) {
+      const chave = valor.slice(0, 7);
+      if (!mesesDisponiveis.length || mesesDisponiveis.includes(chave)) return chave;
+    }
+
+    const nome = valor.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const idx = MESES.findIndex(m => nome === m || nome === m.slice(0, 3));
+    if (idx >= 0 && anoRef) {
+      const chave = `${anoRef}-${String(idx + 1).padStart(2, '0')}`;
+      if (!mesesDisponiveis.length || mesesDisponiveis.includes(chave)) return chave;
+    }
+  }
+
+  if (mesesDisponiveis.length) {
+    const chaveStatus = cfg.data_status ? String(cfg.data_status).slice(0, 7) : null;
+    if (chaveStatus && mesesDisponiveis.includes(chaveStatus)) return chaveStatus;
+    return mesesDisponiveis[mesesDisponiveis.length - 1];
+  }
+
+  return null;
+}
+function resolverContratadaPadrao(cfg, contratadas, fallback = DEF_CONTRATADA) {
+  const candidatos = [cfg && cfg.contratada_principal, cfg && cfg.Empresa, cfg && cfg.empresa, fallback].filter(Boolean);
+  for (const candidato of candidatos) {
+    if (contratadas.includes(candidato)) return candidato;
+  }
+  return contratadas[0] || null;
+}
 function abrevia(t, max) { return !t ? '' : (t.length > max ? t.slice(0, max - 1) + '...' : t); }
 function fmtInt(v) { return Math.round(Number(v) || 0).toLocaleString('pt-BR'); }
 function fmtMil(v, casas = 0) {
@@ -70,13 +108,11 @@ function popularFiltros() {
   const contratadas = [...new Set(DADOS.servicos.map(d => d.contratada).filter(Boolean))].sort();
   const meses = [...new Set(DADOS.servicos.map(d => mesChave(d.mes_referencia)).filter(Boolean))].sort();
 
-  const mesCfg = mesChave(cfg.mes_referencia) || mesChave(cfg.data_status);
+  const mesCfg = normalizarMesConfig(cfg, meses);
   const semanaCfg = cfg.semana != null ? Number(cfg.semana) : null;
 
-  FILTROS.contratada = (cfg.contratada_principal && contratadas.includes(cfg.contratada_principal))
-    ? cfg.contratada_principal
-    : (contratadas.find(c => c.startsWith(DEF_CONTRATADA)) || contratadas[0] || null);
-  FILTROS.mes = mesCfg && meses.includes(mesCfg) ? mesCfg : (meses[meses.length - 1] || null);
+  FILTROS.contratada = resolverContratadaPadrao(cfg, contratadas, DEF_CONTRATADA);
+  FILTROS.mes = mesCfg || (meses[meses.length - 1] || null);
 
   const dropContratada = document.getElementById('drop-contratada');
   dropContratada.innerHTML = '';
@@ -91,10 +127,17 @@ function popularFiltros() {
   const dropMes = document.getElementById('drop-mes');
   dropMes.innerHTML = '';
   anos.forEach(ano => {
+    const anoAtivo = FILTROS.mes && String(FILTROS.mes).startsWith(ano) ? 'checked' : '';
     const grupo = document.createElement('div');
     grupo.innerHTML = `
-      <div class="dropdown-group-title" onclick="this.nextElementSibling.classList.toggle('active')">${ano} <span>▾</span></div>
-      <div class="dropdown-group-items" id="meses-${ano}"></div>
+      <div class="dropdown-group-title">
+        <label class="dropdown-year-item">
+          <input type="checkbox" value="${ano}" ${anoAtivo} onchange="toggleAnoMes(this, '${ano}')">
+          <span>${ano}</span>
+        </label>
+        <span class="dropdown-year-toggle" onclick="const cb = this.parentElement.querySelector('input'); if (cb) { cb.checked = !cb.checked; toggleAnoMes(cb, '${ano}'); }">▾</span>
+      </div>
+      <div class="dropdown-group-items ${anoAtivo ? 'active' : ''}" id="meses-${ano}"></div>
     `;
     const containerMeses = grupo.querySelector(`#meses-${ano}`);
     meses.filter(m => m.startsWith(ano)).forEach(m => {

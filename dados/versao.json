@@ -1,9 +1,9 @@
 {
-  "gerado_em": "2026-10-28T15:06:33.788387",
+  "gerado_em": "2026-10-29T10:04:17.211865",
   "total_datasets": 1,
   "inventario": {
-    "servicos_notaveis": 56
+    "servicos_notaveis": 706
   },
   "arquivo_unificado": "dados.json",
-  "tamanho_unificado_kb": 17.1
+  "tamanho_unificado_kb": 221.8
 }

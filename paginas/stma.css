@@ -21,7 +21,7 @@
 html, body { margin: 0; padding: 0; background: #ffffff; font-family: var(--fonte-principal); height: 100vh; overflow: hidden; display: flex; justify-content: center; align-items: center; }
 .app { display: flex; width: 100vw; height: 100vh; }
 .canvas-wrapper { display: block; flex-shrink: 0; }
-.pbi-canvas { position: relative; width: 1280px; height: 725px; background: var(--pbi-fundo-pagina) url('../imagens/fundo-stma-.jpg') center/cover no-repeat; border-radius: 4px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); overflow: hidden; flex-shrink: 0; --escala: 1; zoom: var(--escala); }
+.pbi-canvas { position: relative; width: 1280px; height: 725px; background: var(--pbi-fundo-pagina) url('../imagens/bacground-padrão.png') center/cover no-repeat; border-radius: 4px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); overflow: hidden; flex-shrink: 0; --escala: 1; zoom: var(--escala); }
 
 /* Sidebar padrao compartilhada em ../assets/sidebar-padrao.css */
 

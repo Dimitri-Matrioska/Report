@@ -1,5 +1,5 @@
 #pbiCanvas {
-  background: var(--pbi-fundo-pagina) url('../imagens/fundo-commodities.jpg') center/cover no-repeat;
+  background: var(--pbi-fundo-pagina) url('../imagens/bacground-padrão.png') center/cover no-repeat;
 }
 
 #title-commodities {

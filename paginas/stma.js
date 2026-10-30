@@ -1,6 +1,10 @@
+
+
 let DADOS = { fisico: [], desvios: [], stma: [] };
 let FILTROS = { contratada: null, ano: null, mes: null, semana: null };
 const CHARTS = {};
+
+
 
 async function carregarConfigRelatorio() {
   try {
@@ -18,12 +22,50 @@ async function carregarConfigRelatorio() {
   }
 }
 
-const DEF_CONTRATADA = 'TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.';
-const MESES = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+const DEF_CONTRATADA = 'TERRAM ENGENHARIA DE INFRAESTRUTURA S.A.'; // Valor padrão caso não haja config.json ou config_padrao no JSON
+const MESES = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro']; // Para exibir no formato "out/26" ou "outubro (Ano) + 2026"
 
-function mesLabel(m) { if(!m) return ''; const [a, mes] = m.split('-'); return MESES[parseInt(mes,10)-1] + '/' + a.slice(2); }
-function mesValor(m) { if(!m) return ''; const [a, mes] = m.split('-'); return a + ' (Ano) + ' + MESES[parseInt(mes,10)-1]; }
-function abrevia(t, max) { return !t ? '' : (t.length > max ? t.slice(0, max-1) + '…' : t); }
+function mesLabel(m) { if(!m) return ''; const [a, mes] = m.split('-'); return MESES[parseInt(mes,10)-1] + '/' + a.slice(2); } // Para exibir no formato "out/26" ou "outubro (Ano) + 2026"
+function mesValor(m) { if(!m) return ''; const [a, mes] = m.split('-'); return a + ' (Ano) + ' + MESES[parseInt(mes,10)-1]; } // Para exibir no formato "out/26" ou "outubro (Ano) + 2026"
+function normalizarMesConfig(cfg, mesesDisponiveis = []) {
+  if (!cfg) return mesesDisponiveis.length ? mesesDisponiveis[mesesDisponiveis.length - 1] : null;
+
+  const candidatos = [];
+  if (cfg.mes_referencia) candidatos.push(String(cfg.mes_referencia));
+  if (cfg.data_status) candidatos.push(String(cfg.data_status).slice(0, 7));
+
+  const anoRef = cfg.ano != null ? String(cfg.ano) : (cfg.data_status ? String(cfg.data_status).slice(0, 4) : null);
+  for (const candidato of candidatos) {
+    const valor = String(candidato).trim();
+    if (/^\d{4}-\d{2}(-\d{2})?$/.test(valor)) {
+      const chave = valor.slice(0, 7);
+      if (!mesesDisponiveis.length || mesesDisponiveis.includes(chave)) return chave;
+    }
+
+    const nome = valor.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const idx = MESES.findIndex(m => nome === m || nome === m.slice(0, 3));
+    if (idx >= 0 && anoRef) {
+      const chave = `${anoRef}-${String(idx + 1).padStart(2, '0')}`;
+      if (!mesesDisponiveis.length || mesesDisponiveis.includes(chave)) return chave;
+    }
+  }
+
+  if (mesesDisponiveis.length) {
+    const chaveStatus = cfg.data_status ? String(cfg.data_status).slice(0, 7) : null;
+    if (chaveStatus && mesesDisponiveis.includes(chaveStatus)) return chaveStatus;
+    return mesesDisponiveis[mesesDisponiveis.length - 1];
+  }
+
+  return null;
+}
+function resolverContratadaPadrao(cfg, contratadas, fallback = DEF_CONTRATADA) {
+  const candidatos = [cfg && cfg.contratada_principal, cfg && cfg.Empresa, cfg && cfg.empresa, fallback].filter(Boolean);
+  for (const candidato of candidatos) {
+    if (contratadas.includes(candidato)) return candidato;
+  }
+  return contratadas[0] || null;
+}
+function abrevia(t, max) { return !t ? '' : (t.length > max ? t.slice(0, max-1) + '…' : t); } // Abrevia texto para caber em dropdowns, ex: "TERRAM ENGENHARI…" (max = 20)
 
 // Funções para desvios (usa desvios_stma.json)
 const getGravidade = (x) => String(
@@ -450,14 +492,23 @@ function toggleDropdown(id) {
   document.querySelectorAll('.dropdown-menu').forEach(el => { if (el.id !== id) el.classList.remove('active'); });
   document.getElementById(id).classList.toggle('active');
 }
+
+function toggleAnoMes(checkbox, ano) {
+  const container = document.getElementById(`meses-${ano}`);
+  if (container) {
+    container.classList.toggle('active', checkbox.checked);
+  }
+}
+
 document.addEventListener('click', function(event) {
   if (!event.target.closest('.sidebar-select') && !event.target.closest('.dropdown-menu')) {
     document.querySelectorAll('.dropdown-menu').forEach(el => el.classList.remove('active'));
   }
-});
+}); 
 
 function popularFiltros() {
   const cfg = window.__CONFIG_PADRAO__ || {};
+  // 1. Popular Contratada
   const contratadas = [...new Set(DADOS.fisico.map(d => d.contratada))].sort();
   const dropContratada = document.getElementById('drop-contratada');
   dropContratada.innerHTML = '';
@@ -468,41 +519,58 @@ function popularFiltros() {
     dropContratada.appendChild(label);
   });
 
+  // 2. Popular Ano/Mês (Acordeão)
   const meses = [...new Set(DADOS.fisico.map(d => d.mes))].sort();
   const anos = [...new Set(meses.map(m => m.split('-')[0]))];
   const dropMes = document.getElementById('drop-mes');
   dropMes.innerHTML = '';
+
   anos.forEach(ano => {
+    // Título do Ano
     const grupo = document.createElement('div');
     grupo.innerHTML = `
-      <div class="dropdown-group-title" onclick="this.nextElementSibling.classList.toggle('active')">${ano} <span>▾</span></div>
+      <div class="dropdown-group-title" onclick="this.nextElementSibling.classList.toggle('active')">
+        ${ano} <span>▾</span>
+      </div>
       <div class="dropdown-group-items" id="meses-${ano}"></div>
     `;
+    
+    // Meses dentro do Ano
     const containerMeses = grupo.querySelector(`#meses-${ano}`);
-    meses.filter(m => m.startsWith(ano)).forEach(m => {
+    const mesesDoAno = meses.filter(m => m.startsWith(ano));
+    
+    mesesDoAno.forEach(m => {
       const label = document.createElement('label');
       label.className = 'dropdown-item';
       label.innerHTML = `<input type="checkbox" value="${m}" onchange="filtrarMes(this)"> ${mesLabel(m)}`;
       containerMeses.appendChild(label);
     });
+
     dropMes.appendChild(grupo);
   });
 
+  // 3. Popular Semanas
+  const dropSemana = document.getElementById('drop-semana');
+  dropSemana.innerHTML = '';
+  // O resto da função chamará popularSemanas, que já existe no seu código.
+  
+  // Resetar filtros para a contratada/mês do config global quando possível
   const mesCfg = cfg.mes_referencia || (cfg.data_status ? String(cfg.data_status).slice(0, 7) : null);
   const semanaCfg = cfg.semana != null ? Number(cfg.semana) : null;
 
   FILTROS.contratada = (cfg.contratada_principal && contratadas.includes(cfg.contratada_principal))
     ? cfg.contratada_principal
-    : (contratadas.find(c => c.startsWith(DEF_CONTRATADA)) || contratadas[0]);
+    : (contratadas.includes(DEF_CONTRATADA) ? DEF_CONTRATADA : (contratadas[0] || null));
   FILTROS.mes = mesCfg && meses.includes(mesCfg) ? mesCfg : (meses[meses.length - 1] || null);
-  FILTROS.ano = FILTROS.mes ? String(FILTROS.mes).slice(0, 4) : null;
   
-  document.getElementById('txt-contratada').textContent = abrevia(FILTROS.contratada, 20);
-  document.getElementById('txt-mes').textContent = mesValor(FILTROS.mes);
-  
-  const cbContr = document.querySelector(`#drop-contratada input[value="${FILTROS.contratada}"]`);
-  if (cbContr) cbContr.checked = true;
-  const cbMes = document.querySelector(`#drop-mes input[value="${FILTROS.mes}"]`);
+  // Atualiza os textos visuais nos botões
+  document.getElementById('txt-contratada').textContent = FILTROS.contratada ? abrevia(FILTROS.contratada, 20) : 'Todas';
+  document.getElementById('txt-mes').textContent = FILTROS.mes ? mesValor(FILTROS.mes) : 'Todos';
+
+  // Marca o checkbox correto
+  const cbContratada = FILTROS.contratada ? document.querySelector(`#drop-contratada input[value="${FILTROS.contratada}"]`) : null;
+  if (cbContratada) cbContratada.checked = true;
+  const cbMes = FILTROS.mes ? document.querySelector(`#drop-mes input[value="${FILTROS.mes}"]`) : null;
   if (cbMes) cbMes.checked = true;
 
   popularSemanas(semanaCfg);

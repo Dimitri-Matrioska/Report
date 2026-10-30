@@ -1,0 +1,31 @@
+[
+  {
+    "id": "area_1_37923",
+    "tipo": "poligono",
+    "nome_area": "Canteiro GC",
+    "servico_notavel": "Drenagem Superficial - Escadas",
+    "foto_miniatura": "ortofoto/fotos-detalhes/Imagem_Piramide.jpg",
+    "pontos": [
+      [
+        1744,
+        1388
+      ],
+      [
+        1984,
+        1520
+      ],
+      [
+        2284,
+        1388
+      ],
+      [
+        2073,
+        1094
+      ],
+      [
+        1747,
+        1392
+      ]
+    ]
+  }
+]
