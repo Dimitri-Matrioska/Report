@@ -293,10 +293,12 @@ function setSidebarInfo(registros, configPadrao = null) {
   const dataStatus = padrao.data_status || null;
   const mesPadrao = mesChave(padrao.mes_referencia) || mesChave(dataStatus);
   const semanaPadrao = padrao.semana != null ? String(padrao.semana) : (semanas.length ? String(semanas[semanas.length - 1]) : '-');
-  const contratadaPadrao = padrao.contratada_principal || contratadas[0] || '-';
+  
+  // ALTERAÇÃO AQUI: Adicionado padrao.Empresa
+  const contratadaPadrao = padrao.Empresa || padrao.contratada_principal || contratadas[0] || '-';
 
   FILTRO_VIEW = {
-    contratada: contratadaPadrao || contratadas[0] || '-',
+    contratada: contratadaPadrao,
     mes: mesPadrao && meses.includes(mesPadrao) ? mesPadrao : (meses.length ? meses[meses.length - 1] : null),
     semana: semanaPadrao !== '-' && semanas.includes(Number(semanaPadrao)) ? String(semanaPadrao) : (semanas.length ? String(semanas[semanas.length - 1] ) : '-')
   };
@@ -319,7 +321,15 @@ function getSemanasDisponiveis(registros) {
   return [...new Set(
     registros
       .filter(r => {
+        // Filtra por contratada
         if (FILTRO_VIEW.contratada && FILTRO_VIEW.contratada !== '-' && r.contratada && FILTRO_VIEW.contratada !== r.contratada) return false;
+        
+        // NOVO: Filtra por mês/ano selecionado
+        if (FILTRO_VIEW.mes) {
+          const mReg = mesChave(r.mes_referencia) || r.mes;
+          if (mReg && mReg !== FILTRO_VIEW.mes) return false;
+        }
+        
         return true;
       })
       .map(r => Number(r.semana))
@@ -540,9 +550,10 @@ function renderizarAreasNoMapa(resumoServicos) {
       const latLngs = area.pontos.map(p => [alturaGlobalImagem - Number(p[1]), Number(p[0])]);
       const nomeLinha = String(area.nome_area || 'Polilinha');
 
+      // Linha prevista (branca)
       const camadaPrevista = L.polyline(latLngs, {
         color: '#ffffff',
-        weight: 3,
+        weight: 5,
         opacity: 0.9
       });
 
@@ -562,15 +573,27 @@ function renderizarAreasNoMapa(resumoServicos) {
       rangesToDraw.forEach(r_range => {
         const subLatLngs = calcularSubPolylines(area.pontos, r_range);
         if (subLatLngs.length >= 2) {
-          const camadaRealizada = L.polyline(subLatLngs, {
+          // Efeito Neon: Camada de fundo (halo brilhante e translúcido)
+          const camadaBrilho = L.polyline(subLatLngs, {
             color: '#22c55e',
+            weight: 10,
+            opacity: 0.35
+          });
+
+          // Efeito Neon: Camada principal (verde vibrante por cima)
+          const camadaRealizada = L.polyline(subLatLngs, {
+            color: '#4ade80',
             weight: 4,
             opacity: 1.0
           });
+
           camadaRealizada.bindTooltip(`<b>${nomeLinha}</b><br>Status: Realizado`, {
             direction: 'auto',
             sticky: true
           });
+
+          // Adiciona o brilho primeiro (ficando embaixo) e depois a linha principal
+          camadaMarcadores.addLayer(camadaBrilho);
           camadaMarcadores.addLayer(camadaRealizada);
         }
       });
@@ -634,10 +657,10 @@ function renderizarAreasNoMapa(resumoServicos) {
         }
         layer.setStyle({
           color: '#ffffff',
-          weight: 3,
-          opacity: 0.9,
+          weight: 1,
+          opacity: 0.4,
           fillColor: '#3b82f6',
-          fillOpacity: 0.25,
+          fillOpacity: 0.3,
           stroke: true
         });
         layer.openPopup();

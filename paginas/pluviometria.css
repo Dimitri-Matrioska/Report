@@ -13,6 +13,66 @@
   --azul-prev: #001d37;
   --real: #ffbe83;
 }
+
+/* ========================================== */
+/* CONFIGURAÇÕES COMPLETAS DOS BALÕES (TOOLTIPS/POPUPS) */
+/* ========================================== */
+
+/* Estilo geral para os balões do ECharts e do Leaflet */
+.echarts-tooltip,
+div[style*="position: absolute"][style*="pointer-events: none"],
+.leaflet-popup-content-wrapper,
+.leaflet-tooltip {
+  /* Cores de Fundo e Texto */
+  background-color: #f3f0eb !important; /* Fundo azul escuro */
+  color: #001d37 !important;           /* Cor padrão do texto (branco) */
+  
+  /* Tipografia (Fontes) */
+  font-family: inherit !important;     /* Herda a fonte padrão do seu projeto */
+  font-size: 10px !important;          /* -> TAMANHO DA FONTE: Altere aqui (ex: 11px, 12px, 14px) */
+  font-weight: normal !important;      /* Peso da fonte (normal, bold) */
+  line-height: 1.4 !important;         /* Espaçamento entre as linhas do texto */
+  
+  /* Espaçamentos e Bordas */
+  padding: 8px 12px !important;        /* -> ESPAÇAMENTO INTERNO: Margem interna do balão */
+  border-radius: 6px !important;       /* -> ARREDONDAMENTO: Cantos arredondados (ex: 4px, 8px, 12px) */
+  border: 1px solid rgba(255, 255, 255, 0.08) !important; /* -> BORDA: Linha sutil opcional ao redor */
+  
+  /* Efeitos Visuais e Sombras */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35) !important; /* -> LEVE SOMBRA: Profundidade do balão */
+  backdrop-filter: blur(4px);          /* Efeito de desfoque sutil no fundo (estilo glassmorphism) */
+  
+  /* Transições e Animações (Efeitos gerais ao aparecer/mover) */
+  transition: opacity 0.15s ease, transform 0.15s ease !important;
+}
+
+/* Garante que os elementos de texto internos acompanhem a estilização */
+.echarts-tooltip *,
+.leaflet-popup-content-wrapper *,
+.leaflet-tooltip * {
+  color: inherit !important;
+}
+
+/* Estilização específica para títulos ou textos em negrito (<b> / <strong>) dentro dos balões */
+.echarts-tooltip b,
+.echarts-tooltip strong,
+.leaflet-popup-content-wrapper b,
+.leaflet-tooltip b {
+  font-weight: bold !important;
+  color: #001d37 !important;           /* Cor dos títulos em destaque */
+  font-size: 2px !important;          /* Tamanho da fonte específica para títulos */
+}
+
+/* Setas indicadoras dos popups e tooltips do Leaflet (acompanham a cor do fundo) */
+.leaflet-popup-tip,
+.leaflet-tooltip-top::before,
+.leaflet-tooltip-bottom::before,
+.leaflet-tooltip-left::before,
+.leaflet-tooltip-right::before {
+  background-color: #f3f0eb !important;
+  border-color: #001e38 !important;
+}
+
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; background: #ffffff; font-family: var(--fonte-principal); height: 100vh; overflow: hidden; display: flex; justify-content: center; align-items: center; }
 .app { display: flex; width: 100vw; height: 100vh; }
